@@ -1,5 +1,5 @@
-@tailwind base;
+/* Tailwind utilities only - no base reset to preserve Elementor styles */
 @tailwind components;
 @tailwind utilities;
 
-/* Remove custom design system - using original CSS files */
+/* Preserve Elementor CSS from lightspeed.css - no Tailwind base reset */
