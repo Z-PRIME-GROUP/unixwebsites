@@ -176,44 +176,50 @@ const Index = () => {
                         <div className="elementor-element elementor-element-4f35598 e-con-full e-flex e-con e-child" data-id="4f35598" data-element_type="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px', marginTop: '50px' }}>
                           {[
                             {
+                              id: "022207d",
                               icon: "/images/feature-responsive.webp",
                               title: "Fully Mobile-Optimized Design",
                               desc: "With over half of internet traffic coming from mobile devices, our websites ensure flawless performance on any screen size, providing a seamless experience for your visitors."
                             },
                             {
+                              id: "72cacfe",
                               icon: "/images/feature-design.webp",
                               title: "Stunning, Cutting-Edge Designs",
                               desc: "Our websites feature the latest in cutting-edge design, crafted by top-tier graphic designers to create a visually striking and modern online presence for your brand."
                             },
                             {
+                              id: "e6b6de9",
                               icon: "/images/feature-seo.webp",
                               title: "SEO-Friendly Setup for High Rankings",
                               desc: "We structure your website with SEO best practices in mind, giving it a strong foundation for future optimization to help improve visibility on search engines like Google."
                             },
                             {
+                              id: "d92a8af",
                               icon: "/images/feature-speed.webp",
                               title: "Ultra-Fast Website Loading Speed",
                               desc: "In today's fast-paced digital world, speed matters. A slow website can cost you customers and hurt your search rankings—we make sure yours loads fast."
                             },
                             {
+                              id: "0342397",
                               icon: "/images/feature-security.webp",
                               title: "Advanced Cutting-Edge Security Features",
                               desc: "Our websites come equipped with top-tier security measures, including automated daily backups and protection against potential threats, keeping your data safe and secure at all times."
                             },
                             {
+                              id: "1a2b869",
                               icon: "/images/feature-customization.webp",
                               title: "Effortless Website Customization",
                               desc: "We'll guide you through how to easily update and edit your website, empowering you to make changes on your own without needing to hire a web developer."
                             }
                           ].map((feature, idx) => (
                             <div key={idx} className="elementor-element e-con-full e-flex e-con e-child" data-element_type="container">
-                              <div className="elementor-element widget-link-underline animated-fast ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box" data-element_type="widget" style={{ visibility: 'visible' }}>
+                              <div className={`elementor-element elementor-element-${feature.id} widget-link-underline animated-fast ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box`} data-id={feature.id} data-element_type="widget" style={{ visibility: 'visible' }}>
                                 <div className="elementor-widget-container">
                                   <div className="ekit-wid-con">
-                                    <div className="elementskit-infobox text-left text-left icon-top-align elementor-animation-float" style={{ backgroundColor: '#FFF', padding: '50px', boxShadow: '0 20px 60px 0 rgba(1, 30, 81, 0.078)', borderRadius: '8px' }}>
+                                    <div className="elementskit-infobox text-left text-left icon-top-align elementor-animation-float">
                                       <div className="elementskit-box-header">
-                                        <div className="elementskit-info-box-icon" style={{ backgroundColor: '#E3EEFF', borderRadius: '8px', padding: '5px', width: '84px', height: '84px', marginBottom: '25px' }}>
-                                          <img loading="lazy" decoding="async" width="500" height="500" src={feature.icon} className="attachment- size-" alt={feature.title} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                                        <div className="elementskit-info-box-icon">
+                                          <img loading="lazy" decoding="async" width="500" height="500" src={feature.icon} className="attachment- size-" alt={feature.title} />
                                         </div>
                                       </div>
                                       <div className="box-body">
