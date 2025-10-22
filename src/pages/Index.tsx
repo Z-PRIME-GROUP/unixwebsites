@@ -1,6 +1,8 @@
 import Header from "@/components/Header";
 
 const Index = () => {
+  console.log('Index component rendering');
+  
   return (
     <div className="home wp-singular page-template-default page page-id-24752 wp-custom-logo wp-theme-landpress underline-link-effect flip-button-effect keydesign-elementor-library elementor-default elementor-kit-24751 elementor-page elementor-page-24752 elementor-page-24772">
       <div id="page" className="site">
@@ -14,7 +16,7 @@ const Index = () => {
                   <div data-elementor-type="wp-page" data-elementor-id="24752" className="elementor elementor-24752" data-elementor-post-type="page">
                     
                     {/* Hero Section with Gallery */}
-                    <div className="elementor-element elementor-element-89bde1c e-con-full e-flex e-con e-parent" data-id="89bde1c" data-element_type="container" style={{background: 'linear-gradient(135deg, hsl(262, 83%, 58%) 0%, hsl(220, 70%, 50%) 100%)'}}>
+                    <div className="elementor-element elementor-element-89bde1c e-con-full e-flex e-con e-parent" data-id="89bde1c" data-element_type="container" data-settings='{"background_background":"gradient"}'>
                       <div className="elementor-element elementor-element-8bb6f3c e-con-full hero-section e-flex e-con e-child" data-id="8bb6f3c" data-element_type="container">
                         
                         {/* Left Column - Text Content */}
@@ -229,7 +231,7 @@ const Index = () => {
                     </div>
 
                     {/* CTA Section - "Who've Transformed Their Business" */}
-                    <div className="elementor-element elementor-element-7e4c759d e-flex e-con-boxed e-con e-parent" data-id="7e4c759d" data-element_type="container" style={{background: 'linear-gradient(135deg, hsl(262, 83%, 58%) 0%, hsl(220, 70%, 50%) 100%)'}}>
+                    <div className="elementor-element elementor-element-7e4c759d e-flex e-con-boxed e-con e-parent" data-id="7e4c759d" data-element_type="container" data-settings='{"background_background":"gradient"}'>
                       <div className="e-con-inner">
                         <div className="elementor-element elementor-element-f01a0aa e-con-full e-flex e-con e-child" data-id="f01a0aa" data-element_type="container">
                           <div className="elementor-element elementor-element-e8ade00 animated-fast transformedBusinessSection elementor-invisible elementor-widget elementor-widget-elementskit-heading" data-id="e8ade00" data-element_type="widget">
