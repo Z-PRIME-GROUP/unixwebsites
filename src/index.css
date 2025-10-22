@@ -2,4 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Font Configuration */
+* {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
 /* Preserve Elementor CSS from lightspeed.css - no Tailwind base reset */
