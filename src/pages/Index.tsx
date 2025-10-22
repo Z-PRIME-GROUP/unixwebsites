@@ -222,7 +222,7 @@ const Index = () => {
 
                       {/* Feature Cards Row 1 */}
                       <div className="elementor-element elementor-element-4f35598 e-con-full e-flex e-con e-child" data-id="4f35598" data-element_type="container">
-                        {/* Feature Card 1 - Mobile Optimized */}
+                        {/* Feature Card 1 */}
                         <div className="elementor-element elementor-element-86ed97a e-con-full e-flex e-con e-child" data-id="86ed97a" data-element_type="container">
                           <div className="elementor-element elementor-element-022207d widget-link-underline animated-fast ekit-equal-height-disable elementor-invisible elementor-widget elementor-widget-elementskit-icon-box" data-id="022207d" data-element_type="widget">
                             <div className="elementor-widget-container">
@@ -243,7 +243,7 @@ const Index = () => {
                           </div>
                         </div>
 
-                        {/* Feature Card 2 - Design */}
+                        {/* Feature Card 2 */}
                         <div className="elementor-element elementor-element-a20b32f e-con-full e-flex e-con e-child" data-id="a20b32f" data-element_type="container">
                           <div className="elementor-element elementor-element-72cacfe widget-link-underline animated-fast ekit-equal-height-disable elementor-invisible elementor-widget elementor-widget-elementskit-icon-box" data-id="72cacfe" data-element_type="widget">
                             <div className="elementor-widget-container">
@@ -264,7 +264,7 @@ const Index = () => {
                           </div>
                         </div>
 
-                        {/* Feature Card 3 - SEO */}
+                        {/* Feature Card 3 */}
                         <div className="elementor-element elementor-element-6cdab5c e-con-full e-flex e-con e-child" data-id="6cdab5c" data-element_type="container">
                           <div className="elementor-element elementor-element-e6b6de9 widget-link-underline animated-fast ekit-equal-height-disable elementor-invisible elementor-widget elementor-widget-elementskit-icon-box" data-id="e6b6de9" data-element_type="widget">
                             <div className="elementor-widget-container">
@@ -288,7 +288,7 @@ const Index = () => {
 
                       {/* Feature Cards Row 2 */}
                       <div className="elementor-element elementor-element-db332f6 e-con-full e-flex e-con e-child" data-id="db332f6" data-element_type="container">
-                        {/* Feature Card 4 - Speed */}
+                        {/* Feature Card 4 */}
                         <div className="elementor-element elementor-element-81906fe e-con-full e-flex e-con e-child" data-id="81906fe" data-element_type="container">
                           <div className="elementor-element elementor-element-d92a8af widget-link-underline animated-fast ekit-equal-height-disable elementor-invisible elementor-widget elementor-widget-elementskit-icon-box" data-id="d92a8af" data-element_type="widget">
                             <div className="elementor-widget-container">
@@ -309,7 +309,7 @@ const Index = () => {
                           </div>
                         </div>
 
-                        {/* Feature Card 5 - Security */}
+                        {/* Feature Card 5 */}
                         <div className="elementor-element elementor-element-5821ed5 e-con-full e-flex e-con e-child" data-id="5821ed5" data-element_type="container">
                           <div className="elementor-element elementor-element-73bb3f7 widget-link-underline animated-fast ekit-equal-height-disable elementor-invisible elementor-widget elementor-widget-elementskit-icon-box" data-id="73bb3f7" data-element_type="widget">
                             <div className="elementor-widget-container">
@@ -330,7 +330,7 @@ const Index = () => {
                           </div>
                         </div>
 
-                        {/* Feature Card 6 - Customization */}
+                        {/* Feature Card 6 */}
                         <div className="elementor-element elementor-element-5f1a29d e-con-full e-flex e-con e-child" data-id="5f1a29d" data-element_type="container">
                           <div className="elementor-element elementor-element-22a2d96 widget-link-underline animated-fast ekit-equal-height-disable elementor-invisible elementor-widget elementor-widget-elementskit-icon-box" data-id="22a2d96" data-element_type="widget">
                             <div className="elementor-widget-container">
@@ -421,7 +421,7 @@ const Index = () => {
                     </div>
                   </div>
 
-                  {/* Testimonials Section with Review Photo */}
+                  {/* Testimonials Intro Section */}
                   <div className="elementor-element elementor-element-3b603c52 e-flex e-con-boxed e-con e-parent" data-id="3b603c52" data-element_type="container">
                     <div className="e-con-inner">
                       <div className="elementor-element elementor-element-55a3571f e-con-full e-flex e-con e-child" data-id="55a3571f" data-element_type="container">
@@ -447,18 +447,251 @@ const Index = () => {
                               </div>
                             </div>
                           </div>
+
+                          <div className="elementor-element elementor-element-3f8f8a2c elementor-icon-list--layout-inline animated-fast elementor-list-item-link-full_width elementor-invisible elementor-widget elementor-widget-icon-list" data-id="3f8f8a2c" data-element_type="widget">
+                            <div className="elementor-widget-container">
+                              <ul className="elementor-icon-list-items elementor-inline-items">
+                                {[1, 2, 3, 4, 5].map((star) => (
+                                  <li key={star} className="elementor-icon-list-item elementor-inline-item">
+                                    <span className="elementor-icon-list-icon">
+                                      <i aria-hidden="true" className="fas fa-star"></i>
+                                    </span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  {/* Additional sections including FAQ and Footer are styled via the external CSS files */}
-                  
+                  {/* Testimonials Slider Section */}
+                  <div className="elementor-element elementor-element-4d2cb9a8 e-flex e-con-boxed e-con e-parent" data-id="4d2cb9a8" data-element_type="container">
+                    <div className="e-con-inner">
+                      <div className="elementor-element elementor-element-29463186 e-con-full e-flex e-con e-child" data-id="29463186" data-element_type="container">
+                        <div className="elementor-element elementor-element-28b1aa8d e-con-full e-flex e-con e-child" data-id="28b1aa8d" data-element_type="container">
+                          <div className="elementor-element elementor-element-7963a9db animated-fast homepageTestimonials elementor-invisible elementor-widget elementor-widget-elementskit-testimonial" data-id="7963a9db" data-element_type="widget">
+                            <div className="elementor-widget-container">
+                              <div className="ekit-wid-con">
+                                <div className="elementskit-testimonial-slider arrow_inside elementskit-default-testimonial slider-dotted">
+                                  <div className="ekit-main-swiper swiper">
+                                    <div className="swiper-wrapper">
+                                      {/* Testimonial slides will be rendered by Swiper JS */}
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* CTA Section - "Don't Just Watch Others Succeed" */}
+                  <div className="elementor-element elementor-element-3fe815c e-con-full e-flex e-con e-child" data-id="3fe815c" data-element_type="container">
+                    <div className="elementor-element elementor-element-b69f4ca animated-fast elementor-widget__width-initial elementor-invisible elementor-widget elementor-widget-elementskit-heading" data-id="b69f4ca" data-element_type="widget">
+                      <div className="elementor-widget-container">
+                        <div className="ekit-wid-con">
+                          <div className="ekit-heading elementskit-section-title-wraper text_center ekit_heading_tablet- ekit_heading_mobile-text_center">
+                            <h2 className="ekit-heading--title elementskit-section-title text_fill">
+                              Don't Just Watch Others Succeed – <span><span>Join Them!</span></span>
+                            </h2>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="elementor-element elementor-element-a3748ce elementor-widget__width-auto e-transform elementor-align-center elementor-widget elementor-widget-elementskit-button" data-id="a3748ce" data-element_type="widget">
+                      <div className="elementor-widget-container">
+                        <div className="ekit-wid-con">
+                          <div className="ekit-btn-wraper">
+                            <a href="https://application.ufreewebsites.com/" className="elementskit-btn whitespace--normal" id="homepageCTA4">
+                              <i className="far fa-arrow-alt-circle-right"></i>Apply Now for Your FREE Website
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* 100% FREE Section with Bill Image */}
+                  <div className="elementor-element elementor-element-6c73384 e-flex e-con-boxed e-con e-parent" data-id="6c73384" data-element_type="container">
+                    <div className="e-con-inner">
+                      <div className="elementor-element elementor-element-75d31388 e-con-full e-flex e-con e-child" data-id="75d31388" data-element_type="container">
+                        <div className="elementor-element elementor-element-7dd72ae8 e-con-full e-flex e-con e-child" data-id="7dd72ae8" data-element_type="container">
+                          <div className="elementor-element elementor-element-387553c1 animated-fast elementor-invisible elementor-widget elementor-widget-elementskit-heading" data-id="387553c1" data-element_type="widget">
+                            <div className="elementor-widget-container">
+                              <div className="ekit-wid-con">
+                                <div className="ekit-heading elementskit-section-title-wraper text_left ekit_heading_tablet-text_center ekit_heading_mobile-">
+                                  <h6 className="elementskit-section-subtitle">No Hidden Charges</h6>
+                                  <h2 className="ekit-heading--title elementskit-section-title">
+                                    <span><span>100%</span></span> FREE Websites
+                                  </h2>
+                                  <div className='ekit-heading__description'>
+                                    <p>We provide professional websites that other agencies charge thousands for, completely free. Why? It's our way of building relationships with business owners who might need larger projects as they grow. Over 95% of clients love their websites, and around 18% go on to hire us for paid services or recommend us to others.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="elementor-element elementor-element-6c55a77 elementor-align-left elementor-widget__width-auto e-transform elementor-align--tabletcenter elementor-widget elementor-widget-elementskit-button" data-id="6c55a77" data-element_type="widget">
+                            <div className="elementor-widget-container">
+                              <div className="ekit-wid-con">
+                                <div className="ekit-btn-wraper">
+                                  <a href="https://application.ufreewebsites.com/" className="elementskit-btn whitespace--normal" id="homepageCTA5">
+                                    <i className="far fa-arrow-alt-circle-right"></i>Apply In 2 Minutes
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="elementor-element elementor-element-6e4b08b7 e-con-full animated-fast e-flex elementor-invisible e-con e-child" data-id="6e4b08b7" data-element_type="container">
+                          <div className="elementor-element elementor-element-55a64f03 elementor-widget elementor-widget-image" data-id="55a64f03" data-element_type="widget">
+                            <div className="elementor-widget-container">
+                              <img loading="lazy" decoding="async" width="1841" height="1500" src="/images/bill.webp" className="attachment-full size-full wp-image-25426" alt="Zero Cost Bill" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Monitor Mockup Section */}
+                  <div className="elementor-element elementor-element-569dec88 e-flex e-con-boxed e-con e-parent" data-id="569dec88" data-element_type="container">
+                    <div className="e-con-inner">
+                      <div className="elementor-element elementor-element-58cb4fe7 e-con-full e-flex e-con e-child" data-id="58cb4fe7" data-element_type="container">
+                        <div className="elementor-element elementor-element-31cd8e93 elementor-widget elementor-widget-image" data-id="31cd8e93" data-element_type="widget">
+                          <div className="elementor-widget-container">
+                            <img loading="lazy" decoding="async" width="2560" height="1580" src="/images/monitor-mockup.webp" className="attachment-full size-full" alt="Website Mockup" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* FAQ Section */}
+                  <div className="elementor-element elementor-element-30bd33d3 e-flex e-con-boxed e-con e-parent" data-id="30bd33d3" data-element_type="container">
+                    <div className="e-con-inner">
+                      <div className="elementor-element elementor-element-4bff6b5f e-con-full e-flex e-con e-child" data-id="4bff6b5f" data-element_type="container">
+                        <div className="elementor-element elementor-element-611f755a animated-fast elementor-invisible elementor-widget elementor-widget-elementskit-accordion" data-id="611f755a" data-element_type="widget">
+                          <div className="elementor-widget-container">
+                            <div className="ekit-wid-con">
+                              <div className="elementskit-accordion" id="accordion-68ca924784ddf">
+                                {/* FAQ accordion items will be rendered */}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </article>
           </main>
         </div>
+      </div>
+
+      {/* Footer */}
+      <footer id="colophon" className="site-footer" role="contentinfo">
+        <div className="footer-wrapper" data-elementor-type="wp-post" data-elementor-id="23808">
+          <div className="elementor elementor-23808">
+            <div className="elementor-element elementor-element-2c8ec2d e-flex e-con-boxed e-con e-parent" data-id="2c8ec2d" data-element_type="container">
+              <div className="e-con-inner">
+                <div className="elementor-element elementor-element-28849e4 e-con-full e-flex e-con e-child" data-id="28849e4" data-element_type="container">
+                  <div className="elementor-element elementor-element-d5f5c7e elementor-widget elementor-widget-image" data-id="d5f5c7e" data-element_type="widget">
+                    <div className="elementor-widget-container">
+                      <img loading="lazy" decoding="async" width="1920" height="331" src="/images/logo-white.webp" alt="uFREEwebsites" />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="elementor-element elementor-element-44e140e e-con-full e-flex e-con e-child" data-id="44e140e" data-element_type="container">
+                  <div className="elementor-element elementor-element-b2d2bdf elementor-widget elementor-widget-heading" data-id="b2d2bdf" data-element_type="widget">
+                    <div className="elementor-widget-container">
+                      <h5 className="elementor-heading-title elementor-size-default">Resources</h5>
+                    </div>
+                  </div>
+                  <div className="elementor-element elementor-element-dd96943 elementor-list-item-link-inline elementor-icon-list--layout-traditional elementor-widget elementor-widget-icon-list" data-id="dd96943" data-element_type="widget">
+                    <div className="elementor-widget-container">
+                      <ul className="elementor-icon-list-items">
+                        <li className="elementor-icon-list-item">
+                          <a href="https://ufreewebsites.com/"><span className="elementor-icon-list-text">Services</span></a>
+                        </li>
+                        <li className="elementor-icon-list-item">
+                          <a href="https://ufreewebsites.com/"><span className="elementor-icon-list-text">Blogs</span></a>
+                        </li>
+                        <li className="elementor-icon-list-item">
+                          <a href="https://ufreewebsites.com/"><span className="elementor-icon-list-text">Tools</span></a>
+                        </li>
+                        <li className="elementor-icon-list-item">
+                          <a href="https://ufreewebsites.com/"><span className="elementor-icon-list-text">Videos</span></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="elementor-element elementor-element-2acb2b5 e-con-full e-flex e-con e-child" data-id="2acb2b5" data-element_type="container">
+                  <div className="elementor-element elementor-element-ac508c4 elementor-widget elementor-widget-heading" data-id="ac508c4" data-element_type="widget">
+                    <div className="elementor-widget-container">
+                      <h5 className="elementor-heading-title elementor-size-default">Social</h5>
+                    </div>
+                  </div>
+                  <div className="elementor-element elementor-element-2b20c5c elementor-list-item-link-inline elementor-icon-list--layout-traditional elementor-widget elementor-widget-icon-list" data-id="2b20c5c" data-element_type="widget">
+                    <div className="elementor-widget-container">
+                      <ul className="elementor-icon-list-items">
+                        <li className="elementor-icon-list-item">
+                          <a href="#"><span className="elementor-icon-list-text">Facebook</span></a>
+                        </li>
+                        <li className="elementor-icon-list-item">
+                          <a href="#"><span className="elementor-icon-list-text">Instagram</span></a>
+                        </li>
+                        <li className="elementor-icon-list-item">
+                          <a href="#"><span className="elementor-icon-list-text">YouTube</span></a>
+                        </li>
+                        <li className="elementor-icon-list-item">
+                          <a href="#"><span className="elementor-icon-list-text">LinkedIn</span></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="elementor-element elementor-element-a7e826d e-con-full e-flex e-con e-parent" data-id="a7e826d" data-element_type="container">
+              <div className="elementor-element elementor-element-830845f e-flex e-con-boxed e-con e-child" data-id="830845f" data-element_type="container">
+                <div className="e-con-inner">
+                  <div className="elementor-element elementor-element-70e6773 e-con-full e-flex e-con e-child" data-id="70e6773" data-element_type="container">
+                    <div className="elementor-element elementor-element-d3b940c elementor-widget elementor-widget-text-editor" data-id="d3b940c" data-element_type="widget">
+                      <div className="elementor-widget-container">
+                        <p>2025 © Copyright. uFREEwebsites™. All rights reserved.</p>
+                      </div>
+                    </div>
+                    <div className="elementor-element elementor-element-203dd76 elementor-widget elementor-widget-text-editor" data-id="203dd76" data-element_type="widget">
+                      <div className="elementor-widget-container">
+                        <p>
+                          <a href="#"><span style={{textDecoration: 'underline'}}>Privacy Policy</span></a> | <a href="#"><span style={{textDecoration: 'underline'}}>Terms and Conditions</span></a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      {/* Back to Top Button */}
+      <div className="back-to-top right-aligned primary-color scroll-position-style">
+        <span className="icon-arrow-up"></span>
+        <svg height="50" width="50">
+          <circle cx="25" cy="25" r="24" />
+        </svg>
       </div>
     </div>
   );
