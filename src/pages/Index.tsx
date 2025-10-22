@@ -153,10 +153,10 @@ const Index = () => {
                     </div>
 
                     {/* Features Section - "A Website Built for Success" */}
-                    <div className="elementor-element elementor-element-f82919f e-flex e-con-boxed e-con e-parent" data-id="f82919f" data-element_type="container" style={{ backgroundImage: 'linear-gradient(180deg, #FFFFFF 0%, #E3EEFF 100%)' }}>
+                    <div className="elementor-element elementor-element-f82919f e-flex e-con-boxed e-con e-parent" data-id="f82919f" data-element_type="container" style={{ background: 'linear-gradient(180deg, #FFFFFF 0%, #E3EEFF 100%)', marginTop: '150px', paddingTop: '100px', paddingBottom: '100px', minHeight: '600px' }}>
                       <div className="e-con-inner">
                         <div className="elementor-element elementor-element-28efd6e e-con-full e-flex e-con e-child" data-id="28efd6e" data-element_type="container">
-                          <div className="elementor-element elementor-element-76aa4e4 animated-fast elementor-widget__width-initial elementor-invisible elementor-widget elementor-widget-elementskit-heading" data-id="76aa4e4" data-element_type="widget">
+                          <div className="elementor-element elementor-element-76aa4e4 animated-fast elementor-widget__width-initial elementor-widget elementor-widget-elementskit-heading" data-id="76aa4e4" data-element_type="widget" style={{ visibility: 'visible' }}>
                             <div className="elementor-widget-container">
                               <div className="ekit-wid-con">
                                 <div className="ekit-heading elementskit-section-title-wraper text_center">
