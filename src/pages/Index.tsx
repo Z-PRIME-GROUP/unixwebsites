@@ -207,7 +207,7 @@ const Index = () => {
                             }
                           ].map((feature, idx) => (
                             <div key={idx} className="elementor-element e-con-full e-flex e-con e-child" data-element_type="container">
-                              <div className="elementor-element widget-link-underline animated-fast ekit-equal-height-disable elementor-invisible elementor-widget elementor-widget-elementskit-icon-box" data-element_type="widget">
+                              <div className="elementor-element widget-link-underline animated-fast ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box" data-element_type="widget" style={{ visibility: 'visible' }}>
                                 <div className="elementor-widget-container">
                                   <div className="ekit-wid-con">
                                     <div className="elementskit-infobox text-left text-left icon-top-align elementor-animation-float">
@@ -242,7 +242,7 @@ const Index = () => {
                     >
                       <div className="e-con-inner">
                         <div className="elementor-element elementor-element-f01a0aa e-con-full e-flex e-con e-child" data-id="f01a0aa" data-element_type="container">
-                          <div className="elementor-element elementor-element-e8ade00 animated-fast transformedBusinessSection elementor-invisible elementor-widget elementor-widget-elementskit-heading" data-id="e8ade00" data-element_type="widget">
+                          <div className="elementor-element elementor-element-e8ade00 animated-fast transformedBusinessSection elementor-widget elementor-widget-elementskit-heading" data-id="e8ade00" data-element_type="widget" style={{ visibility: 'visible' }}>
                             <div className="elementor-widget-container">
                               <div className="ekit-wid-con">
                                 <div className="ekit-heading elementskit-section-title-wraper text_left ekit_heading_tablet-text_center ekit_heading_mobile-">
@@ -284,7 +284,7 @@ const Index = () => {
                       <div className="e-con-inner">
                         <div className="elementor-element elementor-element-cf8e346 e-con-full e-flex e-con e-child" data-id="cf8e346" data-element_type="container">
                           <div className="elementor-element elementor-element-f02912c e-con-full e-flex e-con e-child" data-id="f02912c" data-element_type="container">
-                            <div className="elementor-element elementor-element-ed318e9 animated-fast elementor-invisible elementor-widget elementor-widget-elementskit-funfact" data-id="ed318e9" data-element_type="widget">
+                            <div className="elementor-element elementor-element-ed318e9 animated-fast elementor-widget elementor-widget-elementskit-funfact" data-id="ed318e9" data-element_type="widget" style={{ visibility: 'visible' }}>
                               <div className="elementor-widget-container">
                                 <div className="ekit-wid-con">
                                   <div className="elementskit-funfact text-center">
@@ -303,7 +303,7 @@ const Index = () => {
                             </div>
                           </div>
                           <div className="elementor-element elementor-element-417baba e-con-full e-flex e-con e-child" data-id="417baba" data-element_type="container">
-                            <div className="elementor-element elementor-element-89c5d27 animated-fast elementor-invisible elementor-widget elementor-widget-elementskit-funfact" data-id="89c5d27" data-element_type="widget">
+                            <div className="elementor-element elementor-element-89c5d27 animated-fast elementor-widget elementor-widget-elementskit-funfact" data-id="89c5d27" data-element_type="widget" style={{ visibility: 'visible' }}>
                               <div className="elementor-widget-container">
                                 <div className="ekit-wid-con">
                                   <div className="elementskit-funfact text-center">
@@ -322,7 +322,7 @@ const Index = () => {
                             </div>
                           </div>
                           <div className="elementor-element elementor-element-2316251 e-con-full e-flex e-con e-child" data-id="2316251" data-element_type="container">
-                            <div className="elementor-element elementor-element-d738987 animated-fast elementor-invisible elementor-widget elementor-widget-elementskit-funfact" data-id="d738987" data-element_type="widget">
+                            <div className="elementor-element elementor-element-d738987 animated-fast elementor-widget elementor-widget-elementskit-funfact" data-id="d738987" data-element_type="widget" style={{ visibility: 'visible' }}>
                               <div className="elementor-widget-container">
                                 <div className="ekit-wid-con">
                                   <div className="elementskit-funfact text-center">
@@ -348,7 +348,7 @@ const Index = () => {
                     <div className="elementor-element elementor-element-1f63ae7e e-flex e-con-boxed e-con e-parent" data-id="1f63ae7e" data-element_type="container">
                       <div className="e-con-inner">
                         <div className="elementor-element elementor-element-23e05c41 e-con-full e-flex e-con e-child" data-id="23e05c41" data-element_type="container">
-                          <div className="elementor-element elementor-element-5bea9c73 animated-fast elementor-widget__width-initial elementor-invisible elementor-widget elementor-widget-elementskit-heading" data-id="5bea9c73" data-element_type="widget">
+                          <div className="elementor-element elementor-element-5bea9c73 animated-fast elementor-widget__width-initial elementor-widget elementor-widget-elementskit-heading" data-id="5bea9c73" data-element_type="widget" style={{ visibility: 'visible' }}>
                             <div className="elementor-widget-container">
                               <div className="ekit-wid-con">
                                 <div className="ekit-heading elementskit-section-title-wraper text_center">
@@ -378,7 +378,7 @@ const Index = () => {
                       <div className="e-con-inner">
                         <div className="elementor-element elementor-element-15c6e7e0 e-con-full e-flex e-con e-child" data-id="15c6e7e0" data-element_type="container">
                           <div className="elementor-element elementor-element-79e4ff70 e-con-full e-flex e-con e-child" data-id="79e4ff70" data-element_type="container">
-                            <div className="elementor-element elementor-element-3a9494c3 animated-fast elementor-invisible elementor-widget elementor-widget-elementskit-heading" data-id="3a9494c3" data-element_type="widget">
+                            <div className="elementor-element elementor-element-3a9494c3 animated-fast elementor-widget elementor-widget-elementskit-heading" data-id="3a9494c3" data-element_type="widget" style={{ visibility: 'visible' }}>
                               <div className="elementor-widget-container">
                                 <div className="ekit-wid-con">
                                   <div className="ekit-heading elementskit-section-title-wraper text_left">
@@ -393,7 +393,7 @@ const Index = () => {
                               </div>
                             </div>
                             <div className="elementor-element elementor-element-5c1bdf3c e-con-full e-flex e-con e-child" data-id="5c1bdf3c" data-element_type="container">
-                              <div className="elementor-element elementor-element-3d75a4b1 e-transform elementor-widget__width-auto animated-fast elementor-invisible elementor-widget elementor-widget-elementskit-button" data-id="3d75a4b1" data-element_type="widget">
+                              <div className="elementor-element elementor-element-3d75a4b1 e-transform elementor-widget__width-auto animated-fast elementor-widget elementor-widget-elementskit-button" data-id="3d75a4b1" data-element_type="widget" style={{ visibility: 'visible' }}>
                                 <div className="elementor-widget-container">
                                   <div className="ekit-wid-con">
                                     <div className="ekit-element-align-wrapper">
@@ -405,7 +405,7 @@ const Index = () => {
                             </div>
                           </div>
                           <div className="elementor-element elementor-element-27b4fea9 e-con-full e-flex e-con e-child" data-id="27b4fea9" data-element_type="container">
-                            <div className="elementor-element elementor-element-2f71c17e animated-fast elementor-invisible elementor-widget elementor-widget-image" data-id="2f71c17e" data-element_type="widget">
+                            <div className="elementor-element elementor-element-2f71c17e animated-fast elementor-widget elementor-widget-image" data-id="2f71c17e" data-element_type="widget" style={{ visibility: 'visible' }}>
                               <div className="elementor-widget-container">
                                 <img loading="lazy" decoding="async" width="1920" height="1080" src="/images/monitor-mockup.webp" className="attachment-full size-full wp-image-24807" alt="Website Mockup on Monitor" />
                               </div>
@@ -413,7 +413,7 @@ const Index = () => {
                           </div>
                         </div>
                         <div className="elementor-element elementor-element-2af1c6bc e-con-full e-flex e-con e-child" data-id="2af1c6bc" data-element_type="container">
-                          <div className="elementor-element elementor-element-5cc6f9dc animated-fast elementor-widget__width-initial elementor-invisible elementor-widget elementor-widget-elementskit-heading" data-id="5cc6f9dc" data-element_type="widget">
+                          <div className="elementor-element elementor-element-5cc6f9dc animated-fast elementor-widget__width-initial elementor-widget elementor-widget-elementskit-heading" data-id="5cc6f9dc" data-element_type="widget" style={{ visibility: 'visible' }}>
                             <div className="elementor-widget-container">
                               <div className="ekit-wid-con">
                                 <div className="ekit-heading elementskit-section-title-wraper text_center">
@@ -436,7 +436,7 @@ const Index = () => {
                       <div className="e-con-inner">
                         <div className="elementor-element elementor-element-2d83f2b5 e-con-full e-flex e-con e-child" data-id="2d83f2b5" data-element_type="container">
                           <div className="elementor-element elementor-element-6d2d4e0f e-con-full e-flex e-con e-child" data-id="6d2d4e0f" data-element_type="container">
-                            <div className="elementor-element elementor-element-27a61f4 animated-fast elementor-widget__width-initial elementor-invisible elementor-widget elementor-widget-elementskit-heading" data-id="27a61f4" data-element_type="widget">
+                            <div className="elementor-element elementor-element-27a61f4 animated-fast elementor-widget__width-initial elementor-widget elementor-widget-elementskit-heading" data-id="27a61f4" data-element_type="widget" style={{ visibility: 'visible' }}>
                               <div className="elementor-widget-container">
                                 <div className="ekit-wid-con">
                                   <div className="ekit-heading elementskit-section-title-wraper text_center">
