@@ -1,41 +1,100 @@
 const Index = () => {
   return (
     <div id="page" className="site">
+      {/* Header */}
+      <header id="site-header" className="site-header header-position-default show-on-scroll">
+        <div className="site-header-wrapper">
+          <div className="ekit-template-content-markup ekit-template-content-header ekit-template-content-theme-support">
+            <div data-elementor-type="wp-post" data-elementor-id="23807" className="elementor elementor-23807" data-elementor-post-type="elementskit_template">
+              <div className="elementor-element elementor-element-4f16b2e5 e-con-full e-flex e-con e-parent" data-id="4f16b2e5" data-element_type="container">
+                <div className="elementor-element elementor-element-26559631 e-flex e-con-boxed e-con e-child" data-id="26559631" data-element_type="container">
+                  <div className="e-con-inner">
+                    <div className="elementor-element elementor-element-439fa31 e-con-full e-flex e-con e-child" data-id="439fa31" data-element_type="container">
+                      <div className="elementor-element elementor-element-30e2744d colorLogo elementor-widget elementor-widget-kd_site_logo" data-id="30e2744d" data-element_type="widget">
+                        <div className="elementor-widget-container">
+                          <div className="site-logo-wrapper">
+                            <a className="site-logo" href="/">
+                              <span className="primary-logo">
+                                <img width="1920" height="331" src="/images/logo-color.webp" alt="uFREEwebsites" />
+                              </span>
+                              <span className="secondary-logo">
+                                <img width="1161" height="200" src="/images/logo-white.webp" alt="uFREEwebsites" />
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="elementor-element elementor-element-6583e61b e-con-full e-flex e-con e-child" data-id="6583e61b" data-element_type="container">
+                      <div className="elementor-element elementor-element-3151efa7 elementor-widget elementor-widget-ekit-nav-menu" data-id="3151efa7" data-element_type="widget">
+                        <div className="elementor-widget-container">
+                          <nav className="ekit-wid-con ekit_menu_responsive_tablet">
+                            <button className="elementskit-menu-hamburger elementskit-menu-toggler" type="button" aria-label="hamburger-icon">
+                              <span className="elementskit-menu-hamburger-icon"></span>
+                              <span className="elementskit-menu-hamburger-icon"></span>
+                              <span className="elementskit-menu-hamburger-icon"></span>
+                            </button>
+                            <div id="ekit-megamenu-main-menu" className="elementskit-menu-container elementskit-menu-offcanvas-elements elementskit-navbar-nav-default ekit-nav-menu-one-page-yes ekit-nav-dropdown-hover">
+                              <ul id="menu-main-menu" className="elementskit-navbar-nav elementskit-menu-po-center submenu-click-on-">
+                                <li className="menu-item nav-item">
+                                  <a href="#affiliate-portal" className="ekit-menu-nav-link">Affiliate Portal</a>
+                                </li>
+                                <li className="menu-item nav-item">
+                                  <a href="#affiliate-login" className="ekit-menu-nav-link">Affiliate Login</a>
+                                </li>
+                                <li className="menu-item nav-item">
+                                  <a href="#become-affiliate" className="ekit-menu-nav-link">Become an Affiliate</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </nav>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      {/* Main Content */}
       <div id="content" className="site-content">
         <div id="primary" className="content-area" data-attr="single-page">
           <main id="main" className="site-main" role="main">
             <article id="post-24752" className="post-24752 page type-page status-publish hentry">
               <div className="entry-content">
                 <div data-elementor-type="wp-page" data-elementor-id="24752" className="elementor elementor-24752" data-elementor-post-type="page">
-                  <div className="elementor-element elementor-element-89bde1c e-con-full e-flex e-con e-parent e-lazyloaded" data-id="89bde1c" data-element_type="container" data-settings='{"background_background":"gradient"}'>
+                  
+                  {/* Hero Section */}
+                  <div className="elementor-element elementor-element-89bde1c e-con-full e-flex e-con e-parent" data-id="89bde1c" data-element_type="container">
                     <div className="elementor-element elementor-element-8bb6f3c e-con-full hero-section e-flex e-con e-child" data-id="8bb6f3c" data-element_type="container">
                       <div className="elementor-element elementor-element-b1c56d6 e-con-full e-flex e-con e-child" data-id="b1c56d6" data-element_type="container">
-                        <div className="elementor-element elementor-element-8efe2d6 elementor-widget elementor-widget-elementskit-fancy-animated-text" data-id="8efe2d6" data-element_type="widget" data-settings='{"ekit_we_effect_on":"none"}' data-widget_type="elementskit-fancy-animated-text.default">
+                        
+                        {/* Animated FREE Text */}
+                        <div className="elementor-element elementor-element-8efe2d6 elementor-widget elementor-widget-elementskit-fancy-animated-text" data-id="8efe2d6" data-element_type="widget">
                           <div className="elementor-widget-container">
                             <div className="ekit-wid-con">
-                              <h1 className="ekit-fancy-text letters scale" data-id="8efe2d6" data-animation-settings='{"animationStyle":"animated","animationDelay":2000,"loadingBar":3800,"lettersDelay":50,"typeLettersDelay":150,"duration":500,"revealDuration":600,"revealAnimationDelay":1500}'>
+                              <h1 className="ekit-fancy-text letters scale" data-id="8efe2d6">
                                 <span className="ekit-fancy-prefix-text">Get Your</span>
-                                <span className="ekit-fancy-text-lists" style={{maxWidth: '85px'}}>
-                                  <b className="ekit-fancy-text elementor-repeater-item-a0eec85 is-hidden">
-                                    <i className="out">F</i><i className="out">R</i><i className="out">E</i><i className="out">E</i>
-                                  </b>
-                                  <b className="ekit-fancy-text elementor-repeater-item-b9b00af is-visible">
-                                    <i className="in">F</i><i className="in">R</i><i className="in">E</i><i className="in">E</i>
-                                  </b>
-                                  <b className="ekit-fancy-text elementor-repeater-item-7c0a76c ">
-                                    <i>F</i><i>R</i><i>E</i><i>E</i>
-                                  </b>
+                                <span className="ekit-fancy-text-lists">
+                                  <b className="ekit-fancy-text elementor-repeater-item-a0eec85 is-visible">FREE</b>
+                                  <b className="ekit-fancy-text elementor-repeater-item-b9b00af">FREE</b>
+                                  <b className="ekit-fancy-text elementor-repeater-item-7c0a76c">FREE</b>
                                 </span>
                                 <span className="ekit-fancy-suffix-text">Website</span>
                               </h1>
                             </div>
                           </div>
                         </div>
-                        <div className="elementor-element elementor-element-6e1326a elementor-widget elementor-widget-elementskit-heading" data-id="6e1326a" data-element_type="widget" data-settings='{"ekit_we_effect_on":"css"}' data-widget_type="elementskit-heading.default">
+
+                        {/* Main Heading */}
+                        <div className="elementor-element elementor-element-6e1326a elementor-widget elementor-widget-elementskit-heading" data-id="6e1326a" data-element_type="widget">
                           <div className="elementor-widget-container">
                             <div className="ekit-wid-con">
-                              <div className="ekit-heading elementskit-section-title-wraper text_left   ekit_heading_tablet-text_center   ekit_heading_mobile-">
-                                <h1 className="ekit-heading--title elementskit-section-title "> and Supercharge Your Business Growth!</h1>
+                              <div className="ekit-heading elementskit-section-title-wraper text_left ekit_heading_tablet-text_center ekit_heading_mobile-">
+                                <h1 className="ekit-heading--title elementskit-section-title">and Supercharge Your Business Growth!</h1>
                                 <div className="ekit-heading__description">
                                   <p>Apply now – it only takes 2 minutes, and watch your business thrive with a <span style={{textDecoration: 'underline'}}><strong>FREE</strong></span>, custom-built website.</p>
                                 </div>
@@ -44,14 +103,16 @@ const Index = () => {
                           </div>
                         </div>
                       </div>
+
+                      {/* CTA Button */}
                       <div className="elementor-element elementor-element-31914af e-con-full e-flex e-con e-child" data-id="31914af" data-element_type="container">
                         <div className="elementor-element elementor-element-4407a0b e-con-full e-flex e-con e-child" data-id="4407a0b" data-element_type="container">
-                          <div className="elementor-element elementor-element-7a98993 elementor-align-left elementor-widget__width-auto e-transform elementor-widget elementor-widget-elementskit-button" data-id="7a98993" data-element_type="widget" data-widget_type="elementskit-button.default">
+                          <div className="elementor-element elementor-element-7a98993 elementor-align-left elementor-widget__width-auto e-transform elementor-widget elementor-widget-elementskit-button" data-id="7a98993" data-element_type="widget">
                             <div className="elementor-widget-container">
                               <div className="ekit-wid-con">
                                 <div className="ekit-btn-wraper">
-                                  <a href="https://application.ufreewebsites.com/" className="elementskit-btn  whitespace--normal" id="homepageCTA1" data-text="APPLY IN 2 MINUTES">
-                                    <i className="far fa-arrow-alt-circle-right"></i><span className="button-wrapper">APPLY IN 2 MINUTES				</span>
+                                  <a href="https://application.ufreewebsites.com/" className="elementskit-btn whitespace--normal" id="homepageCTA1">
+                                    <i className="far fa-arrow-alt-circle-right"></i>APPLY IN 2 MINUTES
                                   </a>
                                 </div>
                               </div>
@@ -59,12 +120,14 @@ const Index = () => {
                           </div>
                         </div>
                       </div>
+
+                      {/* Feature List */}
                       <div className="elementor-element elementor-element-48ff8ae e-con-full e-flex e-con e-child" data-id="48ff8ae" data-element_type="container">
-                        <div className="elementor-element elementor-element-f9506ec keydesign-h6 elementor-hidden-mobile elementor-widget elementor-widget-elementskit-stylish-list" data-id="f9506ec" data-element_type="widget" data-settings='{"ekit_we_effect_on":"none"}' data-widget_type="elementskit-stylish-list.default">
+                        <div className="elementor-element elementor-element-f9506ec keydesign-h6 elementor-hidden-mobile elementor-widget elementor-widget-elementskit-stylish-list" data-id="f9506ec" data-element_type="widget">
                           <div className="elementor-widget-container">
                             <div className="ekit-wid-con">
                               <ul className="ekit-stylish-list list-inline" data-ekit-animation="pulse">
-                                <li className="ekit-stylish-list-content-wrapper elementor-repeater-item-b4e5723 animated- animated pulse" data-ekit-delay="0" style={{opacity: 1}}>
+                                <li className="ekit-stylish-list-content-wrapper elementor-repeater-item-b4e5723 animated-">
                                   <div className="ekit-stylish-list-content">
                                     <div className="ekit-stylish-list-content-icon">
                                       <i aria-hidden="true" className="icon icon-check"></i>
@@ -74,7 +137,7 @@ const Index = () => {
                                     </div>
                                   </div>
                                 </li>
-                                <li className="ekit-stylish-list-content-wrapper elementor-repeater-item-9176c3a animated- animated pulse" data-ekit-delay="0" style={{opacity: 1}}>
+                                <li className="ekit-stylish-list-content-wrapper elementor-repeater-item-9176c3a animated-">
                                   <div className="ekit-stylish-list-content">
                                     <div className="ekit-stylish-list-content-icon">
                                       <i aria-hidden="true" className="icon icon-check"></i>
@@ -84,7 +147,7 @@ const Index = () => {
                                     </div>
                                   </div>
                                 </li>
-                                <li className="ekit-stylish-list-content-wrapper elementor-repeater-item-aa8aca8 animated- animated pulse" data-ekit-delay="0" style={{opacity: 1}}>
+                                <li className="ekit-stylish-list-content-wrapper elementor-repeater-item-aa8aca8 animated-">
                                   <div className="ekit-stylish-list-content">
                                     <div className="ekit-stylish-list-content-icon">
                                       <i aria-hidden="true" className="icon icon-check"></i>
@@ -99,35 +162,36 @@ const Index = () => {
                           </div>
                         </div>
                       </div>
+
+                      {/* Verified Badge */}
                       <div className="elementor-element elementor-element-2d6455c e-con-full e-flex e-con e-child" data-id="2d6455c" data-element_type="container">
-                        <div className="elementor-element elementor-element-1435b23 elementor-widget__width-initial elementor-widget elementor-widget-image" data-id="1435b23" data-element_type="widget" data-settings='{"ekit_we_effect_on":"none"}' data-widget_type="image.default">
+                        <div className="elementor-element elementor-element-1435b23 elementor-widget__width-initial elementor-widget elementor-widget-image" data-id="1435b23" data-element_type="widget">
                           <div className="elementor-widget-container">
-                            <img data-lazyloaded="1" data-placeholder-resp="820x300" src="/images/verified-badge.webp" fetchPriority="high" decoding="async" width="820" height="300" className="attachment-full size-full wp-image-25102 entered error" alt="" />
+                            <img fetchPriority="high" decoding="async" width="820" height="300" src="/images/verified-badge.webp" alt="Verified Company Badge" />
                           </div>
                         </div>
                       </div>
-                      <div className="elementor-element elementor-element-eca17a6 e-con-full e-flex e-con e-child" data-id="eca17a6" data-element_type="container" data-settings='{"background_background":"classic"}'>
-                        <div className="elementor-element elementor-element-79c58aa elementor-widget-mobile__width-inherit elementor-widget-tablet__width-inherit elementor-widget elementor-widget-elementskit-gallery" data-id="79c58aa" data-element_type="widget" data-settings='{"ekit_gallery_columns_tablet":"3","ekit_gallery_columns_mobile":"3","ekit_gallery_columns":"3","ekit_we_effect_on":"none"}' data-widget_type="elementskit-gallery.default">
-                          <div className="elementor-widget-container">
-                            <div className="ekit-wid-con">
-                              <div className="ekit_gallery_grid_wraper">
-                                <div id="ekit_gallery_79c58aa" className="ekit_gallery_grid" data-tilt-config='{"disableAxis":"both","easing":"cubic-bezier(.03, .98, .52, .99)","glare":true,"transition":true}' data-masonry-config='{"itemSelector":".ekit_gallery_grid_item"}' style={{position: 'relative', height: '4590px'}}>
-                                  {[1, 2, 3, 4, 5, 6].map((num) => (
-                                    <div key={num} className="ekit_gallery_grid_item ekit_gallery__filter-one">
-                                      <div className="elementskit-single-portfolio-item  ekit-gallery-portfolio-tilt" data-tilt-scale="1.2" data-tilt-maxtilt="20" data-tilt-perspective="600" data-tilt-maxglare="0.6">
-                                        <div className="elementskit-portfolio-thumb">
-                                          <img data-lazyloaded="1" data-placeholder-resp="800x914" src={`/images/demo${num}.webp`} width="800" height="914" decoding="async" className="elementskit-grid__img entered error" alt="gallery grid image" />
-                                        </div>
-                                        <div className="elementskit-hover-area">
-                                          <div className="elementskit-hover-content ekit_vertical_alignment_center"></div>
-                                        </div>
-                                        <div className="js-tilt-glare" style={{position: 'absolute', top: '0px', left: '0px', width: '100%', height: '100%', overflow: 'hidden', pointerEvents: 'none'}}>
-                                          <div className="js-tilt-glare-inner" style={{position: 'absolute', top: '50%', left: '50%', backgroundImage: 'linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%)', width: '266.594px', height: '266.594px', transform: 'rotate(180deg) translate(-50%, -50%)', transformOrigin: '0% 0%', opacity: 0}}></div>
-                                        </div>
+                    </div>
+
+                    {/* Gallery Grid */}
+                    <div className="elementor-element elementor-element-eca17a6 e-con-full e-flex e-con e-child" data-id="eca17a6" data-element_type="container">
+                      <div className="elementor-element elementor-element-79c58aa elementor-widget-mobile__width-inherit elementor-widget-tablet__width-inherit elementor-widget elementor-widget-elementskit-gallery" data-id="79c58aa" data-element_type="widget">
+                        <div className="elementor-widget-container">
+                          <div className="ekit-wid-con">
+                            <div className="ekit_gallery_grid_wraper">
+                              <div id="ekit_gallery_79c58aa" className="ekit_gallery_grid">
+                                {[1, 2, 3, 4, 5, 6].map((num) => (
+                                  <div key={num} className="ekit_gallery_grid_item ekit_gallery__filter-one">
+                                    <div className="elementskit-single-portfolio-item ekit-gallery-portfolio-tilt">
+                                      <div className="elementskit-portfolio-thumb">
+                                        <img width="800" height="914" decoding="async" className="elementskit-grid__img" src={`/images/demo${num}.webp`} alt="gallery grid image" />
+                                      </div>
+                                      <div className="elementskit-hover-area">
+                                        <div className="elementskit-hover-content ekit_vertical_alignment_center"></div>
                                       </div>
                                     </div>
-                                  ))}
-                                </div>
+                                  </div>
+                                ))}
                               </div>
                             </div>
                           </div>
@@ -135,6 +199,9 @@ const Index = () => {
                       </div>
                     </div>
                   </div>
+
+                  {/* Additional sections will be loaded from the CSS styling */}
+                  
                 </div>
               </div>
             </article>
