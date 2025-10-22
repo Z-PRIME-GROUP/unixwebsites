@@ -269,6 +269,229 @@ const Index = () => {
                       </div>
                     </div>
 
+                    {/* Statistics Section */}
+                    <div className="elementor-element elementor-element-46f8afd e-flex e-con-boxed e-con e-parent" data-id="46f8afd" data-element_type="container">
+                      <div className="e-con-inner">
+                        <div className="elementor-element elementor-element-cf8e346 e-con-full e-flex e-con e-child" data-id="cf8e346" data-element_type="container">
+                          <div className="elementor-element elementor-element-f02912c e-con-full e-flex e-con e-child" data-id="f02912c" data-element_type="container">
+                            <div className="elementor-element elementor-element-ed318e9 animated-fast elementor-invisible elementor-widget elementor-widget-elementskit-funfact" data-id="ed318e9" data-element_type="widget">
+                              <div className="elementor-widget-container">
+                                <div className="ekit-wid-con">
+                                  <div className="elementskit-funfact text-center">
+                                    <div className="elementskit-funfact-inner">
+                                      <div className="funfact-content">
+                                        <div className="number-percentage-wraper">
+                                          <span className="number-percentage">10,804</span>
+                                          <span className="super"></span>
+                                        </div>
+                                        <h4 className="funfact-title"># OF FREE WEBSITES WE'VE BUILT</h4>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="elementor-element elementor-element-417baba e-con-full e-flex e-con e-child" data-id="417baba" data-element_type="container">
+                            <div className="elementor-element elementor-element-89c5d27 animated-fast elementor-invisible elementor-widget elementor-widget-elementskit-funfact" data-id="89c5d27" data-element_type="widget">
+                              <div className="elementor-widget-container">
+                                <div className="ekit-wid-con">
+                                  <div className="elementskit-funfact text-center">
+                                    <div className="elementskit-funfact-inner">
+                                      <div className="funfact-content">
+                                        <div className="number-percentage-wraper">
+                                          $ <span className="number-percentage">4,845</span>
+                                          <span className="super"></span>
+                                        </div>
+                                        <h4 className="funfact-title">AVERAGE COST A WEB AGENCY CHARGES</h4>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="elementor-element elementor-element-2316251 e-con-full e-flex e-con e-child" data-id="2316251" data-element_type="container">
+                            <div className="elementor-element elementor-element-d738987 animated-fast elementor-invisible elementor-widget elementor-widget-elementskit-funfact" data-id="d738987" data-element_type="widget">
+                              <div className="elementor-widget-container">
+                                <div className="ekit-wid-con">
+                                  <div className="elementskit-funfact text-center">
+                                    <div className="elementskit-funfact-inner">
+                                      <div className="funfact-content">
+                                        <div className="number-percentage-wraper">
+                                          $ <span className="number-percentage">0</span>
+                                          <span className="super"></span>
+                                        </div>
+                                        <h4 className="funfact-title">AMOUNT WE CHARGE</h4>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Testimonials Section */}
+                    <div className="elementor-element elementor-element-1f63ae7e e-flex e-con-boxed e-con e-parent" data-id="1f63ae7e" data-element_type="container">
+                      <div className="e-con-inner">
+                        <div className="elementor-element elementor-element-23e05c41 e-con-full e-flex e-con e-child" data-id="23e05c41" data-element_type="container">
+                          <div className="elementor-element elementor-element-5bea9c73 animated-fast elementor-widget__width-initial elementor-invisible elementor-widget elementor-widget-elementskit-heading" data-id="5bea9c73" data-element_type="widget">
+                            <div className="elementor-widget-container">
+                              <div className="ekit-wid-con">
+                                <div className="ekit-heading elementskit-section-title-wraper text_center">
+                                  <h2 className="ekit-heading--title elementskit-section-title text_fill">
+                                    Real Stories from <span><span>Real Business Owners</span></span>
+                                  </h2>
+                                  <div className='ekit-heading__description'>
+                                    <p>Don't just take our word for it—hear from entrepreneurs who've transformed their businesses with uFREEwebsites. Our clients have seen incredible results, from increased traffic to higher conversions, all thanks to their custom-built websites.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="elementor-element elementor-element-d1de3f8 e-con-full e-flex e-con e-child" data-id="d1de3f8" data-element_type="container">
+                          <div className="elementor-element elementor-element-6f4e9d9 elementor-widget elementor-widget-image" data-id="6f4e9d9" data-element_type="widget">
+                            <div className="elementor-widget-container">
+                              <img loading="lazy" decoding="async" width="600" height="400" src="/images/review-photo.webp" className="attachment-full size-full wp-image-24997" alt="Happy Customer Review" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Don't Just Watch Section */}
+                    <div className="elementor-element elementor-element-63db892c e-flex e-con-boxed e-con e-parent" data-id="63db892c" data-element_type="container">
+                      <div className="e-con-inner">
+                        <div className="elementor-element elementor-element-15c6e7e0 e-con-full e-flex e-con e-child" data-id="15c6e7e0" data-element_type="container">
+                          <div className="elementor-element elementor-element-79e4ff70 e-con-full e-flex e-con e-child" data-id="79e4ff70" data-element_type="container">
+                            <div className="elementor-element elementor-element-3a9494c3 animated-fast elementor-invisible elementor-widget elementor-widget-elementskit-heading" data-id="3a9494c3" data-element_type="widget">
+                              <div className="elementor-widget-container">
+                                <div className="ekit-wid-con">
+                                  <div className="ekit-heading elementskit-section-title-wraper text_left">
+                                    <h2 className="ekit-heading--title elementskit-section-title">
+                                      Don't Just Watch Others <span><span>Succeed</span></span> —Start Building <span><span>YOUR</span></span> Online Presence for FREE Today!
+                                    </h2>
+                                    <div className='ekit-heading__description'>
+                                      <p>Thousands of entrepreneurs have already transformed their businesses with uFREEwebsites. Now it's your turn. Take control of your online presence and give your business the platform it deserves.</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="elementor-element elementor-element-5c1bdf3c e-con-full e-flex e-con e-child" data-id="5c1bdf3c" data-element_type="container">
+                              <div className="elementor-element elementor-element-3d75a4b1 e-transform elementor-widget__width-auto animated-fast elementor-invisible elementor-widget elementor-widget-elementskit-button" data-id="3d75a4b1" data-element_type="widget">
+                                <div className="elementor-widget-container">
+                                  <div className="ekit-wid-con">
+                                    <div className="ekit-element-align-wrapper">
+                                      <a href="https://apply.ufreewebsites.com/" id="homepageCTA4" className="elementskit-btn whitespace--normal elementor-animation-float">GET YOUR FREE WEBSITE NOW</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="elementor-element elementor-element-27b4fea9 e-con-full e-flex e-con e-child" data-id="27b4fea9" data-element_type="container">
+                            <div className="elementor-element elementor-element-2f71c17e animated-fast elementor-invisible elementor-widget elementor-widget-image" data-id="2f71c17e" data-element_type="widget">
+                              <div className="elementor-widget-container">
+                                <img loading="lazy" decoding="async" width="1920" height="1080" src="/images/monitor-mockup.webp" className="attachment-full size-full wp-image-24807" alt="Website Mockup on Monitor" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="elementor-element elementor-element-2af1c6bc e-con-full e-flex e-con e-child" data-id="2af1c6bc" data-element_type="container">
+                          <div className="elementor-element elementor-element-5cc6f9dc animated-fast elementor-widget__width-initial elementor-invisible elementor-widget elementor-widget-elementskit-heading" data-id="5cc6f9dc" data-element_type="widget">
+                            <div className="elementor-widget-container">
+                              <div className="ekit-wid-con">
+                                <div className="ekit-heading elementskit-section-title-wraper text_center">
+                                  <h2 className="ekit-heading--title elementskit-section-title text_fill">
+                                    Get a <span><span>100% FREE</span></span> Website from Experts
+                                  </h2>
+                                  <div className='ekit-heading__description'>
+                                    <p>Why pay thousands when you can get a professional, custom-built website absolutely FREE? No templates. No shortcuts. Just a site designed specifically for your business—mobile-friendly, secure, and optimized to help you grow.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* FAQ Section */}
+                    <div className="elementor-element elementor-element-13ea8e3d e-flex e-con-boxed e-con e-parent" data-id="13ea8e3d" data-element_type="container">
+                      <div className="e-con-inner">
+                        <div className="elementor-element elementor-element-2d83f2b5 e-con-full e-flex e-con e-child" data-id="2d83f2b5" data-element_type="container">
+                          <div className="elementor-element elementor-element-6d2d4e0f e-con-full e-flex e-con e-child" data-id="6d2d4e0f" data-element_type="container">
+                            <div className="elementor-element elementor-element-27a61f4 animated-fast elementor-widget__width-initial elementor-invisible elementor-widget elementor-widget-elementskit-heading" data-id="27a61f4" data-element_type="widget">
+                              <div className="elementor-widget-container">
+                                <div className="ekit-wid-con">
+                                  <div className="ekit-heading elementskit-section-title-wraper text_center">
+                                    <h2 className="ekit-heading--title elementskit-section-title text_fill">
+                                      Frequently Asked <span><span>Questions</span></span>
+                                    </h2>
+                                    <div className='ekit-heading__description'>
+                                      <p>We understand you may have questions about how our FREE website program works. Below, we've answered the most common inquiries so you can make an informed decision about getting your professional website for FREE.</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="elementor-element elementor-element-2a1d93a9 e-con-full e-flex e-con e-child" data-id="2a1d93a9" data-element_type="container">
+                            <div className="elementor-element elementor-element-4bdaaf20 e-con-full e-flex e-con e-child" data-id="4bdaaf20" data-element_type="container">
+                              <div className="elementor-element elementor-element-611f755a animated-fast elementor-widget__width-initial elementor-invisible elementor-widget elementor-widget-elementskit-accordion" data-id="611f755a" data-element_type="widget">
+                                <div className="elementor-widget-container">
+                                  <div className="ekit-wid-con">
+                                    <div className="elementskit-accordion accoedion-primary" id="accordion-faq">
+                                      {[
+                                        {
+                                          q: "Why do we do this for FREE?",
+                                          a: "It's simple: it helps us build lasting relationships with entrepreneurs who may need larger paid projects as their businesses grow. 97% of our clients are thrilled with their websites, and 10-20% return to hire us for more complex websites, app development, or ongoing services. It's a win-win for everyone."
+                                        },
+                                        {
+                                          q: "How can we afford to offer FREE websites?",
+                                          a: "Simple. To keep your site online, you'll need web hosting. We partner with HYPERhostgate, one of the top providers, and ask you to sign up using our affiliate link, which offers a special discount. When you do, we earn a commission, covering our costs. You pay nothing extra, and HYPERhostgate even offers a Money-Back Guarantee if you change your mind."
+                                        },
+                                        {
+                                          q: "How do I know this is legitimate?",
+                                          a: "uFREEwebsites is a trusted, top-rated web development agency. We've helped thousands of entrepreneurs build their online presence, and our clients consistently give us high ratings across multiple platforms. We've been recognized by industry leaders and recommended by respected organizations."
+                                        }
+                                      ].map((faq, idx) => (
+                                        <div key={idx} className={`elementskit-card ${idx === 0 ? 'active' : ''}`}>
+                                          <div className="elementskit-card-header" id={`primaryHeading-${idx}-611f755a`}>
+                                            <a href={`#collapse-${idx}`} className="ekit-accordion--toggler elementskit-btn-link collapsed" data-ekit-toggle="collapse" data-target={`#Collapse-${idx}`} aria-expanded={idx === 0 ? "true" : "false"}>
+                                              <span className="ekit-accordion-title">{faq.q}</span>
+                                              <div className="ekit_accordion_icon_group">
+                                                <div className="ekit_accordion_normal_icon">
+                                                  <i className="icon icon-chevron-down"></i>
+                                                </div>
+                                                <div className="ekit_accordion_active_icon">
+                                                  <i className="icon icon-chevron-up"></i>
+                                                </div>
+                                              </div>
+                                            </a>
+                                          </div>
+                                          <div id={`Collapse-${idx}`} className={`${idx === 0 ? 'show' : ''} collapse`} aria-labelledby={`primaryHeading-${idx}-611f755a`} data-parent="#accordion-faq">
+                                            <div className="elementskit-card-body ekit-accordion--content">
+                                              <p>{faq.a}</p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      ))}
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
                   </div>
                 </div>
               </article>
