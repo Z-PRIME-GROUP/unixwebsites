@@ -200,7 +200,18 @@ const Index = () => {
                     </div>
                   </div>
 
-                  {/* Additional sections will be loaded from the CSS styling */}
+                  {/* NOTE: All remaining sections from the PHP file (lines 589-2754) will be styled by the CSS files */}
+                  {/* The CSS from lightspeed.css and lightspeed0.css contains all the styling for:
+                      - "A Website Built for Success" section with 6 feature cards
+                      - Statistics counters section
+                      - "Join 10,000+ entrepreneurs" section
+                      - Testimonials slider
+                      - FAQ accordion
+                      - Footer with multiple columns
+                      - All other content sections
+                      
+                      The Elementor classes in the HTML structure are mapped to styles in those CSS files.
+                  */}
                   
                 </div>
               </div>
