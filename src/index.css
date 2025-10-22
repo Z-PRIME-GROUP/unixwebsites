@@ -4,7 +4,14 @@
 
 /* Font Configuration */
 * {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.elementskit-section-title,
+.ekit-heading--title,
+h1, h2, h3, h4, h5, h6,
+.ekit-heading__description p {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
 }
 
 /* Preserve Elementor CSS from lightspeed.css - no Tailwind base reset */
