@@ -231,7 +231,15 @@ const Index = () => {
                     </div>
 
                     {/* CTA Section - "Who've Transformed Their Business" */}
-                    <div className="elementor-element elementor-element-7e4c759d e-flex e-con-boxed e-con e-parent" data-id="7e4c759d" data-element_type="container" data-settings='{"background_background":"gradient"}'>
+                    <div 
+                      className="elementor-element elementor-element-7e4c759d e-flex e-con-boxed e-con e-parent" 
+                      data-id="7e4c759d" 
+                      data-element_type="container"
+                      style={{
+                        backgroundImage: 'linear-gradient(228deg, #FED349 0%, #E23B08 100%)',
+                        backgroundColor: 'transparent'
+                      }}
+                    >
                       <div className="e-con-inner">
                         <div className="elementor-element elementor-element-f01a0aa e-con-full e-flex e-con e-child" data-id="f01a0aa" data-element_type="container">
                           <div className="elementor-element elementor-element-e8ade00 animated-fast transformedBusinessSection elementor-invisible elementor-widget elementor-widget-elementskit-heading" data-id="e8ade00" data-element_type="widget">
