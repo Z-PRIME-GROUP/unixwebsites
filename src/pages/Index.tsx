@@ -210,10 +210,10 @@ const Index = () => {
                               <div className="elementor-element widget-link-underline animated-fast ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box" data-element_type="widget" style={{ visibility: 'visible' }}>
                                 <div className="elementor-widget-container">
                                   <div className="ekit-wid-con">
-                                    <div className="elementskit-infobox text-left text-left icon-top-align elementor-animation-float">
+                                    <div className="elementskit-infobox text-left text-left icon-top-align elementor-animation-float" style={{ backgroundColor: '#FFF', padding: '50px', boxShadow: '0 20px 60px 0 rgba(1, 30, 81, 0.078)', borderRadius: '8px' }}>
                                       <div className="elementskit-box-header">
-                                        <div className="elementskit-info-box-icon">
-                                          <img loading="lazy" decoding="async" width="500" height="500" src={feature.icon} className="attachment- size-" alt={feature.title} />
+                                        <div className="elementskit-info-box-icon" style={{ backgroundColor: '#E3EEFF', borderRadius: '8px', padding: '5px', width: '84px', height: '84px', marginBottom: '25px' }}>
+                                          <img loading="lazy" decoding="async" width="500" height="500" src={feature.icon} className="attachment- size-" alt={feature.title} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                                         </div>
                                       </div>
                                       <div className="box-body">
