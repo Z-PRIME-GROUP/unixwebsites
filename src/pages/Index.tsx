@@ -173,7 +173,7 @@ const Index = () => {
                         </div>
 
                         {/* Feature Cards Grid */}
-                        <div className="elementor-element elementor-element-4f35598 e-con-full e-flex e-con e-child" data-id="4f35598" data-element_type="container">
+                        <div className="elementor-element elementor-element-4f35598 e-con-full e-flex e-con e-child" data-id="4f35598" data-element_type="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px', marginTop: '50px' }}>
                           {[
                             {
                               icon: "/images/feature-responsive.webp",
