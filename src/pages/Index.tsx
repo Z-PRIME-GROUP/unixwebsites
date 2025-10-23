@@ -78,11 +78,11 @@ const Index = () => {
                   <div data-elementor-type="wp-page" data-elementor-id="24752" className="elementor elementor-24752" data-elementor-post-type="page">
                     
                     {/* Hero Section with Gallery */}
-                    <div className="elementor-element elementor-element-89bde1c e-con-full e-flex e-con e-parent" data-id="89bde1c" data-element_type="container" data-settings='{"background_background":"gradient"}' style={{minHeight: '100vh', height: '100vh', marginTop: '-70px', paddingTop: '0px', paddingBottom: '0px', paddingLeft: '0px', paddingRight: '0px', display: 'flex', alignItems: 'stretch'}}>
-                      <div className="elementor-element elementor-element-8bb6f3c e-con-full hero-section e-flex e-con e-child" data-id="8bb6f3c" data-element_type="container" style={{padding: '0', height: '100%', display: 'flex', alignItems: 'stretch'}}>
+                    <div className="elementor-element elementor-element-89bde1c e-con-full e-flex e-con e-parent" data-id="89bde1c" data-element_type="container" data-settings='{"background_background":"gradient"}' style={{minHeight: '100vh', marginTop: '-70px', paddingTop: '0px', paddingBottom: '0px', paddingLeft: '0px', paddingRight: '0px', display: 'flex', alignItems: 'stretch'}}>
+                      <div className="elementor-element elementor-element-8bb6f3c e-con-full hero-section e-flex e-con e-child" data-id="8bb6f3c" data-element_type="container" style={{padding: '0', display: 'flex', alignItems: 'stretch', width: '100%'}}>
                         
-                        {/* Left Column - Text Content */}
-                        <div className="elementor-element elementor-element-b1c56d6 e-con-full e-flex e-con e-child" data-id="b1c56d6" data-element_type="container" style={{paddingTop: '120px', paddingLeft: '40px', paddingRight: '40px', display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '100%'}}>
+                        {/* Left Column - All Content */}
+                        <div className="elementor-element elementor-element-b1c56d6 e-con-full e-flex e-con e-child" data-id="b1c56d6" data-element_type="container" style={{paddingTop: '120px', paddingBottom: '60px', paddingLeft: '40px', paddingRight: '40px', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '30px'}}>
                           
                           {/* Animated Heading */}
                           <div className="elementor-element elementor-element-8efe2d6 elementor-widget elementor-widget-elementskit-fancy-animated-text" data-id="8efe2d6" data-element_type="widget">
@@ -116,72 +116,72 @@ const Index = () => {
                               </div>
                             </div>
                           </div>
-                        </div>
 
-                        {/* CTA Button */}
-                        <div className="elementor-element elementor-element-31914af e-con-full e-flex e-con e-child" data-id="31914af" data-element_type="container">
-                          <div className="elementor-element elementor-element-4407a0b e-con-full e-flex e-con e-child" data-id="4407a0b" data-element_type="container">
-                            <div className="elementor-element elementor-element-7a98993 elementor-align-left elementor-widget__width-auto e-transform elementor-widget elementor-widget-elementskit-button" data-id="7a98993" data-element_type="widget">
-                              <div className="elementor-widget-container">
-                                <div className="ekit-wid-con">
-                                  <div className="ekit-btn-wraper">
-                                    <a href="https://application.ufreewebsites.com/" className="elementskit-btn whitespace--normal" id="homepageCTA1">
-                                      <i className="far fa-arrow-alt-circle-right"></i>APPLY IN 2 MINUTES
-                                    </a>
+                          {/* CTA Button */}
+                          <div className="elementor-element elementor-element-31914af e-con-full e-flex e-con e-child" data-id="31914af" data-element_type="container">
+                            <div className="elementor-element elementor-element-4407a0b e-con-full e-flex e-con e-child" data-id="4407a0b" data-element_type="container">
+                              <div className="elementor-element elementor-element-7a98993 elementor-align-left elementor-widget__width-auto e-transform elementor-widget elementor-widget-elementskit-button" data-id="7a98993" data-element_type="widget">
+                                <div className="elementor-widget-container">
+                                  <div className="ekit-wid-con">
+                                    <div className="ekit-btn-wraper">
+                                      <a href="https://application.ufreewebsites.com/" className="elementskit-btn whitespace--normal" id="homepageCTA1">
+                                        <i className="far fa-arrow-alt-circle-right"></i>APPLY IN 2 MINUTES
+                                      </a>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
                           </div>
-                        </div>
 
-                        {/* Feature List */}
-                        <div className="elementor-element elementor-element-48ff8ae e-con-full e-flex e-con e-child" data-id="48ff8ae" data-element_type="container">
-                          <div className="elementor-element elementor-element-f9506ec keydesign-h6 elementor-hidden-mobile elementor-widget elementor-widget-elementskit-stylish-list" data-id="f9506ec" data-element_type="widget">
-                            <div className="elementor-widget-container">
-                              <div className="ekit-wid-con">
-                                <ul className="ekit-stylish-list list-inline" data-ekit-animation="pulse">
-                                  <li className="ekit-stylish-list-content-wrapper elementor-repeater-item-b4e5723 animated-" data-ekit-delay="0">
-                                    <div className="ekit-stylish-list-content">
-                                      <div className="ekit-stylish-list-content-icon">
-                                        <i aria-hidden="true" className="icon icon-check"></i>
+                          {/* Feature List */}
+                          <div className="elementor-element elementor-element-48ff8ae e-con-full e-flex e-con e-child" data-id="48ff8ae" data-element_type="container">
+                            <div className="elementor-element elementor-element-f9506ec keydesign-h6 elementor-hidden-mobile elementor-widget elementor-widget-elementskit-stylish-list" data-id="f9506ec" data-element_type="widget">
+                              <div className="elementor-widget-container">
+                                <div className="ekit-wid-con">
+                                  <ul className="ekit-stylish-list list-inline" data-ekit-animation="pulse">
+                                    <li className="ekit-stylish-list-content-wrapper elementor-repeater-item-b4e5723 animated-" data-ekit-delay="0">
+                                      <div className="ekit-stylish-list-content">
+                                        <div className="ekit-stylish-list-content-icon">
+                                          <i aria-hidden="true" className="icon icon-check"></i>
+                                        </div>
+                                        <div className="ekit-stylish-list-content-text">
+                                          <span className="ekit-stylish-list-content-title">100% FREE Website</span>
+                                        </div>
                                       </div>
-                                      <div className="ekit-stylish-list-content-text">
-                                        <span className="ekit-stylish-list-content-title">100% FREE Website</span>
+                                    </li>
+                                    <li className="ekit-stylish-list-content-wrapper elementor-repeater-item-9176c3a animated-" data-ekit-delay="0">
+                                      <div className="ekit-stylish-list-content">
+                                        <div className="ekit-stylish-list-content-icon">
+                                          <i aria-hidden="true" className="icon icon-check"></i>
+                                        </div>
+                                        <div className="ekit-stylish-list-content-text">
+                                          <span className="ekit-stylish-list-content-title">Award-Winning Support</span>
+                                        </div>
                                       </div>
-                                    </div>
-                                  </li>
-                                  <li className="ekit-stylish-list-content-wrapper elementor-repeater-item-9176c3a animated-" data-ekit-delay="0">
-                                    <div className="ekit-stylish-list-content">
-                                      <div className="ekit-stylish-list-content-icon">
-                                        <i aria-hidden="true" className="icon icon-check"></i>
+                                    </li>
+                                    <li className="ekit-stylish-list-content-wrapper elementor-repeater-item-aa8aca8 animated-" data-ekit-delay="0">
+                                      <div className="ekit-stylish-list-content">
+                                        <div className="ekit-stylish-list-content-icon">
+                                          <i aria-hidden="true" className="icon icon-check"></i>
+                                        </div>
+                                        <div className="ekit-stylish-list-content-text">
+                                          <span className="ekit-stylish-list-content-title">Risk-Free</span>
+                                        </div>
                                       </div>
-                                      <div className="ekit-stylish-list-content-text">
-                                        <span className="ekit-stylish-list-content-title">Award-Winning Support</span>
-                                      </div>
-                                    </div>
-                                  </li>
-                                  <li className="ekit-stylish-list-content-wrapper elementor-repeater-item-aa8aca8 animated-" data-ekit-delay="0">
-                                    <div className="ekit-stylish-list-content">
-                                      <div className="ekit-stylish-list-content-icon">
-                                        <i aria-hidden="true" className="icon icon-check"></i>
-                                      </div>
-                                      <div className="ekit-stylish-list-content-text">
-                                        <span className="ekit-stylish-list-content-title">Risk-Free</span>
-                                      </div>
-                                    </div>
-                                  </li>
-                                </ul>
+                                    </li>
+                                  </ul>
+                                </div>
                               </div>
                             </div>
                           </div>
-                        </div>
 
-                        {/* Verified Badge */}
-                        <div className="elementor-element elementor-element-2d6455c e-con-full e-flex e-con e-child" data-id="2d6455c" data-element_type="container">
-                          <div className="elementor-element elementor-element-1435b23 elementor-widget__width-initial elementor-widget elementor-widget-image" data-id="1435b23" data-element_type="widget">
-                            <div className="elementor-widget-container">
-                              <img fetchPriority="high" decoding="async" width="820" height="300" src="/images/verified-badge.webp" className="attachment-full size-full wp-image-25102" alt="Verified Company Badge" />
+                          {/* Verified Badge */}
+                          <div className="elementor-element elementor-element-2d6455c e-con-full e-flex e-con e-child" data-id="2d6455c" data-element_type="container">
+                            <div className="elementor-element elementor-element-1435b23 elementor-widget__width-initial elementor-widget elementor-widget-image" data-id="1435b23" data-element_type="widget">
+                              <div className="elementor-widget-container">
+                                <img fetchPriority="high" decoding="async" width="820" height="300" src="/images/verified-badge.webp" className="attachment-full size-full wp-image-25102" alt="Verified Company Badge" />
+                              </div>
                             </div>
                           </div>
                         </div>
