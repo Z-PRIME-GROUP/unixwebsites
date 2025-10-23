@@ -5,43 +5,7 @@ const Index = () => {
   console.log('Index component rendering');
   
   useEffect(() => {
-    // Initialize FREE text letter-by-letter animation
-    const initFancyTextAnimation = () => {
-      const fancyTextContainer = document.querySelector('.ekit-fancy-text-lists');
-      if (!fancyTextContainer) return;
-      
-      const words = fancyTextContainer.querySelectorAll('b');
-      if (words.length === 0) return;
-      
-      let currentIndex = 0;
-      
-      // Ensure only the first word is visible initially
-      words.forEach((word, idx) => {
-        if (idx === 0) {
-          word.classList.add('is-visible');
-        } else {
-          word.classList.remove('is-visible');
-        }
-      });
-      
-      const animateWords = () => {
-        const currentWord = words[currentIndex];
-        const nextIndex = (currentIndex + 1) % words.length;
-        const nextWord = words[nextIndex];
-        
-        // Hide current word
-        currentWord.classList.remove('is-visible');
-        
-        // Show next word after a brief delay
-        setTimeout(() => {
-          nextWord.classList.add('is-visible');
-          currentIndex = nextIndex;
-        }, 100);
-      };
-      
-      // Start animation loop (2000ms delay matches data-animation-settings)
-      setInterval(animateWords, 2000);
-    };
+    // No animation initialization needed - just one static "FREE" word with letter animation
 
     // Load tilt.js from CDN if not already loaded
     const loadTiltJS = () => {
@@ -86,8 +50,7 @@ const Index = () => {
       });
     };
 
-    // Initialize animations
-    setTimeout(initFancyTextAnimation, 100);
+    // Initialize animations - tilt only (FREE animation is pure CSS)
 
     // Small delay to ensure DOM is ready
     const timer = setTimeout(loadTiltJS, 100);
@@ -132,13 +95,7 @@ const Index = () => {
                 <h1 className="ekit-fancy-text letters scale" data-id="8efe2d6" data-animation-settings='{"animationStyle":"animated","animationDelay":2000,"loadingBar":3800,"lettersDelay":50,"typeLettersDelay":150,"duration":500,"revealDuration":600,"revealAnimationDelay":1500}'>
                   <span className="ekit-fancy-prefix-text">Get Your</span>
                   <span className="ekit-fancy-text-lists" style={{maxWidth: '85px'}}>
-                    <b className="ekit-fancy-text elementor-repeater-item-a0eec85">
-                      <i>F</i><i>R</i><i>E</i><i>E</i>
-                    </b>
                     <b className="ekit-fancy-text elementor-repeater-item-b9b00af is-visible">
-                      <i>F</i><i>R</i><i>E</i><i>E</i>
-                    </b>
-                    <b className="ekit-fancy-text elementor-repeater-item-7c0a76c">
                       <i>F</i><i>R</i><i>E</i><i>E</i>
                     </b>
                   </span>
