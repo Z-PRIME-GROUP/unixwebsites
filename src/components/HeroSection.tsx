@@ -1,18 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Check } from "lucide-react";
 import { Button } from "./ui/button";
-
-// Declare jQuery for TypeScript
-declare global {
-  interface Window {
-    jQuery: any;
-    $: any;
-  }
-}
 
 const HeroSection = () => {
   const [currentWord, setCurrentWord] = useState(0);
   const words = ["FREE", "FREE", "FREE"];
+  const gridRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -23,43 +16,71 @@ const HeroSection = () => {
   }, []);
 
   useEffect(() => {
-    // Initialize tilt.js with jQuery
-    const initTilt = () => {
-      if (window.jQuery && window.jQuery.fn && window.jQuery.fn.tilt) {
-        window.jQuery('.demo-tilt-item').tilt({
-          maxTilt: 20,
-          perspective: 600,
-          scale: 1.2,
-          speed: 400,
-          glare: true,
-          maxGlare: 0.6,
-          easing: 'cubic-bezier(.03, .98, .52, .99)',
-          transition: true,
-        });
+    // Load tilt.js library
+    const loadTiltLibrary = () => {
+      return new Promise<void>((resolve, reject) => {
+        // Check if already loaded
+        if ((window as any).$ && (window as any).$.fn && (window as any).$.fn.tilt) {
+          resolve();
+          return;
+        }
+
+        const script = document.createElement('script');
+        script.src = 'https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js';
+        script.async = true;
+        script.onload = () => resolve();
+        script.onerror = () => reject(new Error('Failed to load tilt.js'));
+        document.head.appendChild(script);
+      });
+    };
+
+    // Initialize tilt effect
+    const initializeTilt = async () => {
+      try {
+        await loadTiltLibrary();
+        
+        // Small delay to ensure DOM is ready
+        setTimeout(() => {
+          const $ = (window as any).$;
+          if ($ && $.fn && $.fn.tilt && gridRef.current) {
+            const $items = $(gridRef.current).find('.tilt-item');
+            
+            $items.each(function(this: HTMLElement) {
+              $(this).tilt({
+                maxTilt: 20,
+                perspective: 600,
+                scale: 1.2,
+                speed: 400,
+                glare: true,
+                maxGlare: 0.6,
+                easing: 'cubic-bezier(.03, .98, .52, .99)',
+                transition: true,
+              });
+            });
+            
+            console.log('Tilt initialized on', $items.length, 'items');
+          }
+        }, 100);
+      } catch (error) {
+        console.error('Failed to initialize tilt:', error);
       }
     };
 
-    // Check if tilt is already available
-    if (window.jQuery && window.jQuery.fn && window.jQuery.fn.tilt) {
-      initTilt();
-    } else {
-      // Load tilt.js from CDN
-      const script = document.createElement('script');
-      script.src = 'https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js';
-      script.async = true;
-      script.onload = initTilt;
-      document.body.appendChild(script);
+    initializeTilt();
 
-      return () => {
-        if (document.body.contains(script)) {
-          document.body.removeChild(script);
-        }
-        // Destroy tilt instances
-        if (window.jQuery && window.jQuery.fn && window.jQuery.fn.tilt) {
-          window.jQuery('.demo-tilt-item').tilt.destroy();
-        }
-      };
-    }
+    return () => {
+      // Cleanup
+      const $ = (window as any).$;
+      if ($ && $.fn && $.fn.tilt && gridRef.current) {
+        const $items = $(gridRef.current).find('.tilt-item');
+        $items.each(function(this: HTMLElement) {
+          const instance = $(this).data('tilt');
+          if (instance) {
+            $(this).tilt('destroy');
+          }
+        });
+      }
+    };
   }, []);
 
   const features = [
@@ -171,15 +192,11 @@ const HeroSection = () => {
 
             {/* Right Column - Website Preview Grid (3x3) with Tilt Effect */}
             <div className="flex-1 animate-fade-in">
-              <div className="grid grid-cols-3 gap-0">
+              <div ref={gridRef} className="grid grid-cols-3 gap-0">
                 {demoImages.map((item, index) => (
                   <div 
                     key={index}
-                    className="demo-tilt-item aspect-[4/5] cursor-pointer"
-                    data-tilt-scale="1.2"
-                    data-tilt-maxtilt="20"
-                    data-tilt-perspective="600"
-                    data-tilt-maxglare="0.6"
+                    className="tilt-item aspect-[4/5] cursor-pointer"
                     style={{
                       transformStyle: 'preserve-3d',
                     }}
@@ -187,10 +204,7 @@ const HeroSection = () => {
                     <img 
                       src={`/images/demo${item}.webp`} 
                       alt={`Demo website ${item}`}
-                      className="w-full h-full object-cover"
-                      style={{
-                        pointerEvents: 'none',
-                      }}
+                      className="w-full h-full object-cover pointer-events-none"
                     />
                   </div>
                 ))}
