@@ -1,9 +1,9 @@
+/* Import complete Elementor CSS first - ALL 2392 lines verbatim */
+@import url('./elementor-lightspeed.css');
+
 /* Tailwind utilities only - no base reset to preserve Elementor styles */
 @tailwind components;
 @tailwind utilities;
-
-/* Import Elementor exact CSS */
-@import url('/css/elementor-exact.css');
 
 /* Font Configuration */
 * {
