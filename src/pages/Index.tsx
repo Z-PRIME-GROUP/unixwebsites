@@ -185,36 +185,36 @@ const Index = () => {
                             </div>
                           </div>
                         </div>
-                      </div>
 
-                      {/* Right Column - Gallery Grid (9 images in 3x3 grid) */}
-                      <div className="elementor-element elementor-element-eca17a6 e-con-full e-flex e-con e-child" data-id="eca17a6" data-element_type="container" style={{padding: '0', margin: '0', height: '100%', display: 'flex', flexDirection: 'column'}}>
-                        <div className="elementor-element elementor-element-79c58aa elementor-widget-mobile__width-inherit elementor-widget-tablet__width-inherit elementor-widget elementor-widget-elementskit-gallery" data-id="79c58aa" data-element_type="widget" style={{height: '100%', width: '100%', margin: '0', padding: '0', flex: '1'}}>
-                          <div className="elementor-widget-container" style={{height: '100%', margin: '0', padding: '0'}}>
-                            <div className="ekit-wid-con" style={{height: '100%', margin: '0', padding: '0'}}>
-                              <div className="ekit_gallery_grid_wraper" style={{height: '100%', margin: '0', padding: '0'}}>
-                                <div id="ekit_gallery_79c58aa" className="ekit_gallery_grid" style={{height: '100%', display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gridTemplateRows: 'repeat(3, 1fr)', gap: '0', padding: '0', margin: '0'}}>
-                                  {[1, 2, 3, 4, 5, 6, 1, 2, 3].map((num, idx) => (
-                                    <div key={idx} className="ekit_gallery_grid_item ekit_gallery__filter-one" style={{height: '100%', width: '100%', margin: '0', padding: '0'}}>
-                                      <div className="elementskit-single-portfolio-item ekit-gallery-portfolio-tilt" data-tilt-scale="1.2" data-tilt-maxtilt="20" data-tilt-perspective="600" data-tilt-maxglare="0.6" style={{height: '100%', width: '100%', margin: '0', padding: '0'}}>
-                                        <div className="elementskit-portfolio-thumb" style={{height: '100%', width: '100%', margin: '0', padding: '0'}}>
-                                          <img width="800" height="914" decoding="async" className="elementskit-grid__img" src={`/images/demo${num}.webp`} alt={`Demo Website ${idx + 1}`} style={{height: '100%', width: '100%', objectFit: 'cover', display: 'block', margin: '0', padding: '0'}} />
-                                        </div>
-                                        <div className="elementskit-hover-area" style={{height: '100%', width: '100%', margin: '0', padding: '0'}}>
-                                          <div className="elementskit-hover-content ekit_vertical_alignment_center"></div>
+                        {/* Right Column - Gallery Grid (9 images in 3x3 grid) */}
+                        <div className="elementor-element elementor-element-eca17a6 e-con-full e-flex e-con e-child" data-id="eca17a6" data-element_type="container" style={{padding: '0', margin: '0', height: '100%', display: 'flex', flexDirection: 'column'}}>
+                          <div className="elementor-element elementor-element-79c58aa elementor-widget-mobile__width-inherit elementor-widget-tablet__width-inherit elementor-widget elementor-widget-elementskit-gallery" data-id="79c58aa" data-element_type="widget" style={{height: '100%', width: '100%', margin: '0', padding: '0', flex: '1'}}>
+                            <div className="elementor-widget-container" style={{height: '100%', margin: '0', padding: '0'}}>
+                              <div className="ekit-wid-con" style={{height: '100%', margin: '0', padding: '0'}}>
+                                <div className="ekit_gallery_grid_wraper" style={{height: '100%', margin: '0', padding: '0'}}>
+                                  <div id="ekit_gallery_79c58aa" className="ekit_gallery_grid" style={{height: '100%', display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gridTemplateRows: 'repeat(3, 1fr)', gap: '0', padding: '0', margin: '0'}}>
+                                    {[1, 2, 3, 4, 5, 6, 1, 2, 3].map((num, idx) => (
+                                      <div key={idx} className="ekit_gallery_grid_item ekit_gallery__filter-one" style={{height: '100%', width: '100%', margin: '0', padding: '0'}}>
+                                        <div className="elementskit-single-portfolio-item ekit-gallery-portfolio-tilt" data-tilt-scale="1.2" data-tilt-maxtilt="20" data-tilt-perspective="600" data-tilt-maxglare="0.6" style={{height: '100%', width: '100%', margin: '0', padding: '0'}}>
+                                          <div className="elementskit-portfolio-thumb" style={{height: '100%', width: '100%', margin: '0', padding: '0'}}>
+                                            <img width="800" height="914" decoding="async" className="elementskit-grid__img" src={`/images/demo${num}.webp`} alt={`Demo Website ${idx + 1}`} style={{height: '100%', width: '100%', objectFit: 'cover', display: 'block', margin: '0', padding: '0'}} />
+                                          </div>
+                                          <div className="elementskit-hover-area" style={{height: '100%', width: '100%', margin: '0', padding: '0'}}>
+                                            <div className="elementskit-hover-content ekit_vertical_alignment_center"></div>
+                                          </div>
                                         </div>
                                       </div>
-                                    </div>
-                                  ))}
+                                    ))}
+                                  </div>
                                 </div>
                               </div>
                             </div>
                           </div>
-                        </div>
-                        {/* Faded Background Logo */}
-                        <div className="elementor-element elementor-element-2e19d04 elementor-absolute elementor-widget elementor-widget-image" data-id="2e19d04" data-element_type="widget" data-settings='{"_position":"absolute"}' style={{ position: 'absolute', left: '-1298px', top: '166px', zIndex: 0 }}>
-                          <div className="elementor-widget-container">
-                            <img decoding="async" width="1600" height="1600" src="/images/favicon-icon.webp" className="attachment-full size-full wp-image-24137" alt="" style={{ opacity: 0.1 }} />
+                          {/* Faded Background Logo */}
+                          <div className="elementor-element elementor-element-2e19d04 elementor-absolute elementor-widget elementor-widget-image" data-id="2e19d04" data-element_type="widget" data-settings='{"_position":"absolute"}' style={{ position: 'absolute', left: '-1298px', top: '166px', zIndex: 0 }}>
+                            <div className="elementor-widget-container">
+                              <img decoding="async" width="1600" height="1600" src="/images/favicon-icon.webp" className="attachment-full size-full wp-image-24137" alt="" style={{ opacity: 0.1 }} />
+                            </div>
                           </div>
                         </div>
                       </div>
