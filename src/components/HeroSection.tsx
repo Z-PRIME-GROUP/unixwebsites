@@ -6,36 +6,40 @@ import VanillaTilt from "vanilla-tilt";
 const HeroSection = () => {
   const [currentWord, setCurrentWord] = useState(0);
   const words = ["FREE", "FREE", "FREE"];
-  const tiltRefs = useRef<HTMLDivElement[]>([]);
+  const tiltRefs = useRef<(HTMLDivElement | null)[]>([]);
 
+  // Word animation effect
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentWord((prev) => (prev + 1) % words.length);
     }, 2000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [words.length]);
 
+  // VanillaTilt initialization effect
   useEffect(() => {
-    // Initialize vanilla-tilt on all image containers
-    tiltRefs.current.forEach((el) => {
-      if (el) {
-        VanillaTilt.init(el, {
-          glare: true,
-          "max-glare": 0.5,
-          scale: 1.05,
-          speed: 400,
-          transition: true,
-          easing: "cubic-bezier(.03, .98, .52, .99)",
-        });
-      }
+    // Filter out null refs and initialize tilt on each element
+    const validRefs = tiltRefs.current.filter((el): el is HTMLDivElement => el !== null);
+    
+    validRefs.forEach((element) => {
+      VanillaTilt.init(element, {
+        max: 15,
+        speed: 400,
+        glare: true,
+        "max-glare": 0.5,
+        scale: 1.05,
+        transition: true,
+        easing: "cubic-bezier(.03, .98, .52, .99)",
+      });
     });
 
+    // Cleanup function
     return () => {
-      // Cleanup tilt instances
-      tiltRefs.current.forEach((el) => {
-        if (el && (el as any).vanillaTilt) {
-          (el as any).vanillaTilt.destroy();
+      validRefs.forEach((element) => {
+        const tiltInstance = (element as any).vanillaTilt;
+        if (tiltInstance) {
+          tiltInstance.destroy();
         }
       });
     };
@@ -51,7 +55,7 @@ const HeroSection = () => {
   const demoImages = [1, 2, 3, 4, 5, 6, 1, 2, 3];
 
   return (
-    <section className="relative w-full h-screen overflow-hidden" style={{ marginTop: '-150px', paddingTop: '150px' }}>
+    <section className="relative w-full h-screen" style={{ marginTop: '-150px', paddingTop: '150px', overflow: 'visible' }}>
       {/* Gradient Background */}
       <div 
         className="absolute inset-0 z-0"
@@ -155,11 +159,12 @@ const HeroSection = () => {
                   <div 
                     key={index}
                     ref={(el) => {
-                      if (el) tiltRefs.current[index] = el;
+                      tiltRefs.current[index] = el;
                     }}
-                    className="aspect-[4/5] overflow-visible cursor-pointer"
+                    className="aspect-[4/5] cursor-pointer"
                     style={{
                       transformStyle: 'preserve-3d',
+                      overflow: 'visible',
                     }}
                   >
                     <img 
@@ -168,6 +173,7 @@ const HeroSection = () => {
                       className="w-full h-full object-cover"
                       style={{
                         transform: 'translateZ(20px)',
+                        backfaceVisibility: 'hidden',
                       }}
                     />
                   </div>
