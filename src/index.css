@@ -61,29 +61,21 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .ekit-fancy-text-lists b {
-  display: inline-block;
+  display: none;
   position: absolute;
   left: 0;
   top: 0;
   white-space: nowrap;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
 }
 
 .ekit-fancy-text-lists b.is-visible {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
-
-.ekit-fancy-text-lists b i {
   display: inline-block;
-  opacity: 0;
-  transform: scale(0) translateZ(0);
 }
 
 .ekit-fancy-text-lists b.is-visible i {
+  display: inline-block;
+  opacity: 0;
+  transform: scale(0) translateZ(0);
   animation: scaleIn 0.5s forwards;
 }
 
