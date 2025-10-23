@@ -78,11 +78,11 @@ const Index = () => {
                   <div data-elementor-type="wp-page" data-elementor-id="24752" className="elementor elementor-24752" data-elementor-post-type="page">
                     
                     {/* Hero Section with Gallery */}
-                    <div className="elementor-element elementor-element-89bde1c e-con-full e-flex e-con e-parent" data-id="89bde1c" data-element_type="container" data-settings='{"background_background":"gradient"}' style={{minHeight: '100vh', height: '100vh', marginTop: '-70px', paddingTop: '70px', paddingBottom: '0px', display: 'flex', alignItems: 'center'}}>
-                      <div className="elementor-element elementor-element-8bb6f3c e-con-full hero-section e-flex e-con e-child" data-id="8bb6f3c" data-element_type="container">
+                    <div className="elementor-element elementor-element-89bde1c e-con-full e-flex e-con e-parent" data-id="89bde1c" data-element_type="container" data-settings='{"background_background":"gradient"}' style={{minHeight: '100vh', height: '100vh', marginTop: '-70px', paddingTop: '0px', paddingBottom: '0px', paddingLeft: '0px', paddingRight: '0px', display: 'flex', alignItems: 'stretch'}}>
+                      <div className="elementor-element elementor-element-8bb6f3c e-con-full hero-section e-flex e-con e-child" data-id="8bb6f3c" data-element_type="container" style={{padding: '0', height: '100%', display: 'flex', alignItems: 'stretch'}}>
                         
                         {/* Left Column - Text Content */}
-                        <div className="elementor-element elementor-element-b1c56d6 e-con-full e-flex e-con e-child" data-id="b1c56d6" data-element_type="container">
+                        <div className="elementor-element elementor-element-b1c56d6 e-con-full e-flex e-con e-child" data-id="b1c56d6" data-element_type="container" style={{paddingTop: '120px', paddingLeft: '40px', paddingRight: '40px', display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '100%'}}>
                           
                           {/* Animated Heading */}
                           <div className="elementor-element elementor-element-8efe2d6 elementor-widget elementor-widget-elementskit-fancy-animated-text" data-id="8efe2d6" data-element_type="widget">
@@ -188,19 +188,19 @@ const Index = () => {
                       </div>
 
                       {/* Right Column - Gallery Grid (9 images in 3x3 grid) */}
-                      <div className="elementor-element elementor-element-eca17a6 e-con-full e-flex e-con e-child" data-id="eca17a6" data-element_type="container">
-                        <div className="elementor-element elementor-element-79c58aa elementor-widget-mobile__width-inherit elementor-widget-tablet__width-inherit elementor-widget elementor-widget-elementskit-gallery" data-id="79c58aa" data-element_type="widget">
-                          <div className="elementor-widget-container">
-                            <div className="ekit-wid-con">
-                              <div className="ekit_gallery_grid_wraper">
-                                <div id="ekit_gallery_79c58aa" className="ekit_gallery_grid">
+                      <div className="elementor-element elementor-element-eca17a6 e-con-full e-flex e-con e-child" data-id="eca17a6" data-element_type="container" style={{padding: '0', height: '100%', display: 'flex'}}>
+                        <div className="elementor-element elementor-element-79c58aa elementor-widget-mobile__width-inherit elementor-widget-tablet__width-inherit elementor-widget elementor-widget-elementskit-gallery" data-id="79c58aa" data-element_type="widget" style={{height: '100%', width: '100%'}}>
+                          <div className="elementor-widget-container" style={{height: '100%'}}>
+                            <div className="ekit-wid-con" style={{height: '100%'}}>
+                              <div className="ekit_gallery_grid_wraper" style={{height: '100%'}}>
+                                <div id="ekit_gallery_79c58aa" className="ekit_gallery_grid" style={{height: '100%', display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gridTemplateRows: 'repeat(3, 1fr)', gap: '0', padding: '0'}}>
                                   {[1, 2, 3, 4, 5, 6, 1, 2, 3].map((num, idx) => (
-                                    <div key={idx} className="ekit_gallery_grid_item ekit_gallery__filter-one">
-                                      <div className="elementskit-single-portfolio-item ekit-gallery-portfolio-tilt" data-tilt-scale="1.2" data-tilt-maxtilt="20" data-tilt-perspective="600" data-tilt-maxglare="0.6">
-                                        <div className="elementskit-portfolio-thumb">
-                                          <img width="800" height="914" decoding="async" className="elementskit-grid__img" src={`/images/demo${num}.webp`} alt={`Demo Website ${idx + 1}`} />
+                                    <div key={idx} className="ekit_gallery_grid_item ekit_gallery__filter-one" style={{height: '100%', width: '100%'}}>
+                                      <div className="elementskit-single-portfolio-item ekit-gallery-portfolio-tilt" data-tilt-scale="1.2" data-tilt-maxtilt="20" data-tilt-perspective="600" data-tilt-maxglare="0.6" style={{height: '100%', width: '100%'}}>
+                                        <div className="elementskit-portfolio-thumb" style={{height: '100%', width: '100%'}}>
+                                          <img width="800" height="914" decoding="async" className="elementskit-grid__img" src={`/images/demo${num}.webp`} alt={`Demo Website ${idx + 1}`} style={{height: '100%', width: '100%', objectFit: 'cover'}} />
                                         </div>
-                                        <div className="elementskit-hover-area">
+                                        <div className="elementskit-hover-area" style={{height: '100%', width: '100%'}}>
                                           <div className="elementskit-hover-content ekit_vertical_alignment_center"></div>
                                         </div>
                                       </div>
