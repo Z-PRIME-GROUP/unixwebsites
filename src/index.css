@@ -92,7 +92,7 @@ i.icon-check::before,
   display: inline-flex !important;
   flex-direction: row !important;
   align-items: center !important;
-  gap: 24px !important;
+  gap: 8px !important;
   list-style: none !important;
   padding: 0 !important;
   margin: 20px 0 !important;
@@ -102,8 +102,8 @@ i.icon-check::before,
 .ekit-stylish-list-content-wrapper {
   display: inline-flex !important;
   list-style: none !important;
-  padding: 2px 0 !important;
-  margin: 2px 0 !important;
+  padding: 0px !important;
+  margin: 0px !important;
 }
 
 .ekit-stylish-list-content,
@@ -111,9 +111,8 @@ i.icon-check::before,
   display: inline-flex !important;
   align-items: center !important;
   gap: 3px !important;
-  margin-top: 0px !important;
-  margin-bottom: 0px !important;
   margin: 0px !important;
+  padding: 0px !important;
 }
 
 /* Checkmark icon */
@@ -129,6 +128,8 @@ i.icon-check::before,
   font-size: 12px !important;
   font-weight: 700 !important;
   color: #090909 !important;
+  margin: 0px !important;
+  padding: 0px !important;
 }
 
 /* Text styling - REAKTIF FONT (same as heading!) */
