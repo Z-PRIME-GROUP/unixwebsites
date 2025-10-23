@@ -1593,16 +1593,18 @@
 
         #page {
             display: flex;
+        #page {
+            display: flex;
             flex-direction: column;
             position: relative;
-            min-height: calc(100vh - var(--admin-bar, 0px));
+            min-height: 100vh;
             overflow: hidden;
             overflow: clip;
             z-index: 0
         }
 
         #page .site-content {
-            flex-grow: 1;
+            flex-grow: 0;
             background-color: #fff
         }
 
