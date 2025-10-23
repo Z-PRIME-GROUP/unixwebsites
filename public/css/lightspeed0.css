@@ -8041,6 +8041,7 @@ button.swiper-pagination-bullet {
 
 .elementor-24752 .elementor-element.elementor-element-89bde1c {
     --display: flex;
+    min-height: 100vh;
     --flex-direction: row;
     --container-widget-width: calc((1 - var(--container-widget-flex-grow)) * 100%);
     --container-widget-height: 100%;
@@ -8048,15 +8049,15 @@ button.swiper-pagination-bullet {
     --container-widget-align-self: stretch;
     --flex-wrap-mobile: wrap;
     --justify-content: space-between;
-    --align-items: stretch;
+    --align-items: center;
     --gap: 10px 10px;
     --row-gap: 10px;
     --column-gap: 10px;
-    --margin-top: -300px;
-    --margin-bottom: -200px;
+    --margin-top: 0px;
+    --margin-bottom: 0px;
     --margin-left: 0px;
     --margin-right: 0px;
-    --padding-top: 150px;
+    --padding-top: 100px;
     --padding-bottom: 80px;
     --padding-left: 10px;
     --padding-right: 10px;
@@ -8075,7 +8076,7 @@ button.swiper-pagination-bullet {
     --gap: 40px 40px;
     --row-gap: 40px;
     --column-gap: 40px;
-    --margin-top: 15%;
+    --margin-top: 0%;
     --margin-bottom: 0%;
     --margin-left: 0%;
     --margin-right: 0%;
