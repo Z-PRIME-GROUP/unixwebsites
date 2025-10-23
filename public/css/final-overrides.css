@@ -24,6 +24,18 @@ img[alt*="gallery"],
   overflow: visible !important;
 }
 
+/* Fix tilt glare overflow */
+.js-tilt-glare {
+  overflow: hidden !important;
+  border-radius: 0 !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  pointer-events: none !important;
+}
+
 /* Trustpilot/Verified badge - NO border radius */
 .elementor-24752 .elementor-element-6cd7ca9 img,
 .elementor-24752 .elementor-element-1435b23 img,

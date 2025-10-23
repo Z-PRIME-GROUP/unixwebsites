@@ -47,6 +47,13 @@ const HeroSectionExact = () => {
             transition: true,
             easing: 'cubic-bezier(.03, .98, .52, .99)'
           });
+          
+          // Fix glare overflow - constrain within image boundaries
+          const glareElement = el.querySelector('.js-tilt-glare');
+          if (glareElement) {
+            (glareElement as HTMLElement).style.overflow = 'hidden';
+            (glareElement as HTMLElement).style.borderRadius = '0';
+          }
         }
       });
     };
