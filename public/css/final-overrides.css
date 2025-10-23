@@ -37,6 +37,19 @@ img[alt*="gallery"],
   z-index: 1 !important;
 }
 
+/* Ensure glare elements work properly - don't force opacity, let vanilla-tilt control it */
+.js-tilt-glare {
+  visibility: visible !important;
+  pointer-events: none !important;
+  z-index: 2 !important;
+  border-radius: 0 !important;
+}
+
+.js-tilt-glare-inner {
+  visibility: visible !important;
+  border-radius: 0 !important;
+}
+
 
 /* Trustpilot/Verified badge - NO border radius */
 .elementor-24752 .elementor-element-6cd7ca9 img,

@@ -36,8 +36,9 @@ const HeroSectionExact = () => {
 
     // Vanilla Tilt - exact settings from data attributes
     const initTilt = () => {
-      tiltRefs.current.forEach((el) => {
+      tiltRefs.current.forEach((el, index) => {
         if (el && !(el as any).vanillaTilt) {
+          console.log('Initializing tilt for element', index);
           VanillaTilt.init(el, {
             scale: 1.2,
             max: 20,
@@ -47,6 +48,16 @@ const HeroSectionExact = () => {
             transition: true,
             easing: 'cubic-bezier(.03, .98, .52, .99)'
           });
+          
+          // Check if glare was created
+          setTimeout(() => {
+            const glare = el.querySelector('.js-tilt-glare');
+            console.log('Glare element for', index, ':', glare);
+            if (glare) {
+              console.log('Glare opacity:', window.getComputedStyle(glare).opacity);
+              console.log('Glare visibility:', window.getComputedStyle(glare).visibility);
+            }
+          }, 200);
         }
       });
     };
