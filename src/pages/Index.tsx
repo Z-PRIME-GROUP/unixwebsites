@@ -16,7 +16,7 @@ const Index = () => {
                   <div data-elementor-type="wp-page" data-elementor-id="24752" className="elementor elementor-24752" data-elementor-post-type="page">
                     
                     {/* Hero Section with Gallery */}
-                    <div className="elementor-element elementor-element-89bde1c e-con-full e-flex e-con e-parent" data-id="89bde1c" data-element_type="container" data-settings='{"background_background":"gradient"}' style={{ minHeight: '100vh', overflow: 'hidden' }}>
+                    <div className="elementor-element elementor-element-89bde1c e-con-full e-flex e-con e-parent" data-id="89bde1c" data-element_type="container" data-settings='{"background_background":"gradient"}'>
                       <div className="elementor-element elementor-element-8bb6f3c e-con-full hero-section e-flex e-con e-child" data-id="8bb6f3c" data-element_type="container">
                         
                         {/* Left Column - Text Content */}
@@ -125,18 +125,18 @@ const Index = () => {
                         </div>
                       </div>
 
-                      {/* Right Column - Gallery Grid */}
+                      {/* Right Column - Gallery Grid (9 images in 3x3 grid) */}
                       <div className="elementor-element elementor-element-eca17a6 e-con-full e-flex e-con e-child" data-id="eca17a6" data-element_type="container">
                         <div className="elementor-element elementor-element-79c58aa elementor-widget-mobile__width-inherit elementor-widget-tablet__width-inherit elementor-widget elementor-widget-elementskit-gallery" data-id="79c58aa" data-element_type="widget">
                           <div className="elementor-widget-container">
                             <div className="ekit-wid-con">
                               <div className="ekit_gallery_grid_wraper">
                                 <div id="ekit_gallery_79c58aa" className="ekit_gallery_grid">
-                                  {[1, 2, 3, 4, 5, 6].map((num) => (
-                                    <div key={num} className="ekit_gallery_grid_item ekit_gallery__filter-one">
+                                  {[1, 2, 3, 4, 5, 6, 1, 2, 3].map((num, idx) => (
+                                    <div key={idx} className="ekit_gallery_grid_item ekit_gallery__filter-one">
                                       <div className="elementskit-single-portfolio-item ekit-gallery-portfolio-tilt" data-tilt-scale="1.2" data-tilt-maxtilt="20" data-tilt-perspective="600" data-tilt-maxglare="0.6">
                                         <div className="elementskit-portfolio-thumb">
-                                          <img width="800" height="914" decoding="async" className="elementskit-grid__img" src={`/images/demo${num}.webp`} alt={`Demo Website ${num}`} />
+                                          <img width="800" height="914" decoding="async" className="elementskit-grid__img" src={`/images/demo${num}.webp`} alt={`Demo Website ${idx + 1}`} />
                                         </div>
                                         <div className="elementskit-hover-area">
                                           <div className="elementskit-hover-content ekit_vertical_alignment_center"></div>
@@ -149,11 +149,17 @@ const Index = () => {
                             </div>
                           </div>
                         </div>
+                        {/* Faded Background Logo */}
+                        <div className="elementor-element elementor-element-2e19d04 elementor-absolute elementor-widget elementor-widget-image" data-id="2e19d04" data-element_type="widget" data-settings='{"_position":"absolute"}' style={{ position: 'absolute', left: '-1298px', top: '166px', zIndex: 0 }}>
+                          <div className="elementor-widget-container">
+                            <img decoding="async" width="1600" height="1600" src="/images/favicon-icon.webp" className="attachment-full size-full wp-image-24137" alt="" style={{ opacity: 0.1 }} />
+                          </div>
+                        </div>
                       </div>
                     </div>
 
                     {/* Features Section - "A Website Built for Success" */}
-                    <div className="elementor-element elementor-element-f82919f e-flex e-con-boxed e-con e-parent" data-id="f82919f" data-element_type="container" style={{ background: 'linear-gradient(180deg, #FFFFFF 0%, #E3EEFF 100%)', paddingTop: '100px', paddingBottom: '100px', minHeight: '600px' }}>
+                    <div className="elementor-element elementor-element-f82919f e-flex e-con-boxed e-con e-parent" data-id="f82919f" data-element_type="container" style={{ background: 'linear-gradient(180deg, #FFFFFF 0%, #E3EEFF 100%)', paddingTop: '100px', paddingBottom: '100px' }}>
                       <div className="e-con-inner">
                         <div className="elementor-element elementor-element-28efd6e e-con-full e-flex e-con e-child" data-id="28efd6e" data-element_type="container">
                           <div className="elementor-element elementor-element-76aa4e4 animated-fast elementor-widget__width-initial elementor-widget elementor-widget-elementskit-heading" data-id="76aa4e4" data-element_type="widget" style={{ visibility: 'visible' }}>
