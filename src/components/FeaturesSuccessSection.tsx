@@ -70,12 +70,12 @@ const FeaturesSuccessSection = () => {
       {/* Watermark Background Image */}
       <div style={{
         position: 'absolute',
-        left: '50%',
-        top: '-67px',
-        transform: 'translateX(-50%)',
-        width: '62%',
-        maxWidth: '800px',
-        opacity: 0.1,
+        right: '0',
+        top: '50%',
+        transform: 'translateY(-50%)',
+        width: '50%',
+        maxWidth: '600px',
+        opacity: 0.15,
         pointerEvents: 'none',
         zIndex: 0
       }}>
@@ -124,35 +124,44 @@ const FeaturesSuccessSection = () => {
 
         {/* Features Grid */}
         <div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
-          style={{ gap: '40px' }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          style={{ marginTop: '60px' }}
         >
           {features.map((feature, index) => (
             <div
               key={index}
               className="feature-card text-left transition-all duration-500 hover:translate-y-[-5px] animate-fade-in"
               style={{
-                animationDelay: `${index * 100}ms`
+                animationDelay: `${index * 100}ms`,
+                backgroundColor: '#ffffff',
+                padding: '30px 25px',
+                borderRadius: '10px',
+                boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.08)'
               }}
             >
               {/* Icon */}
-              <div className="mb-5 flex justify-center">
+              <div className="mb-5">
                 <img
                   src={feature.icon}
                   alt={feature.title}
-                  className="w-[150px] h-[150px] object-contain"
+                  style={{
+                    width: '70px',
+                    height: '70px',
+                    marginBottom: '25px',
+                    objectFit: 'contain'
+                  }}
                   loading="lazy"
                 />
               </div>
 
               {/* Title */}
               <h5 
-                className="mb-3"
                 style={{
                   fontFamily: 'Reaktif, sans-serif',
                   fontSize: '20px',
-                  fontWeight: 500,
+                  fontWeight: 600,
                   color: '#090909',
+                  marginBottom: '12px',
                   lineHeight: '1.3'
                 }}
               >
@@ -163,9 +172,10 @@ const FeaturesSuccessSection = () => {
               <p 
                 style={{
                   fontFamily: 'Plus Jakarta Sans, sans-serif',
-                  fontSize: '16px',
-                  color: '#666',
-                  lineHeight: '1.6'
+                  fontSize: '15px',
+                  color: '#555',
+                  lineHeight: '1.7',
+                  marginBottom: '0'
                 }}
               >
                 {feature.description}
