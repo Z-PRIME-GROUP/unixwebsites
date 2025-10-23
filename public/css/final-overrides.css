@@ -45,6 +45,8 @@ img[src*="trustpilot"] {
   background: #FFF !important;
   width: 25px !important;
   height: 25px !important;
+  min-width: 25px !important;
+  min-height: 25px !important;
   border-radius: 100% !important;
   display: flex !important;
   align-items: center !important;
@@ -54,10 +56,19 @@ img[src*="trustpilot"] {
 
 .ekit-stylish-list-content-icon > i,
 .ekit-wid-con .ekit-stylish-list-content-icon > i,
-.elementor-24752 .elementor-element.elementor-element-f9506ec .ekit-stylish-list-content-icon > i {
+.elementor-24752 .elementor-element.elementor-element-f9506ec .ekit-stylish-list-content-icon > i,
+i.icon,
+i.icon-check {
   color: #090909 !important;
   background: none !important;
   background-color: transparent !important;
   font-size: 11px !important;
   line-height: 1 !important;
+  font-family: elementskit !important;
+}
+
+/* Force elementskit icon content */
+i.icon-check::before {
+  content: "\eaaf" !important;
+  font-family: elementskit !important;
 }

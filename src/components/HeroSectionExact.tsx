@@ -71,9 +71,28 @@ const HeroSectionExact = () => {
       data-element_type="container" 
       data-settings='{"background_background":"gradient"}'
       style={{
-        background: `url(https://ufreewebsites.com/wp-content/uploads/2024/09/ufreewebsites-favicon-color.webp) 85% 50% / 450px no-repeat, linear-gradient(180deg, #E3EEFF 40%, #fff 100%)`
+        position: 'relative',
+        backgroundImage: `linear-gradient(180deg, #E3EEFF 40%, #fff 100%)`,
+        backgroundPosition: 'center center',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat'
       }}
     >
+      <div style={{
+        position: 'absolute',
+        left: '5%',
+        top: '50%',
+        transform: 'translateY(-50%)',
+        width: '450px',
+        height: '450px',
+        backgroundImage: `url(/images/unixwebsites-favicon-color.webp)`,
+        backgroundSize: 'contain',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+        opacity: 0.15,
+        pointerEvents: 'none',
+        zIndex: 0
+      }} />
       <div className="elementor-element elementor-element-8bb6f3c e-con-full hero-section e-flex e-con e-child" data-id="8bb6f3c" data-element_type="container">
         <div className="elementor-element elementor-element-b1c56d6 e-con-full e-flex e-con e-child" data-id="b1c56d6" data-element_type="container">
           <div className="elementor-element elementor-element-8efe2d6 elementor-widget elementor-widget-elementskit-fancy-animated-text" data-id="8efe2d6" data-element_type="widget" data-settings='{"ekit_we_effect_on":"none"}' data-widget_type="elementskit-fancy-animated-text.default">
@@ -127,8 +146,19 @@ const HeroSectionExact = () => {
                 <ul className="ekit-stylish-list list-inline" data-ekit-animation="pulse">
                   <li className="ekit-stylish-list-content-wrapper elementor-repeater-item-b4e5723 animated-" data-ekit-delay="0">
                     <div className="ekit-stylish-list-content">
-                      <div className="ekit-stylish-list-content-icon">
-                        <i aria-hidden="true" className="icon icon-check"></i>
+                      <div className="ekit-stylish-list-content-icon" style={{
+                        backgroundColor: '#FFF',
+                        width: '25px',
+                        height: '25px',
+                        borderRadius: '100%',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        fontSize: '14px',
+                        color: '#090909',
+                        fontWeight: 'bold'
+                      }}>
+                        ✓
                       </div>
                       <div className="ekit-stylish-list-content-text">
                         <span className="ekit-stylish-list-content-title">100% FREE Website</span>
@@ -137,8 +167,19 @@ const HeroSectionExact = () => {
                   </li>
                   <li className="ekit-stylish-list-content-wrapper elementor-repeater-item-9176c3a animated-" data-ekit-delay="0">
                     <div className="ekit-stylish-list-content">
-                      <div className="ekit-stylish-list-content-icon">
-                        <i aria-hidden="true" className="icon icon-check"></i>
+                      <div className="ekit-stylish-list-content-icon" style={{
+                        backgroundColor: '#FFF',
+                        width: '25px',
+                        height: '25px',
+                        borderRadius: '100%',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        fontSize: '14px',
+                        color: '#090909',
+                        fontWeight: 'bold'
+                      }}>
+                        ✓
                       </div>
                       <div className="ekit-stylish-list-content-text">
                         <span className="ekit-stylish-list-content-title">Award-Winning Support</span>
@@ -147,8 +188,19 @@ const HeroSectionExact = () => {
                   </li>
                   <li className="ekit-stylish-list-content-wrapper elementor-repeater-item-aa8aca8 animated-" data-ekit-delay="0">
                     <div className="ekit-stylish-list-content">
-                      <div className="ekit-stylish-list-content-icon">
-                        <i aria-hidden="true" className="icon icon-check"></i>
+                      <div className="ekit-stylish-list-content-icon" style={{
+                        backgroundColor: '#FFF',
+                        width: '25px',
+                        height: '25px',
+                        borderRadius: '100%',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        fontSize: '14px',
+                        color: '#090909',
+                        fontWeight: 'bold'
+                      }}>
+                        ✓
                       </div>
                       <div className="ekit-stylish-list-content-text">
                         <span className="ekit-stylish-list-content-title">Risk-Free</span>
