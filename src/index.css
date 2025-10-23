@@ -107,7 +107,7 @@ i.icon-check::before,
 .ekit-stylish-list-content {
   display: inline-flex !important;
   align-items: center !important;
-  gap: 10px !important;
+  gap: 6px !important;
 }
 
 /* Checkmark icon */
