@@ -81,11 +81,11 @@ const HeroSectionExact = () => {
     >
       <div style={{
         position: 'absolute',
-        left: '-100px',
+        left: '-200px',
         top: '50%',
         transform: 'translateY(-50%)',
-        width: '900px',
-        height: '900px',
+        width: '1400px',
+        height: '1400px',
         backgroundImage: `url(/images/unixwebsites-favicon-color.webp)`,
         backgroundSize: 'contain',
         backgroundRepeat: 'no-repeat',
