@@ -18,9 +18,12 @@
   --e-global-color-b3a878d: #fff;
 }
 
-/* Font Configuration */
-* {
-  font-family: 'Plus Jakarta Sans', sans-serif !important;
+/* Reaktif Font Fallback - Use Inter as substitute */
+@font-face {
+  font-family: 'Reaktif';
+  src: local('Inter');
+  font-weight: 100 900;
+  font-style: normal;
 }
 
 /* ElementsKit Icon Font - Absolute path */
@@ -58,8 +61,13 @@ h1.ekit-fancy-text {
   position: relative !important;
   color: #090909 !important;
   font-size: 58px !important;
-  font-weight: 500 !important;
+  font-weight: 400 !important;
   line-height: 1.2 !important;
+}
+
+/* Make FREE bolder */
+.ekit-fancy-text-lists b {
+  font-weight: 900 !important;
 }
 
 h1.ekit-fancy-text * {
