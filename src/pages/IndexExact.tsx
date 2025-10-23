@@ -1,5 +1,6 @@
 import HeaderExact from "@/components/HeaderExact";
 import HeroSectionExact from "@/components/HeroSectionExact";
+import FeaturesSuccessSection from "@/components/FeaturesSuccessSection";
 
 const IndexExact = () => {
   return (
@@ -13,6 +14,7 @@ const IndexExact = () => {
                 <div className="entry-content">
                   <div data-elementor-type="wp-page" data-elementor-id="24752" className="elementor elementor-24752" data-elementor-post-type="page">
                     <HeroSectionExact />
+                    <FeaturesSuccessSection />
                     
                     {/* More sections will be added here as we convert them */}
                   </div>
