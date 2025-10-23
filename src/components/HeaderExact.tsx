@@ -58,14 +58,17 @@ const HeaderExact = () => {
                             className={`elementskit-menu-container elementskit-menu-offcanvas-elements elementskit-navbar-nav-default ekit-nav-menu-one-page-yes ekit-nav-dropdown-hover ${menuOpen ? 'elementskit-menu-open' : ''}`}
                           >
                             <ul id="menu-main-menu" className="elementskit-navbar-nav elementskit-menu-po-center submenu-click-on-">
-                              <li id="menu-item-26026" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-26026 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
-                                <a href="https://ufreewebsites.com/affiliate-portal-2/" className="ekit-menu-nav-link">Affiliate Portal</a>
+                              <li className="menu-item nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
+                                <a href="#home" className="ekit-menu-nav-link">Home</a>
                               </li>
-                              <li id="menu-item-26027" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-26027 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
-                                <a href="https://ufreewebsites.com/affiliate-login-2/" className="ekit-menu-nav-link">Affiliate Login</a>
+                              <li className="menu-item nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
+                                <a href="#about" className="ekit-menu-nav-link">About Us</a>
                               </li>
-                              <li id="menu-item-26028" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-26028 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
-                                <a href="https://ufreewebsites.com/become-an-affiliate-2/" className="ekit-menu-nav-link">Become an Affiliate</a>
+                              <li className="menu-item nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
+                                <a href="#services" className="ekit-menu-nav-link">Services</a>
+                              </li>
+                              <li className="menu-item nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
+                                <a href="#contact" className="ekit-menu-nav-link">Contact</a>
                               </li>
                             </ul>
                             <div className="elementskit-nav-identity-panel">
