@@ -156,7 +156,7 @@
 .elementskit-single-portfolio-item {
   position: relative;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 0 !important;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
 }
@@ -175,7 +175,7 @@
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 10px;
+  border-radius: 0 !important;
 }
 
 /* Grid Columns */

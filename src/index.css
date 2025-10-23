@@ -87,21 +87,28 @@ i.icon-check::before,
   font-family: elementskit !important;
 }
 
-/* WHITE circular checkmarks with BLACK icons */
-.elementor-24752 .elementor-element.elementor-element-f9506ec .ekit-stylish-list-content-icon {
+/* WHITE circular checkmarks with BLACK icons - FORCE IT */
+.elementor-24752 .elementor-element.elementor-element-f9506ec .ekit-stylish-list-content-icon,
+.ekit-wid-con .ekit-stylish-list-content-icon,
+.ekit-stylish-list-content-icon {
   background-color: #FFF !important;
+  background-image: none !important;
   width: 25px !important;
   height: 25px !important;
   border-radius: 100% !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
+  border: none !important;
 }
 
-.elementor-24752 .elementor-element.elementor-element-f9506ec .ekit-stylish-list-content-icon>i {
+.elementor-24752 .elementor-element.elementor-element-f9506ec .ekit-stylish-list-content-icon>i,
+.ekit-wid-con .ekit-stylish-list-content-icon>i,
+.ekit-stylish-list-content-icon>i {
   color: #090909 !important;
   font-size: 11px !important;
   line-height: 1 !important;
+  background: none !important;
 }
 
 /* HEADING TEXT FIX: Override Tailwind base reset + add explicit sizing */
@@ -202,20 +209,32 @@ body,
 }
 
 /* Gallery images - NO border radius - FORCE IT */
+.ekit-wid-con .elementskit-single-portfolio-item,
+.ekit-wid-con .elementskit-single-portfolio-item img,
+.elementskit-portfolio-thumb,
 .elementskit-portfolio-thumb img,
+.elementskit-single-portfolio-item,
 .elementskit-single-portfolio-item img,
 .elementskit-grid__img,
+.ekit_gallery_grid_item,
 .ekit_gallery_grid_item img,
+.elementskit-portfolio-wrapper img,
 img[alt="gallery grid image"] {
   border-radius: 0 !important;
+  overflow: visible !important;
 }
 
 /* Trustpilot/Verified badge - NO border radius - FORCE IT */
 .elementor-24752 .elementor-element-6cd7ca9 img,
 .elementor-24752 .elementor-element-1435b23 img,
+.elementor-widget-image img,
 img[src*="verified"],
-img[src*="badge"] {
+img[src*="badge"],
+img[src*="trustpilot"] {
   border-radius: 0 !important;
+  max-width: 100% !important;
+  height: auto !important;
+  display: block !important;
 }
 
 /* Button styling - Reaktif font and hover scale */
