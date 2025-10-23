@@ -18,12 +18,37 @@
   --e-global-color-b3a878d: #fff;
 }
 
-/* Reaktif Font Fallback - Use Inter as substitute */
+/* Reaktif Font - Downloaded from GitHub */
 @font-face {
   font-family: 'Reaktif';
-  src: local('Inter');
-  font-weight: 100 900;
   font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/Reaktif-Medium.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Reaktif';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/fonts/Reaktif-Bold.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Reaktif';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/fonts/Reaktif-Black.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Reaktif';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(/fonts/Reaktif-Black.woff2) format('woff2');
 }
 
 /* ElementsKit Icon Font - Absolute path */
@@ -63,8 +88,9 @@ h1.ekit-fancy-text {
   position: relative !important;
   color: #090909 !important;
   font-size: 58px !important;
-  font-weight: 400 !important;
+  font-weight: 500 !important;
   line-height: 1.2 !important;
+  font-family: 'Reaktif', sans-serif !important;
 }
 
 /* Make FREE bolder */
