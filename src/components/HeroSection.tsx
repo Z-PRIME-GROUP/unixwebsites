@@ -19,7 +19,11 @@ export const HeroSection = () => {
       if (!container) return;
 
       const words = container.querySelectorAll('b');
-      if (words.length === 0) return;
+      console.log('Found words:', words.length);
+      if (words.length === 0) {
+        console.warn('No words found for animation');
+        return;
+      }
 
       let currentWordIndex = 0;
 
