@@ -301,18 +301,6 @@ const HeroSectionExact = () => {
             </div>
           </div>
         </div>
-        <div className="elementor-element elementor-element-2e19d04 elementor-absolute elementor-widget elementor-widget-image" data-id="2e19d04" data-element_type="widget" data-settings='{"_position":"absolute","ekit_we_effect_on":"none"}' data-widget_type="image.default">
-          <div className="elementor-widget-container">
-            <img 
-              decoding="async"
-              width="1600" 
-              height="1600"
-              src="/images/unixwebsites-favicon-color.webp"
-              className="attachment-full size-full wp-image-24137" 
-              alt="" 
-            />
-          </div>
-        </div>
       </div>
     </div>
   );

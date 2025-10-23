@@ -238,12 +238,6 @@ const Index = () => {
                             </div>
                           </div>
                         </div>
-                        {/* Faded Background Logo */}
-                        <div className="elementor-element elementor-element-2e19d04 elementor-absolute elementor-widget elementor-widget-image" data-id="2e19d04" data-element_type="widget" data-settings='{"_position":"absolute"}' style={{ position: 'absolute', left: '-1298px', top: '166px', zIndex: 0 }}>
-                          <div className="elementor-widget-container">
-                            <img decoding="async" width="1600" height="1600" src="/images/favicon-icon.webp" className="attachment-full size-full wp-image-24137" alt="" style={{ opacity: 0.1 }} />
-                          </div>
-                        </div>
                       </div>
                     </div>
 
