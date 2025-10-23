@@ -92,7 +92,15 @@ const HeroSectionExact = () => {
         backgroundPosition: 'center',
         opacity: 0.08,
         pointerEvents: 'none',
-        zIndex: 0
+        zIndex: 0,
+        WebkitMaskImage: 'url(/images/shape-mask-10.svg)',
+        WebkitMaskPosition: 'center center',
+        WebkitMaskRepeat: 'no-repeat',
+        WebkitMaskSize: 'contain',
+        maskImage: 'url(/images/shape-mask-10.svg)',
+        maskPosition: 'center center',
+        maskRepeat: 'no-repeat',
+        maskSize: 'contain'
       }} />
       <div className="elementor-element elementor-element-8bb6f3c e-con-full hero-section e-flex e-con e-child" data-id="8bb6f3c" data-element_type="container">
         <div className="elementor-element elementor-element-b1c56d6 e-con-full e-flex e-con e-child" data-id="b1c56d6" data-element_type="container">
