@@ -1,8 +1,7 @@
 import { useEffect, useRef } from 'react';
-import VanillaTilt from 'vanilla-tilt';
+import Tilt from 'react-parallax-tilt';
 
 const HeroSectionExact = () => {
-  const tiltRefs = useRef<(HTMLDivElement | null)[]>([]);
   const fancyTextRef = useRef<HTMLSpanElement | null>(null);
 
   useEffect(() => {
@@ -34,44 +33,9 @@ const HeroSectionExact = () => {
       return () => clearInterval(interval);
     };
 
-    // Vanilla Tilt - exact settings from data attributes
-    const initTilt = () => {
-      tiltRefs.current.forEach((el, index) => {
-        if (el && !(el as any).vanillaTilt) {
-          console.log('Initializing tilt for element', index);
-          VanillaTilt.init(el, {
-            scale: 1.2,
-            max: 20,
-            perspective: 600,
-            glare: true,
-            'max-glare': 0.6,
-            transition: true,
-            easing: 'cubic-bezier(.03, .98, .52, .99)'
-          });
-          
-          // Check if glare was created
-          setTimeout(() => {
-            const glare = el.querySelector('.js-tilt-glare');
-            console.log('Glare element for', index, ':', glare);
-            if (glare) {
-              console.log('Glare opacity:', window.getComputedStyle(glare).opacity);
-              console.log('Glare visibility:', window.getComputedStyle(glare).visibility);
-            }
-          }, 200);
-        }
-      });
-    };
-
     const cleanup = initFancyText();
-    setTimeout(initTilt, 100);
-
     return () => {
       cleanup?.();
-      tiltRefs.current.forEach((el) => {
-        if (el && (el as any).vanillaTilt) {
-          (el as any).vanillaTilt.destroy();
-        }
-      });
     };
   }, []);
 
@@ -268,13 +232,18 @@ const HeroSectionExact = () => {
                     '/images/demo3.webp'
                   ].map((src, index) => (
                     <div key={index} className="ekit_gallery_grid_item ekit_gallery__filter-one ">
-                      <div 
-                        className="elementskit-single-portfolio-item  ekit-gallery-portfolio-tilt "
-                        ref={(el) => (tiltRefs.current[index] = el)}
-                        data-tilt-scale="1.2"
-                        data-tilt-maxtilt="20"
-                        data-tilt-perspective="600"
-                        data-tilt-maxglare="0.6"
+                      <Tilt
+                        glareEnable={true}
+                        glareMaxOpacity={0.3}
+                        glareColor="#ffffff"
+                        glarePosition="all"
+                        tiltMaxAngleX={20}
+                        tiltMaxAngleY={20}
+                        scale={1.2}
+                        perspective={600}
+                        transitionSpeed={400}
+                        gyroscope={false}
+                        className="elementskit-single-portfolio-item ekit-gallery-portfolio-tilt"
                       >
                         <div className="elementskit-portfolio-thumb">
                           <img 
@@ -289,7 +258,7 @@ const HeroSectionExact = () => {
                         <div className="elementskit-hover-area">
                           <div className="elementskit-hover-content ekit_vertical_alignment_center"></div>
                         </div>
-                      </div>
+                      </Tilt>
                     </div>
                   ))}
                 </div>
