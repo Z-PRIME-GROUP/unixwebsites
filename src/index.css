@@ -95,7 +95,7 @@ i.icon-check::before,
   gap: 24px !important;
   list-style: none !important;
   padding: 0 !important;
-  margin: 10px 0 !important;
+  margin: 0 !important;
   flex-wrap: wrap !important;
 }
 
