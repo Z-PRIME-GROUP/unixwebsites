@@ -23,18 +23,17 @@ img[alt*="gallery"],
   -o-border-radius: 0 !important;
 }
 
-/* Glare containment - force at parent wrapper level */
-.ekit_gallery_grid_item,
-.elementskit-single-portfolio-item,
-.ekit-gallery-portfolio-tilt {
-  overflow: hidden !important;
-  position: relative !important;
-}
-
-.elementskit-portfolio-thumb {
+/* Tilt glare containment - CRITICAL: overflow hidden on tilt parent */
+.elementskit-single-portfolio-item.ekit-gallery-portfolio-tilt {
   overflow: hidden !important;
   position: relative !important;
   display: block !important;
+}
+
+.elementskit-portfolio-thumb {
+  position: relative !important;
+  display: block !important;
+  width: 100% !important;
 }
 
 .elementskit-portfolio-thumb img {
