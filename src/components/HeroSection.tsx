@@ -107,7 +107,7 @@ export const HeroSection = () => {
                display: 'flex',
                flexDirection: 'column',
                justifyContent: 'center',
-               gap: '30px'
+               gap: '20px'
              }}>
           
           {/* Animated Heading with FREE */}
