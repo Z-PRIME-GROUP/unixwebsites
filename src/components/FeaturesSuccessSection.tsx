@@ -1,29 +1,4 @@
-import { useEffect } from 'react';
-
 const FeaturesSuccessSection = () => {
-  useEffect(() => {
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate-fade-in');
-        }
-      });
-    }, observerOptions);
-
-    const cards = document.querySelectorAll('.feature-card');
-    cards.forEach((card, index) => {
-      (card as HTMLElement).style.animationDelay = `${index * 100}ms`;
-      observer.observe(card);
-    });
-
-    return () => observer.disconnect();
-  }, []);
-
   const features = [
     {
       icon: '/images/ufw-responsive-design.webp',
@@ -58,53 +33,52 @@ const FeaturesSuccessSection = () => {
   ];
 
   return (
-    <section 
-      className="py-20 px-5"
+    <section
+      className="features-success-section"
       style={{ 
         background: 'linear-gradient(180deg, #FFFFFF 0%, #E3EEFF 100%)',
         position: 'relative',
-        overflow: 'visible',
-        marginTop: '150px'
+        overflow: 'hidden',
+        padding: '80px 20px'
       }}
     >
-      {/* Pink/Peach Gradient Blob */}
+      {/* Pink/Peach Gradient Blob - Top Right */}
       <div style={{
         position: 'absolute',
-        right: '5%',
-        top: '10%',
-        width: '400px',
-        height: '400px',
-        background: 'radial-gradient(circle, rgba(255, 192, 203, 0.4) 0%, rgba(255, 192, 203, 0) 70%)',
-        borderRadius: '50%',
-        filter: 'blur(60px)',
-        pointerEvents: 'none',
-        zIndex: 0
-      }}>
-      </div>
-
-      {/* Blue Gradient Blob */}
-      <div style={{
-        position: 'absolute',
-        right: '10%',
-        bottom: '15%',
-        width: '350px',
-        height: '350px',
-        background: 'radial-gradient(circle, rgba(173, 216, 230, 0.5) 0%, rgba(173, 216, 230, 0) 70%)',
+        right: '8%',
+        top: '12%',
+        width: '380px',
+        height: '380px',
+        background: 'radial-gradient(circle, rgba(255, 192, 203, 0.35) 0%, rgba(255, 182, 193, 0.15) 40%, rgba(255, 192, 203, 0) 70%)',
         borderRadius: '50%',
         filter: 'blur(50px)',
         pointerEvents: 'none',
         zIndex: 0
-      }}>
-      </div>
+      }} />
+
+      {/* Light Blue Gradient Blob - Bottom Right */}
+      <div style={{
+        position: 'absolute',
+        right: '5%',
+        bottom: '20%',
+        width: '420px',
+        height: '420px',
+        background: 'radial-gradient(circle, rgba(173, 216, 230, 0.4) 0%, rgba(176, 224, 230, 0.2) 40%, rgba(173, 216, 230, 0) 70%)',
+        borderRadius: '50%',
+        filter: 'blur(55px)',
+        pointerEvents: 'none',
+        zIndex: 0
+      }} />
 
       <div className="max-w-[1200px] mx-auto" style={{ position: 'relative', zIndex: 1 }}>
-        <h2 
-          className="text-center mb-5"
+        <h2
+          className="text-center"
           style={{
             fontFamily: 'Reaktif, sans-serif',
             fontSize: '48px',
             fontWeight: 500,
             color: '#090909',
+            marginBottom: '20px',
             lineHeight: '1.2'
           }}
         >
@@ -113,88 +87,97 @@ const FeaturesSuccessSection = () => {
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text'
-          }}><span>Success</span></span>
+          }}>Success</span>
         </h2>
 
-        {/* Description */}
-        <p 
-          className="text-center mb-0"
+        <p
+          className="text-center"
           style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
             fontSize: '16px',
             color: '#666666',
-            lineHeight: '1.6',
-            maxWidth: '800px',
-            margin: '0 auto 0'
+            lineHeight: '1.65',
+            maxWidth: '850px',
+            margin: '0 auto 60px',
+            paddingLeft: '15px',
+            paddingRight: '15px'
           }}
         >
           Fast, secure, and fully customizable. Our websites are mobile-friendly, SEO-optimized, and designed to grow with your business. Get a professional site that enhances your brand and attracts more customers.
         </p>
 
-        {/* Features Grid */}
-        <div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7"
-          style={{ marginTop: '55px' }}
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+          style={{ 
+            gap: '30px',
+            marginTop: '0'
+          }}
         >
           {features.map((feature, index) => (
             <div
               key={index}
-              className="feature-card transition-all duration-500 hover:translate-y-[-5px] animate-fade-in"
+              className="transition-all duration-300 animate-fade-in"
               style={{
                 animationDelay: `${index * 100}ms`,
                 backgroundColor: '#FAFBFC',
-                padding: '35px 30px',
+                padding: '40px 30px 35px',
                 borderRadius: '12px',
-                boxShadow: '0px 2px 12px rgba(0, 0, 0, 0.06)',
-                textAlign: 'left'
+                boxShadow: '0px 3px 15px rgba(0, 0, 0, 0.06)',
+                textAlign: 'left',
+                transform: 'translateY(0)',
+                transition: 'all 0.3s ease'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-8px)';
+                e.currentTarget.style.boxShadow = '0px 8px 25px rgba(0, 0, 0, 0.1)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = '0px 3px 15px rgba(0, 0, 0, 0.06)';
               }}
             >
-              {/* Icon */}
+              {/* Icon with circular blue background */}
               <div style={{
-                width: '80px',
-                height: '80px',
+                width: '75px',
+                height: '75px',
                 borderRadius: '50%',
-                backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                backgroundColor: 'rgba(59, 130, 246, 0.08)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                marginBottom: '20px'
+                marginBottom: '22px'
               }}>
                 <img
                   src={feature.icon}
                   alt={feature.title}
                   style={{
-                    width: '45px',
-                    height: '45px',
+                    width: '42px',
+                    height: '42px',
                     objectFit: 'contain'
                   }}
                 />
               </div>
 
-              {/* Title */}
-              <h5 
-                style={{
-                  fontFamily: 'Reaktif, sans-serif',
-                  fontSize: '19px',
-                  fontWeight: 600,
-                  color: '#0A0A0A',
-                  marginBottom: '10px',
-                  lineHeight: '1.3'
-                }}
-              >
+              {/* Feature Title */}
+              <h5 style={{
+                fontFamily: 'Reaktif, sans-serif',
+                fontSize: '19px',
+                fontWeight: 600,
+                color: '#0A0A0A',
+                marginBottom: '12px',
+                lineHeight: '1.35'
+              }}>
                 {feature.title}
               </h5>
 
-              {/* Description */}
-              <p 
-                style={{
-                  fontFamily: 'Plus Jakarta Sans, sans-serif',
-                  fontSize: '14px',
-                  color: '#666666',
-                  lineHeight: '1.65',
-                  marginBottom: '0'
-                }}
-              >
+              {/* Feature Description */}
+              <p style={{
+                fontFamily: 'Plus Jakarta Sans, sans-serif',
+                fontSize: '14.5px',
+                color: '#666666',
+                lineHeight: '1.7',
+                marginBottom: '0'
+              }}>
                 {feature.description}
               </p>
             </div>
