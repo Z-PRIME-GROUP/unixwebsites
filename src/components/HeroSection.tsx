@@ -195,9 +195,7 @@ export const HeroSection = () => {
                            textDecoration: 'none',
                            transition: 'transform 0.3s ease',
                            boxShadow: '0 4px 15px rgba(255,107,53,0.3)'
-                         }}
-                         onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
-                         onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}>
+                         }}>
                         <i className="far fa-arrow-alt-circle-right"></i>APPLY IN 2 MINUTES
                       </a>
                     </div>
