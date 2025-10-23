@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import { useEffect } from "react";
-import "./HeroSection.css";
 
 const Index = () => {
   console.log('Index component rendering');
@@ -79,19 +78,7 @@ const Index = () => {
                   <div data-elementor-type="wp-page" data-elementor-id="24752" className="elementor elementor-24752" data-elementor-post-type="page">
                     
                     {/* Hero Section with Gallery */}
-                    <div 
-                      className="elementor-element elementor-element-89bde1c e-con-full e-flex e-con e-parent" 
-                      data-id="89bde1c" 
-                      data-element_type="container" 
-                      data-settings='{"background_background":"gradient"}' 
-                      style={{ 
-                        minHeight: '100vh', 
-                        display: 'flex', 
-                        alignItems: 'center',
-                        background: 'linear-gradient(180deg, #E3EEFF 40%, #FFFFFF 100%)',
-                        position: 'relative'
-                      }}
-                    >
+                    <div className="elementor-element elementor-element-89bde1c e-con-full e-flex e-con e-parent" data-id="89bde1c" data-element_type="container" data-settings='{"background_background":"gradient"}'>
                       <div className="elementor-element elementor-element-8bb6f3c e-con-full hero-section e-flex e-con e-child" data-id="8bb6f3c" data-element_type="container">
                         
                         {/* Left Column - Text Content */}
