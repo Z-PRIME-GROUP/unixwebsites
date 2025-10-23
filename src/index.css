@@ -102,6 +102,8 @@ i.icon-check::before,
 .ekit-stylish-list-content-wrapper {
   display: inline-flex !important;
   list-style: none !important;
+  padding: 2px 0 !important;
+  margin: 2px 0 !important;
 }
 
 .ekit-stylish-list-content,
