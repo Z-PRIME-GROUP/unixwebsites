@@ -168,14 +168,68 @@ const HeroSectionExact = () => {
             <div className="elementor-widget-container">
               <div className="ekit-wid-con">
                 <ul className="ekit-stylish-list list-inline" data-ekit-animation="pulse">
-                  <li className="ekit-stylish-list-content-wrapper">
-                    <span className="ekit-stylish-list-content-title">100% FREE Website</span>
+                  <li className="ekit-stylish-list-content-wrapper elementor-repeater-item-b4e5723 animated-" data-ekit-delay="0">
+                    <div className="ekit-stylish-list-content">
+                      <div className="ekit-stylish-list-content-icon" style={{
+                        backgroundColor: '#FFF',
+                        width: '25px',
+                        height: '25px',
+                        borderRadius: '100%',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        fontSize: '14px',
+                        color: '#090909',
+                        fontWeight: 'bold'
+                      }}>
+                        ✓
+                      </div>
+                      <div className="ekit-stylish-list-content-text">
+                        <span className="ekit-stylish-list-content-title">100% FREE Website</span>
+                      </div>
+                    </div>
                   </li>
-                  <li className="ekit-stylish-list-content-wrapper">
-                    <span className="ekit-stylish-list-content-title">Award-Winning Support</span>
+                  <li className="ekit-stylish-list-content-wrapper elementor-repeater-item-9176c3a animated-" data-ekit-delay="0">
+                    <div className="ekit-stylish-list-content">
+                      <div className="ekit-stylish-list-content-icon" style={{
+                        backgroundColor: '#FFF',
+                        width: '25px',
+                        height: '25px',
+                        borderRadius: '100%',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        fontSize: '14px',
+                        color: '#090909',
+                        fontWeight: 'bold'
+                      }}>
+                        ✓
+                      </div>
+                      <div className="ekit-stylish-list-content-text">
+                        <span className="ekit-stylish-list-content-title">Award-Winning Support</span>
+                      </div>
+                    </div>
                   </li>
-                  <li className="ekit-stylish-list-content-wrapper">
-                    <span className="ekit-stylish-list-content-title">Risk-Free</span>
+                  <li className="ekit-stylish-list-content-wrapper elementor-repeater-item-aa8aca8 animated-" data-ekit-delay="0">
+                    <div className="ekit-stylish-list-content">
+                      <div className="ekit-stylish-list-content-icon" style={{
+                        backgroundColor: '#FFF',
+                        width: '25px',
+                        height: '25px',
+                        borderRadius: '100%',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        fontSize: '14px',
+                        color: '#090909',
+                        fontWeight: 'bold'
+                      }}>
+                        ✓
+                      </div>
+                      <div className="ekit-stylish-list-content-text">
+                        <span className="ekit-stylish-list-content-title">Risk-Free</span>
+                      </div>
+                    </div>
                   </li>
                 </ul>
               </div>
