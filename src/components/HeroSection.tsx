@@ -301,9 +301,9 @@ export const HeroSection = () => {
                       '/images/demo4.webp',
                       '/images/demo5.webp',
                       '/images/demo6.webp',
-                      '/images/demo1.webp',
-                      '/images/demo2.webp',
-                      '/images/demo3.webp'
+                      '/images/demo7.webp',
+                      '/images/demo8.webp',
+                      '/images/demo9.webp'
                     ].map((src, index) => (
                       <div key={index} className="ekit_gallery_grid_item">
                         <div className="elementskit-single-portfolio-item ekit-gallery-portfolio-tilt"
