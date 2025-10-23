@@ -24,7 +24,18 @@ img[alt*="gallery"],
   overflow: visible !important;
 }
 
-/* Fix tilt glare overflow */
+/* Fix tilt glare overflow - constrain within boundaries */
+.elementskit-single-portfolio-item,
+.ekit-gallery-portfolio-tilt {
+  overflow: hidden !important;
+  position: relative !important;
+}
+
+.elementskit-portfolio-thumb {
+  overflow: hidden !important;
+  position: relative !important;
+}
+
 .js-tilt-glare {
   overflow: hidden !important;
   border-radius: 0 !important;
@@ -34,6 +45,10 @@ img[alt*="gallery"],
   width: 100% !important;
   height: 100% !important;
   pointer-events: none !important;
+}
+
+.js-tilt-glare-inner {
+  border-radius: 0 !important;
 }
 
 /* Trustpilot/Verified badge - NO border radius */
