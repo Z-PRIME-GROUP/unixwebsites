@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Check } from "lucide-react";
 import { Button } from "./ui/button";
-import { Tilt } from 'react-tilt';
+import "./HeroSection.css";
 
 const HeroSection = () => {
   const [currentWord, setCurrentWord] = useState(0);
@@ -15,6 +15,55 @@ const HeroSection = () => {
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    // Add mouse move handler for 3D tilt effect
+    const handleMouseMove = (e: MouseEvent) => {
+      const cards = document.querySelectorAll('.tilt-card');
+      
+      cards.forEach((card) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        
+        const rotateX = ((y - centerY) / centerY) * -20; // Max 20 degrees
+        const rotateY = ((x - centerX) / centerX) * 20;
+        
+        const mouseXPercent = (x / rect.width) * 100;
+        const mouseYPercent = (y / rect.height) * 100;
+        
+        (card as HTMLElement).style.setProperty('--rotate-x', `${rotateX}deg`);
+        (card as HTMLElement).style.setProperty('--rotate-y', `${rotateY}deg`);
+        (card as HTMLElement).style.setProperty('--mouse-x', `${mouseXPercent}%`);
+        (card as HTMLElement).style.setProperty('--mouse-y', `${mouseYPercent}%`);
+      });
+    };
+
+    const handleMouseLeave = (e: MouseEvent) => {
+      const card = (e.target as HTMLElement).closest('.tilt-card');
+      if (card) {
+        (card as HTMLElement).style.setProperty('--rotate-x', '0deg');
+        (card as HTMLElement).style.setProperty('--rotate-y', '0deg');
+      }
+    };
+
+    document.addEventListener('mousemove', handleMouseMove);
+    
+    const cards = document.querySelectorAll('.tilt-card');
+    cards.forEach((card) => {
+      card.addEventListener('mouseleave', handleMouseLeave);
+    });
+
+    return () => {
+      document.removeEventListener('mousemove', handleMouseMove);
+      cards.forEach((card) => {
+        card.removeEventListener('mouseleave', handleMouseLeave);
+      });
+    };
+  }, []);
+
   const features = [
     "100% FREE Website",
     "Award-Winning Support",
@@ -23,18 +72,6 @@ const HeroSection = () => {
 
   // Generate 9 images (repeat the 6 available demos)
   const demoImages = [1, 2, 3, 4, 5, 6, 1, 2, 3];
-
-  const tiltOptions = {
-    reverse: false,
-    max: 20,
-    perspective: 600,
-    scale: 1.2,
-    speed: 400,
-    transition: true,
-    axis: null,
-    reset: true,
-    easing: "cubic-bezier(.03,.98,.52,.99)",
-  };
 
   return (
     <section className="relative w-full h-screen" style={{ marginTop: '-150px', paddingTop: '150px', overflow: 'visible' }}>
@@ -134,24 +171,23 @@ const HeroSection = () => {
               </div>
             </div>
 
-            {/* Right Column - Website Preview Grid (3x3) with Tilt Effect */}
+            {/* Right Column - Website Preview Grid (3x3) with CSS 3D Tilt Effect */}
             <div className="flex-1 animate-fade-in">
               <div className="grid grid-cols-3 gap-0">
                 {demoImages.map((item, index) => (
-                  <Tilt
+                  <div 
                     key={index}
-                    options={tiltOptions}
-                    className="aspect-[4/5]"
-                    style={{
-                      transformStyle: 'preserve-3d',
-                    }}
+                    className="tilt-card aspect-[4/5] cursor-pointer"
                   >
-                    <img 
-                      src={`/images/demo${item}.webp`} 
-                      alt={`Demo website ${item}`}
-                      className="w-full h-full object-cover"
-                    />
-                  </Tilt>
+                    <div className="tilt-card-inner">
+                      <img 
+                        src={`/images/demo${item}.webp`} 
+                        alt={`Demo website ${item}`}
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="tilt-glare"></div>
+                    </div>
+                  </div>
                 ))}
               </div>
             </div>
