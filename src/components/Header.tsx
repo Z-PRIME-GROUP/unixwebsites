@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Menu, X } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,6 +18,7 @@ const Header = () => {
             <div className="elementor-element elementor-element-4f16b2e5 e-con-full e-flex e-con e-parent">
               <div className="elementor-element elementor-element-26559631 e-flex e-con-boxed e-con e-child">
                 <div className="e-con-inner">
+                  {/* Logo - Left Side */}
                   <div className="elementor-element elementor-element-439fa31 e-con-full e-flex e-con e-child">
                     <div className="elementor-element elementor-element-30e2744d colorLogo elementor-widget elementor-widget-kd_site_logo">
                       <div className="elementor-widget-container">
@@ -41,22 +43,25 @@ const Header = () => {
                       </div>
                     </div>
                   </div>
+                  
+                  {/* Menu - Right Side */}
                   <div className="elementor-element elementor-element-6583e61b e-con-full e-flex e-con e-child">
                     <div className="elementor-element elementor-element-3151efa7 elementor-widget elementor-widget-ekit-nav-menu">
                       <div className="elementor-widget-container">
                         <nav className="ekit-wid-con ekit_menu_responsive_tablet">
+                          {/* Mobile Menu Button */}
                           <button 
                             className="elementskit-menu-hamburger elementskit-menu-toggler"
                             type="button"
                             aria-label="hamburger-icon"
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
                           >
-                            <span className="elementskit-menu-hamburger-icon"></span>
-                            <span className="elementskit-menu-hamburger-icon"></span>
-                            <span className="elementskit-menu-hamburger-icon"></span>
+                            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
                           </button>
+                          
+                          {/* Desktop & Mobile Menu */}
                           <div className={`elementskit-menu-container elementskit-menu-offcanvas-elements elementskit-navbar-nav-default ekit-nav-menu-one-page-yes ekit-nav-dropdown-hover ${isMenuOpen ? 'elementskit-menu-active' : ''}`}>
-                            <ul className="elementskit-navbar-nav elementskit-menu-po-center submenu-click-on-">
+                            <ul className="elementskit-navbar-nav elementskit-menu-po-right submenu-click-on-">
                               {navItems.map((item, index) => (
                                 <li 
                                   key={index}
@@ -74,7 +79,7 @@ const Header = () => {
                                 type="button"
                                 onClick={() => setIsMenuOpen(false)}
                               >
-                                X
+                                <X size={24} />
                               </button>
                             </div>
                           </div>
@@ -86,7 +91,6 @@ const Header = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="elementor-element elementor-element-212430ff e-con-full elementor-hidden-tablet elementor-hidden-mobile e-flex e-con e-child"></div>
                 </div>
               </div>
             </div>
