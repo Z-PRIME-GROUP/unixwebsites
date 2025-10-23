@@ -76,17 +76,19 @@ const FeaturesSuccessSection = () => {
           style={{
             fontFamily: 'Reaktif, sans-serif',
             fontSize: '48px',
-            fontWeight: 500,
+            fontWeight: '500',
             color: '#090909',
             marginBottom: '20px',
-            lineHeight: '1.2'
+            lineHeight: '1.2',
+            letterSpacing: '0px'
           }}
         >
           A Website Built for <span style={{
             background: 'linear-gradient(100deg, #FED349 40%, #E23B08 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text'
+            backgroundClip: 'text',
+            fontWeight: '500'
           }}>Success</span>
         </h2>
 
@@ -95,12 +97,14 @@ const FeaturesSuccessSection = () => {
           style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
             fontSize: '16px',
+            fontWeight: '400',
             color: '#666666',
             lineHeight: '1.65',
             maxWidth: '850px',
             margin: '0 auto 60px',
             paddingLeft: '15px',
-            paddingRight: '15px'
+            paddingRight: '15px',
+            letterSpacing: '0px'
           }}
         >
           Fast, secure, and fully customizable. Our websites are mobile-friendly, SEO-optimized, and designed to grow with your business. Get a professional site that enhances your brand and attracts more customers.
@@ -120,12 +124,14 @@ const FeaturesSuccessSection = () => {
               style={{
                 animationDelay: `${index * 100}ms`,
                 backgroundColor: '#FAFBFC',
-                padding: '40px 30px 35px',
+                padding: '40px 30px 35px 30px',
                 borderRadius: '12px',
                 boxShadow: '0px 3px 15px rgba(0, 0, 0, 0.06)',
                 textAlign: 'left',
                 transform: 'translateY(0)',
-                transition: 'all 0.3s ease'
+                transition: 'all 0.3s ease',
+                display: 'flex',
+                flexDirection: 'column'
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-8px)';
@@ -145,7 +151,8 @@ const FeaturesSuccessSection = () => {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                marginBottom: '22px'
+                marginBottom: '22px',
+                flexShrink: '0'
               }}>
                 <img
                   src={feature.icon}
@@ -162,10 +169,11 @@ const FeaturesSuccessSection = () => {
               <h5 style={{
                 fontFamily: 'Reaktif, sans-serif',
                 fontSize: '19px',
-                fontWeight: 600,
+                fontWeight: '600',
                 color: '#0A0A0A',
                 marginBottom: '12px',
-                lineHeight: '1.35'
+                lineHeight: '1.35',
+                letterSpacing: '0px'
               }}>
                 {feature.title}
               </h5>
@@ -174,9 +182,11 @@ const FeaturesSuccessSection = () => {
               <p style={{
                 fontFamily: 'Plus Jakarta Sans, sans-serif',
                 fontSize: '14.5px',
+                fontWeight: '400',
                 color: '#666666',
                 lineHeight: '1.7',
-                marginBottom: '0'
+                marginBottom: '0',
+                letterSpacing: '0px'
               }}>
                 {feature.description}
               </p>
