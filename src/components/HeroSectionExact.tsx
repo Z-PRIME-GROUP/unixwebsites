@@ -72,7 +72,7 @@ const HeroSectionExact = () => {
             <div className="elementor-widget-container">
               <div className="ekit-wid-con">
                 <h1 className="ekit-fancy-text letters scale" data-id="8efe2d6" data-animation-settings='{"animationStyle":"animated","animationDelay":2000,"loadingBar":3800,"lettersDelay":50,"typeLettersDelay":150,"duration":500,"revealDuration":600,"revealAnimationDelay":1500}'>
-                  <span className="ekit-fancy-prefix-text">Get Your </span>
+                  <span className="ekit-fancy-prefix-text">Get Your</span>
                   <span className="ekit-fancy-text-lists" ref={fancyTextRef}>
                     <b className="ekit-fancy-text elementor-repeater-item-a0eec85 is-visible">FREE </b>
                     <b className="ekit-fancy-text elementor-repeater-item-b9b00af ">FREE </b>
