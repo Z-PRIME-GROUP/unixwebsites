@@ -110,7 +110,7 @@ h1.ekit-fancy-text {
   position: relative !important;
   color: #090909 !important;
   font-size: 58px !important;
-  font-weight: 900 !important;
+  font-weight: 500 !important;
   line-height: 1.2 !important;
   font-family: 'Reaktif', sans-serif !important;
 }
@@ -119,13 +119,13 @@ h1.ekit-fancy-text {
 h1.ekit-fancy-text *,
 .ekit-fancy-prefix-text,
 .ekit-fancy-suffix-text {
-  font-weight: 900 !important;
+  font-weight: 500 !important;
   font-family: 'Reaktif', sans-serif !important;
 }
 
-/* Make FREE bolder */
+/* Make FREE same weight */
 .ekit-fancy-text-lists b {
-  font-weight: 900 !important;
+  font-weight: 500 !important;
 }
 
 h1.ekit-fancy-text * {
@@ -181,10 +181,10 @@ body,
   font-family: 'Plus Jakarta Sans', sans-serif !important;
 }
 
-/* Second heading also uses Reaktif Black */
+/* Second heading also uses Reaktif Bold */
 .elementor-24752 .elementor-element-6e1326a .elementskit-section-title {
   font-family: 'Reaktif', sans-serif !important;
-  font-weight: 900 !important;
+  font-weight: 500 !important;
 }
 
 /* Vanilla Tilt - Match Elementor gallery styles */
