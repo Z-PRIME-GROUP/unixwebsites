@@ -111,7 +111,7 @@ export const HeroSection = () => {
                display: 'flex',
                flexDirection: 'column',
                justifyContent: 'center',
-               gap: '20px'
+               gap: '15px'
              }}>
           
           {/* Animated Heading with FREE */}
@@ -132,10 +132,10 @@ export const HeroSection = () => {
                     <b className="ekit-fancy-text elementor-repeater-item-a0eec85 is-visible">
                       <i>F</i><i>R</i><i>E</i><i>E</i>
                     </b>
-                    <b className="ekit-fancy-text elementor-repeater-item-b9b00af">
+                    <b className="ekit-fancy-text elementor-repeater-item-b9b00af is-hidden">
                       <i>F</i><i>R</i><i>E</i><i>E</i>
                     </b>
-                    <b className="ekit-fancy-text elementor-repeater-item-7c0a76c">
+                    <b className="ekit-fancy-text elementor-repeater-item-7c0a76c is-hidden">
                       <i>F</i><i>R</i><i>E</i><i>E</i>
                     </b>
                   </span>
