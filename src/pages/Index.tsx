@@ -132,18 +132,36 @@ const Index = () => {
                             <div className="ekit-wid-con">
                               <div className="ekit_gallery_grid_wraper">
                                 <div id="ekit_gallery_79c58aa" className="ekit_gallery_grid">
-                                  {[1, 2, 3, 4, 5, 6].map((num) => (
-                                    <div key={num} className="ekit_gallery_grid_item ekit_gallery__filter-one">
-                                      <div className="elementskit-single-portfolio-item ekit-gallery-portfolio-tilt" data-tilt-scale="1.2" data-tilt-maxtilt="20" data-tilt-perspective="600" data-tilt-maxglare="0.6">
-                                        <div className="elementskit-portfolio-thumb">
-                                          <img width="800" height="914" decoding="async" className="elementskit-grid__img" src={`/images/demo${num}.webp`} alt={`Demo Website ${num}`} />
-                                        </div>
-                                        <div className="elementskit-hover-area">
-                                          <div className="elementskit-hover-content ekit_vertical_alignment_center"></div>
-                                        </div>
+                                  <div className="ekit_gallery_grid_item ekit_gallery__filter-one">
+                                    <div className="elementskit-single-portfolio-item ekit-gallery-portfolio-tilt" data-tilt-scale="1.2" data-tilt-maxtilt="20" data-tilt-perspective="600" data-tilt-maxglare="0.6">
+                                      <div className="elementskit-portfolio-thumb">
+                                        <img width="800" height="914" decoding="async" className="elementskit-grid__img" src="/images/demo1.webp" alt="Demo Website 1" />
+                                      </div>
+                                      <div className="elementskit-hover-area">
+                                        <div className="elementskit-hover-content ekit_vertical_alignment_center"></div>
                                       </div>
                                     </div>
-                                  ))}
+                                  </div>
+                                  <div className="ekit_gallery_grid_item ekit_gallery__filter-one">
+                                    <div className="elementskit-single-portfolio-item ekit-gallery-portfolio-tilt" data-tilt-scale="1.2" data-tilt-maxtilt="20" data-tilt-perspective="600" data-tilt-maxglare="0.6">
+                                      <div className="elementskit-portfolio-thumb">
+                                        <img width="800" height="914" decoding="async" className="elementskit-grid__img" src="/images/demo2.webp" alt="Demo Website 2" />
+                                      </div>
+                                      <div className="elementskit-hover-area">
+                                        <div className="elementskit-hover-content ekit_vertical_alignment_center"></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div className="ekit_gallery_grid_item ekit_gallery__filter-one">
+                                    <div className="elementskit-single-portfolio-item ekit-gallery-portfolio-tilt" data-tilt-scale="1.2" data-tilt-maxtilt="20" data-tilt-perspective="600" data-tilt-maxglare="0.6">
+                                      <div className="elementskit-portfolio-thumb">
+                                        <img width="800" height="914" decoding="async" className="elementskit-grid__img" src="/images/demo3.webp" alt="Demo Website 3" />
+                                      </div>
+                                      <div className="elementskit-hover-area">
+                                        <div className="elementskit-hover-content ekit_vertical_alignment_center"></div>
+                                      </div>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
