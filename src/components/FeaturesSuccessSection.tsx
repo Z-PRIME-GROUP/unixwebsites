@@ -1,4 +1,4 @@
-const FeaturesSuccessSection = () => {
+export const FeaturesSuccessSection = () => {
   const features = [
     {
       icon: '/images/ufw-responsive-design.webp',
@@ -28,115 +28,108 @@ const FeaturesSuccessSection = () => {
     {
       icon: '/images/ufw-magic-wand.webp',
       title: 'Effortless Website Customization',
-      description: "We'll guide you through how to easily update and edit your website, empowering you to make changes on your own without needing to hire a web developer."
+      description: 'We\'ll guide you through how to easily update and edit your website, empowering you to make changes on your own without needing to hire a web developer.'
     }
   ];
 
   return (
-    <section
-      className="features-success-section"
-      style={{ 
-        background: 'linear-gradient(180deg, #FFFFFF 0%, #E3EEFF 100%)',
-        position: 'relative',
-        overflow: 'hidden',
-        padding: '80px 20px',
-        minHeight: '800px'
-      }}
-    >
-      {/* Pink/Peach Gradient Blob - Top Right - MORE VISIBLE */}
+    <section style={{ 
+      background: 'linear-gradient(180deg, #FFFFFF 0%, #E3EEFF 100%)',
+      position: 'relative',
+      overflow: 'hidden',
+      padding: '80px 20px',
+      minHeight: '900px'
+    }}>
+      {/* Pink/Peach Gradient Blob - Top Right */}
+      <div style={{
+        position: 'absolute',
+        right: '3%',
+        top: '5%',
+        width: '500px',
+        height: '500px',
+        background: 'radial-gradient(circle, rgba(255,192,203,0.6) 0%, rgba(255,182,193,0.3) 35%, transparent 70%)',
+        borderRadius: '50%',
+        filter: 'blur(70px)',
+        pointerEvents: 'none',
+        zIndex: 0
+      }} />
+
+      {/* Light Blue Gradient Blob - Bottom Right */}
       <div style={{
         position: 'absolute',
         right: '5%',
-        top: '8%',
-        width: '450px',
-        height: '450px',
-        background: 'radial-gradient(circle, rgba(255, 192, 203, 0.5) 0%, rgba(255, 182, 193, 0.25) 35%, rgba(255, 192, 203, 0) 70%)',
+        bottom: '10%',
+        width: '550px',
+        height: '550px',
+        background: 'radial-gradient(circle, rgba(173,216,230,0.65) 0%, rgba(176,224,230,0.35) 35%, transparent 70%)',
         borderRadius: '50%',
-        filter: 'blur(60px)',
+        filter: 'blur(75px)',
         pointerEvents: 'none',
         zIndex: 0
       }} />
 
-      {/* Light Blue Gradient Blob - Bottom Right - MORE VISIBLE */}
-      <div style={{
-        position: 'absolute',
-        right: '8%',
-        bottom: '15%',
-        width: '500px',
-        height: '500px',
-        background: 'radial-gradient(circle, rgba(173, 216, 230, 0.55) 0%, rgba(176, 224, 230, 0.3) 35%, rgba(173, 216, 230, 0) 70%)',
-        borderRadius: '50%',
-        filter: 'blur(65px)',
-        pointerEvents: 'none',
-        zIndex: 0
-      }} />
-
-      <div className="max-w-[1200px] mx-auto" style={{ position: 'relative', zIndex: 1 }}>
-        <h2
-          className="text-center"
-          style={{
-            fontFamily: 'Reaktif, sans-serif',
-            fontSize: '48px',
-            fontWeight: 500,
-            color: '#090909',
-            marginBottom: '20px',
-            lineHeight: '1.2'
-          }}
-        >
+      <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
+        {/* Main Heading */}
+        <h2 style={{
+          fontFamily: 'Reaktif, sans-serif',
+          fontSize: '48px',
+          fontWeight: 500,
+          color: '#090909',
+          marginBottom: '20px',
+          lineHeight: '1.2',
+          textAlign: 'center'
+        }}>
           A Website Built for <span style={{
             background: 'linear-gradient(100deg, #FED349 40%, #E23B08 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',
-            fontWeight: 600
+            fontWeight: 500
           }}>Success</span>
         </h2>
 
-        <p
-          className="text-center"
-          style={{
-            fontFamily: 'Plus Jakarta Sans, sans-serif',
-            fontSize: '16px',
-            fontWeight: 400,
-            color: '#666666',
-            lineHeight: '1.6',
-            maxWidth: '850px',
-            margin: '0 auto 60px'
-          }}
-        >
+        {/* Description */}
+        <p style={{
+          fontFamily: 'Plus Jakarta Sans, sans-serif',
+          fontSize: '16px',
+          fontWeight: 400,
+          color: '#666666',
+          lineHeight: '1.6',
+          maxWidth: '850px',
+          margin: '0 auto 60px',
+          textAlign: 'center'
+        }}>
           Fast, secure, and fully customizable. Our websites are mobile-friendly, SEO-optimized, and designed to grow with your business. Get a professional site that enhances your brand and attracts more customers.
         </p>
 
-        <div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
-          style={{ gap: '30px' }}
-        >
+        {/* Features Grid */}
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+          gap: '30px'
+        }}>
           {features.map((feature, index) => (
             <div
               key={index}
-              className="transition-all duration-300 animate-fade-in"
               style={{
-                animationDelay: `${index * 100}ms`,
                 backgroundColor: '#FAFBFC',
-                padding: '40px 30px 35px 30px',
+                padding: '40px 30px',
                 borderRadius: '12px',
-                boxShadow: '0px 3px 15px rgba(0, 0, 0, 0.06)',
-                textAlign: 'left',
-                transform: 'translateY(0)',
+                boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.08)',
                 transition: 'all 0.3s ease',
-                display: 'flex',
-                flexDirection: 'column'
+                opacity: 0,
+                animation: `fadeInUp 0.6s ease-out ${index * 0.1}s forwards`
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-8px)';
-                e.currentTarget.style.boxShadow = '0px 8px 25px rgba(0, 0, 0, 0.1)';
+                e.currentTarget.style.boxShadow = '0px 8px 30px rgba(0, 0, 0, 0.12)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = '0px 3px 15px rgba(0, 0, 0, 0.06)';
+                e.currentTarget.style.boxShadow = '0px 4px 20px rgba(0, 0, 0, 0.08)';
               }}
             >
-              {/* Icon with circular blue background */}
+              {/* Icon Container */}
               <div style={{
                 width: '75px',
                 height: '75px',
@@ -145,7 +138,7 @@ const FeaturesSuccessSection = () => {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                marginBottom: '22px'
+                marginBottom: '25px'
               }}>
                 <img
                   src={feature.icon}
@@ -158,19 +151,19 @@ const FeaturesSuccessSection = () => {
                 />
               </div>
 
-              {/* Feature Title */}
+              {/* Title */}
               <h5 style={{
                 fontFamily: 'Reaktif, sans-serif',
-                fontSize: '19px',
-                fontWeight: 700,
+                fontSize: '20px',
+                fontWeight: 600,
                 color: '#0A0A0A',
                 marginBottom: '12px',
-                lineHeight: '1.35'
+                lineHeight: '1.3'
               }}>
                 {feature.title}
               </h5>
 
-              {/* Feature Description */}
+              {/* Description */}
               <p style={{
                 fontFamily: 'Plus Jakarta Sans, sans-serif',
                 fontSize: '15px',
@@ -185,6 +178,19 @@ const FeaturesSuccessSection = () => {
           ))}
         </div>
       </div>
+
+      <style>{`
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      `}</style>
     </section>
   );
 };
