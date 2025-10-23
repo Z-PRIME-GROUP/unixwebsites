@@ -23,7 +23,7 @@ img[alt*="gallery"],
   -o-border-radius: 0 !important;
 }
 
-/* Tilt glare containment - Target the exact element that has VanillaTilt applied */
+/* Tilt glare containment - only set overflow on parent */
 .elementskit-single-portfolio-item.ekit-gallery-portfolio-tilt {
   overflow: hidden !important;
   position: relative !important;
@@ -35,19 +35,6 @@ img[alt*="gallery"],
   height: auto !important;
   position: relative !important;
   z-index: 1 !important;
-}
-
-/* Allow glare to work but ensure it stays within boundaries */
-.js-tilt-glare {
-  border-radius: 0 !important;
-  z-index: 2 !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-}
-
-.js-tilt-glare-inner {
-  border-radius: 0 !important;
-  opacity: 1 !important;
 }
 
 
