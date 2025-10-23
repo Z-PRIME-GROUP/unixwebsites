@@ -110,8 +110,16 @@ h1.ekit-fancy-text {
   position: relative !important;
   color: #090909 !important;
   font-size: 58px !important;
-  font-weight: 500 !important;
+  font-weight: 900 !important;
   line-height: 1.2 !important;
+  font-family: 'Reaktif', sans-serif !important;
+}
+
+/* All parts of heading should be same weight */
+h1.ekit-fancy-text *,
+.ekit-fancy-prefix-text,
+.ekit-fancy-suffix-text {
+  font-weight: 900 !important;
   font-family: 'Reaktif', sans-serif !important;
 }
 
@@ -161,6 +169,22 @@ h1.ekit-fancy-text {
 .ekit-fancy-text-lists .ekit-fancy-text.is-visible {
   display: inline-block;
   position: relative;
+}
+
+/* Body text uses Plus Jakarta Sans */
+p,
+.ekit-heading__description,
+.ekit-heading__description p,
+.elementskit-section-title,
+body,
+.elementor-widget-elementskit-heading p {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+/* Second heading also uses Reaktif Black */
+.elementor-24752 .elementor-element-6e1326a .elementskit-section-title {
+  font-family: 'Reaktif', sans-serif !important;
+  font-weight: 900 !important;
 }
 
 /* Vanilla Tilt - Match Elementor gallery styles */
