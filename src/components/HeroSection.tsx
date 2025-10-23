@@ -43,9 +43,11 @@ const HeroSection = () => {
         }}
       >
         <img 
-          src="/images/favicon-icon.webp" 
+          src="/images/ufreewebsites-favicon-color.webp" 
           alt=""
           className="w-auto h-auto"
+          width="1600"
+          height="1600"
         />
       </div>
       
