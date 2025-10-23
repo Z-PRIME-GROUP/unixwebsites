@@ -1,0 +1,62 @@
+/* Hero Section Layout */
+.elementor-element-8bb6f3c.hero-section {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 3rem !important;
+  align-items: center !important;
+  max-width: 1400px !important;
+  margin: 0 auto !important;
+  padding: 0 2rem !important;
+}
+
+/* Left Column - Text Content */
+.elementor-element-b1c56d6 {
+  flex: 0 0 53% !important;
+  max-width: 675px !important;
+}
+
+/* Right Column - Gallery Grid */
+.elementor-element-eca17a6 {
+  flex: 1 !important;
+}
+
+/* Gallery Grid - 3x3 Layout */
+.ekit_gallery_grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 0 !important;
+}
+
+.ekit_gallery_grid_item {
+  aspect-ratio: 4 / 5 !important;
+  overflow: visible !important;
+}
+
+.elementskit-single-portfolio-item {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.elementskit-portfolio-thumb img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+/* Background Logo */
+.elementor-element-2e19d04 {
+  pointer-events: none !important;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .elementor-element-8bb6f3c.hero-section {
+    flex-direction: column !important;
+  }
+  
+  .elementor-element-b1c56d6 {
+    flex: 1 !important;
+    max-width: 100% !important;
+  }
+}
