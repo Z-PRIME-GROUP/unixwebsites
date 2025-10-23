@@ -219,6 +219,7 @@ h1.ekit-fancy-text {
 }
 
 .ekit-fancy-text-lists b.is-hidden {
+  display: none !important;
   opacity: 0;
   position: absolute;
 }
@@ -324,22 +325,26 @@ img[src*="trustpilot"] {
 }
 
 /* Button hover animation - Professional CTA effect */
-.elementor-24752 .elementor-element-7a98993 {
+.elementor-element-7a98993,
+#homepageCTA1 {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
-.elementor-24752 .elementor-element-7a98993:hover {
+.elementor-element-7a98993:hover,
+#homepageCTA1:hover {
   transform: translateY(-4px) scale(1.03) !important;
   box-shadow: 0 12px 24px rgba(2, 52, 218, 0.25) !important;
 }
 
-.elementor-24752 .elementor-element-7a98993:active {
+.elementor-element-7a98993:active,
+#homepageCTA1:active {
   transform: translateY(-2px) scale(1.01) !important;
   transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
 /* Subtle shine effect on hover */
-.elementor-24752 .elementor-element-7a98993 .elementskit-btn::before {
+.elementor-element-7a98993 .elementskit-btn::before,
+#homepageCTA1::before {
   content: '' !important;
   position: absolute !important;
   top: 0 !important;
@@ -355,26 +360,9 @@ img[src*="trustpilot"] {
   transition: left 0.5s ease !important;
 }
 
-.elementor-24752 .elementor-element-7a98993:hover .elementskit-btn::before {
+.elementor-element-7a98993:hover .elementskit-btn::before,
+#homepageCTA1:hover::before {
   left: 100% !important;
-}
-
-/* Background image for hero section - FORCE IT WITH HIGHEST SPECIFICITY */
-div[data-id="89bde1c"].elementor-element-89bde1c {
-  background-color: transparent !important;
-  background-image: url(/images/unixwebsites-favicon-color.webp), linear-gradient(180deg, #E3EEFF 40%, #fff 100%) !important;
-  background-position: 85% 50%, center center !important;
-  background-size: 450px, cover !important;
-  background-repeat: no-repeat !important;
-}
-
-.elementor-24752 .elementor-element.elementor-element-89bde1c:not(.elementor-motion-effects-element-type-background),
-.elementor-24752 .elementor-element.elementor-element-89bde1c>.elementor-motion-effects-container>.elementor-motion-effects-layer {
-  background-color: transparent !important;
-  background-image: url(/images/unixwebsites-favicon-color.webp), linear-gradient(180deg, #E3EEFF 40%, #fff 100%) !important;
-  background-position: 85% 50%, center center !important;
-  background-size: 450px, cover !important;
-  background-repeat: no-repeat !important;
 }
 
 /* FINAL OVERRIDE - Background with logo */
