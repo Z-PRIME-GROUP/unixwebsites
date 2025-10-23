@@ -108,6 +108,8 @@ i.icon-check::before,
   display: inline-flex !important;
   align-items: center !important;
   gap: 3px !important;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
 }
 
 /* Checkmark icon */
