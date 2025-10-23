@@ -99,9 +99,9 @@ const FeaturesSuccessSection = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="feature-card text-left opacity-0 transition-all duration-500 hover:translate-y-[-5px]"
+              className="feature-card text-left transition-all duration-500 hover:translate-y-[-5px] animate-fade-in"
               style={{
-                animation: 'none'
+                animationDelay: `${index * 100}ms`
               }}
             >
               {/* Icon */}
