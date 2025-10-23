@@ -16,11 +16,12 @@ const HeroSection = () => {
   }, []);
 
   useEffect(() => {
-    // Add mouse move handler for 3D tilt effect
-    const handleMouseMove = (e: MouseEvent) => {
-      const cards = document.querySelectorAll('.tilt-card');
-      
-      cards.forEach((card) => {
+    console.log('Setting up tilt effect...');
+    const cards = document.querySelectorAll('.tilt-card');
+    console.log('Found cards:', cards.length);
+    
+    cards.forEach((card, index) => {
+      const handleMouseMove = (e: MouseEvent) => {
         const rect = card.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
@@ -28,7 +29,7 @@ const HeroSection = () => {
         const centerX = rect.width / 2;
         const centerY = rect.height / 2;
         
-        const rotateX = ((y - centerY) / centerY) * -20; // Max 20 degrees
+        const rotateX = ((y - centerY) / centerY) * -20;
         const rotateY = ((x - centerX) / centerX) * 20;
         
         const mouseXPercent = (x / rect.width) * 100;
@@ -38,28 +39,27 @@ const HeroSection = () => {
         (card as HTMLElement).style.setProperty('--rotate-y', `${rotateY}deg`);
         (card as HTMLElement).style.setProperty('--mouse-x', `${mouseXPercent}%`);
         (card as HTMLElement).style.setProperty('--mouse-y', `${mouseYPercent}%`);
-      });
-    };
+      };
 
-    const handleMouseLeave = (e: MouseEvent) => {
-      const card = (e.target as HTMLElement).closest('.tilt-card');
-      if (card) {
+      const handleMouseLeave = () => {
         (card as HTMLElement).style.setProperty('--rotate-x', '0deg');
         (card as HTMLElement).style.setProperty('--rotate-y', '0deg');
-      }
-    };
+      };
 
-    document.addEventListener('mousemove', handleMouseMove);
-    
-    const cards = document.querySelectorAll('.tilt-card');
-    cards.forEach((card) => {
+      const handleMouseEnter = () => {
+        console.log('Mouse entered card', index);
+      };
+
+      card.addEventListener('mouseenter', handleMouseEnter);
+      card.addEventListener('mousemove', handleMouseMove);
       card.addEventListener('mouseleave', handleMouseLeave);
     });
 
     return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
       cards.forEach((card) => {
-        card.removeEventListener('mouseleave', handleMouseLeave);
+        card.removeEventListener('mouseenter', () => {});
+        card.removeEventListener('mousemove', () => {});
+        card.removeEventListener('mouseleave', () => {});
       });
     };
   }, []);
