@@ -107,11 +107,12 @@ export const HeroSection = () => {
                display: 'flex',
                flexDirection: 'column',
                justifyContent: 'center',
-               gap: '30px'
+               gap: '0px'
              }}>
           
           {/* Animated Heading with FREE */}
-          <div className="elementor-element elementor-element-8efe2d6 elementor-widget elementor-widget-elementskit-fancy-animated-text">
+          <div className="elementor-element elementor-element-8efe2d6 elementor-widget elementor-widget-elementskit-fancy-animated-text"
+               style={{ marginBottom: '40px' }}>
             <div className="elementor-widget-container">
               <div className="ekit-wid-con">
                 <h1 className="ekit-fancy-text letters scale" 
@@ -142,7 +143,8 @@ export const HeroSection = () => {
           </div>
 
           {/* Subheading */}
-          <div className="elementor-element elementor-element-6e1326a elementor-widget elementor-widget-elementskit-heading">
+          <div className="elementor-element elementor-element-6e1326a elementor-widget elementor-widget-elementskit-heading"
+               style={{ marginBottom: '45px' }}>
             <div className="elementor-widget-container">
               <div className="ekit-wid-con">
                 <div className="ekit-heading elementskit-section-title-wraper text_left">
@@ -173,7 +175,8 @@ export const HeroSection = () => {
           </div>
 
           {/* CTA Button */}
-          <div className="elementor-element elementor-element-31914af e-con-full e-flex e-con e-child">
+          <div className="elementor-element elementor-element-31914af e-con-full e-flex e-con e-child"
+               style={{ marginBottom: '40px' }}>
             <div className="elementor-element elementor-element-4407a0b e-con-full e-flex e-con e-child">
               <div className="elementor-element elementor-element-7a98993 elementor-align-left elementor-widget__width-auto e-transform elementor-widget elementor-widget-elementskit-button">
                 <div className="elementor-widget-container">
@@ -206,7 +209,8 @@ export const HeroSection = () => {
           </div>
 
           {/* Feature List with Checkmarks */}
-          <div className="elementor-element elementor-element-48ff8ae e-con-full e-flex e-con e-child">
+          <div className="elementor-element elementor-element-48ff8ae e-con-full e-flex e-con e-child"
+               style={{ marginBottom: '45px' }}>
             <div className="elementor-element elementor-element-f9506ec keydesign-h6 elementor-widget elementor-widget-elementskit-stylish-list">
               <div className="elementor-widget-container">
                 <div className="ekit-wid-con">
