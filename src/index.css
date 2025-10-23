@@ -306,4 +306,137 @@ div[data-id="89bde1c"].elementor-element-89bde1c {
   background: url(/images/unixwebsites-favicon-color.webp) 85% 50% / 450px no-repeat, linear-gradient(180deg, #E3EEFF 40%, #fff 100%) !important;
 }
 
+/* GLASSMORPHIC HEADER STYLES */
+#site-header {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  z-index: 999 !important;
+  background: rgba(255, 255, 255, 0.15) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1) !important;
+}
+
+/* Logo styling with drop shadow */
+.site-logo img {
+  max-height: 45px !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1)) !important;
+}
+
+/* Desktop menu items - horizontal layout */
+@media (min-width: 1025px) {
+  .elementskit-navbar-nav {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 35px !important;
+    align-items: center !important;
+  }
+  
+  .ekit-menu-nav-link {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: #090909 !important;
+    text-decoration: none !important;
+    position: relative !important;
+    transition: color 0.3s ease !important;
+  }
+  
+  /* Underline animation from left to right */
+  .ekit-menu-nav-link::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: -2px !important;
+    left: 0 !important;
+    width: 0 !important;
+    height: 2px !important;
+    background-color: #0234da !important;
+    transition: width 0.3s ease !important;
+  }
+  
+  .ekit-menu-nav-link:hover {
+    color: #0234da !important;
+  }
+  
+  .ekit-menu-nav-link:hover::after {
+    width: 100% !important;
+  }
+}
+
+/* Mobile menu glass effect */
+@media (max-width: 1024px) {
+  .elementskit-menu-container {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    width: 300px !important;
+  }
+  
+  .elementskit-menu-overlay {
+    background: rgba(0, 0, 0, 0.5) !important;
+  }
+  
+  .ekit-menu-nav-link {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: #090909 !important;
+  }
+}
+
+/* CTA Button with Font Awesome icon */
+.elementskit-btn {
+  background: #0234da !important;
+  padding: 18px 35px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 15px rgba(2, 52, 218, 0.3) !important;
+  transition: all 0.3s ease !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  font-family: 'Reaktif', sans-serif !important;
+  font-weight: 900 !important;
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+.elementskit-btn:hover {
+  transform: scale(1.05) !important;
+  background: #00139b !important;
+}
+
+.elementskit-btn i.far.fa-arrow-alt-circle-right {
+  font-size: 18px !important;
+  margin-right: 10px !important;
+}
+
+/* Gallery Grid - 3 columns on all screens */
+.ekit_gallery_grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 20px !important;
+  margin-top: 60px !important;
+}
+
+@media (max-width: 768px) {
+  .ekit_gallery_grid {
+    gap: 10px !important;
+  }
+}
+
+.ekit_gallery_grid_item {
+  aspect-ratio: 800/914 !important;
+  overflow: hidden !important;
+}
+
+.elementskit-grid__img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
 /* Preserve Elementor CSS from lightspeed.css */
