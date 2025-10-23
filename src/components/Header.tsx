@@ -1,67 +1,97 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
-import { Button } from "./ui/button";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { name: "Affiliate Portal", href: "#affiliate-portal" },
-    { name: "Affiliate Login", href: "#affiliate-login" },
-    { name: "Become an Affiliate", href: "#become-affiliate" },
+    { name: "Affiliate Portal", href: "https://ufreewebsites.com/affiliate-portal-2/" },
+    { name: "Affiliate Login", href: "https://ufreewebsites.com/affiliate-login-2/" },
+    { name: "Become an Affiliate", href: "https://ufreewebsites.com/become-an-affiliate-2/" },
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/10 backdrop-blur-md border-b border-white/20">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <a href="/" className="flex items-center">
-              <img src="/images/logo-white.webp" alt="uFREEwebsites" className="h-10 w-auto" />
-            </a>
+    <header id="site-header" className="site-header header-position-default show-on-scroll">
+      <div className="site-header-wrapper">
+        <div className="ekit-template-content-markup ekit-template-content-header ekit-template-content-theme-support">
+          <div className="elementor elementor-23807">
+            <div className="elementor-element elementor-element-4f16b2e5 e-con-full e-flex e-con e-parent">
+              <div className="elementor-element elementor-element-26559631 e-flex e-con-boxed e-con e-child">
+                <div className="e-con-inner">
+                  <div className="elementor-element elementor-element-439fa31 e-con-full e-flex e-con e-child">
+                    <div className="elementor-element elementor-element-30e2744d colorLogo elementor-widget elementor-widget-kd_site_logo">
+                      <div className="elementor-widget-container">
+                        <div className="site-logo-wrapper">
+                          <a className="site-logo" href="/">
+                            <span className="primary-logo">
+                              <img 
+                                src="/images/logo-color.webp" 
+                                alt="uFREEwebsites"
+                                className="attachment-full size-full"
+                              />
+                            </span>
+                            <span className="secondary-logo">
+                              <img 
+                                src="/images/logo-white.webp" 
+                                alt="uFREEwebsites"
+                                className="attachment-full size-full"
+                              />
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="elementor-element elementor-element-6583e61b e-con-full e-flex e-con e-child">
+                    <div className="elementor-element elementor-element-3151efa7 elementor-widget elementor-widget-ekit-nav-menu">
+                      <div className="elementor-widget-container">
+                        <nav className="ekit-wid-con ekit_menu_responsive_tablet">
+                          <button 
+                            className="elementskit-menu-hamburger elementskit-menu-toggler"
+                            type="button"
+                            aria-label="hamburger-icon"
+                            onClick={() => setIsMenuOpen(!isMenuOpen)}
+                          >
+                            <span className="elementskit-menu-hamburger-icon"></span>
+                            <span className="elementskit-menu-hamburger-icon"></span>
+                            <span className="elementskit-menu-hamburger-icon"></span>
+                          </button>
+                          <div className={`elementskit-menu-container elementskit-menu-offcanvas-elements elementskit-navbar-nav-default ekit-nav-menu-one-page-yes ekit-nav-dropdown-hover ${isMenuOpen ? 'elementskit-menu-active' : ''}`}>
+                            <ul className="elementskit-navbar-nav elementskit-menu-po-center submenu-click-on-">
+                              {navItems.map((item, index) => (
+                                <li 
+                                  key={index}
+                                  className="menu-item nav-item elementskit-mobile-builder-content"
+                                >
+                                  <a href={item.href} className="ekit-menu-nav-link">
+                                    {item.name}
+                                  </a>
+                                </li>
+                              ))}
+                            </ul>
+                            <div className="elementskit-nav-identity-panel">
+                              <button 
+                                className="elementskit-menu-close elementskit-menu-toggler"
+                                type="button"
+                                onClick={() => setIsMenuOpen(false)}
+                              >
+                                X
+                              </button>
+                            </div>
+                          </div>
+                          <div 
+                            className={`elementskit-menu-overlay elementskit-menu-offcanvas-elements elementskit-menu-toggler ekit-nav-menu--overlay ${isMenuOpen ? 'elementskit-menu-active' : ''}`}
+                            onClick={() => setIsMenuOpen(false)}
+                          ></div>
+                        </nav>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="elementor-element elementor-element-212430ff e-con-full elementor-hidden-tablet elementor-hidden-mobile e-flex e-con e-child"></div>
+                </div>
+              </div>
+            </div>
           </div>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-sm font-medium text-foreground/90 hover:text-foreground transition-colors"
-              >
-                {item.name}
-              </a>
-            ))}
-          </nav>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="lg:hidden p-2 text-foreground/90"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
         </div>
-
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-white/20 animate-fade-in bg-white/10 backdrop-blur-md">
-            <nav className="flex flex-col space-y-4">
-              {navItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-sm font-medium text-foreground/90 hover:text-foreground transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.name}
-                </a>
-              ))}
-            </nav>
-          </div>
-        )}
       </div>
     </header>
   );
