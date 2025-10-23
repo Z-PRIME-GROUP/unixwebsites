@@ -71,14 +71,14 @@ const HeroSectionExact = () => {
           <div className="elementor-element elementor-element-8efe2d6 elementor-widget elementor-widget-elementskit-fancy-animated-text" data-id="8efe2d6" data-element_type="widget" data-settings='{"ekit_we_effect_on":"none"}' data-widget_type="elementskit-fancy-animated-text.default">
             <div className="elementor-widget-container">
               <div className="ekit-wid-con">
-                <h1 className="ekit-fancy-text letters scale" data-id="8efe2d6" data-animation-settings='{"animationStyle":"animated","animationDelay":2000,"loadingBar":3800,"lettersDelay":50,"typeLettersDelay":150,"duration":500,"revealDuration":600,"revealAnimationDelay":1500}'>
-                  <span className="ekit-fancy-prefix-text">Get Your</span>
-                  <span className="ekit-fancy-text-lists" ref={fancyTextRef}>
-                    <b className="ekit-fancy-text elementor-repeater-item-a0eec85 is-visible"><i>F</i><i>R</i><i>E</i><i>E</i></b>
-                    <b className="ekit-fancy-text elementor-repeater-item-b9b00af "><i>F</i><i>R</i><i>E</i><i>E</i></b>
-                    <b className="ekit-fancy-text elementor-repeater-item-7c0a76c "><i>F</i><i>R</i><i>E</i><i>E</i></b>
+                <h1 className="ekit-fancy-text letters scale" data-id="8efe2d6" data-animation-settings='{"animationStyle":"animated","animationDelay":2000,"loadingBar":3800,"lettersDelay":50,"typeLettersDelay":150,"duration":500,"revealDuration":600,"revealAnimationDelay":1500}' style={{color: '#090909', fontSize: '48px', fontWeight: 500}}>
+                  <span className="ekit-fancy-prefix-text" style={{color: '#090909'}}>Get Your</span>
+                  <span className="ekit-fancy-text-lists" ref={fancyTextRef} style={{color: '#090909'}}>
+                    <b className="ekit-fancy-text elementor-repeater-item-a0eec85 is-visible" style={{color: '#0234da'}}>FREE</b>
+                    <b className="ekit-fancy-text elementor-repeater-item-b9b00af " style={{color: '#0234da'}}>FREE</b>
+                    <b className="ekit-fancy-text elementor-repeater-item-7c0a76c " style={{color: '#0234da'}}>FREE</b>
                   </span>
-                  <span className="ekit-fancy-suffix-text">Website</span>
+                  <span className="ekit-fancy-suffix-text" style={{color: '#090909'}}>Website</span>
                 </h1>
               </div>
             </div>

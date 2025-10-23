@@ -47,28 +47,26 @@
   content: "\eaaf";
 }
 
-/* PRE-EMPTIVE FIXES: Override missing Reaktif font and ensure text visibility */
-
-/* FIX 1: Replace "Reaktif" font everywhere */
-.elementor-24752 .elementor-element-8efe2d6 .ekit-fancy-text,
-.elementor-24752 .elementor-element-6e1326a .elementskit-section-title,
-.elementor-24752 .elementor-element-7a98993 .elementskit-btn,
-.elementor-24752 .elementor-element-f9506ec .ekit-stylish-list-content-title {
-  font-family: "Plus Jakarta Sans", Sans-serif !important;
+/* ATTEMPT 1: Aggressive color override for invisible text */
+.elementor * {
+  color: inherit !important;
 }
 
-/* FIX 2: Ensure ALL text in fancy heading is visible */
 h1.ekit-fancy-text,
 h1.ekit-fancy-text *,
 .ekit-fancy-prefix-text,
 .ekit-fancy-suffix-text,
-.ekit-fancy-text-lists {
+.ekit-fancy-text-lists,
+.ekit-fancy-text-lists b {
   color: #090909 !important;
+  font-family: "Plus Jakarta Sans", Sans-serif !important;
+  font-size: 48px !important;
+  font-weight: 500 !important;
 }
 
-/* FIX 3: Preserve blue color for FREE word */
-.ekit-fancy-text .ekit-fancy-text-lists b {
-  color: var(--e-global-color-primary) !important;
+/* Blue color for FREE word */
+.ekit-fancy-text-lists b {
+  color: #0234da !important;
 }
 
 .ekit-fancy-text-lists {
