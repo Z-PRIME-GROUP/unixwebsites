@@ -1,7 +1,58 @@
 import Header from "@/components/Header";
+import { useEffect } from "react";
+import "./Index.css";
 
 const Index = () => {
   console.log('Index component rendering');
+  
+  useEffect(() => {
+    console.log('Initializing tilt effect on gallery...');
+    
+    // Find all tilt items
+    const tiltItems = document.querySelectorAll('.ekit-gallery-portfolio-tilt');
+    console.log('Found tilt items:', tiltItems.length);
+    
+    tiltItems.forEach((item, index) => {
+      const handleMouseMove = (e: MouseEvent) => {
+        const rect = item.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        
+        const rotateX = ((y - centerY) / centerY) * -20;
+        const rotateY = ((x - centerX) / centerX) * 20;
+        
+        const mouseXPercent = (x / rect.width) * 100;
+        const mouseYPercent = (y / rect.height) * 100;
+        
+        (item as HTMLElement).style.transform = `scale(1.2) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        (item as HTMLElement).style.setProperty('--mouse-x', `${mouseXPercent}%`);
+        (item as HTMLElement).style.setProperty('--mouse-y', `${mouseYPercent}%`);
+      };
+
+      const handleMouseLeave = () => {
+        (item as HTMLElement).style.transform = 'scale(1) rotateX(0deg) rotateY(0deg)';
+      };
+
+      const handleMouseEnter = () => {
+        console.log('Mouse entered item', index);
+      };
+
+      item.addEventListener('mouseenter', handleMouseEnter);
+      item.addEventListener('mousemove', handleMouseMove);
+      item.addEventListener('mouseleave', handleMouseLeave);
+    });
+
+    return () => {
+      tiltItems.forEach((item) => {
+        item.removeEventListener('mouseenter', () => {});
+        item.removeEventListener('mousemove', () => {});
+        item.removeEventListener('mouseleave', () => {});
+      });
+    };
+  }, []);
   
   return (
     <div className="home wp-singular page-template-default page page-id-24752 wp-custom-logo wp-theme-landpress underline-link-effect flip-button-effect keydesign-elementor-library elementor-default elementor-kit-24751 elementor-page elementor-page-24752 elementor-page-24772">
