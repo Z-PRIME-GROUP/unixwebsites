@@ -21,19 +21,25 @@ img[alt*="gallery"],
   -webkit-border-radius: 0 !important;
   -moz-border-radius: 0 !important;
   -o-border-radius: 0 !important;
-  overflow: visible !important;
 }
 
-/* Fix tilt glare overflow - constrain within boundaries */
+/* CRITICAL: Fix tilt glare overflow by containing ALL parent elements */
+.ekit_gallery_grid_item {
+  overflow: hidden !important;
+  position: relative !important;
+}
+
 .elementskit-single-portfolio-item,
 .ekit-gallery-portfolio-tilt {
   overflow: hidden !important;
   position: relative !important;
+  isolation: isolate !important;
 }
 
 .elementskit-portfolio-thumb {
   overflow: hidden !important;
   position: relative !important;
+  isolation: isolate !important;
 }
 
 .js-tilt-glare {
@@ -42,13 +48,34 @@ img[alt*="gallery"],
   position: absolute !important;
   top: 0 !important;
   left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
   width: 100% !important;
   height: 100% !important;
   pointer-events: none !important;
+  clip-path: inset(0) !important;
 }
 
 .js-tilt-glare-inner {
   border-radius: 0 !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  width: 100% !important;
+  height: 100% !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+/* Trustpilot/Verified badge - NO border radius */
+.elementor-24752 .elementor-element-6cd7ca9 img,
+.elementor-24752 .elementor-element-1435b23 img,
+.elementor-widget-image img,
+img[src*="verified"],
+img[src*="badge"],
+img[src*="trustpilot"] {
+  border-radius: 0 !important;
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
 }
 
 /* Trustpilot/Verified badge - NO border radius */
