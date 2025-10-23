@@ -215,4 +215,11 @@ body,
   transform: scale(1.05) !important;
 }
 
-/* Preserve Elementor CSS from lightspeed.css */
+.elementor-24752 .elementor-element.elementor-element-89bde1c:not(.elementor-motion-effects-element-type-background),
+.elementor-24752 .elementor-element.elementor-element-89bde1c>.elementor-motion-effects-container>.elementor-motion-effects-layer {
+  background-color: #fff0;
+  background-image: url(/images/unixwebsites-favicon-color.webp), linear-gradient(180deg, #E3EEFF 40%, var(--e-global-color-b3a878d) 100%) !important;
+  background-position: 85% 50%, center center !important;
+  background-size: 450px, cover !important;
+  background-repeat: no-repeat, no-repeat !important;
+}
