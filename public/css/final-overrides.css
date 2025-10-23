@@ -23,23 +23,25 @@ img[alt*="gallery"],
   -o-border-radius: 0 !important;
 }
 
-/* CRITICAL: Fix tilt glare overflow by containing ALL parent elements */
-.ekit_gallery_grid_item {
-  overflow: hidden !important;
-  position: relative !important;
-}
-
+/* NUCLEAR OPTION: Force contain glare at ALL levels */
+.ekit_gallery_grid,
+.ekit_gallery_grid_wraper,
+.ekit_gallery_grid_item,
 .elementskit-single-portfolio-item,
-.ekit-gallery-portfolio-tilt {
+.ekit-gallery-portfolio-tilt,
+.elementskit-portfolio-thumb,
+.elementskit-grid__img {
   overflow: hidden !important;
   position: relative !important;
-  isolation: isolate !important;
+  contain: layout style paint !important;
 }
 
-.elementskit-portfolio-thumb {
-  overflow: hidden !important;
+.elementskit-portfolio-thumb img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
   position: relative !important;
-  isolation: isolate !important;
+  z-index: 1 !important;
 }
 
 .js-tilt-glare {
@@ -48,22 +50,24 @@ img[alt*="gallery"],
   position: absolute !important;
   top: 0 !important;
   left: 0 !important;
-  right: 0 !important;
-  bottom: 0 !important;
   width: 100% !important;
   height: 100% !important;
   pointer-events: none !important;
-  clip-path: inset(0) !important;
+  clip-path: inset(0 0 0 0) !important;
+  -webkit-clip-path: inset(0 0 0 0) !important;
+  z-index: 2 !important;
 }
 
 .js-tilt-glare-inner {
   border-radius: 0 !important;
   position: absolute !important;
-  top: 50% !important;
-  left: 50% !important;
+  top: 0 !important;
+  left: 0 !important;
   width: 100% !important;
   height: 100% !important;
-  transform: translate(-50%, -50%) !important;
+  transform: none !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
 }
 
 /* Trustpilot/Verified badge - NO border radius */
