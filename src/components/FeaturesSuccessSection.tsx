@@ -99,7 +99,7 @@ const FeaturesSuccessSection = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="feature-card text-center opacity-0 transition-all duration-500 hover:translate-y-[-5px]"
+              className="feature-card text-left opacity-0 transition-all duration-500 hover:translate-y-[-5px]"
               style={{
                 animation: 'none'
               }}
