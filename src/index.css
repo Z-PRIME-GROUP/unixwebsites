@@ -5,12 +5,24 @@
 @tailwind components;
 @tailwind utilities;
 
+/* CSS VARIABLES - Define all Elementor globals immediately */
+:root {
+  --e-global-color-primary: #0234da;
+  --e-global-color-secondary: #00139b;
+  --e-global-color-text: #090909;
+  --e-global-color-accent: #fed349;
+  --e-global-color-light: #e3eeff;
+  --e-global-color-3f38d24: #ff7004;
+  --e-global-color-5d5f5d5: #e23b08;
+  --e-global-color-b3a878d: #fff;
+}
+
 /* Font Configuration */
 * {
   font-family: 'Plus Jakarta Sans', sans-serif !important;
 }
 
-/* ElementsKit Icon Font */
+/* ElementsKit Icon Font - Absolute path */
 @font-face {
   font-family: elementskit;
   src: url(/fonts/elementskit.woff) format("woff");
@@ -35,20 +47,28 @@
   content: "\eaaf";
 }
 
-/* Elementor/ElementsKit Fancy Text Animation - EXACT REPLICA */
+/* PRE-EMPTIVE FIXES: Override missing Reaktif font and ensure text visibility */
 
-/* FIX: Override missing Reaktif font and add text color for visibility */
-h1.ekit-fancy-text {
+/* FIX 1: Replace "Reaktif" font everywhere */
+.elementor-24752 .elementor-element-8efe2d6 .ekit-fancy-text,
+.elementor-24752 .elementor-element-6e1326a .elementskit-section-title,
+.elementor-24752 .elementor-element-7a98993 .elementskit-btn,
+.elementor-24752 .elementor-element-f9506ec .ekit-stylish-list-content-title {
   font-family: "Plus Jakarta Sans", Sans-serif !important;
-  color: #090909 !important; /* Ensure prefix/suffix are visible */
-  font-size: 48px !important;
-  font-weight: 500 !important;
-  line-height: 1.2 !important;
 }
 
-.elementor-24752 .elementor-element.elementor-element-8efe2d6 .ekit-fancy-text {
-  font-family: "Plus Jakarta Sans", Sans-serif !important;
+/* FIX 2: Ensure ALL text in fancy heading is visible */
+h1.ekit-fancy-text,
+h1.ekit-fancy-text *,
+.ekit-fancy-prefix-text,
+.ekit-fancy-suffix-text,
+.ekit-fancy-text-lists {
   color: #090909 !important;
+}
+
+/* FIX 3: Preserve blue color for FREE word */
+.ekit-fancy-text .ekit-fancy-text-lists b {
+  color: var(--e-global-color-primary) !important;
 }
 
 .ekit-fancy-text-lists {
