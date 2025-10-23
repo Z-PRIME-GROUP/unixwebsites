@@ -1,0 +1,218 @@
+/* Elementor Exact CSS - Extracted from lightspeed.css */
+
+/* Hero Container */
+.elementor-element.elementor-element-90a3c95 {
+  padding: 80px 0px 0px 0px;
+}
+
+.elementor-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.elementor-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.elementor-column {
+  padding: 0 15px;
+  width: 100%;
+}
+
+.elementor-col-100 {
+  width: 100%;
+}
+
+.elementor-widget-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+/* H1 Title Styling */
+.elementor-heading-title {
+  color: #000000;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 50px;
+  font-weight: 900;
+  line-height: 1.2em;
+  letter-spacing: 0px;
+  margin: 0;
+  padding: 0;
+}
+
+.elementor-element.elementor-element-ebce572 .elementor-heading-title {
+  font-size: 50px;
+  line-height: 1.2em;
+}
+
+/* Fancy Text Animation Container */
+.elementskit-fancy-animated-text {
+  display: inline;
+}
+
+.ekit-fancy-text-lists {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  min-width: 85px;
+}
+
+.ekit-fancy-text {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  white-space: nowrap;
+}
+
+.ekit-fancy-text.is-visible {
+  position: relative;
+  opacity: 1;
+}
+
+/* CTA Button */
+.elementor-element.elementor-element-39ae89a .elementor-button {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  fill: #FFFFFF;
+  color: #FFFFFF;
+  background-color: #2563EB;
+  border-radius: 10px;
+  padding: 20px 40px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s;
+}
+
+.elementor-element.elementor-element-39ae89a .elementor-button:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.elementor-button-wrapper {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.elementor-button {
+  line-height: 1;
+  border: none;
+  cursor: pointer;
+}
+
+/* Icon List (Benefits) */
+.elementor-icon-list-items {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.elementor-icon-list-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.elementor-icon-list-icon {
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.elementor-icon-list-icon i {
+  font-size: 20px;
+  color: #2563EB;
+}
+
+.elementor-icon-list-text {
+  flex: 1;
+}
+
+/* Gallery Grid */
+.elementskit-portfolio-wrapper {
+  margin-top: 40px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.elementskit-portfolio-item-wrapper {
+  padding: 0 15px;
+  margin-bottom: 30px;
+}
+
+.elementskit-single-portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.elementskit-single-portfolio-item:hover {
+  transform: translateY(-5px);
+}
+
+.elementskit-portfolio-thumb {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.elementskit-portfolio-thumb img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+/* Grid Columns */
+.elementskit-portfolio-item-wrapper.col-lg-4 {
+  width: 33.333333%;
+}
+
+@media (max-width: 991px) {
+  .elementskit-portfolio-item-wrapper.col-lg-4 {
+    width: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .elementskit-portfolio-item-wrapper.col-lg-4 {
+    width: 100%;
+  }
+  
+  .elementor-heading-title {
+    font-size: 32px !important;
+  }
+  
+  .elementor-element.elementor-element-39ae89a .elementor-button {
+    font-size: 14px;
+    padding: 15px 30px;
+  }
+}
+
+/* Spacer */
+.elementor-element.elementor-element-9854d90 {
+  padding: 50px 0px 50px 0px;
+}
+
+.elementor-spacer {
+  clear: both;
+}
+
+.elementor-spacer-inner {
+  height: 30px;
+}
