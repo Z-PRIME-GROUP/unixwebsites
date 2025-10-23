@@ -195,38 +195,30 @@ body,
 }
 
 /* Vanilla Tilt - Match Elementor gallery styles */
-/* Gallery container must have relative positioning */
 .elementskit-single-portfolio-item {
   position: relative !important;
   transform-style: preserve-3d !important;
   will-change: transform !important;
   border-radius: 0 !important;
-  overflow: visible !important; /* Changed from hidden to visible */
+  overflow: hidden !important;
 }
 
 .elementskit-portfolio-thumb {
   transform: translateZ(20px) !important;
   position: relative !important;
-  z-index: 1 !important;
 }
 
-/* Ensure images don't block glare */
-.elementskit-portfolio-thumb img {
-  position: relative !important;
-  z-index: 1 !important;
-}
-
-/* Vanilla Tilt Glare Effect - FIXED */
+/* Vanilla Tilt Glare Effect - CORRECTED */
 .js-tilt-glare {
   position: absolute !important;
   top: 0 !important;
   left: 0 !important;
   width: 100% !important;
   height: 100% !important;
-  border-radius: inherit !important;
+  border-radius: 0 !important;
   overflow: hidden !important;
   pointer-events: none !important;
-  z-index: 10 !important; /* Higher z-index to ensure it's on top */
+  z-index: 10 !important;
 }
 
 .js-tilt-glare-inner {
@@ -238,8 +230,16 @@ body,
   background-image: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%) !important;
   transform: rotate(180deg) translate(-50%, -50%) !important;
   transform-origin: 0% 0% !important;
-  opacity: 1 !important; /* Start visible for debugging */
   will-change: transform, opacity !important;
+}
+
+/* Gallery images - NO border radius */
+.elementskit-grid__img,
+img[alt="gallery grid image"] {
+  border-radius: 0 !important;
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
 }
 
 /* Gallery images - NO border radius - FORCE IT */
