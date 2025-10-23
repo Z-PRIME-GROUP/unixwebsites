@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { Check } from "lucide-react";
 import { Button } from "./ui/button";
-import Tilt from "react-parallax-tilt";
+import Atropos from 'atropos/react';
+import 'atropos/css';
 
 const HeroSection = () => {
   const [currentWord, setCurrentWord] = useState(0);
@@ -122,36 +123,28 @@ const HeroSection = () => {
               </div>
             </div>
 
-            {/* Right Column - Website Preview Grid (3x3) with Tilt Effect */}
+            {/* Right Column - Website Preview Grid (3x3) with Atropos 3D Effect */}
             <div className="flex-1 animate-fade-in">
               <div className="grid grid-cols-3 gap-0">
                 {demoImages.map((item, index) => (
-                  <Tilt
-                    key={index}
-                    glareEnable={true}
-                    glareMaxOpacity={0.5}
-                    glareColor="#ffffff"
-                    glarePosition="all"
-                    glareBorderRadius="0px"
-                    scale={1.05}
-                    transitionSpeed={400}
-                    tiltMaxAngleX={15}
-                    tiltMaxAngleY={15}
-                    perspective={1000}
-                    className="aspect-[4/5] cursor-pointer"
-                    style={{
-                      transformStyle: 'preserve-3d',
-                    }}
-                  >
-                    <img 
-                      src={`/images/demo${item}.webp`} 
-                      alt={`Demo website ${item}`}
-                      className="w-full h-full object-cover"
-                      style={{
-                        transform: 'translateZ(20px)',
-                      }}
-                    />
-                  </Tilt>
+                  <div key={index} className="aspect-[4/5]">
+                    <Atropos
+                      className="w-full h-full cursor-pointer"
+                      shadow={false}
+                      highlight={true}
+                      rotateXMax={15}
+                      rotateYMax={15}
+                      duration={400}
+                      rotateTouch="scroll-y"
+                    >
+                      <img 
+                        src={`/images/demo${item}.webp`} 
+                        alt={`Demo website ${item}`}
+                        className="w-full h-full object-cover"
+                        data-atropos-offset="5"
+                      />
+                    </Atropos>
+                  </div>
                 ))}
               </div>
             </div>
