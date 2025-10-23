@@ -41,10 +41,13 @@ img[alt*="gallery"],
 .js-tilt-glare {
   border-radius: 0 !important;
   z-index: 2 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 .js-tilt-glare-inner {
   border-radius: 0 !important;
+  opacity: 1 !important;
 }
 
 

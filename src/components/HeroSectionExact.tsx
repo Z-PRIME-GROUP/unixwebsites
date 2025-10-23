@@ -51,6 +51,15 @@ const HeroSectionExact = () => {
           // Fix glare overflow - ensure parent contains it
           el.style.overflow = 'hidden';
           el.style.position = 'relative';
+          
+          // Force glare to be visible
+          setTimeout(() => {
+            const glareElement = el.querySelector('.js-tilt-glare') as HTMLElement;
+            if (glareElement) {
+              glareElement.style.opacity = '1';
+              glareElement.style.visibility = 'visible';
+            }
+          }, 50);
         }
       });
     };
