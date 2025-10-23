@@ -34,19 +34,34 @@ const HeroSectionExact = () => {
       return () => clearInterval(interval);
     };
 
-    // Vanilla Tilt - exact settings from data attributes
+    // Vanilla Tilt - FIXED glare initialization
     const initTilt = () => {
       tiltRefs.current.forEach((el) => {
         if (el && !(el as any).vanillaTilt) {
+          // CRITICAL: All values must be proper types (boolean, not string)
           VanillaTilt.init(el, {
             scale: 1.2,
             max: 20,
             perspective: 600,
-            glare: true,
-            'max-glare': 0.6,
+            glare: true,                    // Boolean, NOT string
+            'max-glare': 0.6,              // Number between 0-1
+            'glare-prerender': false,      // CRITICAL: Let vanilla-tilt create glare elements
             transition: true,
-            easing: 'cubic-bezier(.03, .98, .52, .99)'
+            easing: 'cubic-bezier(.03, .98, .52, .99)',
+            speed: 400
           });
+          
+          // Force glare to appear by adding debug logging
+          console.log('Tilt initialized with glare:', (el as any).vanillaTilt);
+          
+          // DEBUG: Force check if glare elements were created
+          setTimeout(() => {
+            const glareElements = el.querySelectorAll('.js-tilt-glare');
+            console.log('Glare elements found:', glareElements.length);
+            if (glareElements.length === 0) {
+              console.error('GLARE ELEMENTS NOT CREATED!');
+            }
+          }, 500);
         }
       });
     };
