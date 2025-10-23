@@ -75,21 +75,22 @@ const HeroSectionExact = () => {
         backgroundImage: `linear-gradient(180deg, #E3EEFF 40%, #fff 100%)`,
         backgroundPosition: 'center center',
         backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat'
+        backgroundRepeat: 'no-repeat',
+        overflow: 'hidden'
       }}
     >
       <div style={{
         position: 'absolute',
-        left: '5%',
+        left: '-100px',
         top: '50%',
         transform: 'translateY(-50%)',
-        width: '450px',
-        height: '450px',
+        width: '900px',
+        height: '900px',
         backgroundImage: `url(/images/unixwebsites-favicon-color.webp)`,
         backgroundSize: 'contain',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
-        opacity: 0.15,
+        opacity: 0.08,
         pointerEvents: 'none',
         zIndex: 0
       }} />
