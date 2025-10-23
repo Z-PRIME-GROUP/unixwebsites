@@ -39,33 +39,34 @@ const FeaturesSuccessSection = () => {
         background: 'linear-gradient(180deg, #FFFFFF 0%, #E3EEFF 100%)',
         position: 'relative',
         overflow: 'hidden',
-        padding: '80px 20px'
+        padding: '80px 20px',
+        minHeight: '800px'
       }}
     >
-      {/* Pink/Peach Gradient Blob - Top Right */}
+      {/* Pink/Peach Gradient Blob - Top Right - MORE VISIBLE */}
       <div style={{
         position: 'absolute',
-        right: '8%',
-        top: '12%',
-        width: '380px',
-        height: '380px',
-        background: 'radial-gradient(circle, rgba(255, 192, 203, 0.35) 0%, rgba(255, 182, 193, 0.15) 40%, rgba(255, 192, 203, 0) 70%)',
+        right: '5%',
+        top: '8%',
+        width: '450px',
+        height: '450px',
+        background: 'radial-gradient(circle, rgba(255, 192, 203, 0.5) 0%, rgba(255, 182, 193, 0.25) 35%, rgba(255, 192, 203, 0) 70%)',
         borderRadius: '50%',
-        filter: 'blur(50px)',
+        filter: 'blur(60px)',
         pointerEvents: 'none',
         zIndex: 0
       }} />
 
-      {/* Light Blue Gradient Blob - Bottom Right */}
+      {/* Light Blue Gradient Blob - Bottom Right - MORE VISIBLE */}
       <div style={{
         position: 'absolute',
-        right: '5%',
-        bottom: '20%',
-        width: '420px',
-        height: '420px',
-        background: 'radial-gradient(circle, rgba(173, 216, 230, 0.4) 0%, rgba(176, 224, 230, 0.2) 40%, rgba(173, 216, 230, 0) 70%)',
+        right: '8%',
+        bottom: '15%',
+        width: '500px',
+        height: '500px',
+        background: 'radial-gradient(circle, rgba(173, 216, 230, 0.55) 0%, rgba(176, 224, 230, 0.3) 35%, rgba(173, 216, 230, 0) 70%)',
         borderRadius: '50%',
-        filter: 'blur(55px)',
+        filter: 'blur(65px)',
         pointerEvents: 'none',
         zIndex: 0
       }} />
@@ -76,11 +77,10 @@ const FeaturesSuccessSection = () => {
           style={{
             fontFamily: 'Reaktif, sans-serif',
             fontSize: '48px',
-            fontWeight: '500',
+            fontWeight: 500,
             color: '#090909',
             marginBottom: '20px',
-            lineHeight: '1.2',
-            letterSpacing: '0px'
+            lineHeight: '1.2'
           }}
         >
           A Website Built for <span style={{
@@ -88,7 +88,7 @@ const FeaturesSuccessSection = () => {
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',
-            fontWeight: '500'
+            fontWeight: 600
           }}>Success</span>
         </h2>
 
@@ -97,14 +97,11 @@ const FeaturesSuccessSection = () => {
           style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
             fontSize: '16px',
-            fontWeight: '400',
+            fontWeight: 400,
             color: '#666666',
-            lineHeight: '1.65',
+            lineHeight: '1.6',
             maxWidth: '850px',
-            margin: '0 auto 60px',
-            paddingLeft: '15px',
-            paddingRight: '15px',
-            letterSpacing: '0px'
+            margin: '0 auto 60px'
           }}
         >
           Fast, secure, and fully customizable. Our websites are mobile-friendly, SEO-optimized, and designed to grow with your business. Get a professional site that enhances your brand and attracts more customers.
@@ -112,10 +109,7 @@ const FeaturesSuccessSection = () => {
 
         <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
-          style={{ 
-            gap: '30px',
-            marginTop: '0'
-          }}
+          style={{ gap: '30px' }}
         >
           {features.map((feature, index) => (
             <div
@@ -151,8 +145,7 @@ const FeaturesSuccessSection = () => {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                marginBottom: '22px',
-                flexShrink: '0'
+                marginBottom: '22px'
               }}>
                 <img
                   src={feature.icon}
@@ -169,11 +162,10 @@ const FeaturesSuccessSection = () => {
               <h5 style={{
                 fontFamily: 'Reaktif, sans-serif',
                 fontSize: '19px',
-                fontWeight: '600',
+                fontWeight: 700,
                 color: '#0A0A0A',
                 marginBottom: '12px',
-                lineHeight: '1.35',
-                letterSpacing: '0px'
+                lineHeight: '1.35'
               }}>
                 {feature.title}
               </h5>
@@ -181,12 +173,11 @@ const FeaturesSuccessSection = () => {
               {/* Feature Description */}
               <p style={{
                 fontFamily: 'Plus Jakarta Sans, sans-serif',
-                fontSize: '14.5px',
-                fontWeight: '400',
+                fontSize: '15px',
+                fontWeight: 400,
                 color: '#666666',
                 lineHeight: '1.7',
-                marginBottom: '0',
-                letterSpacing: '0px'
+                marginBottom: '0'
               }}>
                 {feature.description}
               </p>
