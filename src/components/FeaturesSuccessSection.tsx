@@ -59,11 +59,37 @@ const FeaturesSuccessSection = () => {
 
   return (
     <section 
-      className="bg-white py-20 px-5"
-      style={{ backgroundColor: '#ffffff' }}
+      className="py-20 px-5"
+      style={{ 
+        background: 'linear-gradient(180deg, #FFFFFF 0%, #E3EEFF 100%)',
+        position: 'relative',
+        overflow: 'visible',
+        marginTop: '150px'
+      }}
     >
-      <div className="max-w-[1200px] mx-auto">
-        {/* Heading */}
+      {/* Watermark Background Image */}
+      <div style={{
+        position: 'absolute',
+        left: '50%',
+        top: '-67px',
+        transform: 'translateX(-50%)',
+        width: '62%',
+        maxWidth: '800px',
+        opacity: 0.1,
+        pointerEvents: 'none',
+        zIndex: 0
+      }}>
+        <img 
+          src="/images/unixwebsites-favicon-color.webp"
+          alt=""
+          style={{
+            width: '100%',
+            height: 'auto'
+          }}
+        />
+      </div>
+
+      <div className="max-w-[1200px] mx-auto" style={{ position: 'relative', zIndex: 1 }}>
         <h2 
           className="text-center mb-5"
           style={{
@@ -74,7 +100,12 @@ const FeaturesSuccessSection = () => {
             lineHeight: '1.2'
           }}
         >
-          A Website Built for Success
+          A Website Built for <span style={{
+            background: 'linear-gradient(100deg, #FED349 40%, #E23B08 100%)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text'
+          }}><span>Success</span></span>
         </h2>
 
         {/* Description */}
