@@ -18,9 +18,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <a href="/" className="flex items-center">
-              <span className="text-2xl md:text-3xl font-bold text-foreground">
-                uFREEwebsites™
-              </span>
+              <img src="/images/logo-white.webp" alt="uFREEwebsites" className="h-10 w-auto" />
             </a>
           </div>
 
