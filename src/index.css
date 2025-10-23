@@ -55,8 +55,9 @@ h1, h2, h3, h4, h5, h6,
   position: relative;
   display: inline-block;
   vertical-align: top;
-  margin: 0 0.2em;
-  min-width: 85px;
+  margin: 0;
+  width: 85px;
+  height: 1em;
 }
 
 .ekit-fancy-text-lists b {
@@ -66,15 +67,12 @@ h1, h2, h3, h4, h5, h6,
   top: 0;
   white-space: nowrap;
   opacity: 0;
+  pointer-events: none;
 }
 
 .ekit-fancy-text-lists b.is-visible {
-  position: relative;
   opacity: 1;
-}
-
-.ekit-fancy-text-lists b.is-hidden {
-  opacity: 0;
+  pointer-events: auto;
 }
 
 .ekit-fancy-text-lists b i {
