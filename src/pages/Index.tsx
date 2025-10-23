@@ -79,7 +79,7 @@ const Index = () => {
                     
                     {/* Hero Section with Gallery */}
                     <div className="elementor-element elementor-element-89bde1c e-con-full e-flex e-con e-parent" data-id="89bde1c" data-element_type="container" data-settings='{"background_background":"gradient"}' style={{minHeight: '100vh', marginTop: '-70px', paddingTop: '0px', paddingBottom: '0px', paddingLeft: '0px', paddingRight: '0px', display: 'flex', alignItems: 'stretch'}}>
-                      <div className="elementor-element elementor-element-8bb6f3c e-con-full hero-section e-flex e-con e-child" data-id="8bb6f3c" data-element_type="container" style={{padding: '0', display: 'flex', alignItems: 'stretch', width: '100%'}}>
+                      <div className="elementor-element elementor-element-8bb6f3c e-con-full hero-section e-flex e-con e-child" data-id="8bb6f3c" data-element_type="container" style={{padding: '0', display: 'flex', flexDirection: 'row', alignItems: 'stretch', width: '100%', height: '100%'}}>
                         
                         {/* Left Column - All Content */}
                         <div className="elementor-element elementor-element-b1c56d6 e-con-full e-flex e-con e-child" data-id="b1c56d6" data-element_type="container" style={{paddingTop: '120px', paddingBottom: '60px', paddingLeft: '40px', paddingRight: '40px', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '30px'}}>
