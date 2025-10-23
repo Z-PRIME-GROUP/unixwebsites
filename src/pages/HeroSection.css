@@ -19,21 +19,25 @@
   gap: 2rem !important;
 }
 
-/* Right Column - Gallery Grid */
+/* Right Column - Gallery in Single Vertical Column */
 .elementor-element-eca17a6 {
   flex: 1 !important;
   display: flex !important;
+  align-items: flex-start !important;
 }
 
-/* Gallery Grid - 3x3 Layout */
+/* Gallery Grid - Single Column Layout */
 .ekit_gallery_grid {
-  display: grid !important;
-  grid-template-columns: repeat(3, 1fr) !important;
-  gap: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1rem !important;
   width: 100% !important;
+  max-width: 400px !important;
+  margin-left: auto !important;
 }
 
 .ekit_gallery_grid_item {
+  width: 100% !important;
   aspect-ratio: 4 / 5 !important;
   overflow: visible !important;
   position: relative !important;
@@ -56,6 +60,7 @@
   height: 100% !important;
   object-fit: cover !important;
   display: block !important;
+  border-radius: 0 !important;
 }
 
 /* Hover area */
@@ -78,7 +83,7 @@
 .elementor-element-eca17a6,
 .ekit_gallery_grid_wraper,
 .ekit_gallery_grid {
-  display: block !important;
+  display: flex !important;
   visibility: visible !important;
   opacity: 1 !important;
 }
@@ -95,12 +100,6 @@
   }
   
   .ekit_gallery_grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-  }
-}
-
-@media (max-width: 768px) {
-  .ekit_gallery_grid {
-    grid-template-columns: repeat(1, 1fr) !important;
+    max-width: 100% !important;
   }
 }
