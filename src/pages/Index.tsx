@@ -66,19 +66,19 @@ const Index = () => {
   }, []);
   
   return (
-    <div className="home wp-singular page-template-default page page-id-24752 wp-custom-logo wp-theme-landpress underline-link-effect flip-button-effect keydesign-elementor-library elementor-default elementor-kit-24751 elementor-page elementor-page-24752 elementor-page-24772" style={{ height: 'auto', minHeight: '100vh' }}>
-      <div id="page" className="site" style={{ minHeight: '100vh' }}>
+    <div className="home wp-singular page-template-default page page-id-24752 wp-custom-logo wp-theme-landpress underline-link-effect flip-button-effect keydesign-elementor-library elementor-default elementor-kit-24751 elementor-page elementor-page-24752 elementor-page-24772">
+      <div id="page" className="site">
         <Header />
         
-        <div id="content" className="site-content" style={{ minHeight: 'auto' }}>
-          <div id="primary" className="content-area" data-attr="single-page" style={{ minHeight: 'auto' }}>
-            <main id="main" className="site-main" role="main" style={{ minHeight: 'auto' }}>
-              <article id="post-24752" className="post-24752 page type-page status-publish hentry" style={{ minHeight: 'auto' }}>
-                <div className="entry-content" style={{ minHeight: 'auto' }}>
-                  <div data-elementor-type="wp-page" data-elementor-id="24752" className="elementor elementor-24752" data-elementor-post-type="page" style={{ minHeight: 'auto' }}>
+        <div id="content" className="site-content">
+          <div id="primary" className="content-area" data-attr="single-page">
+            <main id="main" className="site-main" role="main">
+              <article id="post-24752" className="post-24752 page type-page status-publish hentry">
+                <div className="entry-content">
+                  <div data-elementor-type="wp-page" data-elementor-id="24752" className="elementor elementor-24752" data-elementor-post-type="page">
                     
                     {/* Hero Section with Gallery */}
-                    <div className="elementor-element elementor-element-89bde1c e-con-full e-flex e-con e-parent" data-id="89bde1c" data-element_type="container" data-settings='{"background_background":"gradient"}' style={{ minHeight: 'calc(100vh - 70px)', height: 'calc(100vh - 70px)', display: 'flex', alignItems: 'center' }}>
+                    <div className="elementor-element elementor-element-89bde1c e-con-full e-flex e-con e-parent" data-id="89bde1c" data-element_type="container" data-settings='{"background_background":"gradient"}' style={{ minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
                       <div className="elementor-element elementor-element-8bb6f3c e-con-full hero-section e-flex e-con e-child" data-id="8bb6f3c" data-element_type="container">
                         
                         {/* Left Column - Text Content */}
