@@ -36,8 +36,8 @@
 }
 
 /* ICON FIX: Force icon display and proper font */
-.icon,
-.icon::before {
+i.icon,
+i.icon::before {
   font-family: elementskit !important;
   font-style: normal !important;
   font-weight: 400 !important;
@@ -51,8 +51,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-check::before {
+i.icon-check::before {
   content: "\eaaf" !important;
+  display: inline-block !important;
+  font-family: elementskit !important;
 }
 
 /* HEADING TEXT FIX: Override Tailwind base reset + add explicit sizing */
