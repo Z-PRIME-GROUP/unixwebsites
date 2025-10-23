@@ -74,9 +74,9 @@ const HeroSectionExact = () => {
                 <h1 className="ekit-fancy-text letters scale" data-id="8efe2d6" data-animation-settings='{"animationStyle":"animated","animationDelay":2000,"loadingBar":3800,"lettersDelay":50,"typeLettersDelay":150,"duration":500,"revealDuration":600,"revealAnimationDelay":1500}'>
                   <span className="ekit-fancy-prefix-text">Get Your</span>
                   <span className="ekit-fancy-text-lists" ref={fancyTextRef}>
-                    <b className="ekit-fancy-text elementor-repeater-item-a0eec85 is-visible"><i>F</i><i>R</i><i>E</i><i>E</i></b>
-                    <b className="ekit-fancy-text elementor-repeater-item-b9b00af "><i>F</i><i>R</i><i>E</i><i>E</i></b>
-                    <b className="ekit-fancy-text elementor-repeater-item-7c0a76c "><i>F</i><i>R</i><i>E</i><i>E</i></b>
+                    <b className="ekit-fancy-text elementor-repeater-item-a0eec85 is-visible">FREE</b>
+                    <b className="ekit-fancy-text elementor-repeater-item-b9b00af ">FREE</b>
+                    <b className="ekit-fancy-text elementor-repeater-item-7c0a76c ">FREE</b>
                   </span>
                   <span className="ekit-fancy-suffix-text">Website</span>
                 </h1>

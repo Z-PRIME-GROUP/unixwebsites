@@ -36,6 +36,21 @@
 }
 
 /* Elementor/ElementsKit Fancy Text Animation - EXACT REPLICA */
+
+/* FIX: Override missing Reaktif font and add text color for visibility */
+h1.ekit-fancy-text {
+  font-family: "Plus Jakarta Sans", Sans-serif !important;
+  color: #090909 !important; /* Ensure prefix/suffix are visible */
+  font-size: 48px !important;
+  font-weight: 500 !important;
+  line-height: 1.2 !important;
+}
+
+.elementor-24752 .elementor-element.elementor-element-8efe2d6 .ekit-fancy-text {
+  font-family: "Plus Jakarta Sans", Sans-serif !important;
+  color: #090909 !important;
+}
+
 .ekit-fancy-text-lists {
   position: relative;
   display: inline-block;
