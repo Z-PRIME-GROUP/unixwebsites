@@ -5,6 +5,21 @@ const Index = () => {
   console.log('Index component rendering');
   
   useEffect(() => {
+    // Initialize FREE text animation
+    const initFancyTextAnimation = () => {
+      const fancyTextElements = document.querySelectorAll('.ekit-fancy-text-lists b');
+      if (fancyTextElements.length > 0) {
+        let currentIndex = 0;
+        
+        // Start animation loop
+        setInterval(() => {
+          fancyTextElements.forEach((el) => el.classList.remove('is-visible'));
+          currentIndex = (currentIndex + 1) % fancyTextElements.length;
+          fancyTextElements[currentIndex].classList.add('is-visible');
+        }, 2000); // Matches animationDelay from reference
+      }
+    };
+
     // Load tilt.js from CDN if not already loaded
     const loadTiltJS = () => {
       if ((window as any).jQuery && (window as any).jQuery.fn.tilt) {
@@ -47,6 +62,9 @@ const Index = () => {
         });
       });
     };
+
+    // Initialize animations
+    initFancyTextAnimation();
 
     // Small delay to ensure DOM is ready
     const timer = setTimeout(loadTiltJS, 100);

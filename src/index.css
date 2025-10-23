@@ -19,4 +19,46 @@ h1, h2, h3, h4, h5, h6,
   background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 100%) !important;
 }
 
+/* FREE Text Bouncing Animation */
+.ekit-fancy-text-lists {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 0.2em;
+}
+
+.ekit-fancy-text-lists b {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transform: scale(0.8);
+  animation: none;
+}
+
+.ekit-fancy-text-lists b.is-visible {
+  position: relative;
+  opacity: 1;
+  animation: bounceIn 0.6s;
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 /* Preserve Elementor CSS from lightspeed.css - no Tailwind base reset */
