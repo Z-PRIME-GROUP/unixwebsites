@@ -234,15 +234,13 @@ const HeroSectionExact = () => {
                     <div key={index} className="ekit_gallery_grid_item ekit_gallery__filter-one ">
                       <Tilt
                         glareEnable={true}
-                        glareMaxOpacity={0.3}
+                        glareMaxOpacity={0.8}
                         glareColor="#ffffff"
                         glarePosition="all"
-                        tiltMaxAngleX={20}
-                        tiltMaxAngleY={20}
-                        scale={1.2}
-                        perspective={600}
-                        transitionSpeed={400}
-                        gyroscope={false}
+                        tiltMaxAngleX={10}
+                        tiltMaxAngleY={10}
+                        scale={1.02}
+                        transitionSpeed={1000}
                         className="elementskit-single-portfolio-item ekit-gallery-portfolio-tilt"
                       >
                         <div className="elementskit-portfolio-thumb">
@@ -250,7 +248,7 @@ const HeroSectionExact = () => {
                             width="800" 
                             height="914" 
                             decoding="async"
-                            className="elementskit-grid__img"
+                            className="elementskit-grid__img w-full h-full object-cover rounded-lg"
                             src={src}
                             alt="gallery grid image" 
                           />
