@@ -23,17 +23,18 @@ img[alt*="gallery"],
   -o-border-radius: 0 !important;
 }
 
-/* NUCLEAR OPTION: Force contain glare at ALL levels */
-.ekit_gallery_grid,
-.ekit_gallery_grid_wraper,
+/* Glare containment - force at parent wrapper level */
 .ekit_gallery_grid_item,
 .elementskit-single-portfolio-item,
-.ekit-gallery-portfolio-tilt,
-.elementskit-portfolio-thumb,
-.elementskit-grid__img {
+.ekit-gallery-portfolio-tilt {
   overflow: hidden !important;
   position: relative !important;
-  contain: layout style paint !important;
+}
+
+.elementskit-portfolio-thumb {
+  overflow: hidden !important;
+  position: relative !important;
+  display: block !important;
 }
 
 .elementskit-portfolio-thumb img {
