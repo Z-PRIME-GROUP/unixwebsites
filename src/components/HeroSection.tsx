@@ -26,7 +26,7 @@ const HeroSection = () => {
       <div 
         className="absolute inset-0 z-0"
         style={{
-          background: 'linear-gradient(135deg, hsl(220, 70%, 50%) 0%, hsl(262, 83%, 58%) 100%)',
+          background: 'linear-gradient(180deg, #E3EEFF 40%, #FFFFFF 100%)',
         }}
       />
       
@@ -35,14 +35,15 @@ const HeroSection = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Column - Text Content */}
-            <div className="text-white space-y-8 animate-slide-up">
+            <div className="text-gray-900 space-y-8 animate-slide-up">
               {/* Animated Heading */}
               <h1 className="text-5xl md:text-7xl font-bold leading-tight">
                 Get Your{" "}
                 <span className="inline-block relative">
                   <span
                     key={currentWord}
-                    className="animate-scale text-yellow-300"
+                    className="animate-scale"
+                    style={{ color: '#0234DA' }}
                   >
                     {words[currentWord]}
                   </span>
@@ -56,7 +57,7 @@ const HeroSection = () => {
               </h2>
 
               {/* Description */}
-              <p className="text-lg md:text-xl text-white/90 leading-relaxed">
+              <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
                 Apply now – it only takes 2 minutes, and watch your business thrive with a{" "}
                 <strong className="underline">FREE</strong>, custom-built website.
               </p>
@@ -65,9 +66,13 @@ const HeroSection = () => {
               <div className="pt-4">
                 <Button 
                   size="lg"
-                  className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6 rounded-full font-bold shadow-2xl hover:scale-105 transition-transform duration-300"
+                  className="text-lg px-8 py-6 rounded-full font-bold shadow-2xl hover:scale-105 transition-transform duration-300"
+                  style={{
+                    background: 'linear-gradient(240deg, #0234DA 0%, #6B43EF 68%)',
+                    color: '#FFFFFF'
+                  }}
                 >
-                  <ArrowRight className="mr-2 h-5 w-5" />
+                  <i className="far fa-arrow-alt-circle-right mr-2" />
                   APPLY IN 2 MINUTES
                 </Button>
               </div>
@@ -76,32 +81,37 @@ const HeroSection = () => {
               <div className="hidden md:flex items-center gap-8 pt-6">
                 {features.map((feature, index) => (
                   <div key={index} className="flex items-center gap-2">
-                    <div className="bg-white/20 rounded-full p-1">
+                    <div className="bg-green-500 rounded-full p-1">
                       <Check className="h-4 w-4 text-white" />
                     </div>
-                    <span className="text-sm font-medium">{feature}</span>
+                    <span className="text-sm font-medium text-gray-900">{feature}</span>
                   </div>
                 ))}
               </div>
 
               {/* Verified Badge */}
               <div className="pt-4">
-                <div className="inline-block bg-white/10 backdrop-blur-sm rounded-lg px-6 py-3 border border-white/20">
-                  <span className="text-sm font-medium">✓ Verified Company Badge</span>
-                </div>
+                <img 
+                  src="/images/verified-badge.webp" 
+                  alt="Verified Company Badge"
+                  className="h-auto max-w-full"
+                  style={{ maxWidth: '300px' }}
+                />
               </div>
             </div>
 
             {/* Right Column - Website Preview Grid */}
             <div className="grid grid-cols-3 gap-4 animate-fade-in">
-              {[1, 2, 3].map((item) => (
+              {[1, 2, 3, 4, 5, 6].map((item) => (
                 <div 
                   key={item} 
-                  className="aspect-[4/5] bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 hover:scale-105 hover:bg-white/20 transition-all duration-300 cursor-pointer overflow-hidden"
+                  className="aspect-[4/5] rounded-lg overflow-hidden hover:scale-105 transition-all duration-300 cursor-pointer shadow-lg"
                 >
-                  <div className="w-full h-full bg-gradient-to-br from-white/5 to-white/10 flex items-center justify-center">
-                    <span className="text-white/50 text-sm font-medium">Demo {item}</span>
-                  </div>
+                  <img 
+                    src={`/images/demo${item}.webp`} 
+                    alt={`Demo website ${item}`}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               ))}
             </div>
