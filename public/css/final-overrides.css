@@ -72,3 +72,15 @@ i.icon-check::before {
   content: "\eaaf" !important;
   font-family: elementskit !important;
 }
+
+/* SVG Mask for bottom logo image */
+.elementor-24752 .elementor-element.elementor-element-2e19d04:not(.elementor-widget-video,.elementor-widget-elementskit-image-hover-effect) img {
+  -webkit-mask-image: url(https://ufreewebsites.com/wp-content/plugins/elementskit/modules/masking/assets/shapes/shape-10.svg);
+  -webkit-mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-image: url(https://ufreewebsites.com/wp-content/plugins/elementskit/modules/masking/assets/shapes/shape-10.svg);
+  mask-position: center center;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+}
