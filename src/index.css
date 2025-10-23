@@ -457,3 +457,17 @@ img[src*="trustpilot"] {
 .ekit-menu-nav-link:hover {
   color: #0234da !important;
 }
+
+/* Features Section Mobile Responsiveness */
+@media (max-width: 1024px) {
+  .feature-card {
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 768px) {
+  div[style*="gridTemplateColumns: repeat(3, 1fr)"] {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+  }
+}
