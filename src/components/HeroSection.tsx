@@ -186,8 +186,12 @@ export const HeroSection = () => {
                          className="elementskit-btn whitespace--normal"
                          id="homepageCTA1"
                          style={{
-                           background: 'linear-gradient(90deg, #FF8C42 0%, #FF6B35 100%)',
+                           background: 'linear-gradient(60deg, #FED349 0%, #E23B08 68%)',
                            color: '#fff',
+                           padding: '15px 30px',
+                           borderRadius: '10px',
+                           fontSize: '18px',
+                           fontWeight: '700',
                            display: 'inline-flex',
                            alignItems: 'center',
                            gap: '10px',
