@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { ArrowRight, Check } from "lucide-react";
+import { Check } from "lucide-react";
 import { Button } from "./ui/button";
 
 const HeroSection = () => {
@@ -20,8 +20,11 @@ const HeroSection = () => {
     "Risk-Free"
   ];
 
+  // Generate 9 images (repeat the 6 available demos)
+  const demoImages = [1, 2, 3, 4, 5, 6, 1, 2, 3];
+
   return (
-    <section className="relative min-h-screen pt-32 pb-20 overflow-hidden">
+    <section className="relative w-full h-screen overflow-hidden" style={{ marginTop: '-150px', paddingTop: '150px' }}>
       {/* Gradient Background */}
       <div 
         className="absolute inset-0 z-0"
@@ -29,13 +32,29 @@ const HeroSection = () => {
           background: 'linear-gradient(180deg, #E3EEFF 40%, #FFFFFF 100%)',
         }}
       />
+
+      {/* Faded Background Logo - positioned on the left */}
+      <div 
+        className="absolute z-0 pointer-events-none"
+        style={{
+          left: '-1298px',
+          top: '166px',
+          opacity: 0.1,
+        }}
+      >
+        <img 
+          src="/images/favicon-icon.webp" 
+          alt=""
+          className="w-auto h-auto"
+        />
+      </div>
       
       {/* Content */}
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-4 relative z-10 h-full flex items-center">
+        <div className="w-full max-w-[1400px] mx-auto">
+          <div className="flex gap-12 items-center justify-between">
             {/* Left Column - Text Content */}
-            <div className="text-gray-900 space-y-8 animate-slide-up">
+            <div className="text-gray-900 space-y-8 animate-slide-up" style={{ width: '53%', maxWidth: '675px' }}>
               {/* Animated Heading */}
               <h1 className="text-5xl md:text-7xl font-bold leading-tight">
                 Get Your{" "}
@@ -100,20 +119,29 @@ const HeroSection = () => {
               </div>
             </div>
 
-            {/* Right Column - Website Preview Grid */}
-            <div className="grid grid-cols-3 gap-4 animate-fade-in">
-              {[1, 2, 3, 4, 5, 6].map((item) => (
-                <div 
-                  key={item} 
-                  className="aspect-[4/5] rounded-lg overflow-hidden hover:scale-105 transition-all duration-300 cursor-pointer shadow-lg"
-                >
-                  <img 
-                    src={`/images/demo${item}.webp`} 
-                    alt={`Demo website ${item}`}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              ))}
+            {/* Right Column - Website Preview Grid (3x3) */}
+            <div className="flex-1 animate-fade-in">
+              <div className="grid grid-cols-3 gap-0">
+                {demoImages.map((item, index) => (
+                  <div 
+                    key={index} 
+                    className="aspect-[4/5] overflow-hidden transition-all duration-300 cursor-pointer group"
+                    style={{
+                      transformStyle: 'preserve-3d',
+                      perspective: '600px',
+                    }}
+                  >
+                    <img 
+                      src={`/images/demo${item}.webp`} 
+                      alt={`Demo website ${item}`}
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                      style={{
+                        transform: 'translateZ(0)',
+                      }}
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
