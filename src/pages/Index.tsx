@@ -1,56 +1,67 @@
 import Header from "@/components/Header";
 import { useEffect } from "react";
-import "./Index.css";
 
 const Index = () => {
   console.log('Index component rendering');
   
   useEffect(() => {
-    console.log('Initializing tilt effect on gallery...');
-    
-    // Find all tilt items
-    const tiltItems = document.querySelectorAll('.ekit-gallery-portfolio-tilt');
-    console.log('Found tilt items:', tiltItems.length);
-    
-    tiltItems.forEach((item, index) => {
-      const handleMouseMove = (e: MouseEvent) => {
-        const rect = item.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-        
-        const rotateX = ((y - centerY) / centerY) * -20;
-        const rotateY = ((x - centerX) / centerX) * 20;
-        
-        const mouseXPercent = (x / rect.width) * 100;
-        const mouseYPercent = (y / rect.height) * 100;
-        
-        (item as HTMLElement).style.transform = `scale(1.2) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-        (item as HTMLElement).style.setProperty('--mouse-x', `${mouseXPercent}%`);
-        (item as HTMLElement).style.setProperty('--mouse-y', `${mouseYPercent}%`);
-      };
+    // Load tilt.js from CDN if not already loaded
+    const loadTiltJS = () => {
+      if ((window as any).jQuery && (window as any).jQuery.fn.tilt) {
+        console.log('Tilt.js already loaded');
+        initTilt();
+        return;
+      }
 
-      const handleMouseLeave = () => {
-        (item as HTMLElement).style.transform = 'scale(1) rotateX(0deg) rotateY(0deg)';
+      const script = document.createElement('script');
+      script.src = 'https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js';
+      script.onload = () => {
+        console.log('Tilt.js loaded successfully');
+        initTilt();
       };
+      script.onerror = () => console.error('Failed to load tilt.js');
+      document.body.appendChild(script);
+    };
 
-      const handleMouseEnter = () => {
-        console.log('Mouse entered item', index);
-      };
+    const initTilt = () => {
+      const $ = (window as any).jQuery;
+      if (!$ || !$.fn.tilt) {
+        console.error('jQuery or tilt not available');
+        return;
+      }
 
-      item.addEventListener('mouseenter', handleMouseEnter);
-      item.addEventListener('mousemove', handleMouseMove);
-      item.addEventListener('mouseleave', handleMouseLeave);
-    });
+      // Initialize tilt on gallery items matching your reference implementation
+      const $tiltItems = $('.ekit-gallery-portfolio-tilt');
+      console.log('Initializing tilt on', $tiltItems.length, 'items');
+      
+      $tiltItems.each(function(this: HTMLElement) {
+        $(this).tilt({
+          maxTilt: 20,
+          perspective: 600,
+          scale: 1.2,
+          speed: 400,
+          glare: true,
+          maxGlare: 0.6,
+          easing: 'cubic-bezier(.03, .98, .52, .99)',
+          transition: true,
+        });
+      });
+    };
+
+    // Small delay to ensure DOM is ready
+    const timer = setTimeout(loadTiltJS, 100);
 
     return () => {
-      tiltItems.forEach((item) => {
-        item.removeEventListener('mouseenter', () => {});
-        item.removeEventListener('mousemove', () => {});
-        item.removeEventListener('mouseleave', () => {});
-      });
+      clearTimeout(timer);
+      // Cleanup tilt instances
+      const $ = (window as any).jQuery;
+      if ($ && $.fn.tilt) {
+        $('.ekit-gallery-portfolio-tilt').each(function(this: HTMLElement) {
+          if ($(this).data('tilt')) {
+            $(this).tilt('destroy');
+          }
+        });
+      }
     };
   }, []);
   
