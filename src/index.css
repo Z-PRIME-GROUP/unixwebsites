@@ -31,11 +31,15 @@
   font-display: swap;
 }
 
-.icon, .icon::before {
+/* ICON FIX: Force icon display and proper font */
+.icon,
+.icon::before {
   font-family: elementskit !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  display: inline-block !important;
   speak: none;
-  font-style: normal;
-  font-weight: 400;
+  text-decoration: inherit;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
@@ -43,32 +47,26 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon.icon-check::before {
-  content: "\eaaf";
+.icon-check::before {
+  content: "\eaaf" !important;
 }
 
-/* ATTEMPT 1: Aggressive color override for invisible text */
-.elementor * {
-  color: inherit !important;
-}
-
-h1.ekit-fancy-text,
-h1.ekit-fancy-text *,
-.ekit-fancy-prefix-text,
-.ekit-fancy-suffix-text,
-.ekit-fancy-text-lists,
-.ekit-fancy-text-lists b {
+/* HEADING TEXT FIX: Add missing colors for h1 and spans */
+.elementor-24752 .elementor-element-8efe2d6 .ekit-fancy-text {
   color: #090909 !important;
-  font-family: "Plus Jakarta Sans", Sans-serif !important;
-  font-size: 48px !important;
-  font-weight: 500 !important;
 }
 
-/* Blue color for FREE word */
-.ekit-fancy-text-lists b {
-  color: #0234da !important;
+.elementor-24752 .elementor-element-8efe2d6 .ekit-fancy-prefix-text,
+.elementor-24752 .elementor-element-8efe2d6 .ekit-fancy-suffix-text {
+  color: #090909 !important;
 }
 
+/* Preserve blue color for FREE word - already defined in lightspeed.css but ensure it wins */
+.elementor-24752 .elementor-element-8efe2d6 .ekit-fancy-text-lists b {
+  color: var(--e-global-color-primary) !important;
+}
+
+/* Fancy text animation structure */
 .ekit-fancy-text-lists {
   position: relative;
   display: inline-block;
@@ -83,41 +81,12 @@ h1.ekit-fancy-text *,
   left: 0;
   top: 0;
   white-space: nowrap;
-  color: #2563EB;
   font-weight: 900;
 }
 
 .ekit-fancy-text.is-visible {
   display: inline-block;
   position: relative;
-}
-
-.ekit-fancy-text.is-visible i {
-  display: inline-block;
-  font-style: normal;
-  opacity: 0;
-  transform: scale(0) translateZ(0);
-  animation: ekitLetterScale 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-}
-
-.ekit-fancy-text.is-visible i:nth-child(1) { animation-delay: 0s; }
-.ekit-fancy-text.is-visible i:nth-child(2) { animation-delay: 0.05s; }
-.ekit-fancy-text.is-visible i:nth-child(3) { animation-delay: 0.1s; }
-.ekit-fancy-text.is-visible i:nth-child(4) { animation-delay: 0.15s; }
-
-@keyframes ekitLetterScale {
-  0% {
-    opacity: 0;
-    transform: scale(0) translateZ(0);
-  }
-  60% {
-    opacity: 1;
-    transform: scale(1.2) translateZ(0);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1) translateZ(0);
-  }
 }
 
 /* Vanilla Tilt - Match Elementor gallery styles */
