@@ -87,7 +87,7 @@ i.icon-check::before,
   font-family: elementskit !important;
 }
 
-/* Checkmark List - EXACT MATCH to original (bolder and larger) */
+/* Checkmark List - Use REAKTIF font like original */
 .ekit-stylish-list {
   display: inline-flex !important;
   flex-direction: row !important;
@@ -110,7 +110,7 @@ i.icon-check::before,
   gap: 10px !important;
 }
 
-/* Checkmark icon - match original size */
+/* Checkmark icon */
 .ekit-stylish-list-content-icon {
   background-color: #FFF !important;
   width: 24px !important;
@@ -125,11 +125,11 @@ i.icon-check::before,
   color: #090909 !important;
 }
 
-/* Text styling - BOLDER and LARGER */
+/* Text styling - REAKTIF FONT (same as heading!) */
 .ekit-stylish-list-content-title {
-  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-family: 'Reaktif', sans-serif !important;
   font-size: 18px !important;
-  font-weight: 600 !important;
+  font-weight: 500 !important;
   color: #090909 !important;
   line-height: 1.5 !important;
   letter-spacing: 0px !important;
@@ -145,7 +145,7 @@ i.icon-check::before,
 
   .ekit-stylish-list-content-title {
     font-size: 16px !important;
-    font-weight: 600 !important;
+    font-weight: 500 !important;
   }
 }
 
