@@ -65,7 +65,15 @@ const HeroSectionExact = () => {
   }, []);
 
   return (
-    <div className="elementor-element elementor-element-89bde1c e-con-full e-flex e-con e-parent" data-id="89bde1c" data-element_type="container" data-settings='{"background_background":"gradient"}'>
+    <div 
+      className="elementor-element elementor-element-89bde1c e-con-full e-flex e-con e-parent" 
+      data-id="89bde1c" 
+      data-element_type="container" 
+      data-settings='{"background_background":"gradient"}'
+      style={{
+        background: `url(https://ufreewebsites.com/wp-content/uploads/2024/09/ufreewebsites-favicon-color.webp) 85% 50% / 450px no-repeat, linear-gradient(180deg, #E3EEFF 40%, #fff 100%)`
+      }}
+    >
       <div className="elementor-element elementor-element-8bb6f3c e-con-full hero-section e-flex e-con e-child" data-id="8bb6f3c" data-element_type="container">
         <div className="elementor-element elementor-element-b1c56d6 e-con-full e-flex e-con e-child" data-id="b1c56d6" data-element_type="container">
           <div className="elementor-element elementor-element-8efe2d6 elementor-widget elementor-widget-elementskit-fancy-animated-text" data-id="8efe2d6" data-element_type="widget" data-settings='{"ekit_we_effect_on":"none"}' data-widget_type="elementskit-fancy-animated-text.default">
