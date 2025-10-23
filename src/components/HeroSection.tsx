@@ -1,8 +1,14 @@
 import { useState, useEffect } from "react";
 import { Check } from "lucide-react";
 import { Button } from "./ui/button";
-import Atropos from 'atropos/react';
-import 'atropos/css';
+
+// Declare jQuery for TypeScript
+declare global {
+  interface Window {
+    jQuery: any;
+    $: any;
+  }
+}
 
 const HeroSection = () => {
   const [currentWord, setCurrentWord] = useState(0);
@@ -14,6 +20,46 @@ const HeroSection = () => {
     }, 2000);
 
     return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    // Initialize tilt.js with jQuery
+    const initTilt = () => {
+      if (window.jQuery && window.jQuery.fn && window.jQuery.fn.tilt) {
+        window.jQuery('.demo-tilt-item').tilt({
+          maxTilt: 20,
+          perspective: 600,
+          scale: 1.2,
+          speed: 400,
+          glare: true,
+          maxGlare: 0.6,
+          easing: 'cubic-bezier(.03, .98, .52, .99)',
+          transition: true,
+        });
+      }
+    };
+
+    // Check if tilt is already available
+    if (window.jQuery && window.jQuery.fn && window.jQuery.fn.tilt) {
+      initTilt();
+    } else {
+      // Load tilt.js from CDN
+      const script = document.createElement('script');
+      script.src = 'https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js';
+      script.async = true;
+      script.onload = initTilt;
+      document.body.appendChild(script);
+
+      return () => {
+        if (document.body.contains(script)) {
+          document.body.removeChild(script);
+        }
+        // Destroy tilt instances
+        if (window.jQuery && window.jQuery.fn && window.jQuery.fn.tilt) {
+          window.jQuery('.demo-tilt-item').tilt.destroy();
+        }
+      };
+    }
   }, []);
 
   const features = [
@@ -123,27 +169,29 @@ const HeroSection = () => {
               </div>
             </div>
 
-            {/* Right Column - Website Preview Grid (3x3) with Atropos 3D Effect */}
+            {/* Right Column - Website Preview Grid (3x3) with Tilt Effect */}
             <div className="flex-1 animate-fade-in">
               <div className="grid grid-cols-3 gap-0">
                 {demoImages.map((item, index) => (
-                  <div key={index} className="aspect-[4/5]">
-                    <Atropos
-                      className="w-full h-full cursor-pointer"
-                      shadow={false}
-                      highlight={true}
-                      rotateXMax={15}
-                      rotateYMax={15}
-                      duration={400}
-                      rotateTouch="scroll-y"
-                    >
-                      <img 
-                        src={`/images/demo${item}.webp`} 
-                        alt={`Demo website ${item}`}
-                        className="w-full h-full object-cover"
-                        data-atropos-offset="5"
-                      />
-                    </Atropos>
+                  <div 
+                    key={index}
+                    className="demo-tilt-item aspect-[4/5] cursor-pointer"
+                    data-tilt-scale="1.2"
+                    data-tilt-maxtilt="20"
+                    data-tilt-perspective="600"
+                    data-tilt-maxglare="0.6"
+                    style={{
+                      transformStyle: 'preserve-3d',
+                    }}
+                  >
+                    <img 
+                      src={`/images/demo${item}.webp`} 
+                      alt={`Demo website ${item}`}
+                      className="w-full h-full object-cover"
+                      style={{
+                        pointerEvents: 'none',
+                      }}
+                    />
                   </div>
                 ))}
               </div>
