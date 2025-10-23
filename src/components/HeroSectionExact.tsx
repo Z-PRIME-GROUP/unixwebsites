@@ -42,8 +42,7 @@ const HeroSectionExact = () => {
             scale: 1.2,
             max: 20,
             perspective: 600,
-            glare: true,
-            'max-glare': 0.6,
+            glare: false,
             transition: true,
             easing: 'cubic-bezier(.03, .98, .52, .99)'
           });
