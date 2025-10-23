@@ -160,7 +160,7 @@ const HeroSectionExact = () => {
                 decoding="async"
                 width="820" 
                 height="300"
-                src="images/2024/09/verified-company-badge.webp"
+                src="/images/verified-badge.webp"
                 className="attachment-full size-full wp-image-25102" 
                 alt="" 
               />
@@ -177,15 +177,15 @@ const HeroSectionExact = () => {
               <div className="ekit_gallery_grid_wraper">
                 <div id="ekit_gallery_79c58aa" className="ekit_gallery_grid" data-tilt-config='{"disableAxis":"both","easing":"cubic-bezier(.03, .98, .52, .99)","glare":true,"transition":true}' data-masonry-config='{"itemSelector":".ekit_gallery_grid_item"}'>
                   {[
-                    'images/2024/09/landing-demo-qi141-img-1.webp',
-                    'images/2024/09/landing-demo-qi64-img1.webp',
-                    'images/2024/09/landing-demo-qi47-img1.webp',
-                    'images/2024/09/landing-demo-qi75-img2.webp',
-                    'images/2024/09/landing-demo-qi107-img-1.webp',
-                    'images/2024/09/landing-demo-qi66-img2.webp',
-                    'images/2024/09/landing-demo-qi17-img1.webp',
-                    'images/2024/09/landing-demo-qi48-img1.webp',
-                    'images/2024/09/landing-demo-qi12-img2.webp'
+                    '/images/demo1.webp',
+                    '/images/demo2.webp',
+                    '/images/demo3.webp',
+                    '/images/demo4.webp',
+                    '/images/demo5.webp',
+                    '/images/demo6.webp',
+                    '/images/demo1.webp',
+                    '/images/demo2.webp',
+                    '/images/demo3.webp'
                   ].map((src, index) => (
                     <div key={index} className="ekit_gallery_grid_item ekit_gallery__filter-one ">
                       <div 
@@ -223,7 +223,7 @@ const HeroSectionExact = () => {
               decoding="async"
               width="1600" 
               height="1600"
-              src="images/2024/09/ufreewebsites-favicon-color.webp"
+              src="/images/unixwebsites-favicon-color.webp"
               className="attachment-full size-full wp-image-24137" 
               alt="" 
             />
