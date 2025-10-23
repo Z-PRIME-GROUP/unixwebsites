@@ -228,6 +228,13 @@ h1.ekit-fancy-text {
   display: none !important;
 }
 
+.ekit-fancy-text-lists b.is-hidden {
+  position: absolute !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  display: none !important;
+}
+
 /* Body text uses Plus Jakarta Sans */
 p,
 .ekit-heading__description,

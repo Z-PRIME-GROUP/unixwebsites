@@ -188,7 +188,7 @@ export const HeroSection = () => {
                          style={{
                            background: 'linear-gradient(90deg, #FF8C42 0%, #FF6B35 100%)',
                            color: '#fff',
-                           padding: '18px 35px',
+                           padding: '15px 30px',
                            borderRadius: '50px',
                            fontSize: '16px',
                            fontWeight: '700',
