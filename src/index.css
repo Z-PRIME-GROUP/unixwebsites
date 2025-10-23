@@ -52,13 +52,18 @@
   content: "\eaaf" !important;
 }
 
-/* HEADING TEXT FIX: Override Tailwind base reset that makes text invisible */
-h1, h1 * {
+/* HEADING TEXT FIX: Override Tailwind base reset + add explicit sizing */
+h1.ekit-fancy-text {
+  display: block !important;
+  position: relative !important;
   color: #090909 !important;
+  font-size: 58px !important;
+  font-weight: 500 !important;
+  line-height: 1.2 !important;
 }
 
-.elementor-24752 .elementor-element-8efe2d6 .ekit-fancy-text {
-  color: #090909 !important;
+h1.ekit-fancy-text * {
+  color: inherit !important;
 }
 
 .elementor-24752 .elementor-element-8efe2d6 .ekit-fancy-prefix-text,
@@ -66,12 +71,17 @@ h1, h1 * {
   color: #090909 !important;
 }
 
-/* Preserve blue color for FREE word - already defined in lightspeed.css but ensure it wins */
+/* Blue color for FREE word */
 .elementor-24752 .elementor-element-8efe2d6 .ekit-fancy-text-lists b {
   color: var(--e-global-color-primary) !important;
 }
 
-/* Fancy text animation structure */
+/* Fancy text animation structure - FIX: h1.ekit-fancy-text should be visible */
+h1.ekit-fancy-text {
+  display: block !important;
+  position: relative !important;
+}
+
 .ekit-fancy-text-lists {
   position: relative;
   display: inline-block;
@@ -80,7 +90,8 @@ h1, h1 * {
   min-width: 85px;
 }
 
-.ekit-fancy-text {
+/* Only hide the b tags inside, not the h1 */
+.ekit-fancy-text-lists .ekit-fancy-text {
   display: none;
   position: absolute;
   left: 0;
@@ -89,7 +100,7 @@ h1, h1 * {
   font-weight: 900;
 }
 
-.ekit-fancy-text.is-visible {
+.ekit-fancy-text-lists .ekit-fancy-text.is-visible {
   display: inline-block;
   position: relative;
 }
