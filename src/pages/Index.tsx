@@ -82,7 +82,7 @@ const Index = () => {
                       <div className="elementor-element elementor-element-8bb6f3c e-con-full hero-section e-flex e-con e-child" data-id="8bb6f3c" data-element_type="container" style={{padding: '0', display: 'flex', flexDirection: 'row', alignItems: 'stretch', width: '100%', height: '100%'}}>
                         
                         {/* Left Column - All Content */}
-                        <div className="elementor-element elementor-element-b1c56d6 e-con-full e-flex e-con e-child" data-id="b1c56d6" data-element_type="container" style={{paddingTop: '120px', paddingBottom: '60px', paddingLeft: '40px', paddingRight: '40px', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '30px'}}>
+                        <div className="elementor-element elementor-element-b1c56d6 e-con-full e-flex e-con e-child" data-id="b1c56d6" data-element_type="container" style={{flex: '0 0 50%', width: '50%', paddingTop: '120px', paddingBottom: '60px', paddingLeft: '40px', paddingRight: '40px', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '30px'}}>
                           
                           {/* Animated Heading */}
                           <div className="elementor-element elementor-element-8efe2d6 elementor-widget elementor-widget-elementskit-fancy-animated-text" data-id="8efe2d6" data-element_type="widget">
@@ -187,7 +187,7 @@ const Index = () => {
                         </div>
 
                         {/* Right Column - Gallery Grid (9 images in 3x3 grid) */}
-                        <div className="elementor-element elementor-element-eca17a6 e-con-full e-flex e-con e-child" data-id="eca17a6" data-element_type="container" style={{padding: '0', margin: '0', height: '100%', display: 'flex', flexDirection: 'column'}}>
+                        <div className="elementor-element elementor-element-eca17a6 e-con-full e-flex e-con e-child" data-id="eca17a6" data-element_type="container" style={{flex: '0 0 50%', width: '50%', padding: '0', margin: '0', height: '100%', display: 'flex', flexDirection: 'column'}}>
                           <div className="elementor-element elementor-element-79c58aa elementor-widget-mobile__width-inherit elementor-widget-tablet__width-inherit elementor-widget elementor-widget-elementskit-gallery" data-id="79c58aa" data-element_type="widget" style={{height: '100%', width: '100%', margin: '0', padding: '0', flex: '1'}}>
                             <div className="elementor-widget-container" style={{height: '100%', margin: '0', padding: '0'}}>
                               <div className="ekit-wid-con" style={{height: '100%', margin: '0', padding: '0'}}>
