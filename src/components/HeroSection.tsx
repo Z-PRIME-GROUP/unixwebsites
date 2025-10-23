@@ -1,11 +1,11 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { Check } from "lucide-react";
 import { Button } from "./ui/button";
+import { Tilt } from 'react-tilt';
 
 const HeroSection = () => {
   const [currentWord, setCurrentWord] = useState(0);
   const words = ["FREE", "FREE", "FREE"];
-  const gridRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -13,74 +13,6 @@ const HeroSection = () => {
     }, 2000);
 
     return () => clearInterval(interval);
-  }, []);
-
-  useEffect(() => {
-    // Load tilt.js library
-    const loadTiltLibrary = () => {
-      return new Promise<void>((resolve, reject) => {
-        // Check if already loaded
-        if ((window as any).$ && (window as any).$.fn && (window as any).$.fn.tilt) {
-          resolve();
-          return;
-        }
-
-        const script = document.createElement('script');
-        script.src = 'https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js';
-        script.async = true;
-        script.onload = () => resolve();
-        script.onerror = () => reject(new Error('Failed to load tilt.js'));
-        document.head.appendChild(script);
-      });
-    };
-
-    // Initialize tilt effect
-    const initializeTilt = async () => {
-      try {
-        await loadTiltLibrary();
-        
-        // Small delay to ensure DOM is ready
-        setTimeout(() => {
-          const $ = (window as any).$;
-          if ($ && $.fn && $.fn.tilt && gridRef.current) {
-            const $items = $(gridRef.current).find('.tilt-item');
-            
-            $items.each(function(this: HTMLElement) {
-              $(this).tilt({
-                maxTilt: 20,
-                perspective: 600,
-                scale: 1.2,
-                speed: 400,
-                glare: true,
-                maxGlare: 0.6,
-                easing: 'cubic-bezier(.03, .98, .52, .99)',
-                transition: true,
-              });
-            });
-            
-            console.log('Tilt initialized on', $items.length, 'items');
-          }
-        }, 100);
-      } catch (error) {
-        console.error('Failed to initialize tilt:', error);
-      }
-    };
-
-    initializeTilt();
-
-    return () => {
-      // Cleanup
-      const $ = (window as any).$;
-      if ($ && $.fn && $.fn.tilt && gridRef.current) {
-        const $items = $(gridRef.current).find('.tilt-item');
-        $items.each(function(this: HTMLElement) {
-          const instance = $(this).data('tilt');
-          if (instance) {
-            $(this).tilt('destroy');
-          }
-        });
-      }
-    };
   }, []);
 
   const features = [
@@ -91,6 +23,18 @@ const HeroSection = () => {
 
   // Generate 9 images (repeat the 6 available demos)
   const demoImages = [1, 2, 3, 4, 5, 6, 1, 2, 3];
+
+  const tiltOptions = {
+    reverse: false,
+    max: 20,
+    perspective: 600,
+    scale: 1.2,
+    speed: 400,
+    transition: true,
+    axis: null,
+    reset: true,
+    easing: "cubic-bezier(.03,.98,.52,.99)",
+  };
 
   return (
     <section className="relative w-full h-screen" style={{ marginTop: '-150px', paddingTop: '150px', overflow: 'visible' }}>
@@ -192,11 +136,12 @@ const HeroSection = () => {
 
             {/* Right Column - Website Preview Grid (3x3) with Tilt Effect */}
             <div className="flex-1 animate-fade-in">
-              <div ref={gridRef} className="grid grid-cols-3 gap-0">
+              <div className="grid grid-cols-3 gap-0">
                 {demoImages.map((item, index) => (
-                  <div 
+                  <Tilt
                     key={index}
-                    className="tilt-item aspect-[4/5] cursor-pointer"
+                    options={tiltOptions}
+                    className="aspect-[4/5]"
                     style={{
                       transformStyle: 'preserve-3d',
                     }}
@@ -204,9 +149,9 @@ const HeroSection = () => {
                     <img 
                       src={`/images/demo${item}.webp`} 
                       alt={`Demo website ${item}`}
-                      className="w-full h-full object-cover pointer-events-none"
+                      className="w-full h-full object-cover"
                     />
-                  </div>
+                  </Tilt>
                 ))}
               </div>
             </div>
