@@ -23,17 +23,13 @@ img[alt*="gallery"],
   -o-border-radius: 0 !important;
 }
 
-/* Tilt parent MUST have overflow:hidden to contain glare */
-.ekit_gallery_grid_item {
+/* Tilt glare containment - Target the exact element that has VanillaTilt applied */
+.elementskit-single-portfolio-item.ekit-gallery-portfolio-tilt {
   overflow: hidden !important;
-}
-
-.elementskit-single-portfolio-item {
-  overflow: hidden !important;
-}
-
-.ekit-gallery-portfolio-tilt {
-  overflow: hidden !important;
+  position: relative !important;
+  transform: translateZ(0) !important;
+  backface-visibility: hidden !important;
+  isolation: isolate !important;
 }
 
 .elementskit-portfolio-thumb img {
