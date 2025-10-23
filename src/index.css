@@ -87,9 +87,9 @@ i.icon-check::before,
   font-family: elementskit !important;
 }
 
-/* Green circular checkmarks - override white background */
+/* WHITE circular checkmarks with BLACK icons */
 .elementor-24752 .elementor-element.elementor-element-f9506ec .ekit-stylish-list-content-icon {
-  background-color: #50C878 !important;
+  background-color: #FFF !important;
   width: 25px !important;
   height: 25px !important;
   border-radius: 100% !important;
@@ -99,7 +99,7 @@ i.icon-check::before,
 }
 
 .elementor-24752 .elementor-element.elementor-element-f9506ec .ekit-stylish-list-content-icon>i {
-  color: #fff !important;
+  color: #090909 !important;
   font-size: 11px !important;
   line-height: 1 !important;
 }
@@ -201,6 +201,17 @@ body,
   background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 100%) !important;
 }
 
+/* Gallery images - NO border radius */
+.elementskit-portfolio-thumb img,
+.elementskit-single-portfolio-item img {
+  border-radius: 0 !important;
+}
+
+/* Trustpilot/Verified badge - NO border radius */
+.elementor-24752 .elementor-element-6cd7ca9 img {
+  border-radius: 0 !important;
+}
+
 /* Button styling - Reaktif font and hover scale */
 .elementor-24752 .elementor-element-7a98993 .elementskit-btn {
   font-family: 'Reaktif', sans-serif !important;
@@ -215,6 +226,7 @@ body,
   transform: scale(1.05) !important;
 }
 
+/* Background image for hero section */
 .elementor-24752 .elementor-element.elementor-element-89bde1c:not(.elementor-motion-effects-element-type-background),
 .elementor-24752 .elementor-element.elementor-element-89bde1c>.elementor-motion-effects-container>.elementor-motion-effects-layer {
   background-color: #fff0;
@@ -223,3 +235,5 @@ body,
   background-size: 450px, cover !important;
   background-repeat: no-repeat, no-repeat !important;
 }
+
+/* Preserve Elementor CSS from lightspeed.css */
