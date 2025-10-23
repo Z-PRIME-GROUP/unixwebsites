@@ -156,9 +156,11 @@ const HeroSectionExact = () => {
           <div className="elementor-element elementor-element-1435b23 elementor-widget__width-initial elementor-widget elementor-widget-image" data-id="1435b23" data-element_type="widget" data-settings='{"ekit_we_effect_on":"none"}' data-widget_type="image.default">
             <div className="elementor-widget-container">
               <img 
+                fetchPriority="high"
+                decoding="async"
                 width="820" 
                 height="300"
-                src="/images/verified-badge.webp"
+                src="images/2024/09/verified-company-badge.webp"
                 className="attachment-full size-full wp-image-25102" 
                 alt="" 
               />
@@ -175,15 +177,15 @@ const HeroSectionExact = () => {
               <div className="ekit_gallery_grid_wraper">
                 <div id="ekit_gallery_79c58aa" className="ekit_gallery_grid" data-tilt-config='{"disableAxis":"both","easing":"cubic-bezier(.03, .98, .52, .99)","glare":true,"transition":true}' data-masonry-config='{"itemSelector":".ekit_gallery_grid_item"}'>
                   {[
-                    '/images/demo1.webp',
-                    '/images/demo2.webp',
-                    '/images/demo3.webp',
-                    '/images/demo4.webp',
-                    '/images/demo5.webp',
-                    '/images/demo6.webp',
-                    '/images/demo1.webp',
-                    '/images/demo2.webp',
-                    '/images/demo3.webp'
+                    'images/2024/09/landing-demo-qi141-img-1.webp',
+                    'images/2024/09/landing-demo-qi64-img1.webp',
+                    'images/2024/09/landing-demo-qi47-img1.webp',
+                    'images/2024/09/landing-demo-qi75-img2.webp',
+                    'images/2024/09/landing-demo-qi107-img-1.webp',
+                    'images/2024/09/landing-demo-qi66-img2.webp',
+                    'images/2024/09/landing-demo-qi17-img1.webp',
+                    'images/2024/09/landing-demo-qi48-img1.webp',
+                    'images/2024/09/landing-demo-qi12-img2.webp'
                   ].map((src, index) => (
                     <div key={index} className="ekit_gallery_grid_item ekit_gallery__filter-one ">
                       <div 
@@ -218,10 +220,11 @@ const HeroSectionExact = () => {
         <div className="elementor-element elementor-element-2e19d04 elementor-absolute elementor-widget elementor-widget-image" data-id="2e19d04" data-element_type="widget" data-settings='{"_position":"absolute","ekit_we_effect_on":"none"}' data-widget_type="image.default">
           <div className="elementor-widget-container">
             <img 
+              decoding="async"
               width="1600" 
               height="1600"
-              src="/images/unixwebsites-favicon-color.webp"
-              className="attachment-full size-full wp-image-25103" 
+              src="images/2024/09/ufreewebsites-favicon-color.webp"
+              className="attachment-full size-full wp-image-24137" 
               alt="" 
             />
           </div>
