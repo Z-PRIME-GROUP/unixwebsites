@@ -10,8 +10,17 @@ export const FeaturesSuccessSection = () => {
 
   return (
     <section style={{ background: 'linear-gradient(180deg, #FFFFFF 0%, #E3EEFF 100%)', position: 'relative', overflow: 'hidden', padding: '100px 5%' }}>
-      <div style={{ position: 'absolute', right: '0', top: '50%', transform: 'translateY(-50%)', width: '55%', maxWidth: '700px', opacity: 0.12, pointerEvents: 'none', zIndex: 0 }}>
-        <img src="/images/unixwebsites-favicon-color.webp" alt="" style={{ width: '100%', height: 'auto' }} />
+      <div style={{ position: 'absolute', right: '-5%', top: '50%', transform: 'translateY(-50%)', width: '65%', maxWidth: '900px', opacity: 0.1, pointerEvents: 'none', zIndex: 0 }}>
+        <svg width="100%" height="100%" viewBox="0 0 800 800" style={{ filter: 'url(#noise)' }}>
+          <defs>
+            <filter id="noise">
+              <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" />
+              <feColorMatrix type="saturate" values="0" />
+              <feBlend mode="multiply" in2="SourceGraphic" />
+            </filter>
+          </defs>
+          <image href="/images/unixwebsites-favicon-color.webp" width="800" height="800" />
+        </svg>
       </div>
       <div style={{ position: 'absolute', right: '2%', top: '8%', width: '500px', height: '500px', background: 'radial-gradient(circle, rgba(255,192,203,0.7) 0%, rgba(255,182,193,0.35) 30%, transparent 65%)', borderRadius: '50%', filter: 'blur(80px)', pointerEvents: 'none', zIndex: 0 }} />
       <div style={{ position: 'absolute', right: '4%', bottom: '12%', width: '600px', height: '600px', background: 'radial-gradient(circle, rgba(173,216,230,0.75) 0%, rgba(176,224,230,0.4) 30%, transparent 65%)', borderRadius: '50%', filter: 'blur(85px)', pointerEvents: 'none', zIndex: 0 }} />
@@ -28,8 +37,8 @@ export const FeaturesSuccessSection = () => {
               <div style={{ width: '72px', height: '72px', borderRadius: '50%', backgroundColor: 'rgba(59,130,246,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '24px' }}>
                 <img src={feature.icon} alt={feature.title} style={{ width: '40px', height: '40px', objectFit: 'contain' }} />
               </div>
-              <h5 style={{ fontFamily: 'Reaktif, sans-serif', fontSize: '19.5px', fontWeight: 600, color: '#0A0A0A', marginBottom: '13px', lineHeight: '1.35' }}>{feature.title}</h5>
-              <p style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', fontSize: '15px', fontWeight: 400, color: '#666', lineHeight: '1.7', marginBottom: '0' }}>{feature.description}</p>
+              <h5 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', fontSize: '20px', fontWeight: 600, color: '#0A0A0A', marginBottom: '13px', lineHeight: '1.35' }}>{feature.title}</h5>
+              <p style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', fontSize: '16px', fontWeight: 400, color: '#666', lineHeight: '1.8em', marginBottom: '0' }}>{feature.description}</p>
             </div>
           ))}
         </div>
