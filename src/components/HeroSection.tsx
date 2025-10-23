@@ -1,11 +1,12 @@
 import { useState, useEffect, useRef } from "react";
 import { Check } from "lucide-react";
 import { Button } from "./ui/button";
+import VanillaTilt from "vanilla-tilt";
 
 const HeroSection = () => {
   const [currentWord, setCurrentWord] = useState(0);
   const words = ["FREE", "FREE", "FREE"];
-  const gridRef = useRef<HTMLDivElement>(null);
+  const tiltRefs = useRef<HTMLDivElement[]>([]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -16,31 +17,27 @@ const HeroSection = () => {
   }, []);
 
   useEffect(() => {
-    // Load and initialize tilt.js from CDN
-    const script = document.createElement('script');
-    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js';
-    script.async = true;
-    
-    script.onload = () => {
-      if (gridRef.current && (window as any).jQuery) {
-        const $ = (window as any).jQuery;
-        $(gridRef.current).find('.js-tilt-glare').tilt({
+    // Initialize vanilla-tilt on all image containers
+    tiltRefs.current.forEach((el) => {
+      if (el) {
+        VanillaTilt.init(el, {
           glare: true,
-          maxGlare: 0.5,
+          "max-glare": 0.5,
           scale: 1.05,
           speed: 400,
           transition: true,
           easing: "cubic-bezier(.03, .98, .52, .99)",
         });
       }
-    };
-    
-    document.body.appendChild(script);
+    });
 
     return () => {
-      if (document.body.contains(script)) {
-        document.body.removeChild(script);
-      }
+      // Cleanup tilt instances
+      tiltRefs.current.forEach((el) => {
+        if (el && (el as any).vanillaTilt) {
+          (el as any).vanillaTilt.destroy();
+        }
+      });
     };
   }, []);
 
@@ -153,15 +150,14 @@ const HeroSection = () => {
 
             {/* Right Column - Website Preview Grid (3x3) */}
             <div className="flex-1 animate-fade-in">
-              <div ref={gridRef} className="grid grid-cols-3 gap-0">
+              <div className="grid grid-cols-3 gap-0">
                 {demoImages.map((item, index) => (
                   <div 
                     key={index}
-                    className="js-tilt-glare aspect-[4/5] overflow-visible cursor-pointer"
-                    data-tilt
-                    data-tilt-glare="true"
-                    data-tilt-max-glare="0.5"
-                    data-tilt-scale="1.05"
+                    ref={(el) => {
+                      if (el) tiltRefs.current[index] = el;
+                    }}
+                    className="aspect-[4/5] overflow-visible cursor-pointer"
                     style={{
                       transformStyle: 'preserve-3d',
                     }}
