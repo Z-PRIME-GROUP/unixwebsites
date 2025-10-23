@@ -5,19 +5,39 @@ const Index = () => {
   console.log('Index component rendering');
   
   useEffect(() => {
-    // Initialize FREE text animation
+    // Initialize FREE text letter-by-letter animation
     const initFancyTextAnimation = () => {
-      const fancyTextElements = document.querySelectorAll('.ekit-fancy-text-lists b');
-      if (fancyTextElements.length > 0) {
-        let currentIndex = 0;
+      const fancyTextContainer = document.querySelector('.ekit-fancy-text-lists');
+      if (!fancyTextContainer) return;
+      
+      const words = fancyTextContainer.querySelectorAll('b');
+      if (words.length === 0) return;
+      
+      let currentIndex = 0;
+      words[currentIndex].classList.add('is-visible');
+      words[currentIndex].classList.remove('is-hidden');
+      
+      const animateWords = () => {
+        const currentWord = words[currentIndex];
+        const nextIndex = (currentIndex + 1) % words.length;
+        const nextWord = words[nextIndex];
         
-        // Start animation loop
-        setInterval(() => {
-          fancyTextElements.forEach((el) => el.classList.remove('is-visible'));
-          currentIndex = (currentIndex + 1) % fancyTextElements.length;
-          fancyTextElements[currentIndex].classList.add('is-visible');
-        }, 2000); // Matches animationDelay from reference
-      }
+        // Hide current word with letter-by-letter out animation
+        currentWord.classList.add('is-hidden');
+        currentWord.classList.remove('is-visible');
+        
+        // Show next word with letter-by-letter in animation after a delay
+        setTimeout(() => {
+          currentWord.style.opacity = '0';
+          nextWord.classList.add('is-visible');
+          nextWord.classList.remove('is-hidden');
+          nextWord.style.opacity = '1';
+          currentIndex = nextIndex;
+        }, 600); // Match animation duration
+      };
+      
+      // Start animation loop (2000ms delay matches data-animation-settings)
+      setInterval(animateWords, 2000);
     };
 
     // Load tilt.js from CDN if not already loaded
@@ -64,7 +84,7 @@ const Index = () => {
     };
 
     // Initialize animations
-    initFancyTextAnimation();
+    setTimeout(initFancyTextAnimation, 100);
 
     // Small delay to ensure DOM is ready
     const timer = setTimeout(loadTiltJS, 100);
@@ -102,22 +122,28 @@ const Index = () => {
                         {/* Left Column - Text Content */}
                         <div className="elementor-element elementor-element-b1c56d6 e-con-full e-flex e-con e-child" data-id="b1c56d6" data-element_type="container">
                           
-                          {/* Animated Heading */}
-                          <div className="elementor-element elementor-element-8efe2d6 elementor-widget elementor-widget-elementskit-fancy-animated-text" data-id="8efe2d6" data-element_type="widget">
-                            <div className="elementor-widget-container">
-                              <div className="ekit-wid-con">
-                                <h1 className="ekit-fancy-text letters scale">
-                                  <span className="ekit-fancy-prefix-text">Get Your</span>
-                                  <span className="ekit-fancy-text-lists">
-                                    <b className="ekit-fancy-text elementor-repeater-item-a0eec85 is-visible">FREE</b>
-                                    <b className="ekit-fancy-text elementor-repeater-item-b9b00af">FREE</b>
-                                    <b className="ekit-fancy-text elementor-repeater-item-7c0a76c">FREE</b>
-                                  </span>
-                                  <span className="ekit-fancy-suffix-text">Website</span>
-                                </h1>
-                              </div>
-                            </div>
-                          </div>
+          {/* Animated Heading */}
+          <div className="elementor-element elementor-element-8efe2d6 elementor-widget elementor-widget-elementskit-fancy-animated-text" data-id="8efe2d6" data-element_type="widget">
+            <div className="elementor-widget-container">
+              <div className="ekit-wid-con">
+                <h1 className="ekit-fancy-text letters scale" data-id="8efe2d6" data-animation-settings='{"animationStyle":"animated","animationDelay":2000,"loadingBar":3800,"lettersDelay":50,"typeLettersDelay":150,"duration":500,"revealDuration":600,"revealAnimationDelay":1500}'>
+                  <span className="ekit-fancy-prefix-text">Get Your</span>
+                  <span className="ekit-fancy-text-lists" style={{maxWidth: '85px'}}>
+                    <b className="ekit-fancy-text elementor-repeater-item-a0eec85 is-hidden">
+                      <i className="out">F</i><i className="out">R</i><i className="in">E</i><i className="in">E</i>
+                    </b>
+                    <b className="ekit-fancy-text elementor-repeater-item-b9b00af is-visible">
+                      <i className="in">F</i><i className="in">R</i><i>E</i><i>E</i>
+                    </b>
+                    <b className="ekit-fancy-text elementor-repeater-item-7c0a76c">
+                      <i>F</i><i>R</i><i>E</i><i>E</i>
+                    </b>
+                  </span>
+                  <span className="ekit-fancy-suffix-text">Website</span>
+                </h1>
+              </div>
+            </div>
+          </div>
 
                           {/* Subheading */}
                           <div className="elementor-element elementor-element-6e1326a elementor-widget elementor-widget-elementskit-heading" data-id="6e1326a" data-element_type="widget">
