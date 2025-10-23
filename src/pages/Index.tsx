@@ -5,7 +5,29 @@ const Index = () => {
   console.log('Index component rendering');
   
   useEffect(() => {
-    // No animation initialization needed - just one static "FREE" word with letter animation
+    // Initialize FREE letter animation loop
+    const initFancyTextAnimation = () => {
+      const fancyWord = document.querySelector('.ekit-fancy-text-lists b') as HTMLElement;
+      if (!fancyWord) return;
+      
+      // Function to restart the letter animation
+      const restartAnimation = () => {
+        // Remove is-visible class
+        fancyWord.classList.remove('is-visible');
+        
+        // Force reflow to reset animation
+        void fancyWord.offsetWidth;
+        
+        // Re-add is-visible class to trigger animation
+        fancyWord.classList.add('is-visible');
+      };
+      
+      // Initial animation
+      restartAnimation();
+      
+      // Loop every 2 seconds
+      setInterval(restartAnimation, 2000);
+    };
 
     // Load tilt.js from CDN if not already loaded
     const loadTiltJS = () => {
@@ -50,7 +72,8 @@ const Index = () => {
       });
     };
 
-    // Initialize animations - tilt only (FREE animation is pure CSS)
+    // Initialize animations
+    setTimeout(initFancyTextAnimation, 100);
 
     // Small delay to ensure DOM is ready
     const timer = setTimeout(loadTiltJS, 100);
