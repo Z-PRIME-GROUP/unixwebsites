@@ -1,7 +1,8 @@
 /* Import complete Elementor CSS first - ALL 2392 lines verbatim */
 @import url('./elementor-lightspeed.css');
 
-/* Tailwind utilities only - no base reset to preserve Elementor styles */
+/* Tailwind base + utilities */
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -51,7 +52,11 @@
   content: "\eaaf" !important;
 }
 
-/* HEADING TEXT FIX: Add missing colors for h1 and spans */
+/* HEADING TEXT FIX: Override Tailwind base reset that makes text invisible */
+h1, h1 * {
+  color: #090909 !important;
+}
+
 .elementor-24752 .elementor-element-8efe2d6 .ekit-fancy-text {
   color: #090909 !important;
 }
