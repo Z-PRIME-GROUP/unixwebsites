@@ -475,7 +475,8 @@
 
         .elementor-24752 .elementor-element.elementor-element-89bde1c {
             --display: flex;
-            min-height: 100vh;
+            min-height: 100vh !important;
+            height: 100vh !important;
             --flex-direction: row;
             --container-widget-width: calc((1 - var(--container-widget-flex-grow))*100%);
             --container-widget-height: 100%;
