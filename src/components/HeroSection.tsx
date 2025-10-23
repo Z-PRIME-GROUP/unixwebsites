@@ -85,7 +85,6 @@ export const HeroSection = () => {
          data-id="89bde1c" 
          data-element_type="container"
          style={{
-           background: 'linear-gradient(180deg, #EDF4FF 0%, #FFFFFF 100%)',
            minHeight: '100vh',
            display: 'flex',
            alignItems: 'center',
