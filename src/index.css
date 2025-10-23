@@ -50,59 +50,29 @@ h1, h2, h3, h4, h5, h6,
   background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 100%) !important;
 }
 
-/* FREE Text Letter-by-Letter Animation - Exact Match */
-.ekit-fancy-text-lists {
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  margin: 0;
-  width: 85px;
-  height: 1em;
-}
-
-.ekit-fancy-text-lists b {
-  display: none;
-  position: absolute;
-  left: 0;
-  top: 0;
-  white-space: nowrap;
-}
-
-.ekit-fancy-text-lists b.is-visible {
-  display: inline-block;
-}
-
-.ekit-fancy-text-lists b.is-visible i {
+/* FREE Text Letter-by-Letter Animation */
+.free-animated-word {
   display: inline-block;
   opacity: 0;
-  transform: scale(0) translateZ(0);
-  animation: scaleIn 0.5s forwards;
+  transition: opacity 0.1s;
 }
 
-.ekit-fancy-text-lists b.is-visible i:nth-child(1) {
-  animation-delay: 0s;
+.free-animated-word.is-visible {
+  opacity: 1;
 }
 
-.ekit-fancy-text-lists b.is-visible i:nth-child(2) {
-  animation-delay: 0.05s;
+.free-animated-word.is-visible .animate-letter {
+  animation: letterScale 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 }
 
-.ekit-fancy-text-lists b.is-visible i:nth-child(3) {
-  animation-delay: 0.1s;
-}
-
-.ekit-fancy-text-lists b.is-visible i:nth-child(4) {
-  animation-delay: 0.15s;
-}
-
-@keyframes scaleIn {
+@keyframes letterScale {
   0% {
     opacity: 0;
     transform: scale(0) translateZ(0);
   }
   60% {
     opacity: 1;
-    transform: scale(1.2) translateZ(0);
+    transform: scale(1.15) translateZ(0);
   }
   100% {
     opacity: 1;
@@ -110,19 +80,14 @@ h1, h2, h3, h4, h5, h6,
   }
 }
 
-@keyframes scaleOut {
-  0% {
-    opacity: 1;
-    transform: scale(1) translateZ(0);
-  }
-  60% {
-    opacity: 0;
-    transform: scale(0) translateZ(0);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(0) translateZ(0);
-  }
+/* Vanilla Tilt 3D Effect Enhancements */
+.tilt-element {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.tilt-element img {
+  transform: translateZ(20px);
 }
 
 /* Preserve Elementor CSS from lightspeed.css - no Tailwind base reset */
