@@ -182,16 +182,12 @@ export const HeroSection = () => {
                 <div className="elementor-widget-container">
                   <div className="ekit-wid-con">
                     <div className="ekit-btn-wraper">
-                      <a href="https://application.ufreewebsites.com/"
+                       <a href="https://application.ufreewebsites.com/"
                          className="elementskit-btn whitespace--normal"
                          id="homepageCTA1"
                          style={{
                            background: 'linear-gradient(90deg, #FF8C42 0%, #FF6B35 100%)',
                            color: '#fff',
-                           padding: '15px 30px',
-                           borderRadius: '50px',
-                           fontSize: '16px',
-                           fontWeight: '700',
                            display: 'inline-flex',
                            alignItems: 'center',
                            gap: '10px',
