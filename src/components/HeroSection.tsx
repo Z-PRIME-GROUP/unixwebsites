@@ -1,10 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Check } from "lucide-react";
 import { Button } from "./ui/button";
+import VanillaTilt from "vanilla-tilt";
 
 const HeroSection = () => {
   const [currentWord, setCurrentWord] = useState(0);
   const words = ["FREE", "FREE", "FREE"];
+  const tiltRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -12,6 +14,30 @@ const HeroSection = () => {
     }, 2000);
 
     return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    // Initialize tilt effect on all demo images
+    tiltRefs.current.forEach((element) => {
+      if (element) {
+        VanillaTilt.init(element, {
+          glare: true,
+          "max-glare": 0.5,
+          scale: 1.1,
+          speed: 400,
+          transition: true,
+          easing: "cubic-bezier(.03, .98, .52, .99)",
+        });
+      }
+    });
+
+    return () => {
+      tiltRefs.current.forEach((element) => {
+        if (element && (element as any).vanillaTilt) {
+          (element as any).vanillaTilt.destroy();
+        }
+      });
+    };
   }, []);
 
   const features = [
@@ -126,19 +152,19 @@ const HeroSection = () => {
               <div className="grid grid-cols-3 gap-0">
                 {demoImages.map((item, index) => (
                   <div 
-                    key={index} 
-                    className="aspect-[4/5] overflow-hidden transition-all duration-300 cursor-pointer group"
+                    key={index}
+                    ref={(el) => (tiltRefs.current[index] = el)}
+                    className="aspect-[4/5] overflow-visible cursor-pointer"
                     style={{
                       transformStyle: 'preserve-3d',
-                      perspective: '600px',
                     }}
                   >
                     <img 
                       src={`/images/demo${item}.webp`} 
                       alt={`Demo website ${item}`}
-                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                      className="w-full h-full object-cover"
                       style={{
-                        transform: 'translateZ(0)',
+                        transform: 'translateZ(20px)',
                       }}
                     />
                   </div>
