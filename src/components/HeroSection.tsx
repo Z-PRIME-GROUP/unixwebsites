@@ -1,48 +1,18 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { Check } from "lucide-react";
 import { Button } from "./ui/button";
-import VanillaTilt from "vanilla-tilt";
+import Tilt from "react-parallax-tilt";
 
 const HeroSection = () => {
   const [currentWord, setCurrentWord] = useState(0);
   const words = ["FREE", "FREE", "FREE"];
-  const tiltRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-  // Word animation effect
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentWord((prev) => (prev + 1) % words.length);
     }, 2000);
 
     return () => clearInterval(interval);
-  }, [words.length]);
-
-  // VanillaTilt initialization effect
-  useEffect(() => {
-    // Filter out null refs and initialize tilt on each element
-    const validRefs = tiltRefs.current.filter((el): el is HTMLDivElement => el !== null);
-    
-    validRefs.forEach((element) => {
-      VanillaTilt.init(element, {
-        max: 15,
-        speed: 400,
-        glare: true,
-        "max-glare": 0.5,
-        scale: 1.05,
-        transition: true,
-        easing: "cubic-bezier(.03, .98, .52, .99)",
-      });
-    });
-
-    // Cleanup function
-    return () => {
-      validRefs.forEach((element) => {
-        const tiltInstance = (element as any).vanillaTilt;
-        if (tiltInstance) {
-          tiltInstance.destroy();
-        }
-      });
-    };
   }, []);
 
   const features = [
@@ -152,19 +122,25 @@ const HeroSection = () => {
               </div>
             </div>
 
-            {/* Right Column - Website Preview Grid (3x3) */}
+            {/* Right Column - Website Preview Grid (3x3) with Tilt Effect */}
             <div className="flex-1 animate-fade-in">
               <div className="grid grid-cols-3 gap-0">
                 {demoImages.map((item, index) => (
-                  <div 
+                  <Tilt
                     key={index}
-                    ref={(el) => {
-                      tiltRefs.current[index] = el;
-                    }}
+                    glareEnable={true}
+                    glareMaxOpacity={0.5}
+                    glareColor="#ffffff"
+                    glarePosition="all"
+                    glareBorderRadius="0px"
+                    scale={1.05}
+                    transitionSpeed={400}
+                    tiltMaxAngleX={15}
+                    tiltMaxAngleY={15}
+                    perspective={1000}
                     className="aspect-[4/5] cursor-pointer"
                     style={{
                       transformStyle: 'preserve-3d',
-                      overflow: 'visible',
                     }}
                   >
                     <img 
@@ -173,10 +149,9 @@ const HeroSection = () => {
                       className="w-full h-full object-cover"
                       style={{
                         transform: 'translateZ(20px)',
-                        backfaceVisibility: 'hidden',
                       }}
                     />
-                  </div>
+                  </Tilt>
                 ))}
               </div>
             </div>
