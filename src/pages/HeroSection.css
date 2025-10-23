@@ -7,17 +7,22 @@
   max-width: 1400px !important;
   margin: 0 auto !important;
   padding: 0 2rem !important;
+  width: 100% !important;
 }
 
 /* Left Column - Text Content */
 .elementor-element-b1c56d6 {
-  flex: 0 0 53% !important;
-  max-width: 675px !important;
+  flex: 0 0 45% !important;
+  max-width: 600px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 2rem !important;
 }
 
 /* Right Column - Gallery Grid */
 .elementor-element-eca17a6 {
   flex: 1 !important;
+  display: flex !important;
 }
 
 /* Gallery Grid - 3x3 Layout */
@@ -25,16 +30,25 @@
   display: grid !important;
   grid-template-columns: repeat(3, 1fr) !important;
   gap: 0 !important;
+  width: 100% !important;
 }
 
 .ekit_gallery_grid_item {
   aspect-ratio: 4 / 5 !important;
   overflow: visible !important;
+  position: relative !important;
 }
 
 .elementskit-single-portfolio-item {
   width: 100% !important;
   height: 100% !important;
+  display: block !important;
+}
+
+.elementskit-portfolio-thumb {
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
 }
 
 .elementskit-portfolio-thumb img {
@@ -44,9 +58,29 @@
   display: block !important;
 }
 
+/* Hover area */
+.elementskit-hover-area {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  pointer-events: none !important;
+}
+
 /* Background Logo */
 .elementor-element-2e19d04 {
   pointer-events: none !important;
+  z-index: 0 !important;
+}
+
+/* Ensure elements are visible */
+.elementor-element-eca17a6,
+.ekit_gallery_grid_wraper,
+.ekit_gallery_grid {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 /* Responsive */
@@ -58,5 +92,15 @@
   .elementor-element-b1c56d6 {
     flex: 1 !important;
     max-width: 100% !important;
+  }
+  
+  .ekit_gallery_grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .ekit_gallery_grid {
+    grid-template-columns: repeat(1, 1fr) !important;
   }
 }
