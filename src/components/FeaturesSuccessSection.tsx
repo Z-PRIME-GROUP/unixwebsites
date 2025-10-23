@@ -10,18 +10,7 @@ export const FeaturesSuccessSection = () => {
 
   return (
     <section style={{ background: 'linear-gradient(180deg, #FFFFFF 0%, #E3EEFF 100%)', position: 'relative', overflow: 'hidden', padding: '100px 5%' }}>
-      <div style={{ position: 'absolute', right: '-8%', top: '50%', transform: 'translateY(-50%)', width: '70%', maxWidth: '950px', opacity: 0.1, pointerEvents: 'none', zIndex: 0 }}>
-        <svg width="100%" height="100%" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid slice">
-          <defs>
-            <filter id="noise-filter">
-              <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" />
-              <feColorMatrix type="saturate" values="0" />
-              <feBlend mode="multiply" in2="SourceGraphic" result="blend" />
-            </filter>
-          </defs>
-          <image href="/images/unixwebsites-favicon-color.webp" width="800" height="800" filter="url(#noise-filter)" />
-        </svg>
-      </div>
+      <div style={{ position: 'absolute', left: '-200px', top: '50%', transform: 'translateY(-50%)', width: '1400px', height: '1400px', backgroundImage: 'url("/images/unixwebsites-favicon-color.webp")', backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center center', opacity: 0.08, pointerEvents: 'none', zIndex: 0, maskImage: 'url("/images/shape-mask-10.svg")', WebkitMaskImage: 'url("/images/shape-mask-10.svg")', maskPosition: 'center center', WebkitMaskPosition: 'center center', maskRepeat: 'no-repeat', WebkitMaskRepeat: 'no-repeat', maskSize: 'contain', WebkitMaskSize: 'contain' }} />
       <div style={{ position: 'absolute', right: '2%', top: '8%', width: '500px', height: '500px', background: 'radial-gradient(circle, rgba(255,192,203,0.7) 0%, rgba(255,182,193,0.35) 30%, transparent 65%)', borderRadius: '50%', filter: 'blur(80px)', pointerEvents: 'none', zIndex: 0 }} />
       <div style={{ position: 'absolute', right: '4%', bottom: '12%', width: '600px', height: '600px', background: 'radial-gradient(circle, rgba(173,216,230,0.75) 0%, rgba(176,224,230,0.4) 30%, transparent 65%)', borderRadius: '50%', filter: 'blur(85px)', pointerEvents: 'none', zIndex: 0 }} />
       <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
@@ -33,7 +22,7 @@ export const FeaturesSuccessSection = () => {
         </p>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '28px' }}>
           {features.map((feature, index) => (
-            <div key={index} style={{ backgroundColor: '#FAFBFC', padding: '38px 28px 32px', borderRadius: '12px', boxShadow: '0px 5px 25px rgba(0,0,0,0.08)', transition: 'all 0.3s ease', opacity: 0, animation: `fadeInUp 0.6s ease-out ${index * 0.1}s forwards` }} onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-10px)'; e.currentTarget.style.boxShadow = '0px 10px 35px rgba(0,0,0,0.13)'; e.currentTarget.querySelector('div').style.transform = 'translateY(-5px)'; }} onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0px 5px 25px rgba(0,0,0,0.08)'; e.currentTarget.querySelector('div').style.transform = 'translateY(0)'; }}>
+            <div key={index} style={{ backgroundColor: '#FAFBFC', padding: '38px 28px 32px', borderRadius: '12px', boxShadow: '0px 5px 25px rgba(0,0,0,0.08)', transition: 'all 0.3s ease', opacity: 0, animation: `fadeInUp 0.6s ease-out ${index * 0.1}s forwards` }} onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-10px)'; e.currentTarget.style.boxShadow = '0px 10px 35px rgba(0,0,0,0.13)'; const iconDiv = e.currentTarget.querySelector('div'); if (iconDiv) iconDiv.style.transform = 'translateY(-5px)'; }} onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0px 5px 25px rgba(0,0,0,0.08)'; const iconDiv = e.currentTarget.querySelector('div'); if (iconDiv) iconDiv.style.transform = 'translateY(0)'; }}>
               <div style={{ width: '90px', height: '90px', borderRadius: '16px', backgroundColor: 'rgba(59,130,246,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '24px', transition: 'transform 0.3s ease' }}>
                 <img src={feature.icon} alt={feature.title} style={{ width: '55px', height: '55px', objectFit: 'contain' }} />
               </div>
