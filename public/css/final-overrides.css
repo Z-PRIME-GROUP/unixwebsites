@@ -23,17 +23,17 @@ img[alt*="gallery"],
   -o-border-radius: 0 !important;
 }
 
-/* Tilt glare containment - CRITICAL: overflow hidden on tilt parent */
-.elementskit-single-portfolio-item.ekit-gallery-portfolio-tilt {
+/* Tilt parent MUST have overflow:hidden to contain glare */
+.ekit_gallery_grid_item {
   overflow: hidden !important;
-  position: relative !important;
-  display: block !important;
 }
 
-.elementskit-portfolio-thumb {
-  position: relative !important;
-  display: block !important;
-  width: 100% !important;
+.elementskit-single-portfolio-item {
+  overflow: hidden !important;
+}
+
+.ekit-gallery-portfolio-tilt {
+  overflow: hidden !important;
 }
 
 .elementskit-portfolio-thumb img {
