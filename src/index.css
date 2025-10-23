@@ -201,14 +201,20 @@ body,
   background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 100%) !important;
 }
 
-/* Gallery images - NO border radius */
+/* Gallery images - NO border radius - FORCE IT */
 .elementskit-portfolio-thumb img,
-.elementskit-single-portfolio-item img {
+.elementskit-single-portfolio-item img,
+.elementskit-grid__img,
+.ekit_gallery_grid_item img,
+img[alt="gallery grid image"] {
   border-radius: 0 !important;
 }
 
-/* Trustpilot/Verified badge - NO border radius */
-.elementor-24752 .elementor-element-6cd7ca9 img {
+/* Trustpilot/Verified badge - NO border radius - FORCE IT */
+.elementor-24752 .elementor-element-6cd7ca9 img,
+.elementor-24752 .elementor-element-1435b23 img,
+img[src*="verified"],
+img[src*="badge"] {
   border-radius: 0 !important;
 }
 
@@ -226,14 +232,27 @@ body,
   transform: scale(1.05) !important;
 }
 
-/* Background image for hero section */
-.elementor-24752 .elementor-element.elementor-element-89bde1c:not(.elementor-motion-effects-element-type-background),
-.elementor-24752 .elementor-element.elementor-element-89bde1c>.elementor-motion-effects-container>.elementor-motion-effects-layer {
-  background-color: #fff0;
-  background-image: url(/images/unixwebsites-favicon-color.webp), linear-gradient(180deg, #E3EEFF 40%, var(--e-global-color-b3a878d) 100%) !important;
+/* Background image for hero section - FORCE IT WITH HIGHEST SPECIFICITY */
+div[data-id="89bde1c"].elementor-element-89bde1c {
+  background-color: transparent !important;
+  background-image: url(/images/unixwebsites-favicon-color.webp), linear-gradient(180deg, #E3EEFF 40%, #fff 100%) !important;
   background-position: 85% 50%, center center !important;
   background-size: 450px, cover !important;
-  background-repeat: no-repeat, no-repeat !important;
+  background-repeat: no-repeat !important;
+}
+
+.elementor-24752 .elementor-element.elementor-element-89bde1c:not(.elementor-motion-effects-element-type-background),
+.elementor-24752 .elementor-element.elementor-element-89bde1c>.elementor-motion-effects-container>.elementor-motion-effects-layer {
+  background-color: transparent !important;
+  background-image: url(/images/unixwebsites-favicon-color.webp), linear-gradient(180deg, #E3EEFF 40%, #fff 100%) !important;
+  background-position: 85% 50%, center center !important;
+  background-size: 450px, cover !important;
+  background-repeat: no-repeat !important;
+}
+
+/* FINAL OVERRIDE - Background with logo */
+.elementor-24752 div.elementor-element-89bde1c.e-con-full[data-id="89bde1c"] {
+  background: url(/images/unixwebsites-favicon-color.webp) 85% 50% / 450px no-repeat, linear-gradient(180deg, #E3EEFF 40%, #fff 100%) !important;
 }
 
 /* Preserve Elementor CSS from lightspeed.css */
