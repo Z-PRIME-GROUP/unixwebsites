@@ -49,13 +49,6 @@ const HeroSectionExact = () => {
           });
           
           // Fix glare overflow - ensure parent contains it
-          const glareElement = el.querySelector('.js-tilt-glare');
-          if (glareElement) {
-            // Force the glare to respect parent boundaries
-            (glareElement as HTMLElement).style.borderRadius = '0';
-            (glareElement as HTMLElement).style.clipPath = 'inset(0 0 0 0)';
-          }
-          // Ensure parent contains the glare
           el.style.overflow = 'hidden';
           el.style.position = 'relative';
         }

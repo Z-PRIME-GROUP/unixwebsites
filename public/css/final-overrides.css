@@ -27,9 +27,6 @@ img[alt*="gallery"],
 .elementskit-single-portfolio-item.ekit-gallery-portfolio-tilt {
   overflow: hidden !important;
   position: relative !important;
-  transform: translateZ(0) !important;
-  backface-visibility: hidden !important;
-  isolation: isolate !important;
 }
 
 .elementskit-portfolio-thumb img {
@@ -38,32 +35,6 @@ img[alt*="gallery"],
   height: auto !important;
   position: relative !important;
   z-index: 1 !important;
-}
-
-.js-tilt-glare {
-  overflow: hidden !important;
-  border-radius: 0 !important;
-  position: absolute !important;
-  top: 0 !important;
-  left: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-  pointer-events: none !important;
-  clip-path: inset(0 0 0 0) !important;
-  -webkit-clip-path: inset(0 0 0 0) !important;
-  z-index: 2 !important;
-}
-
-.js-tilt-glare-inner {
-  border-radius: 0 !important;
-  position: absolute !important;
-  top: 0 !important;
-  left: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-  transform: none !important;
-  max-width: 100% !important;
-  max-height: 100% !important;
 }
 
 
