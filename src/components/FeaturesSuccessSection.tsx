@@ -33,20 +33,19 @@ export const FeaturesSuccessSection = () => {
         </div>
 
         {/* CTA Content - Bottom of Features Section */}
-        <div style={{ marginTop: '80px', textAlign: 'center', maxWidth: '900px', margin: '80px auto 0', paddingBottom: '40px' }}>
+        <div style={{ marginTop: '80px', textAlign: 'center', maxWidth: '1100px', margin: '80px auto 0', paddingBottom: '40px' }}>
           
-          {/* Main Heading - TWO LINES */}
+          {/* Main Heading - ONE LINE */}
           <h1 style={{
             fontFamily: 'Reaktif, sans-serif',
-            fontSize: '52px',
+            fontSize: '48px',
             fontWeight: 600,
             color: '#1e3a8a',
             marginBottom: '35px',
-            lineHeight: '1.2'
+            lineHeight: '1.2',
+            whiteSpace: 'nowrap'
           }}>
-            Get a Feature-Rich, Professional Website
-            <br />
-            for{' '}
+            Get a Feature-Rich, Professional Website for{' '}
             <span style={{
               background: 'linear-gradient(100deg, #FED349 40%, #E23B08 100%)',
               WebkitBackgroundClip: 'text',
