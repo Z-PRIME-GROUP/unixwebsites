@@ -419,7 +419,7 @@ img[src*="trustpilot"] {
   z-index: 999 !important;
   
   /* Glassmorphism effect with light blue base */
-  background: rgba(227, 238, 255, 0.6) !important;
+  background: rgba(227, 238, 255, 0.8) !important;
   backdrop-filter: blur(12px) !important;
   -webkit-backdrop-filter: blur(12px) !important;
   
