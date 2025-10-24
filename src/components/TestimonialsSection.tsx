@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 
@@ -41,97 +41,135 @@ export const TestimonialsSection = () => {
 
   return (
     <section style={{
-      background: 'linear-gradient(180deg, #FFFFFF 0%, #E3EEFF 100%)',
+      background: 'linear-gradient(180deg, #E8EFFF 0%, #E3E8FF 100%)',
       padding: '80px 5%'
     }}>
-      {/* Featured Review - Sarah Jenkins */}
+      {/* Featured Review Section - Sarah Jenkins */}
       <div style={{
         maxWidth: '1200px',
-        margin: '0 auto 60px',
+        margin: '0 auto 80px',
         display: 'flex',
+        gap: '60px',
         alignItems: 'center',
-        gap: '40px',
         flexWrap: 'wrap'
       }}>
-        <div style={{ flex: '1 1 300px' }}>
-          <img 
-            src="/images/reviewPhoto-min-min-e1726036254972.webp"
-            alt="Sarah Jenkins"
-            style={{
-              width: '100%',
-              maxWidth: '400px',
-              height: 'auto',
-              borderRadius: '12px',
-              boxShadow: '0 10px 30px rgba(0,0,0,0.1)'
-            }}
-          />
-        </div>
-        <div style={{ flex: '1 1 500px' }}>
+        {/* Left Column - Text Content */}
+        <div style={{ flex: '1 1 400px' }}>
           <div style={{
-            fontSize: '20px',
             fontFamily: 'Plus Jakarta Sans, sans-serif',
+            fontSize: '14px',
+            fontWeight: 600,
+            color: '#0234DA',
+            marginBottom: '16px',
+            textTransform: 'uppercase',
+            letterSpacing: '0.5px'
+          }}>
+            Trusted by Thousands of Entrepreneurs
+          </div>
+          
+          <h2 style={{
+            fontFamily: 'Reaktif, sans-serif',
+            fontSize: '48px',
+            fontWeight: 700,
+            color: '#000000',
+            marginBottom: '20px',
+            lineHeight: '1.2'
+          }}>
+            See How We've Transformed Businesses
+          </h2>
+          
+          <p style={{
+            fontFamily: 'Plus Jakarta Sans, sans-serif',
+            fontSize: '16px',
             lineHeight: '1.6',
             color: '#333',
-            fontStyle: 'italic',
-            marginBottom: '20px'
+            marginBottom: '30px'
           }}>
-            "uFREEwebsites completely transformed my business! I went from struggling to get noticed to having a beautiful, professional website that brings in new clients every day. And the best part? It was completely free!"
-          </div>
+            Join thousands of entrepreneurs who have transformed their businesses with a professional, free website. Our clients see real results - more customers, more sales, and more success.
+          </p>
+          
           <div style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
-            fontWeight: 700,
-            fontSize: '18px',
-            color: '#00139B'
-          }}>
-            — Sarah Jenkins, Owner of Sparkle Clean Services
-          </div>
-        </div>
-      </div>
-
-      {/* Section Heading */}
-      <div style={{
-        maxWidth: '1200px',
-        margin: '0 auto 60px',
-        textAlign: 'center'
-      }}>
-        <h2 style={{
-          fontFamily: 'Plus Jakarta Sans, sans-serif',
-          fontSize: '48px',
-          fontWeight: 700,
-          color: '#00139B',
-          marginBottom: '20px',
-          lineHeight: '1.2'
-        }}>
-          Trusted by Thousands of Entrepreneurs
-        </h2>
-        <p style={{
-          fontFamily: 'Plus Jakarta Sans, sans-serif',
-          fontSize: '20px',
-          color: '#666',
-          marginBottom: '30px'
-        }}>
-          See How We've Transformed Businesses
-        </p>
-        
-        {/* Rating Badge */}
-        <div style={{
-          display: 'inline-flex',
-          alignItems: 'center',
-          gap: '10px',
-          background: '#FFD700',
-          padding: '12px 24px',
-          borderRadius: '50px',
-          boxShadow: '0 4px 12px rgba(255,215,0,0.3)'
-        }}>
-          <span style={{ fontSize: '24px' }}>⭐⭐⭐⭐⭐</span>
-          <span style={{
-            fontFamily: 'Plus Jakarta Sans, sans-serif',
             fontSize: '18px',
             fontWeight: 700,
-            color: '#000'
+            color: '#000000',
+            marginBottom: '10px'
           }}>
             Exceptional 4.9 Rating
-          </span>
+          </div>
+          
+          <div style={{ fontSize: '24px' }}>
+            ⭐⭐⭐⭐⭐
+          </div>
+        </div>
+
+        {/* Right Column - Featured Review Card with Image */}
+        <div style={{ 
+          flex: '1 1 500px',
+          position: 'relative',
+          minHeight: '400px'
+        }}>
+          {/* Background Image */}
+          <div style={{
+            position: 'absolute',
+            right: '0',
+            top: '50%',
+            transform: 'translateY(-50%)',
+            width: '70%',
+            zIndex: 1
+          }}>
+            <img 
+              src="/images/reviewPhoto-min-min-e1726036254972.webp"
+              alt="Sarah Jenkins"
+              style={{
+                width: '100%',
+                height: 'auto',
+                borderRadius: '12px',
+                boxShadow: '0 10px 30px rgba(0,0,0,0.15)'
+              }}
+            />
+          </div>
+
+          {/* White Card Overlay */}
+          <div style={{
+            position: 'relative',
+            zIndex: 2,
+            background: '#FFFFFF',
+            borderRadius: '12px',
+            padding: '30px',
+            boxShadow: '0 10px 40px rgba(0,0,0,0.1)',
+            maxWidth: '400px',
+            marginTop: '40px'
+          }}>
+            <p style={{
+              fontFamily: 'Plus Jakarta Sans, sans-serif',
+              fontSize: '18px',
+              fontWeight: 600,
+              color: '#0234DA',
+              lineHeight: '1.5',
+              marginBottom: '20px'
+            }}>
+              "I can't thank uFREEwebsites enough! I would've never imagined getting such a high-quality site for FREE."
+            </p>
+            
+            <div style={{
+              fontFamily: 'Plus Jakarta Sans, sans-serif',
+              fontSize: '24px',
+              fontWeight: 700,
+              color: '#000000',
+              marginBottom: '4px'
+            }}>
+              Sarah Jenkins
+            </div>
+            
+            <div style={{
+              fontFamily: 'Plus Jakarta Sans, sans-serif',
+              fontSize: '16px',
+              color: '#999999'
+            }}>
+              Green Thumb Nursery
+            </div>
+          </div>
         </div>
       </div>
 
@@ -162,10 +200,11 @@ export const TestimonialsSection = () => {
                   {/* Left Column - Quote */}
                   <div>
                     <div style={{
-                      fontSize: '24px',
-                      color: '#00139B',
-                      marginBottom: '20px',
-                      lineHeight: '1'
+                      fontSize: '48px',
+                      color: '#0234DA',
+                      marginBottom: '10px',
+                      lineHeight: '1',
+                      fontFamily: 'Georgia, serif'
                     }}>
                       "
                     </div>
@@ -181,9 +220,9 @@ export const TestimonialsSection = () => {
                     <div>
                       <div style={{
                         fontFamily: 'Plus Jakarta Sans, sans-serif',
-                        fontSize: '18px',
+                        fontSize: '20px',
                         fontWeight: 700,
-                        color: '#00139B',
+                        color: '#000000',
                         marginBottom: '4px'
                       }}>
                         {testimonial.name}
@@ -238,7 +277,7 @@ export const TestimonialsSection = () => {
                 height: '12px',
                 borderRadius: '50%',
                 border: 'none',
-                background: '#00139B',
+                background: '#0234DA',
                 opacity: 0.3,
                 cursor: 'pointer',
                 transition: 'opacity 0.3s'
