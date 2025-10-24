@@ -22,7 +22,7 @@ export const CtaTransformedSection = () => {
             Join 10,000+ entrepreneurs
           </h6>
 
-          {/* Main Heading with animated underline spans */}
+          {/* Main Heading with double-nested spans for underline effect */}
           <h2 style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
             fontSize: '48px',
@@ -31,43 +31,37 @@ export const CtaTransformedSection = () => {
             marginBottom: '25px',
             lineHeight: '1.25'
           }}>
-            Who've <span style={{
+            Who've <span><span style={{
               backgroundColor: 'transparent',
               backgroundImage: 'linear-gradient(180deg, #FFFFFF00 78%, #295B5112 0%)',
-              borderRadius: '0',
               backgroundPosition: '200% 0',
               backgroundSize: '200%',
               backgroundRepeat: 'no-repeat',
-              transition: 'background-position 0.75s cubic-bezier(.29, 1.11, .74, 1.04), all 0.3s ease',
+              transition: 'background-position 0.75s cubic-bezier(.29, 1.11, .74, 1.04)',
               transitionDelay: '0.5s',
-              display: 'inline-block',
-              fontWeight: 700
-            }}>Transformed</span> <span style={{
+              display: 'inline-block'
+            }}>Transformed</span></span> <span><span style={{
               backgroundColor: 'transparent',
               backgroundImage: 'linear-gradient(180deg, #FFFFFF00 78%, #295B5112 0%)',
-              borderRadius: '0',
               backgroundPosition: '200% 0',
               backgroundSize: '200%',
               backgroundRepeat: 'no-repeat',
-              transition: 'background-position 0.75s cubic-bezier(.29, 1.11, .74, 1.04), all 0.3s ease',
+              transition: 'background-position 0.75s cubic-bezier(.29, 1.11, .74, 1.04)',
               transitionDelay: '0.5s',
-              display: 'inline-block',
-              fontWeight: 700
-            }}>Their Business with a</span> <span style={{
+              display: 'inline-block'
+            }}>Their Business with a</span></span> <span><span style={{
               backgroundColor: 'transparent',
               backgroundImage: 'linear-gradient(180deg, #FFFFFF00 78%, #295B5112 0%)',
-              borderRadius: '0',
               backgroundPosition: '200% 0',
               backgroundSize: '200%',
               backgroundRepeat: 'no-repeat',
-              transition: 'background-position 0.75s cubic-bezier(.29, 1.11, .74, 1.04), all 0.3s ease',
+              transition: 'background-position 0.75s cubic-bezier(.29, 1.11, .74, 1.04)',
               transitionDelay: '0.5s',
-              display: 'inline-block',
-              fontWeight: 700
-            }}>FREE Website</span>!
+              display: 'inline-block'
+            }}>FREE Website</span></span>!
           </h2>
 
-          {/* Description */}
+          {/* Description with SAME COLOR underlines (not black) */}
           <p style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
             fontSize: '18px',
@@ -76,10 +70,10 @@ export const CtaTransformedSection = () => {
             lineHeight: '1.8em',
             marginBottom: '35px'
           }}>
-            Imagine having a stunning website that <strong>builds trust and drives sales</strong>—without the hefty $5,000-$20,000 price tag that web agencies charge. A professional website can increase your chances of converting potential clients <strong>by 76%</strong>. But here's the game-changer: with our <strong>Free Website Program</strong>, you get all of this value at <strong>no cost</strong>.
+            Imagine having a stunning website that <span style={{ textDecoration: 'underline', fontWeight: 700 }}>builds trust and drives sales</span>—without the hefty $5,000-$20,000 price tag that web agencies charge. A professional website can increase your chances of converting potential clients <span style={{ textDecoration: 'underline', fontWeight: 700 }}>by 76%</span>. But here's the game-changer: with our <span style={{ textDecoration: 'underline', fontWeight: 700 }}>Free Website Program</span>, you get all of this value at <span style={{ textDecoration: 'underline', fontWeight: 700 }}>no cost</span>.
           </p>
 
-          {/* CTA Button - BLUE */}
+          {/* CTA Button - NOT uppercase, icon is outline circle arrow */}
           <a 
             href="https://application.ufreewebsites.com/"
             id="homepageCTA3"
@@ -91,8 +85,6 @@ export const CtaTransformedSection = () => {
               fontSize: '16px',
               fontWeight: 700,
               fontFamily: 'Plus Jakarta Sans, sans-serif',
-              textTransform: 'uppercase',
-              letterSpacing: '1px',
               display: 'inline-flex',
               alignItems: 'center',
               gap: '10px',
@@ -109,15 +101,15 @@ export const CtaTransformedSection = () => {
               e.currentTarget.style.boxShadow = '0px 4px 15px rgba(37, 99, 235, 0.3)';
             }}
           >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <circle cx="12" cy="12" r="10"/>
               <path d="M12 16l4-4-4-4M8 12h8"/>
             </svg>
-            APPLY NOW – YOUR FREE WEBSITE AWAITS!
+            Apply Now – Your FREE Website Awaits!
           </a>
         </div>
 
-        {/* Right Column - Desktop Mockup Image */}
+        {/* Right Column - Desktop Mockup */}
         <div style={{ position: 'relative' }}>
           <div style={{
             backgroundColor: 'rgba(255, 255, 255, 0.15)',
@@ -127,11 +119,10 @@ export const CtaTransformedSection = () => {
           }}>
             <img 
               src="/images/mockup-desktop.webp" 
-              alt="Website mockup on desktop computer"
+              alt="Website mockup"
               style={{
                 width: '100%',
                 height: 'auto',
-                objectFit: 'contain',
                 borderRadius: '12px'
               }}
             />
@@ -143,7 +134,6 @@ export const CtaTransformedSection = () => {
         @media (max-width: 768px) {
           section > div {
             grid-template-columns: 1fr !important;
-            gap: 40px !important;
           }
         }
       `}</style>
