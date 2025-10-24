@@ -23,7 +23,7 @@ export const CtaTransformedSection = () => {
             Join 10,000+ entrepreneurs
           </h6>
 
-          {/* Main Heading */}
+          {/* Main Heading - WHITE spans with gradient underline */}
           <h2 style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
             fontSize: '48px',
@@ -33,6 +33,7 @@ export const CtaTransformedSection = () => {
             lineHeight: '1.25'
           }}>
             Who've <span><span style={{
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               backgroundImage: 'linear-gradient(180deg, #FFFFFF00 78%, #295B5112 0%)',
               backgroundPosition: '200% 0',
@@ -43,6 +44,7 @@ export const CtaTransformedSection = () => {
               display: 'inline-block',
               fontWeight: 700
             }}>Transformed</span></span> <span><span style={{
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               backgroundImage: 'linear-gradient(180deg, #FFFFFF00 78%, #295B5112 0%)',
               backgroundPosition: '200% 0',
@@ -53,6 +55,7 @@ export const CtaTransformedSection = () => {
               display: 'inline-block',
               fontWeight: 700
             }}>Their Business with a</span></span> <span><span style={{
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               backgroundImage: 'linear-gradient(180deg, #FFFFFF00 78%, #295B5112 0%)',
               backgroundPosition: '200% 0',
