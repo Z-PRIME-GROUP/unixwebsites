@@ -27,6 +27,24 @@ body {
   overflow-x: hidden;
 }
 
+/* Disable animations on initial load to prevent layout shift */
+.hero-section,
+.hero-section * {
+  will-change: unset;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    transition-duration: 0s !important;
+    animation-duration: 0s !important;
+  }
+  
+  .page-loaded * {
+    transition-duration: revert !important;
+    animation-duration: revert !important;
+  }
+}
+
 @font-face {
   font-family: 'Reaktif';
   src: url('/fonts/Reaktif-Regular.woff2') format('woff2');

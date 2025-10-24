@@ -86,6 +86,8 @@ const HeroSectionExact = () => {
       data-element_type="container" 
       data-settings='{"background_background":"gradient"}'
       style={{
+        width: '100%',
+        maxWidth: '100vw',
         position: 'relative',
         backgroundImage: `linear-gradient(180deg, #E3EEFF 40%, #fff 100%)`,
         backgroundPosition: 'center center',
