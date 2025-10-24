@@ -118,29 +118,21 @@ export const CtaTransformedSection = () => {
           </a>
         </div>
 
-        {/* Right Column - Image with rounded container */}
+        {/* Right Column - Plain Image (NO wrapper) */}
         <div style={{ flex: '1 1 45%', minWidth: '400px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          <div style={{
-            backgroundColor: 'rgba(255, 255, 255, 0.15)',
-            borderRadius: '30px',
-            padding: '40px',
-            backdropFilter: 'blur(10px)',
-            WebkitBackdropFilter: 'blur(10px)',
-            maxWidth: '675px',
-            width: '100%'
-          }}>
-            <img 
-              src="/images/mockup-desktop.webp" 
-              alt="Website mockup on desktop computer"
-              style={{
-                width: '100%',
-                height: 'auto',
-                objectFit: 'contain',
-                borderRadius: '12px',
-                display: 'block'
-              }}
-            />
-          </div>
+          <img 
+            src="/images/mockup-desktop.webp" 
+            alt="Website mockup on desktop computer"
+            width="675"
+            height="450"
+            style={{
+              width: '100%',
+              maxWidth: '675px',
+              height: 'auto',
+              objectFit: 'contain',
+              display: 'block'
+            }}
+          />
         </div>
       </div>
 
