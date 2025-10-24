@@ -1,5 +1,20 @@
 /* FINAL OVERRIDES - Loaded last to ensure these styles win */
 
+/* CRITICAL: Prevent white flash on load - ensure first fancy text is visible */
+.ekit-fancy-text-lists b.ekit-fancy-text:first-child {
+  opacity: 1 !important;
+  position: relative !important;
+}
+
+/* Then let JavaScript animation take over after page loads */
+.page-loaded .ekit-fancy-text-lists b.ekit-fancy-text:first-child {
+  opacity: 0 !important;
+}
+
+.page-loaded .ekit-fancy-text-lists b.ekit-fancy-text.is-visible {
+  opacity: 1 !important;
+}
+
 /* Gallery images - ZERO border-radius - FORCE IT */
 .ekit-wid-con .elementskit-single-portfolio-item,
 .ekit-wid-con .elementskit-single-portfolio-item *,
