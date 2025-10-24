@@ -35,21 +35,24 @@ export const FeaturesSuccessSection = () => {
         {/* CTA Content - Bottom of Features Section */}
         <div style={{ marginTop: '80px', textAlign: 'center', maxWidth: '900px', margin: '80px auto 0', paddingBottom: '40px' }}>
           
-          {/* Main Heading - "Get a Feature-Rich, Professional Website for FREE" */}
+          {/* Main Heading - TWO LINES */}
           <h1 style={{
             fontFamily: 'Reaktif, sans-serif',
-            fontSize: '48px',
+            fontSize: '52px',
             fontWeight: 600,
             color: '#1e3a8a',
             marginBottom: '35px',
-            lineHeight: '1.3'
+            lineHeight: '1.2'
           }}>
-            Get a Feature-Rich, Professional Website for{' '}
+            Get a Feature-Rich, Professional Website
+            <br />
+            for{' '}
             <span style={{
               background: 'linear-gradient(100deg, #FED349 40%, #E23B08 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text'
+              backgroundClip: 'text',
+              fontWeight: 700
             }}>FREE</span>
           </h1>
 
@@ -59,17 +62,17 @@ export const FeaturesSuccessSection = () => {
             id="homepageCTA2"
             style={{
               background: 'linear-gradient(60deg, #FED349 0%, #E23B08 68%)',
-              color: '#fff',
-              padding: '18px 40px',
-              borderRadius: '10px',
-              fontSize: '16px',
+              color: '#FFFFFF',
+              padding: '16px 38px',
+              borderRadius: '8px',
+              fontSize: '15px',
               fontWeight: 700,
-              fontFamily: 'Plus Jakarta Sans, sans-serif',
+              fontFamily: 'Reaktif, sans-serif',
               textTransform: 'uppercase',
-              letterSpacing: '1px',
+              letterSpacing: '0.5px',
               display: 'inline-flex',
               alignItems: 'center',
-              gap: '12px',
+              gap: '10px',
               textDecoration: 'none',
               transition: 'transform 0.3s ease, box-shadow 0.3s ease',
               boxShadow: '0px 4px 15px rgba(254, 211, 73, 0.3)'
@@ -83,9 +86,9 @@ export const FeaturesSuccessSection = () => {
               e.currentTarget.style.boxShadow = '0px 4px 15px rgba(254, 211, 73, 0.3)';
             }}
           >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-              <circle cx="12" cy="12" r="10"/>
-              <path d="M12 16l4-4-4-4M8 12h8"/>
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+              <circle cx="12" cy="12" r="10" opacity="0.3"/>
+              <path d="M12 8v8M8 12h8" stroke="currentColor" strokeWidth="2" fill="none"/>
             </svg>
             APPLY NOW – IT ONLY TAKES 2 MINUTES
           </a>
