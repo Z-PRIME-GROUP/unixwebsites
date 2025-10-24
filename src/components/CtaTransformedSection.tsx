@@ -2,14 +2,15 @@ export const CtaTransformedSection = () => {
   return (
     <section style={{ 
       background: 'linear-gradient(90deg, #E23B08 0%, #FED349 100%)',
-      padding: '100px 5%',
+      padding: '100px 0',
       position: 'relative',
       overflow: 'hidden'
     }}>
-      <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'center' }}>
+      <div style={{ maxWidth: '1320px', margin: '0 auto', padding: '0 20px', display: 'flex', gap: '80px', alignItems: 'center', flexWrap: 'wrap' }}>
         
         {/* Left Column - Text Content */}
-        <div>
+        <div style={{ flex: '1 1 45%', minWidth: '400px' }}>
+          
           {/* Small Subtitle */}
           <h6 style={{ 
             fontFamily: 'Plus Jakarta Sans, sans-serif',
@@ -117,31 +118,30 @@ export const CtaTransformedSection = () => {
           </a>
         </div>
 
-        {/* Right Column - Desktop Mockup */}
-        <div style={{ position: 'relative' }}>
-          <div style={{
-            backgroundColor: 'rgba(255, 255, 255, 0.15)',
-            borderRadius: '30px',
-            padding: '40px',
-            backdropFilter: 'blur(10px)'
-          }}>
-            <img 
-              src="/images/mockup-desktop.webp" 
-              alt="Website mockup"
-              style={{
-                width: '100%',
-                height: 'auto',
-                borderRadius: '12px'
-              }}
-            />
-          </div>
+        {/* Right Column - Image */}
+        <div style={{ flex: '1 1 45%', minWidth: '400px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <img 
+            src="/images/mockup-desktop.webp" 
+            alt="Website mockup"
+            style={{
+              width: '100%',
+              maxWidth: '675px',
+              height: 'auto',
+              objectFit: 'contain'
+            }}
+          />
         </div>
       </div>
 
       <style>{`
-        @media (max-width: 768px) {
+        @media (max-width: 991px) {
           section > div {
-            grid-template-columns: 1fr !important;
+            flex-direction: column !important;
+            gap: 50px !important;
+          }
+          section > div > div {
+            flex: 1 1 100% !important;
+            min-width: 100% !important;
           }
         }
       `}</style>
