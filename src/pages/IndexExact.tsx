@@ -3,6 +3,7 @@ import HeroSectionExact from "@/components/HeroSectionExact";
 import FeaturesSuccessSection from "@/components/FeaturesSuccessSection";
 import CtaTransformedSection from "@/components/CtaTransformedSection";
 import StatisticsSection from "@/components/StatisticsSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
 
 const IndexExact = () => {
   return (
@@ -19,6 +20,7 @@ const IndexExact = () => {
                     <FeaturesSuccessSection />
                     <CtaTransformedSection />
                     <StatisticsSection />
+                    <TestimonialsSection />
                     
                     {/* More sections will be added here as we convert them */}
                   </div>
