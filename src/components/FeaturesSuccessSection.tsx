@@ -39,19 +39,17 @@ export const FeaturesSuccessSection = () => {
           <h1 style={{
             fontFamily: 'Reaktif, sans-serif',
             fontSize: '48px',
-            fontWeight: 600,
-            color: '#1e3a8a',
+            fontWeight: 500,
+            color: '#00139B',
             marginBottom: '35px',
-            lineHeight: '1.2',
-            whiteSpace: 'nowrap'
+            lineHeight: '1.2'
           }}>
             Get a Feature-Rich, Professional Website for{' '}
             <span style={{
-              background: 'linear-gradient(100deg, #FED349 40%, #E23B08 100%)',
+              background: 'linear-gradient(100deg, #FED349 0%, #E23B08 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-              fontWeight: 700
+              backgroundClip: 'text'
             }}>FREE</span>
           </h1>
 
@@ -64,8 +62,8 @@ export const FeaturesSuccessSection = () => {
               color: '#FFFFFF',
               padding: '16px 38px',
               borderRadius: '8px',
-              fontSize: '15px',
-              fontWeight: 700,
+              fontSize: '18px',
+              fontWeight: 900,
               fontFamily: 'Reaktif, sans-serif',
               textTransform: 'uppercase',
               letterSpacing: '0.5px',
@@ -85,7 +83,7 @@ export const FeaturesSuccessSection = () => {
               e.currentTarget.style.boxShadow = '0px 4px 15px rgba(254, 211, 73, 0.3)';
             }}
           >
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none">
               <circle cx="12" cy="12" r="10" opacity="0.3"/>
               <path d="M12 8v8M8 12h8" stroke="currentColor" strokeWidth="2" fill="none"/>
             </svg>
