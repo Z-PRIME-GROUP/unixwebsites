@@ -20,7 +20,7 @@ const HeaderExact = () => {
                               <img 
                                 width="1920" 
                                 height="331"
-                                src="/images/logo-color.webp"
+                                src="/images/logo-color-new.png"
                                 className="attachment-full size-full wp-image-24133"
                                 alt="uFREEwebsites Logo" 
                               />
