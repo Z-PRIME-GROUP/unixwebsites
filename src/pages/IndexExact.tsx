@@ -1,7 +1,6 @@
 import HeaderExact from "@/components/HeaderExact";
 import HeroSectionExact from "@/components/HeroSectionExact";
 import FeaturesSuccessSection from "@/components/FeaturesSuccessSection";
-import CtaFreeWebsiteSection from "@/components/CtaFreeWebsiteSection";
 import CtaTransformedSection from "@/components/CtaTransformedSection";
 
 const IndexExact = () => {
@@ -17,7 +16,6 @@ const IndexExact = () => {
                   <div data-elementor-type="wp-page" data-elementor-id="24752" className="elementor elementor-24752" data-elementor-post-type="page">
                     <HeroSectionExact />
                     <FeaturesSuccessSection />
-                    <CtaFreeWebsiteSection />
                     <CtaTransformedSection />
                     
                     {/* More sections will be added here as we convert them */}
