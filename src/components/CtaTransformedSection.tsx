@@ -22,8 +22,8 @@ export const CtaTransformedSection = () => {
             Join 10,000+ entrepreneurs
           </h6>
 
-          {/* Main Heading - Spans inherit parent color with underline effect */}
-          <h2 style={{
+          {/* Main Heading - Double-nested spans with underline effect */}
+          <h2 className="cta-transformed-heading" style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
             fontSize: '48px',
             fontWeight: 700,
@@ -31,28 +31,7 @@ export const CtaTransformedSection = () => {
             marginBottom: '25px',
             lineHeight: '1.25'
           }}>
-            Who've <span><span style={{
-              display: 'inline-block',
-              backgroundImage: 'linear-gradient(180deg, rgba(255,255,255,0) 78%, rgba(41,91,81,0.07) 100%)',
-              backgroundPosition: '0% 100%',
-              backgroundSize: '100% 100%',
-              backgroundRepeat: 'no-repeat',
-              paddingBottom: '2px'
-            }}>Transformed</span></span> <span><span style={{
-              display: 'inline-block',
-              backgroundImage: 'linear-gradient(180deg, rgba(255,255,255,0) 78%, rgba(41,91,81,0.07) 100%)',
-              backgroundPosition: '0% 100%',
-              backgroundSize: '100% 100%',
-              backgroundRepeat: 'no-repeat',
-              paddingBottom: '2px'
-            }}>Their Business with a</span></span> <span><span style={{
-              display: 'inline-block',
-              backgroundImage: 'linear-gradient(180deg, rgba(255,255,255,0) 78%, rgba(41,91,81,0.07) 100%)',
-              backgroundPosition: '0% 100%',
-              backgroundSize: '100% 100%',
-              backgroundRepeat: 'no-repeat',
-              paddingBottom: '2px'
-            }}>FREE Website</span></span>!
+            Who've <span><span>Transformed</span></span> <span><span>Their Business with a</span></span> <span><span>FREE Website</span></span>!
           </h2>
 
           {/* Description with SAME COLOR underlines (not black) */}
@@ -125,6 +104,16 @@ export const CtaTransformedSection = () => {
       </div>
 
       <style>{`
+        .cta-transformed-heading span span {
+          display: inline-block;
+          background-color: transparent;
+          background-image: linear-gradient(180deg, rgba(255,255,255,0) 78%, rgba(255,240,193,0.3) 100%);
+          background-position: 0% 100%;
+          background-size: 100% 100%;
+          background-repeat: no-repeat;
+          padding-bottom: 3px;
+        }
+        
         @media (max-width: 768px) {
           section > div {
             grid-template-columns: 1fr !important;
