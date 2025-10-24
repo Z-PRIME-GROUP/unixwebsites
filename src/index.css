@@ -419,7 +419,7 @@ img[src*="trustpilot"] {
   z-index: 999 !important;
   
   /* Glassmorphism effect with light blue base */
-  background: rgba(227, 238, 255, 0.4) !important;
+  background: rgba(227, 238, 255, 0.6) !important;
   backdrop-filter: blur(12px) !important;
   -webkit-backdrop-filter: blur(12px) !important;
   
@@ -432,7 +432,7 @@ img[src*="trustpilot"] {
 /* Firefox fallback */
 @supports not (backdrop-filter: blur(12px)) {
   .site-header {
-    background: rgba(227, 238, 255, 0.85) !important;
+    background: rgba(227, 238, 255, 0.9) !important;
   }
 }
 
