@@ -46,42 +46,44 @@ export const CtaTransformedSection = () => {
             Imagine having a stunning website that <span style={{ textDecoration: 'underline', fontWeight: 700 }}>builds trust and drives sales</span>—without the hefty $5,000-$20,000 price tag that web agencies charge. A professional website can increase your chances of converting potential clients <span style={{ textDecoration: 'underline', fontWeight: 700 }}>by 76%</span>. But here's the game-changer: with our <span style={{ textDecoration: 'underline', fontWeight: 700 }}>Free Website Program</span>, you get all of this value at <span style={{ textDecoration: 'underline', fontWeight: 700 }}>no cost</span>.
           </p>
 
-          {/* CTA Button - Exact match to original */}
+          {/* CTA Button - Exact CSS from original */}
           <a 
             href="https://application.ufreewebsites.com/"
             id="homepageCTA3"
             style={{
-              background: 'linear-gradient(90deg, #0066FF 0%, #0047AB 100%)',
-              color: '#FFFFFF',
-              padding: '18px 35px',
-              borderRadius: '8px',
+              backgroundColor: 'transparent',
+              fontFamily: 'Reaktif, sans-serif',
               fontSize: '18px',
               fontWeight: 900,
-              fontFamily: 'Reaktif, sans-serif',
-              textTransform: 'none',
-              letterSpacing: '0.3px',
+              textTransform: 'uppercase',
+              letterSpacing: '1.2px',
+              color: '#FFFFFF',
+              fill: '#FFFFFF',
+              backgroundImage: 'linear-gradient(60deg, #0234DA 0%, #00139B 68%)',
+              borderStyle: 'none',
+              borderRadius: '10px',
+              padding: '18px 25px',
               display: 'inline-flex',
               alignItems: 'center',
-              gap: '12px',
+              gap: '10px',
               textDecoration: 'none',
               transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-              boxShadow: '0px 5px 20px rgba(0, 71, 171, 0.3)',
-              border: 'none'
+              boxShadow: '0px 4px 15px rgba(2, 52, 218, 0.3)'
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = 'scale(1.05)';
-              e.currentTarget.style.boxShadow = '0px 8px 30px rgba(0, 71, 171, 0.4)';
+              e.currentTarget.style.boxShadow = '0px 6px 25px rgba(2, 52, 218, 0.4)';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = 'scale(1)';
-              e.currentTarget.style.boxShadow = '0px 5px 20px rgba(0, 71, 171, 0.3)';
+              e.currentTarget.style.boxShadow = '0px 4px 15px rgba(2, 52, 218, 0.3)';
             }}
           >
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <circle cx="12" cy="12" r="10"/>
               <path d="M12 16l4-4-4-4M8 12h8"/>
             </svg>
-            Apply Now – Your FREE Website Awaits!
+            APPLY NOW – YOUR FREE WEBSITE AWAITS!
           </a>
         </div>
 
