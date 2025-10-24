@@ -10,9 +10,9 @@ export const StatisticsSection = () => {
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
-          animateCounter(setCount1, 10804, 3500);
-          animateCounter(setCount2, 4845, 3500);
-          animateCounter(setCount3, 0, 3500);
+          animateCounter(setCount1, 10804, 700);
+          animateCounter(setCount2, 4845, 700);
+          animateCounter(setCount3, 0, 700);
         }
       },
       { threshold: 0.3 }
@@ -40,7 +40,7 @@ export const StatisticsSection = () => {
   return (
     <section ref={sectionRef} style={{
       background: 'linear-gradient(228deg, #0234DA 0%, #00139B 100%)',
-      padding: '20px 5%',
+      padding: '50px 5%',
       textAlign: 'center'
     }}>
       <div style={{ 
