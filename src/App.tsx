@@ -11,6 +11,12 @@ const queryClient = new QueryClient();
 
 const App = () => {
   useEffect(() => {
+    // Remove loading skeleton once React has mounted
+    const root = document.getElementById('root');
+    if (root && root.children.length > 1) {
+      root.removeChild(root.children[0]);
+    }
+    
     requestAnimationFrame(() => {
       document.body.classList.add('loaded');
     });
