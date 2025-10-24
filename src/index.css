@@ -418,10 +418,10 @@ img[src*="trustpilot"] {
   right: 0 !important;
   z-index: 999 !important;
   
-  /* Glassmorphism effect */
-  background: rgba(255, 255, 255, 0.15) !important;
-  backdrop-filter: blur(20px) saturate(180%) !important;
-  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  /* Glassmorphism effect with light blue base */
+  background: rgba(227, 238, 255, 0.4) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
   
   /* Subtle styling */
   border-bottom: 1px solid rgba(255, 255, 255, 0.3) !important;
@@ -430,9 +430,9 @@ img[src*="trustpilot"] {
 }
 
 /* Firefox fallback */
-@supports not (backdrop-filter: blur(20px)) {
+@supports not (backdrop-filter: blur(12px)) {
   .site-header {
-    background: rgba(255, 255, 255, 0.85) !important;
+    background: rgba(227, 238, 255, 0.85) !important;
   }
 }
 
