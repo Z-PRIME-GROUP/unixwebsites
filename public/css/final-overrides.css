@@ -1,5 +1,20 @@
 /* FINAL OVERRIDES - Loaded last to ensure these styles win */
 
+/* CRITICAL: Prevent layout shift on load */
+html,
+body,
+#root,
+.elementor {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+}
+
+.e-con.e-parent,
+.e-con-full.e-flex.e-con.e-parent {
+  overflow: hidden !important;
+  max-width: 100vw !important;
+}
+
 /* Gallery images - ZERO border-radius - FORCE IT */
 .ekit-wid-con .elementskit-single-portfolio-item,
 .ekit-wid-con .elementskit-single-portfolio-item *,
