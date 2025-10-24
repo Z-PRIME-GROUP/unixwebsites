@@ -13,40 +13,70 @@ export const CtaTransformedSection = () => {
           {/* Small Subtitle */}
           <h6 style={{ 
             fontFamily: 'Plus Jakarta Sans, sans-serif',
-            fontSize: '14px',
-            fontWeight: 600,
+            fontSize: '18px',
+            fontWeight: 500,
             color: '#FFFFFF',
-            textTransform: 'uppercase',
-            letterSpacing: '1px',
             marginBottom: '18px',
-            opacity: 0.9
+            opacity: 0.95
           }}>
             Join 10,000+ entrepreneurs
           </h6>
 
-          {/* Main Heading - ALL WHITE TEXT */}
+          {/* Main Heading with animated underline spans */}
           <h2 style={{
-            fontFamily: 'Reaktif, sans-serif',
+            fontFamily: 'Plus Jakarta Sans, sans-serif',
             fontSize: '48px',
-            fontWeight: 600,
-            color: '#FFFFFF',
+            fontWeight: 700,
+            color: '#FFE5A1',
             marginBottom: '25px',
             lineHeight: '1.25'
           }}>
-            Who've Transformed Their Business with a FREE Website!
+            Who've <span style={{
+              backgroundColor: 'transparent',
+              backgroundImage: 'linear-gradient(180deg, #FFFFFF00 78%, #295B5112 0%)',
+              borderRadius: '0',
+              backgroundPosition: '200% 0',
+              backgroundSize: '200%',
+              backgroundRepeat: 'no-repeat',
+              transition: 'background-position 0.75s cubic-bezier(.29, 1.11, .74, 1.04), all 0.3s ease',
+              transitionDelay: '0.5s',
+              display: 'inline-block',
+              fontWeight: 700
+            }}>Transformed</span> <span style={{
+              backgroundColor: 'transparent',
+              backgroundImage: 'linear-gradient(180deg, #FFFFFF00 78%, #295B5112 0%)',
+              borderRadius: '0',
+              backgroundPosition: '200% 0',
+              backgroundSize: '200%',
+              backgroundRepeat: 'no-repeat',
+              transition: 'background-position 0.75s cubic-bezier(.29, 1.11, .74, 1.04), all 0.3s ease',
+              transitionDelay: '0.5s',
+              display: 'inline-block',
+              fontWeight: 700
+            }}>Their Business with a</span> <span style={{
+              backgroundColor: 'transparent',
+              backgroundImage: 'linear-gradient(180deg, #FFFFFF00 78%, #295B5112 0%)',
+              borderRadius: '0',
+              backgroundPosition: '200% 0',
+              backgroundSize: '200%',
+              backgroundRepeat: 'no-repeat',
+              transition: 'background-position 0.75s cubic-bezier(.29, 1.11, .74, 1.04), all 0.3s ease',
+              transitionDelay: '0.5s',
+              display: 'inline-block',
+              fontWeight: 700
+            }}>FREE Website</span>!
           </h2>
 
-          {/* Description - WHITE TEXT */}
+          {/* Description */}
           <p style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
-            fontSize: '16px',
+            fontSize: '18px',
             fontWeight: 400,
-            color: '#FFFFFF',
-            lineHeight: '1.7',
-            marginBottom: '35px',
-            opacity: 0.95
+            color: '#FFE5A1',
+            lineHeight: '1.8em',
+            marginBottom: '35px'
           }}>
-            Imagine having a stunning website that <span style={{ fontWeight: 700 }}>builds trust and drives sales</span>—without the hefty $5,000-$20,000 price tag that web agencies charge. A professional website can increase your chances of converting potential clients <span style={{ fontWeight: 700 }}>by 76%</span>. But here's the game-changer: with our <span style={{ fontWeight: 700 }}>Free Website Program</span>, you get all of this value at <span style={{ fontWeight: 700 }}>no cost</span>.
+            Imagine having a stunning website that <strong>builds trust and drives sales</strong>—without the hefty $5,000-$20,000 price tag that web agencies charge. A professional website can increase your chances of converting potential clients <strong>by 76%</strong>. But here's the game-changer: with our <strong>Free Website Program</strong>, you get all of this value at <strong>no cost</strong>.
           </p>
 
           {/* CTA Button - BLUE */}
@@ -87,7 +117,7 @@ export const CtaTransformedSection = () => {
           </a>
         </div>
 
-        {/* Right Column - Desktop Mockup Image with rounded background */}
+        {/* Right Column - Desktop Mockup Image */}
         <div style={{ position: 'relative' }}>
           <div style={{
             backgroundColor: 'rgba(255, 255, 255, 0.15)',
@@ -109,7 +139,6 @@ export const CtaTransformedSection = () => {
         </div>
       </div>
 
-      {/* Responsive Styles */}
       <style>{`
         @media (max-width: 768px) {
           section > div {
