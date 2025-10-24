@@ -33,7 +33,7 @@ export const FeaturesSuccessSection = () => {
         </div>
 
         {/* CTA Content - Bottom of Features Section */}
-        <div style={{ marginTop: '80px', textAlign: 'center', maxWidth: '1100px', margin: '80px auto 0', paddingBottom: '40px' }}>
+        <div style={{ marginTop: '80px', textAlign: 'center', maxWidth: '1100px', margin: '80px auto 0', paddingBottom: '10px' }}>
           
           {/* Main Heading - ONE LINE */}
           <h1 style={{
