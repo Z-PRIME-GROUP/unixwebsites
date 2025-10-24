@@ -1,18 +1,16 @@
 /* FINAL OVERRIDES - Loaded last to ensure these styles win */
 
-/* CRITICAL: Prevent white flash on load - ensure first fancy text is visible */
-.ekit-fancy-text-lists b.ekit-fancy-text:first-child {
-  opacity: 1 !important;
-  position: relative !important;
+/* CRITICAL: Prevent layout shift - target root only */
+.elementor-element.elementor-element-89bde1c.e-con-full {
+  overflow: hidden !important;
+  max-width: 100vw !important;
 }
 
-/* Then let JavaScript animation take over after page loads */
-.page-loaded .ekit-fancy-text-lists b.ekit-fancy-text:first-child {
-  opacity: 0 !important;
-}
-
-.page-loaded .ekit-fancy-text-lists b.ekit-fancy-text.is-visible {
-  opacity: 1 !important;
+/* Gallery container MUST have visible overflow for grid to work */
+.elementor-element.elementor-element-eca17a6.e-con-full,
+.ekit_gallery_grid_wraper,
+.ekit_gallery_grid {
+  overflow: visible !important;
 }
 
 /* Gallery images - ZERO border-radius - FORCE IT */
