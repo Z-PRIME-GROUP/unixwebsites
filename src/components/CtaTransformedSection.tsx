@@ -22,8 +22,8 @@ export const CtaTransformedSection = () => {
             Join 10,000+ entrepreneurs
           </h6>
 
-          {/* Main Heading - Double-nested spans with underline effect */}
-          <h2 className="cta-transformed-heading" style={{
+          {/* Main Heading */}
+          <h2 style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
             fontSize: '48px',
             fontWeight: 700,
@@ -31,7 +31,37 @@ export const CtaTransformedSection = () => {
             marginBottom: '25px',
             lineHeight: '1.25'
           }}>
-            Who've <span><span>Transformed</span></span> <span><span>Their Business with a</span></span> <span><span>FREE Website</span></span>!
+            Who've <span><span style={{
+              backgroundColor: 'transparent',
+              backgroundImage: 'linear-gradient(180deg, #FFFFFF00 78%, #295B5112 0%)',
+              backgroundPosition: '200% 0',
+              backgroundSize: '200%',
+              backgroundRepeat: 'no-repeat',
+              transition: 'background-position 0.75s cubic-bezier(.29, 1.11, .74, 1.04)',
+              transitionDelay: '0.5s',
+              display: 'inline-block',
+              fontWeight: 700
+            }}>Transformed</span></span> <span><span style={{
+              backgroundColor: 'transparent',
+              backgroundImage: 'linear-gradient(180deg, #FFFFFF00 78%, #295B5112 0%)',
+              backgroundPosition: '200% 0',
+              backgroundSize: '200%',
+              backgroundRepeat: 'no-repeat',
+              transition: 'background-position 0.75s cubic-bezier(.29, 1.11, .74, 1.04)',
+              transitionDelay: '0.5s',
+              display: 'inline-block',
+              fontWeight: 700
+            }}>Their Business with a</span></span> <span><span style={{
+              backgroundColor: 'transparent',
+              backgroundImage: 'linear-gradient(180deg, #FFFFFF00 78%, #295B5112 0%)',
+              backgroundPosition: '200% 0',
+              backgroundSize: '200%',
+              backgroundRepeat: 'no-repeat',
+              transition: 'background-position 0.75s cubic-bezier(.29, 1.11, .74, 1.04)',
+              transitionDelay: '0.5s',
+              display: 'inline-block',
+              fontWeight: 700
+            }}>FREE Website</span></span>!
           </h2>
 
           {/* Description with SAME COLOR underlines (not black) */}
@@ -109,16 +139,6 @@ export const CtaTransformedSection = () => {
       </div>
 
       <style>{`
-        .cta-transformed-heading span span {
-          display: inline-block;
-          background-color: transparent;
-          background-image: linear-gradient(180deg, rgba(255,255,255,0) 78%, rgba(255,240,193,0.3) 100%);
-          background-position: 0% 100%;
-          background-size: 100% 100%;
-          background-repeat: no-repeat;
-          padding-bottom: 3px;
-        }
-        
         @media (max-width: 768px) {
           section > div {
             grid-template-columns: 1fr !important;
