@@ -1,9 +1,12 @@
 export const CtaTransformedSection = () => {
   return (
     <section style={{ 
+      width: '100%',
+      maxWidth: '100vw',
+      overflowX: 'hidden',
+      position: 'relative',
       background: 'linear-gradient(90deg, #E23B08 0%, #FED349 100%)',
       padding: '100px 0',
-      position: 'relative',
       overflow: 'hidden'
     }}>
       <div style={{ maxWidth: '1320px', margin: '0 auto', padding: '0 20px', display: 'flex', gap: '80px', alignItems: 'center', flexWrap: 'wrap' }}>

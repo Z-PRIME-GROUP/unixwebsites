@@ -119,7 +119,17 @@ const HeroSectionExact = () => {
         maskRepeat: 'no-repeat',
         maskSize: 'contain'
       }} />
-      <div className="elementor-element elementor-element-8bb6f3c e-con-full hero-section e-flex e-con e-child" data-id="8bb6f3c" data-element_type="container">
+      <div className="elementor-element elementor-element-8bb6f3c e-con-full hero-section e-flex e-con e-child" 
+        data-id="8bb6f3c" 
+        data-element_type="container"
+        style={{
+          display: 'flex',
+          width: '100%',
+          maxWidth: '100%',
+          flexWrap: 'wrap',
+          overflow: 'hidden'
+        }}
+      >
         <div className="elementor-element elementor-element-b1c56d6 e-con-full e-flex e-con e-child" data-id="b1c56d6" data-element_type="container">
           <div className="elementor-element elementor-element-8efe2d6 elementor-widget elementor-widget-elementskit-fancy-animated-text" data-id="8efe2d6" data-element_type="widget" data-settings='{"ekit_we_effect_on":"none"}' data-widget_type="elementskit-fancy-animated-text.default">
             <div className="elementor-widget-container">
