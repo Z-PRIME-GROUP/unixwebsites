@@ -1,5 +1,18 @@
 /* FINAL OVERRIDES - Loaded last to ensure these styles win */
 
+/* CRITICAL: Prevent layout shift - target root only */
+.elementor-element.elementor-element-89bde1c.e-con-full {
+  overflow: hidden !important;
+  max-width: 100vw !important;
+}
+
+/* Gallery container MUST have visible overflow for grid to work */
+.elementor-element.elementor-element-eca17a6.e-con-full,
+.ekit_gallery_grid_wraper,
+.ekit_gallery_grid {
+  overflow: visible !important;
+}
+
 /* Gallery images - ZERO border-radius - FORCE IT */
 .ekit-wid-con .elementskit-single-portfolio-item,
 .ekit-wid-con .elementskit-single-portfolio-item *,
