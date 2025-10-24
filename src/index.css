@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
+/* Prevent initial load flash */
+body:not(.loaded) {
+  visibility: hidden;
+}
+
+body.loaded {
+  visibility: visible;
+}
+
 /* Prevent layout shift and white flash - MUST BE FIRST */
 * {
   box-sizing: border-box;
