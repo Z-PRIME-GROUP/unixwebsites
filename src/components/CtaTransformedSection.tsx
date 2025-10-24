@@ -23,7 +23,7 @@ export const CtaTransformedSection = () => {
             Join 10,000+ entrepreneurs
           </h6>
 
-          {/* Main Heading - WHITE spans with underline BELOW text */}
+          {/* Main Heading - WHITE spans with VISIBLE gradient underline */}
           <h2 style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
             fontSize: '48px',
@@ -34,22 +34,34 @@ export const CtaTransformedSection = () => {
           }}>
             Who've <span><span style={{
               color: '#FFFFFF',
+              backgroundColor: 'transparent',
+              backgroundImage: 'linear-gradient(180deg, rgba(255,255,255,0) 78%, rgba(255,255,255,0.2) 78%)',
+              backgroundPosition: '0% 100%',
+              backgroundSize: '100% 100%',
+              backgroundRepeat: 'no-repeat',
               display: 'inline-block',
               fontWeight: 700,
-              borderBottom: '3px solid rgba(255,255,255,0.2)',
-              paddingBottom: '2px'
+              paddingBottom: '3px'
             }}>Transformed</span></span> <span><span style={{
               color: '#FFFFFF',
+              backgroundColor: 'transparent',
+              backgroundImage: 'linear-gradient(180deg, rgba(255,255,255,0) 78%, rgba(255,255,255,0.2) 78%)',
+              backgroundPosition: '0% 100%',
+              backgroundSize: '100% 100%',
+              backgroundRepeat: 'no-repeat',
               display: 'inline-block',
               fontWeight: 700,
-              borderBottom: '3px solid rgba(255,255,255,0.2)',
-              paddingBottom: '2px'
+              paddingBottom: '3px'
             }}>Their Business with a</span></span> <span><span style={{
               color: '#FFFFFF',
+              backgroundColor: 'transparent',
+              backgroundImage: 'linear-gradient(180deg, rgba(255,255,255,0) 78%, rgba(255,255,255,0.2) 78%)',
+              backgroundPosition: '0% 100%',
+              backgroundSize: '100% 100%',
+              backgroundRepeat: 'no-repeat',
               display: 'inline-block',
               fontWeight: 700,
-              borderBottom: '3px solid rgba(255,255,255,0.2)',
-              paddingBottom: '2px'
+              paddingBottom: '3px'
             }}>FREE Website</span></span>!
           </h2>
 
@@ -106,7 +118,7 @@ export const CtaTransformedSection = () => {
           </a>
         </div>
 
-        {/* Right Column - Image with border-radius */}
+        {/* Right Column - Plain Image (NO wrapper) */}
         <div style={{ flex: '1 1 45%', minWidth: '400px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
           <img 
             src="/images/mockup-desktop.webp" 
@@ -118,8 +130,7 @@ export const CtaTransformedSection = () => {
               maxWidth: '675px',
               height: 'auto',
               objectFit: 'contain',
-              display: 'block',
-              borderRadius: '12px'
+              display: 'block'
             }}
           />
         </div>
