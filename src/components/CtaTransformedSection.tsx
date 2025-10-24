@@ -130,7 +130,8 @@ export const CtaTransformedSection = () => {
               maxWidth: '675px',
               height: 'auto',
               objectFit: 'contain',
-              display: 'block'
+              display: 'block',
+              borderRadius: '60px'
             }}
           />
         </div>
