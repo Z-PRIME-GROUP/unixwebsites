@@ -39,10 +39,6 @@ export const StatisticsSection = () => {
 
   return (
     <section ref={sectionRef} style={{
-      width: '100%',
-      maxWidth: '100vw',
-      overflowX: 'hidden',
-      position: 'relative',
       background: 'linear-gradient(228deg, #0234DA 0%, #00139B 100%)',
       padding: '50px 5%',
       textAlign: 'center'

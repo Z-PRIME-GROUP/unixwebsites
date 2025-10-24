@@ -41,10 +41,6 @@ export const TestimonialsSection = () => {
 
   return (
     <section style={{
-      width: '100%',
-      maxWidth: '100vw',
-      overflowX: 'hidden',
-      position: 'relative',
       background: 'linear-gradient(180deg, #E8EFFF 0%, #E3E8FF 100%)',
       padding: '80px 5%'
     }}>
