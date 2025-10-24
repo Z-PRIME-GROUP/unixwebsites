@@ -22,7 +22,7 @@ export const CtaTransformedSection = () => {
             Join 10,000+ entrepreneurs
           </h6>
 
-          {/* Main Heading with double-nested spans for underline effect */}
+          {/* Main Heading - Spans inherit parent color with underline effect */}
           <h2 style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
             fontSize: '48px',
@@ -32,32 +32,26 @@ export const CtaTransformedSection = () => {
             lineHeight: '1.25'
           }}>
             Who've <span><span style={{
-              backgroundColor: 'transparent',
-              backgroundImage: 'linear-gradient(180deg, #FFFFFF00 78%, #295B5112 0%)',
-              backgroundPosition: '200% 0',
-              backgroundSize: '200%',
+              display: 'inline-block',
+              backgroundImage: 'linear-gradient(180deg, rgba(255,255,255,0) 78%, rgba(41,91,81,0.07) 100%)',
+              backgroundPosition: '0% 100%',
+              backgroundSize: '100% 100%',
               backgroundRepeat: 'no-repeat',
-              transition: 'background-position 0.75s cubic-bezier(.29, 1.11, .74, 1.04)',
-              transitionDelay: '0.5s',
-              display: 'inline-block'
+              paddingBottom: '2px'
             }}>Transformed</span></span> <span><span style={{
-              backgroundColor: 'transparent',
-              backgroundImage: 'linear-gradient(180deg, #FFFFFF00 78%, #295B5112 0%)',
-              backgroundPosition: '200% 0',
-              backgroundSize: '200%',
+              display: 'inline-block',
+              backgroundImage: 'linear-gradient(180deg, rgba(255,255,255,0) 78%, rgba(41,91,81,0.07) 100%)',
+              backgroundPosition: '0% 100%',
+              backgroundSize: '100% 100%',
               backgroundRepeat: 'no-repeat',
-              transition: 'background-position 0.75s cubic-bezier(.29, 1.11, .74, 1.04)',
-              transitionDelay: '0.5s',
-              display: 'inline-block'
+              paddingBottom: '2px'
             }}>Their Business with a</span></span> <span><span style={{
-              backgroundColor: 'transparent',
-              backgroundImage: 'linear-gradient(180deg, #FFFFFF00 78%, #295B5112 0%)',
-              backgroundPosition: '200% 0',
-              backgroundSize: '200%',
+              display: 'inline-block',
+              backgroundImage: 'linear-gradient(180deg, rgba(255,255,255,0) 78%, rgba(41,91,81,0.07) 100%)',
+              backgroundPosition: '0% 100%',
+              backgroundSize: '100% 100%',
               backgroundRepeat: 'no-repeat',
-              transition: 'background-position 0.75s cubic-bezier(.29, 1.11, .74, 1.04)',
-              transitionDelay: '0.5s',
-              display: 'inline-block'
+              paddingBottom: '2px'
             }}>FREE Website</span></span>!
           </h2>
 
