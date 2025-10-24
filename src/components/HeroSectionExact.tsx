@@ -93,16 +93,18 @@ const HeroSectionExact = () => {
         backgroundPosition: 'center center',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
-        overflow: 'hidden'
+        overflow: 'hidden',
+        isolation: 'isolate'
       }}
     >
       <div style={{
         position: 'absolute',
-        left: '-200px',
+        left: '50%',
         top: '50%',
-        transform: 'translateY(-50%)',
-        width: '1400px',
-        height: '1400px',
+        transform: 'translate(-50%, -50%)',
+        width: 'min(1400px, 200vw)',
+        height: 'min(1400px, 200vw)',
+        maxWidth: 'none',
         backgroundImage: `url(/images/unixwebsites-favicon-color.webp)`,
         backgroundSize: 'contain',
         backgroundRepeat: 'no-repeat',
