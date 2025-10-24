@@ -46,10 +46,12 @@ export const FeaturesSuccessSection = () => {
           }}>
             Get a Feature-Rich, Professional Website for{' '}
             <span style={{
+              display: 'inline-block',
               background: 'linear-gradient(100deg, #FED349 0%, #E23B08 100%)',
               WebkitBackgroundClip: 'text',
+              backgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text'
+              color: 'transparent'
             }}>FREE</span>
           </h1>
 
