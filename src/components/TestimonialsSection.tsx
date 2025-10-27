@@ -402,7 +402,7 @@ export const TestimonialsSection = () => {
           padding: '30px',
           boxShadow: '0 8px 30px rgba(0,0,0,0.06)'
         }}>
-          <div style={{ fontSize: '20px', marginBottom: '20px', color: '#000000' }}>★★★★★</div>
+          <div style={{ fontSize: '18px', marginBottom: '20px', color: '#FFD700' }}>★★★★★</div>
           <p style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
             fontSize: '16px',
@@ -443,7 +443,7 @@ export const TestimonialsSection = () => {
           padding: '30px',
           boxShadow: '0 8px 30px rgba(0,0,0,0.06)'
         }}>
-          <div style={{ fontSize: '20px', marginBottom: '20px', color: '#000000' }}>★★★★★</div>
+          <div style={{ fontSize: '18px', marginBottom: '20px', color: '#FFD700' }}>★★★★★</div>
           <p style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
             fontSize: '16px',
@@ -484,7 +484,7 @@ export const TestimonialsSection = () => {
           padding: '30px',
           boxShadow: '0 8px 30px rgba(0,0,0,0.06)'
         }}>
-          <div style={{ fontSize: '20px', marginBottom: '20px', color: '#000000' }}>★★★★★</div>
+          <div style={{ fontSize: '18px', marginBottom: '20px', color: '#FFD700' }}>★★★★★</div>
           <p style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
             fontSize: '16px',
