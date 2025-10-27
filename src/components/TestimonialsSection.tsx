@@ -518,6 +518,67 @@ export const TestimonialsSection = () => {
           </div>
         </div>
       </div>
+
+      {/* CTA Content - Bottom of Testimonials Section */}
+      <div style={{ marginTop: '80px', textAlign: 'center', maxWidth: '1100px', margin: '80px auto 0', paddingBottom: '10px' }}>
+        
+        {/* Main Heading */}
+        <h1 style={{
+          fontFamily: 'Reaktif, sans-serif',
+          fontSize: '48px',
+          fontWeight: 500,
+          color: '#00139B',
+          marginBottom: '35px',
+          lineHeight: '1.2'
+        }}>
+          Don't Just Watch Others Succeed –{' '}
+          <span style={{
+            display: 'inline-block',
+            background: 'linear-gradient(100deg, #FED349 0%, #E23B08 100%)',
+            WebkitBackgroundClip: 'text',
+            backgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            color: 'transparent'
+          }}>Join Them!</span>
+        </h1>
+
+        {/* CTA Button */}
+        <a 
+          href="https://application.ufreewebsites.com/"
+          id="testimonialsCTA"
+          style={{
+            background: 'linear-gradient(60deg, #FED349 0%, #E23B08 68%)',
+            color: '#FFFFFF',
+            padding: '16px 38px',
+            borderRadius: '8px',
+            fontSize: '18px',
+            fontWeight: 900,
+            fontFamily: 'Reaktif, sans-serif',
+            textTransform: 'uppercase',
+            letterSpacing: '0.5px',
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '10px',
+            textDecoration: 'none',
+            transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+            boxShadow: '0px 4px 15px rgba(254, 211, 73, 0.3)'
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = 'scale(1.05)';
+            e.currentTarget.style.boxShadow = '0px 6px 25px rgba(254, 211, 73, 0.4)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = 'scale(1)';
+            e.currentTarget.style.boxShadow = '0px 4px 15px rgba(254, 211, 73, 0.3)';
+          }}
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+            <circle cx="12" cy="12" r="10" opacity="0.3"/>
+            <path d="M12 8v8M8 12h8" stroke="currentColor" strokeWidth="2" fill="none"/>
+          </svg>
+          APPLY NOW FOR YOUR FREE WEBSITE
+        </a>
+      </div>
     </section>
   );
 };
