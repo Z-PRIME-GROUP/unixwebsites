@@ -1,16 +1,25 @@
-import { useRef } from 'react';
-import useEmblaCarousel from 'embla-carousel-react';
-import Autoplay from 'embla-carousel-autoplay';
+import { useEffect, useRef } from 'react';
 
 export const TestimonialsSection = () => {
-  const autoplay = useRef(
-    Autoplay({ delay: 5000, stopOnInteraction: false })
-  );
-  
-  const [emblaRef, emblaApi] = useEmblaCarousel(
-    { loop: true, align: 'start' },
-    [autoplay.current]
-  );
+  const swiperRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (swiperRef.current && (window as any).Swiper) {
+      new (window as any).Swiper(swiperRef.current, {
+        loop: true,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        slidesPerView: 1,
+        spaceBetween: 30,
+      });
+    }
+  }, []);
 
   const testimonials = [
     {
@@ -173,20 +182,12 @@ export const TestimonialsSection = () => {
         </div>
       </div>
 
-      {/* Testimonials Carousel */}
+      {/* Swiper Testimonials Carousel */}
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-        <div className="embla" ref={emblaRef} style={{ overflow: 'hidden' }}>
-          <div className="embla__container" style={{ display: 'flex' }}>
+        <div className="swiper testimonials-swiper" ref={swiperRef}>
+          <div className="swiper-wrapper">
             {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className="embla__slide"
-                style={{
-                  flex: '0 0 100%',
-                  minWidth: 0,
-                  padding: '20px'
-                }}
-              >
+              <div key={index} className="swiper-slide">
                 <div style={{
                   display: 'grid',
                   gridTemplateColumns: '1fr 1fr',
@@ -197,7 +198,26 @@ export const TestimonialsSection = () => {
                   borderRadius: '20px',
                   boxShadow: '0 10px 40px rgba(0,0,0,0.08)'
                 }}>
-                  {/* Left Column - Quote */}
+                  {/* Left Column - Image */}
+                  <div style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center'
+                  }}>
+                    <img
+                      src={testimonial.image}
+                      alt={testimonial.name}
+                      style={{
+                        width: '100%',
+                        maxWidth: '400px',
+                        height: 'auto',
+                        borderRadius: '12px',
+                        boxShadow: '0 8px 24px rgba(0,0,0,0.12)'
+                      }}
+                    />
+                  </div>
+
+                  {/* Right Column - Quote and Name */}
                   <div>
                     <div style={{
                       fontSize: '48px',
@@ -236,63 +256,44 @@ export const TestimonialsSection = () => {
                       </div>
                     </div>
                   </div>
-
-                  {/* Right Column - Image */}
-                  <div style={{
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center'
-                  }}>
-                    <img
-                      src={testimonial.image}
-                      alt={testimonial.name}
-                      style={{
-                        width: '100%',
-                        maxWidth: '400px',
-                        height: 'auto',
-                        borderRadius: '12px',
-                        boxShadow: '0 8px 24px rgba(0,0,0,0.12)'
-                      }}
-                    />
-                  </div>
                 </div>
               </div>
             ))}
           </div>
-        </div>
-
-        {/* Carousel Navigation Dots */}
-        <div style={{
-          display: 'flex',
-          justifyContent: 'center',
-          gap: '12px',
-          marginTop: '40px'
-        }}>
-          {testimonials.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => emblaApi?.scrollTo(index)}
-              style={{
-                width: '12px',
-                height: '12px',
-                borderRadius: '50%',
-                border: 'none',
-                background: '#0234DA',
-                opacity: 0.3,
-                cursor: 'pointer',
-                transition: 'opacity 0.3s'
-              }}
-              onMouseEnter={(e) => e.currentTarget.style.opacity = '1'}
-              onMouseLeave={(e) => e.currentTarget.style.opacity = '0.3'}
-            />
-          ))}
+          
+          {/* Swiper Pagination Dots */}
+          <div className="swiper-pagination" style={{ marginTop: '40px' }}></div>
         </div>
       </div>
 
       <style>{`
+        .swiper-pagination-bullet {
+          width: 12px;
+          height: 12px;
+          background: #0234DA;
+          opacity: 0.3;
+          transition: opacity 0.3s;
+        }
+        
+        .swiper-pagination-bullet-active {
+          opacity: 1;
+        }
+        
+        .swiper-pagination-bullet:hover {
+          opacity: 1;
+        }
+        
         @media (max-width: 768px) {
-          .embla__slide > div {
+          .swiper-slide > div {
             grid-template-columns: 1fr !important;
+          }
+          
+          .swiper-slide > div > div:first-child {
+            order: 2;
+          }
+          
+          .swiper-slide > div > div:last-child {
+            order: 1;
           }
         }
       `}</style>
