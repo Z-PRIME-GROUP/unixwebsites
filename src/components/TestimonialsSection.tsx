@@ -11,6 +11,8 @@ export const TestimonialsSection = () => {
             rtl: false,
             loop: true,
             speed: 1000,
+            effect: 'slide',
+            grabCursor: true,
             autoplay: {
               delay: 5000,
               disableOnInteraction: false,
@@ -22,10 +24,19 @@ export const TestimonialsSection = () => {
             },
             pagination: {
               el: '.swiper-pagination',
-              clickable: true
+              clickable: true,
+              dynamicBullets: false
             },
             slidesPerView: 1,
-            spaceBetween: 15
+            spaceBetween: 15,
+            allowTouchMove: true,
+            simulateTouch: true,
+            touchRatio: 1,
+            touchAngle: 45,
+            longSwipesRatio: 0.5,
+            followFinger: true,
+            resistance: true,
+            resistanceRatio: 0.85
           });
         }
       }
@@ -445,6 +456,40 @@ export const TestimonialsSection = () => {
       </div>
 
       <style>{`
+        /* Swiper Navigation Buttons */
+        .swiper-button-prev,
+        .swiper-button-next {
+          width: 44px;
+          height: 44px;
+          background: #FFFFFF;
+          border-radius: 50%;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+          color: #0234DA;
+        }
+        
+        .swiper-button-prev:after,
+        .swiper-button-next:after {
+          font-size: 20px;
+          font-weight: 900;
+        }
+        
+        .swiper-button-prev:hover,
+        .swiper-button-next:hover {
+          background: #0234DA;
+          color: #FFFFFF;
+        }
+        
+        .swiper-pagination-bullet {
+          width: 12px;
+          height: 12px;
+          background: #0234DA;
+          opacity: 0.3;
+        }
+        
+        .swiper-pagination-bullet-active {
+          opacity: 1;
+        }
+        
         @media (max-width: 768px) {
           .row {
             flex-direction: column !important;
