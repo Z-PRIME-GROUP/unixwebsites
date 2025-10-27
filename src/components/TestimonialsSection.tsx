@@ -4,10 +4,15 @@ export const TestimonialsSection = () => {
   useEffect(() => {
     // Initialize Swiper after component mounts
     const initSwiper = () => {
+      console.log('=== SWIPER INIT START ===');
+      console.log('Swiper available?', typeof (window as any).Swiper);
+      
       if (typeof window !== 'undefined' && (window as any).Swiper) {
         const swiperEl = document.getElementById('testimonials-swiper');
+        console.log('Swiper element found?', !!swiperEl);
+        
         if (swiperEl && !(swiperEl as any).swiper) {
-          new (window as any).Swiper('#testimonials-swiper', {
+          const swiperInstance = new (window as any).Swiper('#testimonials-swiper', {
             rtl: false,
             loop: true,
             speed: 1000,
@@ -38,7 +43,13 @@ export const TestimonialsSection = () => {
             resistance: true,
             resistanceRatio: 0.85
           });
+          console.log('Swiper initialized:', swiperInstance);
+          console.log('Navigation buttons:', document.querySelectorAll('.swiper-button-next, .swiper-button-prev'));
+        } else {
+          console.log('Swiper already initialized or element not found');
         }
+      } else {
+        console.log('Swiper library not loaded!');
       }
     };
 
@@ -466,8 +477,8 @@ export const TestimonialsSection = () => {
             </div>
 
             {/* Swiper Navigation Buttons */}
-            <div className="swiper-navigation-button swiper-button-prev"></div>
-            <div className="swiper-navigation-button swiper-button-next"></div>
+            <div className="swiper-button-prev"></div>
+            <div className="swiper-button-next"></div>
             
             {/* Swiper Pagination Dots */}
             <div className="swiper-pagination"></div>
@@ -485,6 +496,20 @@ export const TestimonialsSection = () => {
           border-radius: 50%;
           box-shadow: 0 4px 12px rgba(0,0,0,0.15);
           color: #0234DA;
+          cursor: pointer;
+          pointer-events: auto;
+          z-index: 10;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        
+        .swiper-button-prev {
+          left: 10px;
+        }
+        
+        .swiper-button-next {
+          right: 10px;
         }
         
         .swiper-button-prev:after,
