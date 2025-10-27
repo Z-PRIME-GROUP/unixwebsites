@@ -15,7 +15,7 @@ export const TestimonialsSection = () => {
           const swiperInstance = new (window as any).Swiper('#testimonials-swiper', {
             rtl: false,
             loop: false,
-            speed: 1000,
+            speed: 800,
             effect: 'slide',
             grabCursor: true,
             autoplay: {
@@ -23,6 +23,8 @@ export const TestimonialsSection = () => {
               disableOnInteraction: false,
               pauseOnMouseEnter: true
             },
+            slideToClickedSlide: true,
+            centeredSlides: false,
             navigation: {
               nextEl: '.swiper-button-next',
               prevEl: '.swiper-button-prev'
@@ -490,6 +492,21 @@ export const TestimonialsSection = () => {
       </div>
 
       <style>{`
+        /* Fade effect for inactive slides */
+        .swiper-slide {
+          opacity: 0.3;
+          transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .swiper-slide-active {
+          opacity: 1;
+        }
+        
+        /* Smooth slide transitions */
+        .elementskit-single-testimonial-slider {
+          transition: all 0.4s ease-in-out;
+        }
+        
         /* Ensure swiper container allows buttons outside */
         #testimonials-swiper {
           position: relative;
