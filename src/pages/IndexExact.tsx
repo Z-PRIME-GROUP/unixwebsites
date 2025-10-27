@@ -5,6 +5,7 @@ import FeaturesSuccessSection from "@/components/FeaturesSuccessSection";
 import CtaTransformedSection from "@/components/CtaTransformedSection";
 import StatisticsSection from "@/components/StatisticsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import FreeWebsitesSection from "@/components/FreeWebsitesSection";
 
 const IndexExact = () => {
   useEffect(() => {
@@ -33,6 +34,7 @@ const IndexExact = () => {
                       <CtaTransformedSection />
                       <StatisticsSection />
                       <TestimonialsSection />
+                      <FreeWebsitesSection />
                       
                       {/* More sections will be added here as we convert them */}
                     </div>
