@@ -158,7 +158,22 @@ const HeroSectionExact = () => {
               <div className="elementor-widget-container">
                 <div className="ekit-wid-con">
                   <div className="ekit-btn-wraper">
-                    <a href="https://application.ufreewebsites.com/" className="elementskit-btn  whitespace--normal" id="homepageCTA1">
+                    <a 
+                      href="https://application.ufreewebsites.com/" 
+                      className="elementskit-btn  whitespace--normal" 
+                      id="homepageCTA1"
+                      style={{
+                        transition: 'transform 0.3s ease, box-shadow 0.3s ease'
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.transform = 'scale(1.05)';
+                        e.currentTarget.style.boxShadow = '0px 6px 25px rgba(254, 211, 73, 0.4)';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.transform = 'scale(1)';
+                        e.currentTarget.style.boxShadow = '0px 4px 15px rgba(254, 211, 73, 0.3)';
+                      }}
+                    >
                       <i className="far fa-arrow-alt-circle-right"></i>APPLY IN 2 MINUTES
                     </a>
                   </div>
