@@ -14,7 +14,7 @@ export const TestimonialsSection = () => {
         if (swiperEl && !(swiperEl as any).swiper) {
           const swiperInstance = new (window as any).Swiper('#testimonials-swiper', {
             rtl: false,
-            loop: true,
+            loop: false,
             speed: 1000,
             effect: 'slide',
             grabCursor: true,
@@ -41,7 +41,10 @@ export const TestimonialsSection = () => {
             longSwipesRatio: 0.5,
             followFinger: true,
             resistance: true,
-            resistanceRatio: 0.85
+            resistanceRatio: 0.85,
+            watchSlidesProgress: true,
+            observer: true,
+            observeParents: true
           });
           console.log('Swiper initialized:', swiperInstance);
           console.log('Navigation buttons:', document.querySelectorAll('.swiper-button-next, .swiper-button-prev'));
