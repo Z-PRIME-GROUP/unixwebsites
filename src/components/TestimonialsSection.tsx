@@ -142,28 +142,28 @@ export const TestimonialsSection = () => {
         margin: '0 auto',
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fit, minmax(500px, 1fr))',
-        gap: '40px'
+        gap: '30px'
       }}>
         {/* Testimonial 1 - Lori Matthews */}
         <div style={{
           background: '#FFFFFF',
           borderRadius: '20px',
-          padding: '60px',
+          padding: '40px',
           boxShadow: '0 10px 40px rgba(0,0,0,0.08)'
         }}>
-          <div style={{ display: 'flex', gap: '40px', alignItems: 'center', flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', gap: '30px', alignItems: 'center', flexWrap: 'wrap' }}>
             <div style={{ flex: '1 1 300px' }}>
               <div style={{ 
-                fontSize: '20px', 
-                marginBottom: '20px',
+                fontSize: '18px', 
+                marginBottom: '15px',
                 color: '#FFD700'
               }}>★★★★★</div>
               <p style={{
                 fontFamily: 'Plus Jakarta Sans, sans-serif',
-                fontSize: '18px',
-                lineHeight: '1.8',
+                fontSize: '16px',
+                lineHeight: '1.7',
                 color: '#333',
-                marginBottom: '30px'
+                marginBottom: '20px'
               }}>
                 uFREEwebsites transformed my business! As the owner of Willow Tree Cafe, I needed an online presence that matched the charm of my café. The free website they built is beautiful, and my customers love how easy it is to navigate. Sales have gone up, and I didn't pay a penny!
               </p>
@@ -177,7 +177,7 @@ export const TestimonialsSection = () => {
               <div>
                 <strong style={{
                   fontFamily: 'Plus Jakarta Sans, sans-serif',
-                  fontSize: '20px',
+                  fontSize: '18px',
                   fontWeight: 700,
                   color: '#000000',
                   display: 'block',
@@ -209,22 +209,22 @@ export const TestimonialsSection = () => {
         <div style={{
           background: '#FFFFFF',
           borderRadius: '20px',
-          padding: '60px',
+          padding: '40px',
           boxShadow: '0 10px 40px rgba(0,0,0,0.08)'
         }}>
-          <div style={{ display: 'flex', gap: '40px', alignItems: 'center', flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', gap: '30px', alignItems: 'center', flexWrap: 'wrap' }}>
             <div style={{ flex: '1 1 300px' }}>
               <div style={{ 
-                fontSize: '20px', 
-                marginBottom: '20px',
+                fontSize: '18px', 
+                marginBottom: '15px',
                 color: '#FFD700'
               }}>★★★★★</div>
               <p style={{
                 fontFamily: 'Plus Jakarta Sans, sans-serif',
-                fontSize: '18px',
-                lineHeight: '1.8',
+                fontSize: '16px',
+                lineHeight: '1.7',
                 color: '#333',
-                marginBottom: '30px'
+                marginBottom: '20px'
               }}>
                 uFREEwebsites took my business, Apex Automotive, to the next level with a professional and easy-to-navigate website. It's helped me get more clients, and the fact that it was free is unbelievable!
               </p>
@@ -238,7 +238,7 @@ export const TestimonialsSection = () => {
               <div>
                 <strong style={{
                   fontFamily: 'Plus Jakarta Sans, sans-serif',
-                  fontSize: '20px',
+                  fontSize: '18px',
                   fontWeight: 700,
                   color: '#000000',
                   display: 'block',
@@ -270,22 +270,22 @@ export const TestimonialsSection = () => {
         <div style={{
           background: '#FFFFFF',
           borderRadius: '20px',
-          padding: '60px',
+          padding: '40px',
           boxShadow: '0 10px 40px rgba(0,0,0,0.08)'
         }}>
-          <div style={{ display: 'flex', gap: '40px', alignItems: 'center', flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', gap: '30px', alignItems: 'center', flexWrap: 'wrap' }}>
             <div style={{ flex: '1 1 300px' }}>
               <div style={{ 
-                fontSize: '20px', 
-                marginBottom: '20px',
+                fontSize: '18px', 
+                marginBottom: '15px',
                 color: '#FFD700'
               }}>★★★★★</div>
               <p style={{
                 fontFamily: 'Plus Jakarta Sans, sans-serif',
-                fontSize: '18px',
-                lineHeight: '1.8',
+                fontSize: '16px',
+                lineHeight: '1.7',
                 color: '#333',
-                marginBottom: '30px'
+                marginBottom: '20px'
               }}>
                 Running a pet grooming service like Furry Friends Groomers, having an attractive, easy-to-use website is a must. uFREEwebsites delivered exactly what I needed, for free! My client bookings have increased, and I'm so grateful.
               </p>
@@ -299,7 +299,7 @@ export const TestimonialsSection = () => {
               <div>
                 <strong style={{
                   fontFamily: 'Plus Jakarta Sans, sans-serif',
-                  fontSize: '20px',
+                  fontSize: '18px',
                   fontWeight: 700,
                   color: '#000000',
                   display: 'block',
@@ -331,22 +331,22 @@ export const TestimonialsSection = () => {
         <div style={{
           background: '#FFFFFF',
           borderRadius: '20px',
-          padding: '60px',
+          padding: '40px',
           boxShadow: '0 10px 40px rgba(0,0,0,0.08)'
         }}>
-          <div style={{ display: 'flex', gap: '40px', alignItems: 'center', flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', gap: '30px', alignItems: 'center', flexWrap: 'wrap' }}>
             <div style={{ flex: '1 1 300px' }}>
               <div style={{ 
-                fontSize: '20px', 
-                marginBottom: '20px',
+                fontSize: '18px', 
+                marginBottom: '15px',
                 color: '#FFD700'
               }}>★★★★★</div>
               <p style={{
                 fontFamily: 'Plus Jakarta Sans, sans-serif',
-                fontSize: '18px',
-                lineHeight: '1.8',
+                fontSize: '16px',
+                lineHeight: '1.7',
                 color: '#333',
-                marginBottom: '30px'
+                marginBottom: '20px'
               }}>
                 As the owner of Ocean Breeze Yoga, I struggled to find an affordable website service. uFREEwebsites made it so easy, and now I have a professional site that brings in new students every week. Couldn't be happier!
               </p>
@@ -360,7 +360,7 @@ export const TestimonialsSection = () => {
               <div>
                 <strong style={{
                   fontFamily: 'Plus Jakarta Sans, sans-serif',
-                  fontSize: '20px',
+                  fontSize: '18px',
                   fontWeight: 700,
                   color: '#000000',
                   display: 'block',
