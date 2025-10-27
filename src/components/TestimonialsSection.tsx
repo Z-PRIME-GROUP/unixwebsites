@@ -153,9 +153,10 @@ export const TestimonialsSection = () => {
               }}>★★★★★</div>
               <p style={{
                 fontFamily: 'Plus Jakarta Sans, sans-serif',
-                fontSize: '16px',
+                fontSize: '20px',
                 lineHeight: '1.6',
-                color: '#333',
+                color: '#00139B',
+                fontWeight: 700,
                 marginBottom: '20px'
               }}>
                 uFREEwebsites transformed my business! As the owner of Willow Tree Cafe, I needed an online presence that matched the charm of my café. The free website they built is beautiful, and my customers love how easy it is to navigate. Sales have gone up, and I didn't pay a penny!
@@ -214,9 +215,10 @@ export const TestimonialsSection = () => {
               }}>★★★★★</div>
               <p style={{
                 fontFamily: 'Plus Jakarta Sans, sans-serif',
-                fontSize: '16px',
+                fontSize: '20px',
                 lineHeight: '1.6',
-                color: '#333',
+                color: '#00139B',
+                fontWeight: 700,
                 marginBottom: '20px'
               }}>
                 uFREEwebsites took my business, Apex Automotive, to the next level with a professional and easy-to-navigate website. It's helped me get more clients, and the fact that it was free is unbelievable!
@@ -275,9 +277,10 @@ export const TestimonialsSection = () => {
               }}>★★★★★</div>
               <p style={{
                 fontFamily: 'Plus Jakarta Sans, sans-serif',
-                fontSize: '16px',
+                fontSize: '20px',
                 lineHeight: '1.6',
-                color: '#333',
+                color: '#00139B',
+                fontWeight: 700,
                 marginBottom: '20px'
               }}>
                 Running a pet grooming service like Furry Friends Groomers, having an attractive, easy-to-use website is a must. uFREEwebsites delivered exactly what I needed, for free! My client bookings have increased, and I'm so grateful.
@@ -336,9 +339,10 @@ export const TestimonialsSection = () => {
               }}>★★★★★</div>
               <p style={{
                 fontFamily: 'Plus Jakarta Sans, sans-serif',
-                fontSize: '16px',
+                fontSize: '20px',
                 lineHeight: '1.6',
-                color: '#333',
+                color: '#00139B',
+                fontWeight: 700,
                 marginBottom: '20px'
               }}>
                 As the owner of Ocean Breeze Yoga, I struggled to find an affordable website service. uFREEwebsites made it so easy, and now I have a professional site that brings in new students every week. Couldn't be happier!
@@ -493,7 +497,7 @@ export const TestimonialsSection = () => {
           </p>
           <div style={{ display: 'flex', gap: '15px', alignItems: 'center' }}>
             <img 
-              src="/images/jessicapowell-min-min.webp" 
+              src="/images/oceanbreezeyoga-owner-avatar.webp" 
               alt="Megan Thompson"
               style={{ width: '60px', height: '60px', borderRadius: '50%', objectFit: 'cover' }}
             />
