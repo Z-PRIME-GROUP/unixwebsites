@@ -491,6 +491,10 @@ export const TestimonialsSection = () => {
 
       <style>{`
         /* Swiper Navigation Buttons */
+        #testimonials-swiper {
+          position: relative;
+        }
+        
         .swiper-button-prev,
         .swiper-button-next {
           width: 60px;
@@ -504,15 +508,15 @@ export const TestimonialsSection = () => {
           z-index: 10;
           position: absolute;
           top: 50%;
-          transform: translateY(-50%);
+          margin-top: -30px;
         }
         
         .swiper-button-prev {
-          left: 10px;
+          left: -30px;
         }
         
         .swiper-button-next {
-          right: 10px;
+          right: -30px;
         }
         
         .swiper-button-prev:after,
