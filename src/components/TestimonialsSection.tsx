@@ -490,30 +490,52 @@ export const TestimonialsSection = () => {
       </div>
 
       <style>{`
+        /* Ensure swiper container allows buttons outside */
+        #testimonials-swiper {
+          position: relative;
+          overflow: visible !important;
+        }
+        
+        .swiper-wrapper {
+          overflow: visible;
+        }
+        
         /* Swiper Navigation Buttons */
         .swiper-button-prev,
         .swiper-button-next {
-          width: 60px;
-          height: 60px;
-          background: #FFFFFF;
-          border-radius: 50%;
-          box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-          color: #0234DA;
-          cursor: pointer;
-          pointer-events: auto;
-          z-index: 10;
+          width: 60px !important;
+          height: 60px !important;
+          background: #FFFFFF !important;
+          border-radius: 50% !important;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+          color: #0234DA !important;
+          cursor: pointer !important;
+          pointer-events: auto !important;
+          z-index: 10 !important;
+          position: absolute !important;
+          top: 50% !important;
+          transform: translateY(-50%) !important;
+          margin: 0 !important;
+        }
+        
+        .swiper-button-prev {
+          left: -80px !important;
+        }
+        
+        .swiper-button-next {
+          right: -80px !important;
         }
         
         .swiper-button-prev:after,
         .swiper-button-next:after {
-          font-size: 24px;
-          font-weight: 900;
+          font-size: 24px !important;
+          font-weight: 900 !important;
         }
         
         .swiper-button-prev:hover,
         .swiper-button-next:hover {
-          background: #0234DA;
-          color: #FFFFFF;
+          background: #0234DA !important;
+          color: #FFFFFF !important;
         }
         
         .swiper-pagination-bullet {
@@ -533,6 +555,12 @@ export const TestimonialsSection = () => {
           }
           .col-lg-6 {
             flex: 1 1 100% !important;
+          }
+          .swiper-button-prev {
+            left: 10px !important;
+          }
+          .swiper-button-next {
+            right: 10px !important;
           }
         }
       `}</style>
