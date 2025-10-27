@@ -153,7 +153,7 @@ export const TestimonialsSection = () => {
               }}>★★★★★</div>
               <p style={{
                 fontFamily: 'Plus Jakarta Sans, sans-serif',
-                fontSize: '20px',
+                fontSize: '18px',
                 lineHeight: '1.6',
                 color: '#00139B',
                 fontWeight: 700,
@@ -215,7 +215,7 @@ export const TestimonialsSection = () => {
               }}>★★★★★</div>
               <p style={{
                 fontFamily: 'Plus Jakarta Sans, sans-serif',
-                fontSize: '20px',
+                fontSize: '18px',
                 lineHeight: '1.6',
                 color: '#00139B',
                 fontWeight: 700,
@@ -277,7 +277,7 @@ export const TestimonialsSection = () => {
               }}>★★★★★</div>
               <p style={{
                 fontFamily: 'Plus Jakarta Sans, sans-serif',
-                fontSize: '20px',
+                fontSize: '18px',
                 lineHeight: '1.6',
                 color: '#00139B',
                 fontWeight: 700,
@@ -339,7 +339,7 @@ export const TestimonialsSection = () => {
               }}>★★★★★</div>
               <p style={{
                 fontFamily: 'Plus Jakarta Sans, sans-serif',
-                fontSize: '20px',
+                fontSize: '18px',
                 lineHeight: '1.6',
                 color: '#00139B',
                 fontWeight: 700,
@@ -407,7 +407,7 @@ export const TestimonialsSection = () => {
             fontFamily: 'Plus Jakarta Sans, sans-serif',
             fontSize: '16px',
             lineHeight: '1.6',
-            color: '#0234DA',
+            color: '#00139B',
             fontWeight: 600,
             marginBottom: '30px'
           }}>
@@ -448,7 +448,7 @@ export const TestimonialsSection = () => {
             fontFamily: 'Plus Jakarta Sans, sans-serif',
             fontSize: '16px',
             lineHeight: '1.6',
-            color: '#0234DA',
+            color: '#00139B',
             fontWeight: 600,
             marginBottom: '30px'
           }}>
@@ -489,7 +489,7 @@ export const TestimonialsSection = () => {
             fontFamily: 'Plus Jakarta Sans, sans-serif',
             fontSize: '16px',
             lineHeight: '1.6',
-            color: '#0234DA',
+            color: '#00139B',
             fontWeight: 600,
             marginBottom: '30px'
           }}>
