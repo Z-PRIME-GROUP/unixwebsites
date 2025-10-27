@@ -368,7 +368,7 @@ export const TestimonialsSection = () => {
             </div>
             <div style={{ flex: '1 1 150px', maxWidth: '200px' }}>
               <img 
-                src="/images/emilygarcia-min-min.webp" 
+                src="/images/emilygarcia-min-min.webp"
                 alt="Emily Garcia"
                 style={{
                   width: '100%',
@@ -381,127 +381,184 @@ export const TestimonialsSection = () => {
           </div>
         </div>
 
-        {/* Testimonial 5 - Michael Carter - MUCH MORE COMPACT */}
+        {/* Testimonial 5 - Michael Carter - SAME DESIGN */}
         <div style={{
           background: '#FFFFFF',
-          borderRadius: '10px',
-          padding: '18px',
-          boxShadow: '0 6px 24px rgba(0,0,0,0.05)'
+          borderRadius: '16px',
+          padding: '30px',
+          boxShadow: '0 10px 40px rgba(0,0,0,0.08)'
         }}>
-          <div style={{ display: 'flex', gap: '12px', alignItems: 'center', flexWrap: 'wrap' }}>
-            <div style={{ flex: '1 1 200px' }}>
-              <div style={{ fontSize: '14px', marginBottom: '8px', color: '#FFD700' }}>★★★★★</div>
+          <div style={{ display: 'flex', gap: '20px', alignItems: 'center', flexWrap: 'wrap' }}>
+            <div style={{ flex: '1 1 250px' }}>
+              <div style={{ 
+                fontSize: '18px', 
+                marginBottom: '15px',
+                color: '#FFD700'
+              }}>★★★★★</div>
               <p style={{
                 fontFamily: 'Plus Jakarta Sans, sans-serif',
-                fontSize: '13px',
-                lineHeight: '1.4',
+                fontSize: '16px',
+                lineHeight: '1.6',
                 color: '#333',
-                marginBottom: '12px'
+                marginBottom: '20px'
               }}>
                 As the owner of Blue River Landscaping, I needed a strong online presence to attract clients. uFREEwebsites delivered a stunning website that has brought in more inquiries than ever. Highly recommend!
               </p>
-              <span style={{ display: 'block', height: '2px', width: '35px', background: '#0234DA', marginBottom: '10px' }}></span>
+              <span style={{
+                display: 'block',
+                height: '3px',
+                width: '50px',
+                background: '#0234DA',
+                marginBottom: '15px'
+              }}></span>
               <div>
                 <strong style={{
                   fontFamily: 'Plus Jakarta Sans, sans-serif',
-                  fontSize: '15px',
+                  fontSize: '18px',
                   fontWeight: 700,
                   color: '#000000',
                   display: 'block',
-                  marginBottom: '3px'
+                  marginBottom: '5px'
                 }}>Michael Carter</strong>
-                <span style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', fontSize: '13px', color: '#666' }}>Blue River Landscaping</span>
+                <span style={{
+                  fontFamily: 'Plus Jakarta Sans, sans-serif',
+                  fontSize: '16px',
+                  color: '#666'
+                }}>Blue River Landscaping</span>
               </div>
             </div>
-            <div style={{ flex: '1 1 120px', maxWidth: '150px' }}>
+            <div style={{ flex: '1 1 150px', maxWidth: '200px' }}>
               <img 
-                src="/images/jameswalker-min-min.webp" 
+                src="/images/apexautorepair-owner-avatar.webp" 
                 alt="Michael Carter"
-                style={{ width: '100%', height: 'auto', borderRadius: '8px', boxShadow: '0 4px 16px rgba(0,0,0,0.08)' }}
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  borderRadius: '12px',
+                  boxShadow: '0 8px 24px rgba(0,0,0,0.12)'
+                }}
               />
             </div>
           </div>
         </div>
 
-        {/* Testimonial 6 - Rachel Sanders - MUCH MORE COMPACT */}
+        {/* Testimonial 6 - Rachel Sanders - SAME DESIGN */}
         <div style={{
           background: '#FFFFFF',
-          borderRadius: '10px',
-          padding: '18px',
-          boxShadow: '0 6px 24px rgba(0,0,0,0.05)'
+          borderRadius: '16px',
+          padding: '30px',
+          boxShadow: '0 10px 40px rgba(0,0,0,0.08)'
         }}>
-          <div style={{ display: 'flex', gap: '12px', alignItems: 'center', flexWrap: 'wrap' }}>
-            <div style={{ flex: '1 1 200px' }}>
-              <div style={{ fontSize: '14px', marginBottom: '8px', color: '#FFD700' }}>★★★★★</div>
+          <div style={{ display: 'flex', gap: '20px', alignItems: 'center', flexWrap: 'wrap' }}>
+            <div style={{ flex: '1 1 250px' }}>
+              <div style={{ 
+                fontSize: '18px', 
+                marginBottom: '15px',
+                color: '#FFD700'
+              }}>★★★★★</div>
               <p style={{
                 fontFamily: 'Plus Jakarta Sans, sans-serif',
-                fontSize: '13px',
-                lineHeight: '1.4',
+                fontSize: '16px',
+                lineHeight: '1.6',
                 color: '#333',
-                marginBottom: '12px'
+                marginBottom: '20px'
               }}>
                 uFREEwebsites helped my bakery, Sweet Crumbs, thrive online. The website is not only visually appealing but also easy to update with new products and promotions. I'm so impressed with the results!
               </p>
-              <span style={{ display: 'block', height: '2px', width: '35px', background: '#0234DA', marginBottom: '10px' }}></span>
+              <span style={{
+                display: 'block',
+                height: '3px',
+                width: '50px',
+                background: '#0234DA',
+                marginBottom: '15px'
+              }}></span>
               <div>
                 <strong style={{
                   fontFamily: 'Plus Jakarta Sans, sans-serif',
-                  fontSize: '15px',
+                  fontSize: '18px',
                   fontWeight: 700,
                   color: '#000000',
                   display: 'block',
-                  marginBottom: '3px'
+                  marginBottom: '5px'
                 }}>Rachel Sanders</strong>
-                <span style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', fontSize: '13px', color: '#666' }}>Sweet Crumbs Bakery</span>
+                <span style={{
+                  fontFamily: 'Plus Jakarta Sans, sans-serif',
+                  fontSize: '16px',
+                  color: '#666'
+                }}>Sweet Crumbs Bakery</span>
               </div>
             </div>
-            <div style={{ flex: '1 1 120px', maxWidth: '150px' }}>
+            <div style={{ flex: '1 1 150px', maxWidth: '200px' }}>
               <img 
-                src="/images/lorimatthews-min-min.webp" 
+                src="/images/willowtreecare-owner-avatar.webp" 
                 alt="Rachel Sanders"
-                style={{ width: '100%', height: 'auto', borderRadius: '8px', boxShadow: '0 4px 16px rgba(0,0,0,0.08)' }}
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  borderRadius: '12px',
+                  boxShadow: '0 8px 24px rgba(0,0,0,0.12)'
+                }}
               />
             </div>
           </div>
         </div>
 
-        {/* Testimonial 7 - Megan Thompson - MUCH MORE COMPACT */}
+        {/* Testimonial 7 - Megan Thompson - SAME DESIGN */}
         <div style={{
           background: '#FFFFFF',
-          borderRadius: '10px',
-          padding: '18px',
-          boxShadow: '0 6px 24px rgba(0,0,0,0.05)'
+          borderRadius: '16px',
+          padding: '30px',
+          boxShadow: '0 10px 40px rgba(0,0,0,0.08)'
         }}>
-          <div style={{ display: 'flex', gap: '12px', alignItems: 'center', flexWrap: 'wrap' }}>
-            <div style={{ flex: '1 1 200px' }}>
-              <div style={{ fontSize: '14px', marginBottom: '8px', color: '#FFD700' }}>★★★★★</div>
+          <div style={{ display: 'flex', gap: '20px', alignItems: 'center', flexWrap: 'wrap' }}>
+            <div style={{ flex: '1 1 250px' }}>
+              <div style={{ 
+                fontSize: '18px', 
+                marginBottom: '15px',
+                color: '#FFD700'
+              }}>★★★★★</div>
               <p style={{
                 fontFamily: 'Plus Jakarta Sans, sans-serif',
-                fontSize: '13px',
-                lineHeight: '1.4',
+                fontSize: '16px',
+                lineHeight: '1.6',
                 color: '#333',
-                marginBottom: '12px'
+                marginBottom: '20px'
               }}>
                 The team at uFREEwebsites exceeded my expectations! As a personal trainer running FitLife Gym, I needed a website to help manage class bookings. They delivered a professional site that's boosted my client base significantly.
               </p>
-              <span style={{ display: 'block', height: '2px', width: '35px', background: '#0234DA', marginBottom: '10px' }}></span>
+              <span style={{
+                display: 'block',
+                height: '3px',
+                width: '50px',
+                background: '#0234DA',
+                marginBottom: '15px'
+              }}></span>
               <div>
                 <strong style={{
                   fontFamily: 'Plus Jakarta Sans, sans-serif',
-                  fontSize: '15px',
+                  fontSize: '18px',
                   fontWeight: 700,
                   color: '#000000',
                   display: 'block',
-                  marginBottom: '3px'
+                  marginBottom: '5px'
                 }}>Megan Thompson</strong>
-                <span style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', fontSize: '13px', color: '#666' }}>FitLife Gym</span>
+                <span style={{
+                  fontFamily: 'Plus Jakarta Sans, sans-serif',
+                  fontSize: '16px',
+                  color: '#666'
+                }}>FitLife Gym</span>
               </div>
             </div>
-            <div style={{ flex: '1 1 120px', maxWidth: '150px' }}>
+            <div style={{ flex: '1 1 150px', maxWidth: '200px' }}>
               <img 
-                src="/images/oceanbreezeyoga-owner-avatar.webp" 
+                src="/images/jessicapowell-min-min.webp" 
                 alt="Megan Thompson"
-                style={{ width: '100%', height: 'auto', borderRadius: '8px', boxShadow: '0 4px 16px rgba(0,0,0,0.08)' }}
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  borderRadius: '12px',
+                  boxShadow: '0 8px 24px rgba(0,0,0,0.12)'
+                }}
               />
             </div>
           </div>
