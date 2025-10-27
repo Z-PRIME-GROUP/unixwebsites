@@ -7,132 +7,116 @@ export const TestimonialsSection = () => {
       background: 'linear-gradient(180deg, #E8EFFF 0%, #E3E8FF 100%)',
       padding: '80px 5%'
     }}>
-      {/* Featured Review Section - Sarah Jenkins */}
+      {/* Featured Review Section - Sarah Jenkins - Single large card */}
       <div style={{
-        maxWidth: '1200px',
-        margin: '0 auto 80px',
-        display: 'flex',
-        gap: '60px',
-        alignItems: 'center',
-        flexWrap: 'wrap'
+        maxWidth: '900px',
+        margin: '0 auto 60px',
+        position: 'relative',
+        minHeight: '500px'
       }}>
-        {/* Left Column - Text Content */}
-        <div style={{ flex: '1 1 400px' }}>
-          <div style={{
-            fontFamily: 'Plus Jakarta Sans, sans-serif',
-            fontSize: '14px',
-            fontWeight: 600,
-            color: '#0234DA',
-            marginBottom: '16px',
-            textTransform: 'uppercase',
-            letterSpacing: '0.5px'
-          }}>
-            Trusted by Thousands of Entrepreneurs
-          </div>
-          
-          <h2 style={{
-            fontFamily: 'Reaktif, sans-serif',
-            fontSize: '48px',
-            fontWeight: 700,
-            color: '#000000',
-            marginBottom: '20px',
-            lineHeight: '1.2'
-          }}>
-            See How We've Transformed Businesses
-          </h2>
-          
+        {/* Large Background Image */}
+        <img 
+          src="/images/reviewPhoto-min-min-e1726036254972.webp"
+          alt="Sarah Jenkins"
+          style={{
+            width: '100%',
+            height: 'auto',
+            borderRadius: '20px',
+            boxShadow: '0 20px 60px rgba(0,0,0,0.15)'
+          }}
+        />
+
+        {/* Quote Card Overlay - Bottom Left */}
+        <div style={{
+          position: 'absolute',
+          bottom: '40px',
+          left: '40px',
+          background: '#FFFFFF',
+          borderRadius: '16px',
+          padding: '40px',
+          boxShadow: '0 10px 40px rgba(0,0,0,0.2)',
+          maxWidth: '500px',
+          zIndex: 2
+        }}>
           <p style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
-            fontSize: '16px',
-            lineHeight: '1.6',
-            color: '#333',
-            marginBottom: '30px'
+            fontSize: '20px',
+            fontWeight: 600,
+            color: '#000000',
+            lineHeight: '1.5',
+            marginBottom: '24px'
           }}>
-            Join thousands of entrepreneurs who have transformed their businesses with a professional, free website. Our clients see real results - more customers, more sales, and more success.
+            "I can't thank uFREEwebsites enough! I would've never imagined getting such a high-quality site for FREE."
           </p>
           
           <div style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
-            fontSize: '18px',
+            fontSize: '20px',
             fontWeight: 700,
             color: '#000000',
-            marginBottom: '10px'
+            marginBottom: '4px'
           }}>
-            Exceptional 4.9 Rating
+            Sarah Jenkins
           </div>
           
-          <div style={{ fontSize: '24px' }}>
-            ⭐⭐⭐⭐⭐
+          <div style={{
+            fontFamily: 'Plus Jakarta Sans, sans-serif',
+            fontSize: '16px',
+            color: '#666666'
+          }}>
+            Green Thumb Nursery
           </div>
         </div>
+      </div>
 
-        {/* Right Column - Featured Review Card with Image */}
-        <div style={{ 
-          flex: '1 1 500px',
-          position: 'relative',
-          minHeight: '400px'
+      {/* Section Header - Moved here after featured review */}
+      <div style={{
+        maxWidth: '1200px',
+        margin: '0 auto 60px',
+        textAlign: 'center'
+      }}>
+        <div style={{
+          fontFamily: 'Plus Jakarta Sans, sans-serif',
+          fontSize: '14px',
+          fontWeight: 600,
+          color: '#0234DA',
+          marginBottom: '16px',
+          textTransform: 'uppercase',
+          letterSpacing: '0.5px'
         }}>
-          {/* Background Image */}
-          <div style={{
-            position: 'absolute',
-            right: '0',
-            top: '50%',
-            transform: 'translateY(-50%)',
-            width: '70%',
-            zIndex: 1
-          }}>
-            <img 
-              src="/images/reviewPhoto-min-min-e1726036254972.webp"
-              alt="Sarah Jenkins"
-              style={{
-                width: '100%',
-                height: 'auto',
-                borderRadius: '24px',
-                boxShadow: '0 10px 30px rgba(0,0,0,0.15)'
-              }}
-            />
-          </div>
-
-          {/* White Card Overlay */}
-          <div style={{
-            position: 'relative',
-            zIndex: 2,
-            background: '#FFFFFF',
-            borderRadius: '12px',
-            padding: '30px',
-            boxShadow: '0 10px 40px rgba(0,0,0,0.1)',
-            maxWidth: '400px',
-            marginTop: '40px'
-          }}>
-            <p style={{
-              fontFamily: 'Plus Jakarta Sans, sans-serif',
-              fontSize: '18px',
-              fontWeight: 600,
-              color: '#0234DA',
-              lineHeight: '1.5',
-              marginBottom: '20px'
-            }}>
-              "I can't thank uFREEwebsites enough! I would've never imagined getting such a high-quality site for FREE."
-            </p>
-            
-            <div style={{
-              fontFamily: 'Plus Jakarta Sans, sans-serif',
-              fontSize: '24px',
-              fontWeight: 700,
-              color: '#000000',
-              marginBottom: '4px'
-            }}>
-              Sarah Jenkins
-            </div>
-            
-            <div style={{
-              fontFamily: 'Plus Jakarta Sans, sans-serif',
-              fontSize: '16px',
-              color: '#999999'
-            }}>
-              Green Thumb Nursery
-            </div>
-          </div>
+          Trusted by Thousands of Entrepreneurs
+        </div>
+        
+        <h2 style={{
+          fontFamily: 'Reaktif, sans-serif',
+          fontSize: '48px',
+          fontWeight: 700,
+          color: '#000000',
+          marginBottom: '20px',
+          lineHeight: '1.2'
+        }}>
+          See How We've Transformed Businesses
+        </h2>
+        
+        <p style={{
+          fontFamily: 'Plus Jakarta Sans, sans-serif',
+          fontSize: '18px',
+          lineHeight: '1.6',
+          color: '#333',
+          marginBottom: '20px',
+          maxWidth: '800px',
+          margin: '0 auto 20px'
+        }}>
+          Don't just take our word for it. Hear from business owners across industries who have elevated their online presence with a FREE, custom-built website from uFREEwebsites.
+        </p>
+        
+        <div style={{
+          fontFamily: 'Plus Jakarta Sans, sans-serif',
+          fontSize: '18px',
+          fontWeight: 700,
+          color: '#0234DA'
+        }}>
+          Exceptional 4.9 rating ⭐⭐⭐⭐⭐
         </div>
       </div>
 
