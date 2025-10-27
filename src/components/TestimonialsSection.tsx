@@ -401,10 +401,10 @@ export const TestimonialsSection = () => {
           <div style={{ fontSize: '20px', marginBottom: '20px', color: '#000000' }}>★★★★★</div>
           <p style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
-            fontSize: '16px',
+            fontSize: '20px',
             lineHeight: '1.6',
-            color: '#0234DA',
-            fontWeight: 600,
+            color: '#00139B',
+            fontWeight: 700,
             marginBottom: '30px'
           }}>
             As the owner of Blue River Landscaping, I needed a strong online presence to attract clients. uFREEwebsites delivered a stunning website that has brought in more inquiries than ever. Highly recommend!
@@ -442,10 +442,10 @@ export const TestimonialsSection = () => {
           <div style={{ fontSize: '20px', marginBottom: '20px', color: '#000000' }}>★★★★★</div>
           <p style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
-            fontSize: '16px',
+            fontSize: '20px',
             lineHeight: '1.6',
-            color: '#0234DA',
-            fontWeight: 600,
+            color: '#00139B',
+            fontWeight: 700,
             marginBottom: '30px'
           }}>
             uFREEwebsites helped my bakery, Sweet Crumbs, thrive online. The website is not only visually appealing but also easy to update with new products and promotions. I'm so impressed with the results!
@@ -483,10 +483,10 @@ export const TestimonialsSection = () => {
           <div style={{ fontSize: '20px', marginBottom: '20px', color: '#000000' }}>★★★★★</div>
           <p style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
-            fontSize: '16px',
+            fontSize: '20px',
             lineHeight: '1.6',
-            color: '#0234DA',
-            fontWeight: 600,
+            color: '#00139B',
+            fontWeight: 700,
             marginBottom: '30px'
           }}>
             The team at uFREEwebsites exceeded my expectations! As a personal trainer running FitLife Gym, I needed a website to help manage class bookings. They delivered a professional site that's boosted my client base significantly.
