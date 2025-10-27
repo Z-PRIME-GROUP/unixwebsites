@@ -142,17 +142,17 @@ export const TestimonialsSection = () => {
         margin: '0 auto',
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fit, minmax(500px, 1fr))',
-        gap: '30px'
+        gap: '20px'
       }}>
         {/* Testimonial 1 - Lori Matthews */}
         <div style={{
           background: '#FFFFFF',
-          borderRadius: '20px',
-          padding: '40px',
+          borderRadius: '16px',
+          padding: '30px',
           boxShadow: '0 10px 40px rgba(0,0,0,0.08)'
         }}>
-          <div style={{ display: 'flex', gap: '30px', alignItems: 'center', flexWrap: 'wrap' }}>
-            <div style={{ flex: '1 1 300px' }}>
+          <div style={{ display: 'flex', gap: '20px', alignItems: 'center', flexWrap: 'wrap' }}>
+            <div style={{ flex: '1 1 250px' }}>
               <div style={{ 
                 fontSize: '18px', 
                 marginBottom: '15px',
@@ -161,7 +161,7 @@ export const TestimonialsSection = () => {
               <p style={{
                 fontFamily: 'Plus Jakarta Sans, sans-serif',
                 fontSize: '16px',
-                lineHeight: '1.7',
+                lineHeight: '1.6',
                 color: '#333',
                 marginBottom: '20px'
               }}>
@@ -170,9 +170,9 @@ export const TestimonialsSection = () => {
               <span style={{
                 display: 'block',
                 height: '3px',
-                width: '60px',
+                width: '50px',
                 background: '#0234DA',
-                marginBottom: '20px'
+                marginBottom: '15px'
               }}></span>
               <div>
                 <strong style={{
@@ -190,7 +190,7 @@ export const TestimonialsSection = () => {
                 }}>Willow Tree Cafe</span>
               </div>
             </div>
-            <div style={{ flex: '1 1 200px' }}>
+            <div style={{ flex: '1 1 150px', maxWidth: '200px' }}>
               <img 
                 src="/images/lorimatthews-min-min.webp" 
                 alt="Lori Matthews"
@@ -208,12 +208,12 @@ export const TestimonialsSection = () => {
         {/* Testimonial 2 - James Walker */}
         <div style={{
           background: '#FFFFFF',
-          borderRadius: '20px',
-          padding: '40px',
+          borderRadius: '16px',
+          padding: '30px',
           boxShadow: '0 10px 40px rgba(0,0,0,0.08)'
         }}>
-          <div style={{ display: 'flex', gap: '30px', alignItems: 'center', flexWrap: 'wrap' }}>
-            <div style={{ flex: '1 1 300px' }}>
+          <div style={{ display: 'flex', gap: '20px', alignItems: 'center', flexWrap: 'wrap' }}>
+            <div style={{ flex: '1 1 250px' }}>
               <div style={{ 
                 fontSize: '18px', 
                 marginBottom: '15px',
@@ -222,7 +222,7 @@ export const TestimonialsSection = () => {
               <p style={{
                 fontFamily: 'Plus Jakarta Sans, sans-serif',
                 fontSize: '16px',
-                lineHeight: '1.7',
+                lineHeight: '1.6',
                 color: '#333',
                 marginBottom: '20px'
               }}>
@@ -231,9 +231,9 @@ export const TestimonialsSection = () => {
               <span style={{
                 display: 'block',
                 height: '3px',
-                width: '60px',
+                width: '50px',
                 background: '#0234DA',
-                marginBottom: '20px'
+                marginBottom: '15px'
               }}></span>
               <div>
                 <strong style={{
@@ -251,7 +251,7 @@ export const TestimonialsSection = () => {
                 }}>Apex Automotive</span>
               </div>
             </div>
-            <div style={{ flex: '1 1 200px' }}>
+            <div style={{ flex: '1 1 150px', maxWidth: '200px' }}>
               <img 
                 src="/images/jameswalker-min-min.webp" 
                 alt="James Walker"
@@ -269,12 +269,12 @@ export const TestimonialsSection = () => {
         {/* Testimonial 3 - Jessica Powell */}
         <div style={{
           background: '#FFFFFF',
-          borderRadius: '20px',
-          padding: '40px',
+          borderRadius: '16px',
+          padding: '30px',
           boxShadow: '0 10px 40px rgba(0,0,0,0.08)'
         }}>
-          <div style={{ display: 'flex', gap: '30px', alignItems: 'center', flexWrap: 'wrap' }}>
-            <div style={{ flex: '1 1 300px' }}>
+          <div style={{ display: 'flex', gap: '20px', alignItems: 'center', flexWrap: 'wrap' }}>
+            <div style={{ flex: '1 1 250px' }}>
               <div style={{ 
                 fontSize: '18px', 
                 marginBottom: '15px',
@@ -283,7 +283,7 @@ export const TestimonialsSection = () => {
               <p style={{
                 fontFamily: 'Plus Jakarta Sans, sans-serif',
                 fontSize: '16px',
-                lineHeight: '1.7',
+                lineHeight: '1.6',
                 color: '#333',
                 marginBottom: '20px'
               }}>
@@ -292,9 +292,9 @@ export const TestimonialsSection = () => {
               <span style={{
                 display: 'block',
                 height: '3px',
-                width: '60px',
+                width: '50px',
                 background: '#0234DA',
-                marginBottom: '20px'
+                marginBottom: '15px'
               }}></span>
               <div>
                 <strong style={{
@@ -312,7 +312,7 @@ export const TestimonialsSection = () => {
                 }}>Furry Friends Groomers</span>
               </div>
             </div>
-            <div style={{ flex: '1 1 200px' }}>
+            <div style={{ flex: '1 1 150px', maxWidth: '200px' }}>
               <img 
                 src="/images/jessicapowell-min-min.webp" 
                 alt="Jessica Powell"
@@ -330,12 +330,12 @@ export const TestimonialsSection = () => {
         {/* Testimonial 4 - Emily Garcia */}
         <div style={{
           background: '#FFFFFF',
-          borderRadius: '20px',
-          padding: '40px',
+          borderRadius: '16px',
+          padding: '30px',
           boxShadow: '0 10px 40px rgba(0,0,0,0.08)'
         }}>
-          <div style={{ display: 'flex', gap: '30px', alignItems: 'center', flexWrap: 'wrap' }}>
-            <div style={{ flex: '1 1 300px' }}>
+          <div style={{ display: 'flex', gap: '20px', alignItems: 'center', flexWrap: 'wrap' }}>
+            <div style={{ flex: '1 1 250px' }}>
               <div style={{ 
                 fontSize: '18px', 
                 marginBottom: '15px',
@@ -344,7 +344,7 @@ export const TestimonialsSection = () => {
               <p style={{
                 fontFamily: 'Plus Jakarta Sans, sans-serif',
                 fontSize: '16px',
-                lineHeight: '1.7',
+                lineHeight: '1.6',
                 color: '#333',
                 marginBottom: '20px'
               }}>
@@ -353,9 +353,9 @@ export const TestimonialsSection = () => {
               <span style={{
                 display: 'block',
                 height: '3px',
-                width: '60px',
+                width: '50px',
                 background: '#0234DA',
-                marginBottom: '20px'
+                marginBottom: '15px'
               }}></span>
               <div>
                 <strong style={{
@@ -373,7 +373,7 @@ export const TestimonialsSection = () => {
                 }}>Ocean Breeze Yoga</span>
               </div>
             </div>
-            <div style={{ flex: '1 1 200px' }}>
+            <div style={{ flex: '1 1 150px', maxWidth: '200px' }}>
               <img 
                 src="/images/oceanbreezeyoga-owner-avatar.webp" 
                 alt="Emily Garcia"
