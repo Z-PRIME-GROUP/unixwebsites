@@ -131,7 +131,7 @@ export const TestimonialsSection = () => {
               style={{
                 width: '100%',
                 height: 'auto',
-                borderRadius: '12px',
+                borderRadius: '24px',
                 boxShadow: '0 10px 30px rgba(0,0,0,0.15)'
               }}
             />
@@ -200,6 +200,11 @@ export const TestimonialsSection = () => {
                     <div className="row" style={{ display: 'flex', gap: '40px', alignItems: 'center' }}>
                       <div className="col-lg-6" style={{ flex: '1 1 45%' }}>
                         <div className="elementskit-commentor-content">
+                          <div style={{ 
+                            fontSize: '20px', 
+                            marginBottom: '20px',
+                            color: '#FFD700'
+                          }}>★★★★★</div>
                           <p style={{
                             fontFamily: 'Plus Jakarta Sans, sans-serif',
                             fontSize: '18px',
@@ -264,6 +269,11 @@ export const TestimonialsSection = () => {
                     <div className="row" style={{ display: 'flex', gap: '40px', alignItems: 'center' }}>
                       <div className="col-lg-6" style={{ flex: '1 1 45%' }}>
                         <div className="elementskit-commentor-content">
+                          <div style={{ 
+                            fontSize: '20px', 
+                            marginBottom: '20px',
+                            color: '#FFD700'
+                          }}>★★★★★</div>
                           <p style={{
                             fontFamily: 'Plus Jakarta Sans, sans-serif',
                             fontSize: '18px',
@@ -328,6 +338,11 @@ export const TestimonialsSection = () => {
                     <div className="row" style={{ display: 'flex', gap: '40px', alignItems: 'center' }}>
                       <div className="col-lg-6" style={{ flex: '1 1 45%' }}>
                         <div className="elementskit-commentor-content">
+                          <div style={{ 
+                            fontSize: '20px', 
+                            marginBottom: '20px',
+                            color: '#FFD700'
+                          }}>★★★★★</div>
                           <p style={{
                             fontFamily: 'Plus Jakarta Sans, sans-serif',
                             fontSize: '18px',
@@ -392,6 +407,11 @@ export const TestimonialsSection = () => {
                     <div className="row" style={{ display: 'flex', gap: '40px', alignItems: 'center' }}>
                       <div className="col-lg-6" style={{ flex: '1 1 45%' }}>
                         <div className="elementskit-commentor-content">
+                          <div style={{ 
+                            fontSize: '20px', 
+                            marginBottom: '20px',
+                            color: '#FFD700'
+                          }}>★★★★★</div>
                           <p style={{
                             fontFamily: 'Plus Jakarta Sans, sans-serif',
                             fontSize: '18px',
@@ -459,8 +479,8 @@ export const TestimonialsSection = () => {
         /* Swiper Navigation Buttons */
         .swiper-button-prev,
         .swiper-button-next {
-          width: 44px;
-          height: 44px;
+          width: 60px;
+          height: 60px;
           background: #FFFFFF;
           border-radius: 50%;
           box-shadow: 0 4px 12px rgba(0,0,0,0.15);
@@ -469,7 +489,7 @@ export const TestimonialsSection = () => {
         
         .swiper-button-prev:after,
         .swiper-button-next:after {
-          font-size: 20px;
+          font-size: 24px;
           font-weight: 900;
         }
         
