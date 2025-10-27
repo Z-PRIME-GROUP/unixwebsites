@@ -195,7 +195,7 @@ export const TestimonialsSection = () => {
       </div>
 
       {/* Testimonials Carousel - Swiper */}
-      <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 80px', position: 'relative' }}>
         <div 
           className="elementskit-testimonial-slider arrow_inside elementskit-default-testimonial slider-dotted"
           data-config='{"rtl":false,"arrows":true,"dots":true,"pauseOnHover":true,"autoplay":true,"speed":1000,"slidesPerGroup":1,"slidesPerView":1,"loop":true,"spaceBetween":15}'
@@ -512,11 +512,11 @@ export const TestimonialsSection = () => {
         }
         
         .swiper-button-prev {
-          left: -30px;
+          left: -70px;
         }
         
         .swiper-button-next {
-          right: -30px;
+          right: -70px;
         }
         
         .swiper-button-prev:after,
