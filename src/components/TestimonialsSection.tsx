@@ -1,52 +1,39 @@
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 
 export const TestimonialsSection = () => {
-  const swiperRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
-    if (swiperRef.current && (window as any).Swiper) {
-      new (window as any).Swiper(swiperRef.current, {
-        loop: true,
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        slidesPerView: 1,
-        spaceBetween: 30,
-      });
-    }
-  }, []);
+    // Initialize Swiper after component mounts
+    const initSwiper = () => {
+      if (typeof window !== 'undefined' && (window as any).Swiper) {
+        const swiperEl = document.getElementById('testimonials-swiper');
+        if (swiperEl && !(swiperEl as any).swiper) {
+          new (window as any).Swiper('#testimonials-swiper', {
+            rtl: false,
+            loop: true,
+            speed: 1000,
+            autoplay: {
+              delay: 5000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true
+            },
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev'
+            },
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true
+            },
+            slidesPerView: 1,
+            spaceBetween: 15
+          });
+        }
+      }
+    };
 
-  const testimonials = [
-    {
-      name: "Emily Garcia",
-      business: "Ocean Breeze Yoga",
-      quote: "As the owner of Ocean Breeze Yoga, I struggled to find an affordable website service. uFREEwebsites made it so easy, and now I have a professional site that brings in new students every week. Couldn't be happier!",
-      image: "/images/oceanbreezeyoga-owner-avatar.webp"
-    },
-    {
-      name: "Lori Matthews",
-      business: "Willow Tree Cafe",
-      quote: "uFREEwebsites transformed my business! As the owner of Willow Tree Cafe, I needed an online presence that matched the charm of my café. The free website they built is beautiful, and my customers love how easy it is to navigate. Sales have gone up, and I didn't pay a penny!",
-      image: "/images/lorimatthews-min-min.webp"
-    },
-    {
-      name: "James Walker",
-      business: "Apex Automotive",
-      quote: "uFREEwebsites took my business, Apex Automotive, to the next level with a professional and easy-to-navigate website. It's helped me get more clients, and the fact that it was free is unbelievable!",
-      image: "/images/jameswalker-min-min.webp"
-    },
-    {
-      name: "Jessica Powell",
-      business: "Furry Friends Groomers",
-      quote: "Running a pet grooming service like Furry Friends Groomers, having an attractive, easy-to-use website is a must. uFREEwebsites delivered exactly what I needed, for free! My client bookings have increased, and I'm so grateful.",
-      image: "/images/jessicapowell-min-min.webp"
-    }
-  ];
+    // Delay to ensure Swiper library is loaded
+    setTimeout(initSwiper, 100);
+  }, []);
 
   return (
     <section style={{
@@ -182,118 +169,288 @@ export const TestimonialsSection = () => {
         </div>
       </div>
 
-      {/* Swiper Testimonials Carousel */}
+      {/* Testimonials Carousel - Swiper */}
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-        <div className="swiper testimonials-swiper" ref={swiperRef}>
-          <div className="swiper-wrapper">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="swiper-slide">
-                <div style={{
-                  display: 'grid',
-                  gridTemplateColumns: '1fr 1fr',
-                  gap: '40px',
-                  alignItems: 'center',
-                  background: '#FFFFFF',
-                  padding: '40px',
-                  borderRadius: '20px',
-                  boxShadow: '0 10px 40px rgba(0,0,0,0.08)'
-                }}>
-                  {/* Left Column - Image */}
-                  <div style={{
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center'
+        <div 
+          className="elementskit-testimonial-slider arrow_inside elementskit-default-testimonial slider-dotted"
+          data-config='{"rtl":false,"arrows":true,"dots":true,"pauseOnHover":true,"autoplay":true,"speed":1000,"slidesPerGroup":1,"slidesPerView":1,"loop":true,"spaceBetween":15}'
+        >
+          <div className="ekit-main-swiper swiper" id="testimonials-swiper">
+            <div className="swiper-wrapper">
+              {/* Slide 1 - Lori Matthews */}
+              <div className="swiper-slide">
+                <div className="swiper-slide-inner">
+                  <div className="elementskit-single-testimonial-slider" style={{
+                    background: '#FFFFFF',
+                    borderRadius: '20px',
+                    padding: '60px',
+                    boxShadow: '0 10px 40px rgba(0,0,0,0.08)'
                   }}>
-                    <img
-                      src={testimonial.image}
-                      alt={testimonial.name}
-                      style={{
-                        width: '100%',
-                        maxWidth: '400px',
-                        height: 'auto',
-                        borderRadius: '12px',
-                        boxShadow: '0 8px 24px rgba(0,0,0,0.12)'
-                      }}
-                    />
-                  </div>
-
-                  {/* Right Column - Quote and Name */}
-                  <div>
-                    <div style={{
-                      fontSize: '48px',
-                      color: '#0234DA',
-                      marginBottom: '10px',
-                      lineHeight: '1',
-                      fontFamily: 'Georgia, serif'
-                    }}>
-                      "
-                    </div>
-                    <p style={{
-                      fontFamily: 'Plus Jakarta Sans, sans-serif',
-                      fontSize: '18px',
-                      lineHeight: '1.6',
-                      color: '#333',
-                      marginBottom: '24px'
-                    }}>
-                      {testimonial.quote}
-                    </p>
-                    <div>
-                      <div style={{
-                        fontFamily: 'Plus Jakarta Sans, sans-serif',
-                        fontSize: '20px',
-                        fontWeight: 700,
-                        color: '#000000',
-                        marginBottom: '4px'
-                      }}>
-                        {testimonial.name}
+                    <div className="row" style={{ display: 'flex', gap: '40px', alignItems: 'center' }}>
+                      <div className="col-lg-6" style={{ flex: '1 1 45%' }}>
+                        <div className="elementskit-commentor-content">
+                          <p style={{
+                            fontFamily: 'Plus Jakarta Sans, sans-serif',
+                            fontSize: '18px',
+                            lineHeight: '1.8',
+                            color: '#333',
+                            marginBottom: '30px'
+                          }}>
+                            uFREEwebsites transformed my business! As the owner of Willow Tree Cafe, I needed an online presence that matched the charm of my café. The free website they built is beautiful, and my customers love how easy it is to navigate. Sales have gone up, and I didn't pay a penny!
+                          </p>
+                          <span className="elementskit-border-hr" style={{
+                            display: 'block',
+                            height: '3px',
+                            width: '60px',
+                            background: '#0234DA',
+                            marginBottom: '20px'
+                          }}></span>
+                          <span className="elementskit-profile-info">
+                            <strong className="elementskit-author-name" style={{
+                              fontFamily: 'Plus Jakarta Sans, sans-serif',
+                              fontSize: '20px',
+                              fontWeight: 700,
+                              color: '#000000',
+                              display: 'block',
+                              marginBottom: '5px'
+                            }}>Lori Matthews</strong>
+                            <span className="elementskit-author-des" style={{
+                              fontFamily: 'Plus Jakarta Sans, sans-serif',
+                              fontSize: '16px',
+                              color: '#666'
+                            }}>Willow Tree Cafe</span>
+                          </span>
+                        </div>
                       </div>
-                      <div style={{
-                        fontFamily: 'Plus Jakarta Sans, sans-serif',
-                        fontSize: '16px',
-                        color: '#666'
-                      }}>
-                        {testimonial.business}
+                      <div className="col-lg-6" style={{ flex: '1 1 45%' }}>
+                        <div className="elementskit-profile-image-card">
+                          <img 
+                            src="/images/lorimatthews-min-min.webp" 
+                            alt="Lori Matthews"
+                            style={{
+                              width: '100%',
+                              height: 'auto',
+                              borderRadius: '12px',
+                              boxShadow: '0 8px 24px rgba(0,0,0,0.12)'
+                            }}
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            ))}
+
+              {/* Slide 2 - James Walker */}
+              <div className="swiper-slide">
+                <div className="swiper-slide-inner">
+                  <div className="elementskit-single-testimonial-slider" style={{
+                    background: '#FFFFFF',
+                    borderRadius: '20px',
+                    padding: '60px',
+                    boxShadow: '0 10px 40px rgba(0,0,0,0.08)'
+                  }}>
+                    <div className="row" style={{ display: 'flex', gap: '40px', alignItems: 'center' }}>
+                      <div className="col-lg-6" style={{ flex: '1 1 45%' }}>
+                        <div className="elementskit-commentor-content">
+                          <p style={{
+                            fontFamily: 'Plus Jakarta Sans, sans-serif',
+                            fontSize: '18px',
+                            lineHeight: '1.8',
+                            color: '#333',
+                            marginBottom: '30px'
+                          }}>
+                            uFREEwebsites took my business, Apex Automotive, to the next level with a professional and easy-to-navigate website. It's helped me get more clients, and the fact that it was free is unbelievable!
+                          </p>
+                          <span className="elementskit-border-hr" style={{
+                            display: 'block',
+                            height: '3px',
+                            width: '60px',
+                            background: '#0234DA',
+                            marginBottom: '20px'
+                          }}></span>
+                          <span className="elementskit-profile-info">
+                            <strong className="elementskit-author-name" style={{
+                              fontFamily: 'Plus Jakarta Sans, sans-serif',
+                              fontSize: '20px',
+                              fontWeight: 700,
+                              color: '#000000',
+                              display: 'block',
+                              marginBottom: '5px'
+                            }}>James Walker</strong>
+                            <span className="elementskit-author-des" style={{
+                              fontFamily: 'Plus Jakarta Sans, sans-serif',
+                              fontSize: '16px',
+                              color: '#666'
+                            }}>Apex Automotive</span>
+                          </span>
+                        </div>
+                      </div>
+                      <div className="col-lg-6" style={{ flex: '1 1 45%' }}>
+                        <div className="elementskit-profile-image-card">
+                          <img 
+                            src="/images/jameswalker-min-min.webp" 
+                            alt="James Walker"
+                            style={{
+                              width: '100%',
+                              height: 'auto',
+                              borderRadius: '12px',
+                              boxShadow: '0 8px 24px rgba(0,0,0,0.12)'
+                            }}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Slide 3 - Jessica Powell */}
+              <div className="swiper-slide">
+                <div className="swiper-slide-inner">
+                  <div className="elementskit-single-testimonial-slider" style={{
+                    background: '#FFFFFF',
+                    borderRadius: '20px',
+                    padding: '60px',
+                    boxShadow: '0 10px 40px rgba(0,0,0,0.08)'
+                  }}>
+                    <div className="row" style={{ display: 'flex', gap: '40px', alignItems: 'center' }}>
+                      <div className="col-lg-6" style={{ flex: '1 1 45%' }}>
+                        <div className="elementskit-commentor-content">
+                          <p style={{
+                            fontFamily: 'Plus Jakarta Sans, sans-serif',
+                            fontSize: '18px',
+                            lineHeight: '1.8',
+                            color: '#333',
+                            marginBottom: '30px'
+                          }}>
+                            Running a pet grooming service like Furry Friends Groomers, having an attractive, easy-to-use website is a must. uFREEwebsites delivered exactly what I needed, for free! My client bookings have increased, and I'm so grateful.
+                          </p>
+                          <span className="elementskit-border-hr" style={{
+                            display: 'block',
+                            height: '3px',
+                            width: '60px',
+                            background: '#0234DA',
+                            marginBottom: '20px'
+                          }}></span>
+                          <span className="elementskit-profile-info">
+                            <strong className="elementskit-author-name" style={{
+                              fontFamily: 'Plus Jakarta Sans, sans-serif',
+                              fontSize: '20px',
+                              fontWeight: 700,
+                              color: '#000000',
+                              display: 'block',
+                              marginBottom: '5px'
+                            }}>Jessica Powell</strong>
+                            <span className="elementskit-author-des" style={{
+                              fontFamily: 'Plus Jakarta Sans, sans-serif',
+                              fontSize: '16px',
+                              color: '#666'
+                            }}>Furry Friends Groomers</span>
+                          </span>
+                        </div>
+                      </div>
+                      <div className="col-lg-6" style={{ flex: '1 1 45%' }}>
+                        <div className="elementskit-profile-image-card">
+                          <img 
+                            src="/images/jessicapowell-min-min.webp" 
+                            alt="Jessica Powell"
+                            style={{
+                              width: '100%',
+                              height: 'auto',
+                              borderRadius: '12px',
+                              boxShadow: '0 8px 24px rgba(0,0,0,0.12)'
+                            }}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Slide 4 - Emily Garcia */}
+              <div className="swiper-slide">
+                <div className="swiper-slide-inner">
+                  <div className="elementskit-single-testimonial-slider" style={{
+                    background: '#FFFFFF',
+                    borderRadius: '20px',
+                    padding: '60px',
+                    boxShadow: '0 10px 40px rgba(0,0,0,0.08)'
+                  }}>
+                    <div className="row" style={{ display: 'flex', gap: '40px', alignItems: 'center' }}>
+                      <div className="col-lg-6" style={{ flex: '1 1 45%' }}>
+                        <div className="elementskit-commentor-content">
+                          <p style={{
+                            fontFamily: 'Plus Jakarta Sans, sans-serif',
+                            fontSize: '18px',
+                            lineHeight: '1.8',
+                            color: '#333',
+                            marginBottom: '30px'
+                          }}>
+                            As the owner of Ocean Breeze Yoga, I struggled to find an affordable website service. uFREEwebsites made it so easy, and now I have a professional site that brings in new students every week. Couldn't be happier!
+                          </p>
+                          <span className="elementskit-border-hr" style={{
+                            display: 'block',
+                            height: '3px',
+                            width: '60px',
+                            background: '#0234DA',
+                            marginBottom: '20px'
+                          }}></span>
+                          <span className="elementskit-profile-info">
+                            <strong className="elementskit-author-name" style={{
+                              fontFamily: 'Plus Jakarta Sans, sans-serif',
+                              fontSize: '20px',
+                              fontWeight: 700,
+                              color: '#000000',
+                              display: 'block',
+                              marginBottom: '5px'
+                            }}>Emily Garcia</strong>
+                            <span className="elementskit-author-des" style={{
+                              fontFamily: 'Plus Jakarta Sans, sans-serif',
+                              fontSize: '16px',
+                              color: '#666'
+                            }}>Ocean Breeze Yoga</span>
+                          </span>
+                        </div>
+                      </div>
+                      <div className="col-lg-6" style={{ flex: '1 1 45%' }}>
+                        <div className="elementskit-profile-image-card">
+                          <img 
+                            src="/images/oceanbreezeyoga-owner-avatar.webp" 
+                            alt="Emily Garcia"
+                            style={{
+                              width: '100%',
+                              height: 'auto',
+                              borderRadius: '12px',
+                              boxShadow: '0 8px 24px rgba(0,0,0,0.12)'
+                            }}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Swiper Navigation Buttons */}
+            <div className="swiper-navigation-button swiper-button-prev"></div>
+            <div className="swiper-navigation-button swiper-button-next"></div>
+            
+            {/* Swiper Pagination Dots */}
+            <div className="swiper-pagination"></div>
           </div>
-          
-          {/* Swiper Pagination Dots */}
-          <div className="swiper-pagination" style={{ marginTop: '40px' }}></div>
         </div>
       </div>
 
       <style>{`
-        .swiper-pagination-bullet {
-          width: 12px;
-          height: 12px;
-          background: #0234DA;
-          opacity: 0.3;
-          transition: opacity 0.3s;
-        }
-        
-        .swiper-pagination-bullet-active {
-          opacity: 1;
-        }
-        
-        .swiper-pagination-bullet:hover {
-          opacity: 1;
-        }
-        
         @media (max-width: 768px) {
-          .swiper-slide > div {
-            grid-template-columns: 1fr !important;
+          .row {
+            flex-direction: column !important;
           }
-          
-          .swiper-slide > div > div:first-child {
-            order: 2;
-          }
-          
-          .swiper-slide > div > div:last-child {
-            order: 1;
+          .col-lg-6 {
+            flex: 1 1 100% !important;
           }
         }
       `}</style>
