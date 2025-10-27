@@ -36,6 +36,14 @@ body {
   overflow-x: hidden;
 }
 
+/* CRITICAL FIX: Override elementor's overflow: hidden on #page container */
+/* This allows TestimonialsSection and other sections below the fold to render */
+#page {
+  overflow: visible !important;
+  overflow-x: hidden !important;
+  overflow-y: visible !important;
+}
+
 /* Disable animations on initial load to prevent layout shift */
 .hero-section,
 .hero-section * {

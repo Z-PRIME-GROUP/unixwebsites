@@ -2,9 +2,6 @@ import { useEffect } from 'react';
 
 export const TestimonialsSection = () => {
   useEffect(() => {
-    console.log('TestimonialsSection mounted');
-    console.log('Swiper available?', typeof (window as any).Swiper);
-    
     // Initialize Swiper after component mounts
     const initSwiper = () => {
       if (typeof window !== 'undefined' && (window as any).Swiper) {
@@ -48,8 +45,6 @@ export const TestimonialsSection = () => {
     // Delay to ensure Swiper library is loaded
     setTimeout(initSwiper, 100);
   }, []);
-
-  console.log('TestimonialsSection rendering');
 
   return (
     <section style={{
